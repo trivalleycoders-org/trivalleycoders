@@ -1,6 +1,11 @@
+// Nav
 export const wrapper = {
+  display: 'flex',
+  flexGrow: 4,
+  justifyContent: 'flex-end',
+  alignItem: 'center',
   backgroundColor: 'lightgray',
-  border: '1px solid black'
+  border: '1px solid black',
 };
 
 /*
