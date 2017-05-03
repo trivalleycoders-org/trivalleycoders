@@ -1,0 +1,65 @@
+body  {
+  background-color: rgb(32, 29, 35);
+  color: rgb(104, 104, 104);
+  font-family: "Source Sans Pro", "SourceSansPro", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+.colors {
+  color: darkblue;
+  color: blue;
+  color: royalblue;
+  color: dodgerblue;
+  color: deepskyblue;
+  color: darkturquoise;
+  color: turquoise;
+  color: aqua;
+  color: cyan;
+  color: lightskyblue;
+  color: skyblue;
+  color: paleturquoise;
+  color: powderblue;
+
+
+
+
+}
+/*
+nav {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 1160px;
+  height: 86.5px;
+}
+
+.brand {
+  width: 386.65px;
+  height: 86.5px;
+}
+
+.menu {
+  width: 773.333
+
+}
+
+.hero {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: rgb(32, 29, 35);
+  background-image: url("http://lattice.cf/images/img--hero-7a206540.png");
+  background-origin: padding-box;
+  background-position: 50.25% 100px;
+  background-repeat: no-repeat;
+  background-size: 1097px 622px;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  padding-bottom: 40px;
+}
+*/
