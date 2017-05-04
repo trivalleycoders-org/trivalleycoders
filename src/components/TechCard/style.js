@@ -9,6 +9,13 @@ export const wrapper = {
   // border: '1px solid black'
 };
 
+export const test = {
+  backgroundColor: 'orange',
+}
+
+export const logo = {
+  maxWidth: '100%',
+}
 export const logoSquare = {
   maxWidth: 70,
 }
