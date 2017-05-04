@@ -2,14 +2,20 @@
 import React from 'react';
 import * as style from './style';
 
-const TechCard = () => (
-  <div id='tech-card' style={style.wrapper}> 
-    <div>
-      HTML5
+const TechCard = (props) => {
+  const logoStyle = props.shape === 'square' ? style.logoSquare : style.logoRectangle;
+  return (
+    <div id='tech-card' style={style.wrapper}>
+      <div>
+        {props.name}
+      </div>
+      <div>
+        <a href="#">
+          <img style={logoStyle} src={props.url} alt=""></img>
+        </a>
+      </div>
     </div>
-    <div>
-      <a href="#"><img src="http://klequis.com/images/logo.store/500x500/html5.500x500.svg" alt=""></a>
-    </div>
-);
+  )
+};
 
 export default TechCard;

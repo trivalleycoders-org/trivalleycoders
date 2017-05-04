@@ -7,7 +7,7 @@ import Footer from '../Footer';
 import * as style from './style.js';
 
 
-class App extends Component {
+class Page extends Component {
   render() {
     return (
       <div id='page' style={style.wrapper}>
@@ -19,4 +19,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Page;

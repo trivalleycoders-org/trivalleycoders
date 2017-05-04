@@ -6,5 +6,6 @@ export const wrapper = {
   height: '100vh',
   backgroundColor: 'darkblue',
   border: '1px solid gray',
-  padding: '10px 10px 10px 10px',
+  padding: '10px',
+  maxWidth: 1080
 };

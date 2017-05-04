@@ -1,4 +1,18 @@
+// TechCard
 export const wrapper = {
-  backgroundColor: 'lightgray',
-  border: '1px solid black'
+  display: 'flex',
+  flexFlow: 'column',
+  alignItems: 'center',
+  margin: 10,
+  // flex: '0 1 auto',
+  //backgroundColor: 'lightgray',
+  // border: '1px solid black'
 };
+
+export const logoSquare = {
+  maxWidth: 70,
+}
+
+export const logoRectangle = {
+  maxWidth: 110,
+}

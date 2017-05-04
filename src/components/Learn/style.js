@@ -1,4 +1,8 @@
 export const wrapper = {
-  backgroundColor: 'lightgray',
-  border: '1px solid black'
+  display: 'flex',
+  flexFlow: 'row wrap',
+  // margin: 30,
+  //backgroundColor: 'lightgray',
+  border: '1px solid white',
+  // maxWidth: 70,
 };
