@@ -1,5 +1,5 @@
 export const getEvents = (state) =>
-  state.events
+  state.events.ids.map((id) => state.events.byId[id]);
 
 export const getRequest = (state, key) =>
   state.requests[key] || {};

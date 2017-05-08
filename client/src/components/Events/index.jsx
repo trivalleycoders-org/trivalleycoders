@@ -1,10 +1,13 @@
 // Events
 import React from 'react';
-import * as style from './style';
+import { connect } from 'react-redux';
+import * as actionCreators from '../../store/actions';
+import * as selectors from '../../store/selectors'
 import Event from '../Event';
-import events from '../../data/events';
+// import events from '../../data/events';
+import * as style from './style';
 
-const Events = () => (
+const Events = ({ events }) => (
   <div id='events' style={style.wrapper}>
     {events.map((e) => (
       <Event
@@ -17,4 +20,8 @@ const Events = () => (
   </div>
 );
 
-export default Events;
+const mapStateToProps = (state) => ({
+  events: selectors.getEvents(state),
+});
+
+export default connect(mapStateToProps, actionCreators)(Events);

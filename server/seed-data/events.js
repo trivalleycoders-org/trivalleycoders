@@ -12,13 +12,13 @@ const events = [
     location: "Specialty's Cafe, Dublin, CA",
   },
   {
-    id: 2,
+    id: 3,
     date: '5/8/2017',
     name: 'Extreme JavaScript Jam Session',
     location: "Specialty's Cafe, Dublin, CA",
   },
   {
-    id: 2,
+    id: 4,
     date: '5/9/2017',
     name: 'Extreme JavaScript Jam Session',
     location: "Specialty's Cafe, Dublin, CA",

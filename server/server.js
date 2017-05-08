@@ -1,7 +1,7 @@
 import bodyParser from 'body-parser'
 import express from 'express'
 import path from 'path'
-import tech from './seed-data/technologies'
+import events from './seed-data/events'
 
 const app = express()
 
@@ -24,8 +24,8 @@ router.get('/cities', (req, res) => {
 })
 
 router.get('/events', (req, res) => {
-  const t = tech
-  res.send(t)
+  const e = events
+  res.send(e)
 })
 
 app.use(router)

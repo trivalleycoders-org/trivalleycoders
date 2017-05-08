@@ -7,13 +7,13 @@ import tech from '../../data/technologies';
 const Learn = () => (
   <div id='learn' style={style.wrapper}>
     {tech.map((t) => (
-       <TechCard
-         key={t.url}
-         name={t.name}
-         url={t.url}
-         shape={t.shape}
-       />
-    	))}
+      <TechCard
+        key={t.url}
+        name={t.name}
+        url={t.url}
+        shape={t.shape}
+      />
+    ))}
   </div>
 );
 
