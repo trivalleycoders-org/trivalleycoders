@@ -1,3 +1,4 @@
+// TechLogos
 export const wrapper = {
   display: 'flex',
   flexFlow: 'row wrap',

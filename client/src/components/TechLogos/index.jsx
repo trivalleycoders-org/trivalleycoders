@@ -1,13 +1,13 @@
-// Learn
+// TechLogos
 import React from 'react';
 import * as style from './style';
-import TechCard from '../TechCard';
+import TechLogo from '../TechLogo';
 import tech from '../../data/technologies';
 
-const Learn = () => (
-  <div id='learn' style={style.wrapper}>
+const TechLogos = () => (
+  <div id='tech-logos' style={style.wrapper}>
     {tech.map((t) => (
-       <TechCard
+       <TechLogo
          key={t.url}
          name={t.name}
          url={t.url}
@@ -17,4 +17,4 @@ const Learn = () => (
   </div>
 );
 
-export default Learn;
+export default TechLogos;

@@ -1,11 +1,12 @@
-// TechCard
+// TechLogo
+
 import React from 'react';
 import * as style from './style';
 
-const TechCard = (props) => {
+const TechLogo = (props) => {
   const logoStyle = props.shape === 'square' ? style.logoSquare : style.logoRectangle;
   return (
-    <div id='tech-card' style={style.wrapper}>
+    <div id='tech-logo' style={style.wrapper}>
       <div>
         {props.name}
       </div>
@@ -18,4 +19,4 @@ const TechCard = (props) => {
   )
 };
 
-export default TechCard;
+export default TechLogo;
