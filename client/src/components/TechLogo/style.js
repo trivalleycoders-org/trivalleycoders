@@ -1,4 +1,4 @@
-// TechCard
+// TechLogo
 export const wrapper = {
   display: 'flex',
   flexFlow: 'column',
