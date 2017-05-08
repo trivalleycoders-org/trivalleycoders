@@ -34,6 +34,11 @@ class Page extends Component {
           </div>
         );
       default:
+        return (
+          <div id='page' style={style.wrapper}>
+            <h2>No data</h2>
+          </div>
+        )
     }
 
   }

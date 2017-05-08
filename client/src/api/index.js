@@ -31,9 +31,9 @@ export default {
         .then((data) => {
           console.log('data', data);
           const normalized = normalize(data, arrayOf(events));
-          console.log('entities.notes', normalized.entities.notes);
+          console.log('normalized', normalized);
           const o = {
-            events: normalized.entities.notes || {},
+            events: normalized.entities.events || {},
             ids: normalized.result,
           };
           console.log('o', o);

@@ -3,9 +3,11 @@ import { combineReducers } from 'redux';
 import { merge } from 'ramda';
 
 export const byId = ( state = {}, { type, payload }) => {
+  console.log('type', type);
+  console.log('payload', payload);
   switch (type) {
     case 'app/replaceEvents':
-    return payload.notes;
+      return payload.events;
     default:
       return state;
   }
