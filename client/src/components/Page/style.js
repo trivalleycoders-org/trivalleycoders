@@ -1,5 +1,7 @@
 export const wrapper = {
-  backgroundColor: 'black',
-  border: '1px solid black',
-  padding: '10px 10px 10px 10px',
+  display: 'flex',
+  flexFlow: 'column nowrap',
+  padding: '10px',
+  // alignItems: 'center',
+  // border: '1px solid orange',
 };

@@ -1,0 +1,10 @@
+(function(){
+  document.write('<div id="adsatlas-1309514797" style="position:relative;width:300px;height:250px;overflow:hidden">');
+  document.write('<iframe src=\"https://ad.atdmt.com/as/direct;p=11237205196382;as=0;a=11237204685791;crs=11237204685628;cr=11237204685630;i.ts=1494335653/index.html?click=\" width=\"300\" height=\"250\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\" topmargin=\"0\" leftmargin=\"0\" allowtransparency=\"true\"></iframe><img src=\"https://ad.atdmt.com/i/img;p=11237205196382;as=0;a=11237204685791;crs=11237204685628;cr=11237204685630;llid=639284044465283794;cache=1636753102\" />');
+  document.write('</div>');
+  document.write('<script src="https://cdn.atlassbx.com/FB/11122200772940/browser_features1488235112.js"></script><script type="text/javascript">(function(window){var data = window.getAtlasBrowserFeatures.getAllBrowserFeatures();new Image().src = "https://sig.atdmt.com/bf?iid=639284044465283794&r=https%3A%2F%2Fcdn.adfront.org%2F1306801%2Fraw_050571892037c3c04dbb56b188dbfb1a.html&bf=" + encodeURIComponent(data);})(window.inDapIF ? parent.window : window);</script>');
+  document.write('<script type="text/javascript" src="https://cdn.atlassbx.com/FB/11122200773193/atlas_tots1492556476.js?gk_enable=raf_safari_fix"></script><script type="text/javascript">(function(window){window.initAtlasTOTS("adsatlas-1309514797","639284044465283794","11237205196382","11237204685630");})(window.inDapIF ? parent.window : window);</script>');
+  document.write('');
+  document.write('');
+  document.close();
+})();

@@ -4,8 +4,8 @@ export const wrapper = {
   flexGrow: 4,
   justifyContent: 'flex-end',
   alignItem: 'center',
-  backgroundColor: 'lightgray',
-  border: '1px solid black',
+  // backgroundColor: 'lightgray',
+  // border: '1px solid black',
 };
 
 /*

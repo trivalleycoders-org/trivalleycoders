@@ -4,8 +4,3 @@ export const wrapper = {
   // backgroundColor: 'lightgray',
   // border: '1px solid black',
 };
-
-export const projectsAndEvents = {
-  display: 'flex',
-  
-};

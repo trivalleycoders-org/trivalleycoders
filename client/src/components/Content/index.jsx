@@ -4,7 +4,7 @@ import Sidebar from '../Sidebar';
 import MainContent from '../MainContent';
 
 const Content = () => (
-  <div id='site-title' style={style.wrapper}>
+  <div id='content' style={style.wrapper}>
     <MainContent />
     <Sidebar />
   </div>

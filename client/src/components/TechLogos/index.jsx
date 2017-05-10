@@ -7,13 +7,13 @@ import tech from '../../data/technologies';
 const TechLogos = () => (
   <div id='tech-logos' style={style.wrapper}>
     {tech.map((t) => (
-       <TechLogo
-         key={t.url}
-         name={t.name}
-         url={t.url}
-         shape={t.shape}
-       />
-    	))}
+      <TechLogo
+        key={t.url}
+        name={t.name}
+        url={t.url}
+        shape={t.shape}
+      />
+    ))}
   </div>
 );
 
