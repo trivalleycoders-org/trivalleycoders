@@ -1,6 +1,8 @@
 import bodyParser from 'body-parser'
 import express from 'express'
 import path from 'path'
+import tech from './seed-data/technologies'
+
 const app = express()
 
 app.use(bodyParser.json())
@@ -19,6 +21,11 @@ router.get('/cities', (req, res) => {
     {name: 'Chicago',       population: 2695598}
   ]
   res.json(cities)
+})
+
+router.get('/events', (req, res) => {
+  const t = tech
+  res.send(t)
 })
 
 app.use(router)
