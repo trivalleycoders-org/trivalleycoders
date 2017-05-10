@@ -3,7 +3,7 @@ export const wrapper = {
   display: 'flex',
   flexGrow: 4,
   justifyContent: 'flex-end',
-  alignItem: 'center',
+  alignItems: 'center',
   // backgroundColor: 'lightgray',
   // border: '1px solid black',
 };

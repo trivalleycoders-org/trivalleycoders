@@ -3,19 +3,19 @@ export const wrapper = {
   display: 'flex',
   flexFlow: 'column',
   alignItems: 'center',
-  margin: 10,
+
+  // margin: 10,
   // flex: '0 1 auto',
-  //backgroundColor: 'lightgray',
-  // border: '1px solid black'
+  // backgroundColor: 'lightgray',
 };
 
-export const logo = {
-  maxWidth: '100%',
-}
 export const logoSquare = {
+  border: '1px solid green',
   maxWidth: 70,
 }
 
 export const logoRectangle = {
+  border: '1px solid orange',
   maxWidth: 110,
+  // maxHeight: 70,
 }

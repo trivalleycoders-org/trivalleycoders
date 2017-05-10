@@ -3,7 +3,8 @@ import * as style from './style';
 
 const Logo = () => (
   <div id='logo' style={style.wrapper}>
-    Logo
+    <img style={style.tvcLogo} src="http://klequis.com/images/tvc/tvc.05.svg" />
+
   </div>
 );
 

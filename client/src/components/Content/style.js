@@ -5,7 +5,7 @@ export const wrapper = {
   alignItems: 'stretch',
   height: '100vh',
   // backgroundColor: 'darkblue',
-  border: '1px solid gray',
-  padding: '10px',
+  // border: '1px solid gray',
+  // padding: '10px',
   //maxWidth: 1080
 };
