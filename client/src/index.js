@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import configureStore from './store';
 import Page from './components/Page';
 import './index.css';
 
 ReactDOM.render(
-  <Page />,
+  <Provider store={configureStore()}>
+    <Page />
+  </Provider>,
   document.getElementById('root')
 );
