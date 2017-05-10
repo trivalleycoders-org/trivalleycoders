@@ -1,28 +1,29 @@
-const events = [
+db = new Mongo().getDB('tvcwebsite');
+db.events.remove({});
+db.events.insert([
   {
     id: 1,
-    date: '5/6/2017',
+    date: new Date('2017-05-06'),
     name: 'Extreme JavaScript Jam Session',
     location: "Specialty's Cafe, Dublin, CA",
   },
   {
     id: 2,
-    date: '5/7/2017',
+    date: new Date('2017-05-07'),
     name: 'Extreme JavaScript Jam Session',
     location: "Specialty's Cafe, Dublin, CA",
   },
   {
-    id: 2,
-    date: '5/8/2017',
+    id: 3,
+    date: new Date('2017-05-08'),
     name: 'Extreme JavaScript Jam Session',
     location: "Specialty's Cafe, Dublin, CA",
   },
   {
-    id: 2,
-    date: '5/9/2017',
+    id: 4,
+    date: new Date('2017-05-09'),
     name: 'Extreme JavaScript Jam Session',
     location: "Specialty's Cafe, Dublin, CA",
   },
-]
-
-export default events;
+]);
+db.events.createIndex({ date: 1 });
