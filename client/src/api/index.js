@@ -1,5 +1,5 @@
 import { normalize, Schema, arrayOf } from 'normalizr';
-const events = new Schema('events');
+const events = new Schema('events', { idAttribute: '_id' });
 
 export const rejectErrors = (res) => {
   const { status } = res;
