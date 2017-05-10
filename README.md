@@ -7,7 +7,7 @@ If Yarn is not installed then
 - $ yarn install
 - $ yarn start
 
-Your default browser should be launched automatically. If not, lanuch the app from localhost:3000
+Your default browser should be launched automatically. If not, launch the app from localhost:3000
 
 To shut-down the project in terminal you need to press ctrl+c twice
 
