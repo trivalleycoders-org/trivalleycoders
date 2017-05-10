@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Component } from 'react';
 import { connect } from 'react-redux';
 import * as selectors from '../../store/selectors';
 import * as actionCreators from '../../store/actions';
@@ -44,8 +45,10 @@ class Page extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  readEventsRequest: selectors.getRequest(state, 'readEvents'),
-});
+const mapStateToProps = (state) => {
+  return {
+    readEventsRequest: selectors.getRequest(state, 'readEvents'),
+  }
+};
 
 export default connect(mapStateToProps, actionCreators)(Page);
