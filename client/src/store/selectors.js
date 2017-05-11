@@ -1,6 +1,9 @@
 export const getEvents = (state) =>
   state.events.ids.map((id) => state.events.byId[id]);
 
+export const getProjects = (state) =>
+  state.projects.ids.map((id) => state.projects.byId[id]);
+
 export const getRequest = (state, key) =>
   state.requests[key] || {};
 

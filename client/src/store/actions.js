@@ -10,6 +10,11 @@ export const replaceEvents = (events) => ({
   payload: events,
 });
 
+export const replaceProjects = (projects) => ({
+  type: 'app/replaceProjects',
+  payload: projects,
+});
+
 export const markRequestPending = (key) => ({
   type: 'app/markRequestPending',
   meta: { key },
@@ -49,4 +54,10 @@ export const requestReadEvents = createRequestThunk({
   request: api.events.readList,
   key: 'readEvents',
   success: [ replaceEvents ]
+});
+
+export const requestReadProjects = createRequestThunk({
+  request: api.projects.readList,
+  key: 'readProjects',
+  success: [ replaceProjects ]
 });

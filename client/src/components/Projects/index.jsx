@@ -1,17 +1,27 @@
 // Projects
 import React from 'react';
-import * as style from './style';
+import { connect } from 'react-redux';
+import * as actionCreators from '../../store/actions';
+import * as selectors from '../../store/selectors'
 import Project from '../Project';
+import * as style from './style';
 
-const Projects = () => (
+const Projects = ({ projects }) => (
   <div id='projects' style={style.wrapper}>
-    <Project />
-    <Project />
-    <Project />
-    <Project />
-    <Project />
-    <Project />
+    {projects.map((p) => (
+      <Project
+        key={p._id}
+        ownerName={p.ownerName}
+        projectName={p.projectName}
+        projectType={p.projectType}
+        technologies={p.technologies}
+      />
+    ))}
   </div>
 );
 
-export default Projects;
+const mapStateToProps = (state) => ({
+  projects: selectors.getProjects(state),
+});
+
+export default connect(mapStateToProps, actionCreators)(Projects);

@@ -4,14 +4,13 @@ import { connect } from 'react-redux';
 import * as actionCreators from '../../store/actions';
 import * as selectors from '../../store/selectors'
 import Event from '../Event';
-// import events from '../../data/events';
 import * as style from './style';
 
 const Events = ({ events }) => (
   <div id='events' style={style.wrapper}>
     {events.map((e) => (
       <Event
-        key={e.date}
+        key={e._id}
         date={e.date}
         name={e.name}
         location={e.location}

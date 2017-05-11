@@ -46,6 +46,18 @@ router.get('/events', (req, res) => {
   // res.send(e)
 })
 
+router.get('/projects', (req, res) => {
+  db.collection('projects').find().toArray()
+    .then(projects => {
+      const metadata = { total_count: projects.length}
+      res.json(projects)
+    })
+    .catch(error => {
+      console.log(error);
+      res.status(500).json({ message: 'Internal Server Error' })
+    })
+})
+
 app.use(router)
 
 app.use('/*', staticFiles)

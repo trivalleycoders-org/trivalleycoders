@@ -8,6 +8,8 @@ export const byId = ( state = {}, { type, payload }) => {
   switch (type) {
     case 'app/replaceEvents':
       return payload.events;
+    case 'app/replaceProjects':
+      return payload.projects;
     default:
       return state;
   }
@@ -16,6 +18,8 @@ export const byId = ( state = {}, { type, payload }) => {
 export const ids = (state = [], { type, payload }) => {
   switch (type) {
     case 'app/replaceEvents':
+      return payload.ids;
+    case 'app/replaceProjects':
       return payload.ids;
     default:
       return state;

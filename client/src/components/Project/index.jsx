@@ -2,12 +2,20 @@
 import React from 'react';
 import * as style from './style';
 
-const Project = () => (
+const Project = (props) => (
   <div id='project' style={style.wrapper}>
-    <div>Project Name</div>
-    <div>Owner</div>
-    <div style={style.techList}>React Javascript HTML CSS3</div>
-
+    <div>
+      {props.projectName}
+    </div>
+    <div>
+      {props.ownerName}
+    </div>
+    <div>
+      {props.projectType}
+    </div>
+    <div style={style.techList}>
+      {props.technologies}
+    </div>
   </div>
 );
 
