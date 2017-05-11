@@ -30,9 +30,9 @@ export default {
       console.log('api.events.readList()');
       return fetchJson('/events')
         .then((data) => {
-          console.log('data', data);
+          console.log('data.events', data);
           const normalized = normalize(data, arrayOf(events));
-          console.log('normalized', normalized);
+          console.log('normalized.events', normalized);
           const o = {
             events: normalized.entities.events || {},
             ids: normalized.result,
@@ -81,9 +81,9 @@ export default {
       console.log('api.projects.readList()');
       return fetchJson('/projects')
         .then((data) => {
-          console.log('data', data);
+          console.log('data.projects', data);
           const normalized = normalize(data, arrayOf(projects));
-          console.log('normalized', normalized);
+          console.log('normalized.projects', normalized);
           const o = {
             projects: normalized.entities.projects || {},
             ids: normalized.result,
@@ -125,5 +125,5 @@ export default {
         }
       );
     },
-  }, 
+  },
 };

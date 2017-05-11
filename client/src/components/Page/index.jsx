@@ -14,6 +14,7 @@ import * as style from './style.js';
 class Page extends Component {
   componentWillMount() {
     this.props.requestReadEvents()
+    this.props.requestReadProjects()
   }
 
   render() {

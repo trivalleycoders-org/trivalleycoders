@@ -44,5 +44,9 @@ export default combineReducers({
     byId,
     ids,
   }),
+  projects: combineReducers({
+    byId,
+    ids,
+  }),
   requests,
 })

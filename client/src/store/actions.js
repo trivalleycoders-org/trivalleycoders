@@ -1,10 +1,5 @@
 import api from '../api';
 
-export const listEvents = () => ({
-  type: 'app/listNotes',
-  payload: [],
-});
-
 export const replaceEvents = (events) => ({
   type: 'app/replaceEvents',
   payload: events,
