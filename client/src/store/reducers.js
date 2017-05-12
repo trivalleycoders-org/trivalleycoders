@@ -1,10 +1,11 @@
 import { combineReducers } from 'redux';
 // import { dissoc } from 'ramda';
 import { merge } from 'ramda';
+import * as ku from '../../../lib/ke-utils';
 
 export const byId = ( state = {}, { type, payload }) => {
-  console.log('type', type);
-  console.log('payload', payload);
+  ku.log('byId.type', type, 'green');
+  ku.log('byId.payload', payload, 'blue');
   switch (type) {
     case 'app/replaceEvents':
       return payload.events;
@@ -16,6 +17,8 @@ export const byId = ( state = {}, { type, payload }) => {
 }
 
 export const ids = (state = [], { type, payload }) => {
+  ku.log('ids.type', type, 'red');
+  ku.log('ids.payload', payload, 'red');
   switch (type) {
     case 'app/replaceEvents':
       return payload.ids;

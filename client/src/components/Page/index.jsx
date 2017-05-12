@@ -13,14 +13,14 @@ import * as style from './style.js';
 
 class Page extends Component {
   componentWillMount() {
-    this.props.requestReadEvents()
-    //this.props.requestReadProjects()
+    this.props.requestReadEvents();
+    this.props.requestReadProjects();
   }
 
   render() {
-    const {readEventsRequest} = this.props;
+    const { readEventsRequest, readProjectsRequest} = this.props;
     // console.log('status', readEventsRequest.status);
-    switch (readEventsRequest.status) {
+    switch (readEventsRequest.status || readProjectsRequest.status) {
       case 'success':
         return (
           <div id='page' style={style.wrapper}>
@@ -49,6 +49,7 @@ class Page extends Component {
 const mapStateToProps = (state) => {
   return {
     readEventsRequest: selectors.getRequest(state, 'readEvents'),
+    readProjectsRequest: selectors.getRequest(state, 'readProjects'),
   }
 };
 
