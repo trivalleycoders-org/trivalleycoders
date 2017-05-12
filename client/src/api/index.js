@@ -28,7 +28,7 @@ export const fetchJson = (url, options = {}) => (
 export default {
   events: {
     readList() {
-      ku.log('api.events.readList()');
+      ku.logFunction('api.events.readList');
       return fetchJson('/events')
         .then((data) => {
           ku.log('data.events', data, 'red');
@@ -46,7 +46,7 @@ export default {
 
  projects: {
     readList() {
-      ku.log('api.projects.readList()');
+      ku.logFunction('api.projects.readList()');
       return fetchJson('/projects')
         .then((data) => {
           ku.log('data.projects', data, 'red');

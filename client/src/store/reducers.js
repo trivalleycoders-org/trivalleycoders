@@ -3,31 +3,53 @@ import { combineReducers } from 'redux';
 import { merge } from 'ramda';
 import * as ku from '../../../lib/ke-utils';
 
-export const byId = ( state = {}, { type, payload }) => {
-  ku.log('byId.type', type, 'green');
-  ku.log('byId.payload', payload, 'blue');
+export const eventsById = ( state = {}, { type, payload }) => {
+  // ku.log('byId.type', type, 'green');
+
   switch (type) {
     case 'app/replaceEvents':
+      ku.log('events.byId.payload', payload, 'green');
       return payload.events;
+    default:
+      return state;
+  }
+}
+
+export const eventsIds = (state = [], { type, payload }) => {
+  // ku.log('ids.type', type, 'green');
+
+  switch (type) {
+    case 'app/replaceEvents':
+      ku.log('events.ids.payload', payload, 'green');
+      return payload.ids;
+    default:
+      return state;
+  }
+};
+
+export const projectsById = ( state = {}, { type, payload }) => {
+  // ku.log('byId.type', type, 'green');
+  switch (type) {
     case 'app/replaceProjects':
+      ku.log('projects.byId.payload', payload, 'green');
       return payload.projects;
     default:
       return state;
   }
 }
 
-export const ids = (state = [], { type, payload }) => {
-  ku.log('ids.type', type, 'red');
-  ku.log('ids.payload', payload, 'red');
+export const projectsIds = (state = [], { type, payload }) => {
+  // ku.log('ids.type', type, 'green');
+
   switch (type) {
-    case 'app/replaceEvents':
-      return payload.ids;
     case 'app/replaceProjects':
+      ku.log('projects.ids.payload', payload, 'green');
       return payload.ids;
     default:
       return state;
   }
 };
+
 
 export const requests = (state = {}, { type, payload, meta }) => {
   switch (type) {
@@ -44,12 +66,12 @@ export const requests = (state = {}, { type, payload, meta }) => {
 
 export default combineReducers({
   events: combineReducers({
-    byId,
-    ids,
+    eventsById,
+    eventsIds,
   }),
   projects: combineReducers({
-    byId,
-    ids,
+    projectsById,
+    projectsIds,
   }),
   requests,
 })
