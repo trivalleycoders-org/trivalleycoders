@@ -1,3 +1,7 @@
+export const backgroundBlack = {
+  backgroundColor: #201D23,
+}
+
 /*
 export const body = {
   margin: 0,
