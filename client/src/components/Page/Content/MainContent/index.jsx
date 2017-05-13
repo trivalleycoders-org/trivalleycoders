@@ -1,9 +1,9 @@
 // MainContent
 import React from 'react';
 import * as style from './style';
-import Intro from '../Intro';
-import TechLogos from '../TechLogos';
-import ProjectsAndEvents from '../ProjectsAndEvents';
+import Intro from './Intro';
+import TechLogos from './TechLogos';
+import ProjectsAndEvents from './ProjectsAndEvents';
 
 const MainContent = () => (
   <div id='main-conent' style={style.wrapper}>

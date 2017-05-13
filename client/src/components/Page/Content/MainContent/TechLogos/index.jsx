@@ -1,8 +1,8 @@
 // TechLogos
 import React from 'react';
 import * as style from './style';
-import TechLogo from '../TechLogo';
-import tech from '../../data/technologies';
+import TechLogo from './TechLogo';
+import tech from '../../../../../data/technologies';
 
 const TechLogos = () => (
   <div id='tech-logos' style={style.wrapper}>

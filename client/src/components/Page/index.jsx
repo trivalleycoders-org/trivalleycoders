@@ -5,9 +5,9 @@ import { connect } from 'react-redux';
 import * as selectors from '../../store/selectors';
 import * as actionCreators from '../../store/actions';
 
-import Header from '../Header';
-import Content from '../Content';
-import Footer from '../Footer';
+import Header from './Header';
+import Content from './Content';
+import Footer from './Footer';
 // import * as mStyle from '../../master-style';
 import * as style from './style.js';
 

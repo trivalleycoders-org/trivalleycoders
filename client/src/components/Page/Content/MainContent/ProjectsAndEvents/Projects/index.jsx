@@ -1,9 +1,9 @@
 // Projects
 import React from 'react';
 import { connect } from 'react-redux';
-import * as actionCreators from '../../store/actions';
-import * as selectors from '../../store/selectors'
-import Project from '../Project';
+import * as actionCreators from '../../../../../../store/actions';
+import * as selectors from '../../../../../../store/selectors'
+import Project from './Project';
 import * as style from './style';
 
 const Projects = ({ projects }) => (
