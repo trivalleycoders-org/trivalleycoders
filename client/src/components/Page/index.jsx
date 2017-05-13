@@ -1,5 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
+import { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import * as selectors from '../../store/selectors';
 import * as actionCreators from '../../store/actions';
@@ -46,6 +47,11 @@ class Page extends Component {
   }
 }
 
+Page.propTypes = {
+  requestReadEvents: PropTypes.func.isRequired,
+  readEventsRequest: PropTypes.object.isRequired,
+  readProjectsRequest: PropTypes.object.isRequired,
+}
 const mapStateToProps = (state) => {
   return {
     readEventsRequest: selectors.getRequest(state, 'readEvents'),
