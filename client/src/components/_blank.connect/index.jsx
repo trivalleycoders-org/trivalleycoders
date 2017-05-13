@@ -11,7 +11,7 @@ const NAME = ({ PROP }) => (
      on the page, remove the 'id' from the <div>
   */
   <div id='NAME' style={style.wrapper}>
-
+    
   </div>
 );
 
