@@ -3,7 +3,7 @@ import * as style from './style';
 
 const Footer = () => (
   <div id='footer' style={style.wrapper}>
-    Footer
+    <p>Footer</p>
   </div>
 );
 

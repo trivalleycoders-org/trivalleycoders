@@ -1,3 +1,4 @@
+// Pages
 import React from 'react';
 import { Component } from 'react';
 import { PropTypes } from 'react';
@@ -25,9 +26,11 @@ class Page extends Component {
       case 'success':
         return (
           <div id='page' style={style.wrapper}>
-            <Header />
-            <Content />
-            <Footer />
+            <div id='wrap-content' style={style.wrapContent}>
+              <Header />
+              <Content />
+              <Footer />
+            </div>
           </div>
         );
       case 'failure':
@@ -49,6 +52,7 @@ class Page extends Component {
 
 Page.propTypes = {
   requestReadEvents: PropTypes.func.isRequired,
+  requestReadProjects: PropTypes.func.isRequired,
   readEventsRequest: PropTypes.object.isRequired,
   readProjectsRequest: PropTypes.object.isRequired,
 }
