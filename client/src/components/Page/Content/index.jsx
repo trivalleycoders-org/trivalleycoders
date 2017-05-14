@@ -1,12 +1,17 @@
+// Content
 import React from 'react';
+import Hero from './Hero';
+import TechLogos from './TechLogos';
+import ProjectsAndEvents from './ProjectsAndEvents';
+import Sponsors from './Sponsors';
 import * as style from './style';
-import Sidebar from './Sidebar';
-import MainContent from './MainContent';
 
 const Content = () => (
   <div id='content' style={style.wrapper}>
-    <MainContent />
-    <Sidebar />
+    <Hero />
+    <TechLogos />
+    <ProjectsAndEvents />
+    <Sponsors />
   </div>
 );
 
