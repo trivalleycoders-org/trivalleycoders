@@ -4,6 +4,10 @@ export const getEvents = (state) =>
 export const getProjects = (state) =>
   state.projects.projectsIds.map((id) => state.projects.projectsById[id]);
 
+export const getMembers = (state) =>
+  state.members.membersIds.map((id) => state.members.membersById[id]);
+
+// redux selectors
 export const getRequest = (state, key) =>
   state.requests[key] || {};
 
