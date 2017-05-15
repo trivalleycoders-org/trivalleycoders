@@ -58,6 +58,18 @@ router.get('/projects', (req, res) => {
     })
 })
 
+router.get('/members', (req, res) => {
+  db.collection('members').find().toArray()
+    .then(members => {
+      const metadata = { total_count: members.length}
+      res.json(members)
+    })
+    .catch(error => {
+      console.log(error);
+      res.status(500).json({ message: 'Internal Server Error' })
+    })
+})
+
 app.use(router)
 
 app.use('/*', staticFiles)

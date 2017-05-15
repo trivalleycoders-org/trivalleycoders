@@ -1,15 +1,5 @@
 import api from '../api';
 
-export const replaceEvents = (events) => ({
-  type: 'app/replaceEvents',
-  payload: events,
-});
-
-export const replaceProjects = (projects) => ({
-  type: 'app/replaceProjects',
-  payload: projects,
-});
-
 export const markRequestPending = (key) => ({
   type: 'app/markRequestPending',
   meta: { key },
@@ -45,10 +35,20 @@ export const createRequestThunk = ({ request, key, start = [], success = [], fai
   };
 };
 
+export const replaceEvents = (events) => ({
+  type: 'app/replaceEvents',
+  payload: events,
+});
+
 export const requestReadEvents = createRequestThunk({
   request: api.events.readList,
   key: 'readEvents',
   success: [ replaceEvents ]
+});
+
+export const replaceProjects = (projects) => ({
+  type: 'app/replaceProjects',
+  payload: projects,
 });
 
 export const requestReadProjects = createRequestThunk({
@@ -56,3 +56,16 @@ export const requestReadProjects = createRequestThunk({
   key: 'readProjects',
   success: [ replaceProjects ]
 });
+
+export const replaceMembers = (members) => ({
+  type: 'app/replaceMembers',
+  payload: members,
+});
+
+export const requestReadMembers = createRequestThunk({
+  request: api.members.readList,
+  key: 'readMembers',
+  success: [ replaceMembers ]
+});
+
+

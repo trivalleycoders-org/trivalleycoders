@@ -50,6 +50,29 @@ export const projectsIds = (state = [], { type, payload }) => {
   }
 };
 
+export const membersById = ( state = {}, { type, payload }) => {
+  // ku.log('byId.type', type, 'green');
+  switch (type) {
+    case 'app/replaceMembers':
+      ku.log('members.byId.payload', payload, 'green');
+      return payload.members;
+    default:
+      return state;
+  }
+}
+
+export const membersIds = (state = [], { type, payload }) => {
+  // ku.log('ids.type', type, 'green');
+
+  switch (type) {
+    case 'app/replaceMembers':
+      ku.log('members.ids.payload', payload, 'green');
+      return payload.ids;
+    default:
+      return state;
+  }
+};
+
 
 export const requests = (state = {}, { type, payload, meta }) => {
   switch (type) {
@@ -72,6 +95,10 @@ export default combineReducers({
   projects: combineReducers({
     projectsById,
     projectsIds,
+  }),
+  members: combineReducers({
+    membersById,
+    membersIds,
   }),
   requests,
 })
