@@ -17,6 +17,7 @@ class Page extends Component {
   componentWillMount() {
     this.props.requestReadEvents();
     this.props.requestReadProjects();
+    this.props.requestReadMembers();
   }
 
   render() {
@@ -53,13 +54,16 @@ class Page extends Component {
 Page.propTypes = {
   requestReadEvents: PropTypes.func.isRequired,
   requestReadProjects: PropTypes.func.isRequired,
+  requestReadMembers: PropTypes.func.isRequired,
   readEventsRequest: PropTypes.object.isRequired,
   readProjectsRequest: PropTypes.object.isRequired,
+  readMembersRequest: PropTypes.object.isRequired,
 }
 const mapStateToProps = (state) => {
   return {
     readEventsRequest: selectors.getRequest(state, 'readEvents'),
     readProjectsRequest: selectors.getRequest(state, 'readProjects'),
+    readMembersRequest: selectors.getRequest(state, 'readMembers')
   }
 };
 
