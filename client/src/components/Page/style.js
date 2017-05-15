@@ -1,7 +1,13 @@
+// Page
 export const wrapper = {
   display: 'flex',
-  flexFlow: 'column nowrap',
-  padding: '10px',
-  // alignItems: 'center',
+  flexDirection: 'column',
+  alignItems: 'center',
   // border: '1px solid orange',
 };
+
+export const wrapContent = {
+  // display: 'flex',
+  // alignItems: 'center',
+  maxWidth: 1160,
+}
