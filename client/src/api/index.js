@@ -2,6 +2,7 @@ import { normalize, Schema, arrayOf } from 'normalizr';
 import * as ku from '../../../lib/ke-utils';
 const events = new Schema('events', { idAttribute: '_id' });
 const projects = new Schema('projects', { idAttribute: '_id' });
+const members = new Schema('members', { idAttribute: '_id' });
 
 export const rejectErrors = (res) => {
   const { status } = res;
@@ -28,17 +29,13 @@ export const fetchJson = (url, options = {}) => (
 export default {
   events: {
     readList() {
-      ku.logFunction('api.events.readList');
       return fetchJson('/events')
         .then((data) => {
-          ku.log('data.events', data, 'red');
           const normalized = normalize(data, arrayOf(events));
-          ku.log('normalized.events', normalized, 'red');
           const o = {
             events: normalized.entities.events || {},
             ids: normalized.result,
           };
-          ku.log('events.o', o, 'red');
           return o;
         });
     },
@@ -61,4 +58,23 @@ export default {
         });
     },
   },
+
+members: {
+  readList() {
+    ku.logFunction('api.members.readList()');
+    return fetchJson('/members')
+      .then((data) => {
+        ku.log('data.members', data, 'red');
+        const normalized = normalize(data, arrayOf(members));
+        ku.log('normalized.members', normalized, 'red');
+        const o = {
+          members: normalized.entities.members || {},
+          ids: normalized.result,
+        };
+        ku.log('members.o', o, 'red');
+        return o;
+      });
+  },
+},
+
 };
