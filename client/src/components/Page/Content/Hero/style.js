@@ -29,7 +29,7 @@ export const heroHeadings = {
 export const heroText = {
   maxWidth: 1000,
   // color: 'white',
-  color: '#ecefef',
+  // color: '#ecefef',
   fontWeight: 200,
   fontSize: 20,
 }
