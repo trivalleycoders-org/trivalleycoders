@@ -7,6 +7,7 @@ import * as actionCreators from '../../../../store/actions';
 import * as selectors from '../../../../store/selectors'
 import Member from './Member';
 import * as style from './style';
+import * as ku from '../../../../../../lib/ke-utils'
 
 class Members extends Component {
   componentWillMount() {
@@ -17,9 +18,10 @@ class Members extends Component {
     const { readMembersRequest } = this.props;
     switch (readMembersRequest.status) {
       case 'success':
+        ku.log('props.members.length', this.props.members.length, 'red');
         return (
           <div id='members' style={style.wrapper}>
-            {this.state.members.map((m) => (
+            {this.props.members.map((m) => (
               <Member
                 key={m._id}
                 picture={m.picture}

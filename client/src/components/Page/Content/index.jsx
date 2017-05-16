@@ -4,7 +4,7 @@ import Hero from './Hero';
 import TechLogos from './TechLogos';
 import ProjectsAndEvents from './ProjectsAndEvents';
 import Sponsors from './Sponsors';
-// import Members from './Members';
+import Members from './Members';
 import * as style from './style';
 
 const Content = () => (
@@ -12,7 +12,7 @@ const Content = () => (
     <Hero />
     <TechLogos />
     <ProjectsAndEvents />
-    {/*<Members />*/}
+    <Members />
     <Sponsors />
   </div>
 );

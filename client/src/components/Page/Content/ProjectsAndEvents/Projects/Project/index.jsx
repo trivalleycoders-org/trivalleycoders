@@ -1,4 +1,4 @@
-// Events
+// Project
 import React from 'react';
 import * as style from './style';
 
@@ -20,4 +20,4 @@ const Project = (props) => (
   </div>
 );
 
-export default Event;
+export default Project;
