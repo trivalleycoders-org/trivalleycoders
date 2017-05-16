@@ -43,38 +43,33 @@ export default {
 
  projects: {
     readList() {
-      ku.logFunction('api.projects.readList()');
+      // ku.logFunction('api.projects.readList()');
       return fetchJson('/projects')
         .then((data) => {
-          ku.log('data.projects', data, 'red');
+          // ku.log('data.projects', data, 'red');
           const normalized = normalize(data, arrayOf(projects));
-          ku.log('normalized.projects', normalized, 'red');
+          // ku.log('normalized.projects', normalized, 'red');
           const o = {
             projects: normalized.entities.projects || {},
             ids: normalized.result,
           };
-          ku.log('projects.o', o, 'red');
+          // ku.log('projects.o', o, 'red');
           return o;
         });
     },
   },
 
-members: {
-  readList() {
-    ku.logFunction('api.members.readList()');
-    return fetchJson('/members')
-      .then((data) => {
-        ku.log('data.members', data, 'red');
-        const normalized = normalize(data, arrayOf(members));
-        ku.log('normalized.members', normalized, 'red');
-        const o = {
-          members: normalized.entities.members || {},
-          ids: normalized.result,
-        };
-        ku.log('members.o', o, 'red');
-        return o;
-      });
+  members: {
+    readList() {
+      return fetchJson('/members')
+        .then((data) => {
+          const normalized = normalize(data, arrayOf(members));
+          const o = {
+            members: normalized.entities.members || {},
+            ids: normalized.result,
+          };
+          return o;
+        });
+    },
   },
-},
-
 };

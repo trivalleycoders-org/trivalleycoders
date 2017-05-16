@@ -10,7 +10,7 @@ import * as style from './style';
 
 class Members extends Component {
   componentWillMount() {
-    this.props.requestReadProjects();
+    this.props.requestReadMembers();
   }
 
   render() {
@@ -32,13 +32,13 @@ class Members extends Component {
         )
       case 'failure':
         return (
-          <div id='project' style={style.wrapper}>
+          <div id='members' style={style.wrapper}>
             <h2>Attempt to load data failed</h2>
           </div>
         );
       default:
         return (
-          <div id='project' style={style.wrapper}>
+          <div id='members' style={style.wrapper}>
             <h2>Loading data...</h2>
           </div>
         );

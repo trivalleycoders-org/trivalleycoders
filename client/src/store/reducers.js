@@ -4,11 +4,9 @@ import { merge } from 'ramda';
 import * as ku from '../../../lib/ke-utils';
 
 export const eventsById = ( state = {}, { type, payload }) => {
-  // ku.log('byId.type', type, 'green');
-
   switch (type) {
     case 'app/replaceEvents':
-      ku.log('events.byId.payload', payload, 'green');
+      ku.log('eventsById.payload', payload, 'green');
       return payload.events;
     default:
       return state;
@@ -16,11 +14,9 @@ export const eventsById = ( state = {}, { type, payload }) => {
 }
 
 export const eventsIds = (state = [], { type, payload }) => {
-  // ku.log('ids.type', type, 'green');
-
   switch (type) {
     case 'app/replaceEvents':
-      ku.log('events.ids.payload', payload, 'green');
+      ku.log('eventsIds.payload', payload, 'green');
       return payload.ids;
     default:
       return state;
@@ -28,10 +24,9 @@ export const eventsIds = (state = [], { type, payload }) => {
 };
 
 export const projectsById = ( state = {}, { type, payload }) => {
-  // ku.log('byId.type', type, 'green');
   switch (type) {
     case 'app/replaceProjects':
-      ku.log('projects.byId.payload', payload, 'green');
+      ku.log('projectsById.payload', payload, 'green');
       return payload.projects;
     default:
       return state;
@@ -39,11 +34,9 @@ export const projectsById = ( state = {}, { type, payload }) => {
 }
 
 export const projectsIds = (state = [], { type, payload }) => {
-  // ku.log('ids.type', type, 'green');
-
   switch (type) {
     case 'app/replaceProjects':
-      ku.log('projects.ids.payload', payload, 'green');
+      ku.log('projectsIds.payload', payload, 'green');
       return payload.ids;
     default:
       return state;
@@ -51,10 +44,9 @@ export const projectsIds = (state = [], { type, payload }) => {
 };
 
 export const membersById = ( state = {}, { type, payload }) => {
-  // ku.log('byId.type', type, 'green');
   switch (type) {
     case 'app/replaceMembers':
-      ku.log('members.byId.payload', payload, 'green');
+      ku.log('membersById.payload', payload, 'green');
       return payload.members;
     default:
       return state;
@@ -62,17 +54,14 @@ export const membersById = ( state = {}, { type, payload }) => {
 }
 
 export const membersIds = (state = [], { type, payload }) => {
-  // ku.log('ids.type', type, 'green');
-
   switch (type) {
     case 'app/replaceMembers':
-      ku.log('members.ids.payload', payload, 'green');
+      ku.log('membersIds', payload, 'green');
       return payload.ids;
     default:
       return state;
   }
 };
-
 
 export const requests = (state = {}, { type, payload, meta }) => {
   switch (type) {

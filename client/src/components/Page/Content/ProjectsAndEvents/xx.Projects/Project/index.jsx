@@ -1,7 +1,6 @@
-// Events
+// Project
 import React from 'react';
 import * as style from './style';
-
 
 const Project = (props) => (
   <div id='project' style={style.wrapper}>
@@ -14,10 +13,10 @@ const Project = (props) => (
     <div>
       {props.projectType}
     </div>
-    <div>
+    <div style={style.techList}>
       {props.technologies}
     </div>
   </div>
 );
 
-export default Event;
+export default Project;

@@ -1,14 +1,39 @@
 import api from '../api';
 
+export const replaceEvents = (events) => ({
+  type: 'app/replaceEvents',
+  payload: events,
+});
+
+export const replaceProjects = (projects) => ({
+  type: 'app/replaceProjects',
+  payload: projects,
+});
+
+export const replaceMembers = (members) => ({
+  type: 'app/replaceMembers',
+  payload: members,
+});
+
 export const markRequestPending = (key) => ({
   type: 'app/markRequestPending',
   meta: { key },
 });
 
+export const markRequestSuccess = (key) => {
+  console.log('key', key)
+  return ({
+    type: 'app/markRequestSuccess',
+    meta: { key },
+  });
+}
+
+/*
 export const markRequestSuccess = (key) => ({
   type: 'app/markRequestSuccess',
   meta: { key },
 });
+*/
 
 export const markRequestFailed = (reason, key) => ({
   type: 'app/markRequestFailed',
@@ -35,20 +60,10 @@ export const createRequestThunk = ({ request, key, start = [], success = [], fai
   };
 };
 
-export const replaceEvents = (events) => ({
-  type: 'app/replaceEvents',
-  payload: events,
-});
-
 export const requestReadEvents = createRequestThunk({
   request: api.events.readList,
   key: 'readEvents',
   success: [ replaceEvents ]
-});
-
-export const replaceProjects = (projects) => ({
-  type: 'app/replaceProjects',
-  payload: projects,
 });
 
 export const requestReadProjects = createRequestThunk({
@@ -57,15 +72,8 @@ export const requestReadProjects = createRequestThunk({
   success: [ replaceProjects ]
 });
 
-export const replaceMembers = (members) => ({
-  type: 'app/replaceMembers',
-  payload: members,
-});
-
 export const requestReadMembers = createRequestThunk({
   request: api.members.readList,
   key: 'readMembers',
   success: [ replaceMembers ]
 });
-
-

@@ -5,7 +5,7 @@ import * as style from './style';
 const Member = (props) => (
   <div class='member' style={style.wrapper}>
     <div>
-      <img style={style.picture} src={props.picture}/>
+      <img style={style.picture} src={props.picture} alt="member"/>
     </div>
     <div>
       {props.name}
