@@ -23,6 +23,26 @@ export const eventsIds = (state = [], { type, payload }) => {
   }
 };
 
+export const navButtonsById = ( state = {}, { type, payload }) => {
+  switch (type) {
+    case 'app/replaceNavButtons':
+      ku.log('navButtonsById.payload', payload, 'green');
+      return payload.navButtons;
+    default:
+      return state;
+  }
+}
+
+export const navButtonsIds = (state = [], { type, payload }) => {
+  switch (type) {
+    case 'app/replaceNavButtons':
+      ku.log('navButtonsIds.payload', payload, 'green');
+      return payload.ids;
+    default:
+      return state;
+  }
+};
+
 export const projectsById = ( state = {}, { type, payload }) => {
   switch (type) {
     case 'app/replaceProjects':
@@ -88,6 +108,10 @@ export default combineReducers({
   members: combineReducers({
     membersById,
     membersIds,
+  }),
+  navButtons: combineReducers({
+    navButtonsById,
+    navButtonsIds,
   }),
   requests,
 })
