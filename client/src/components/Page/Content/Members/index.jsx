@@ -38,7 +38,7 @@ class Members extends Component {
       case 'failure':
         return (
           <div id='members' style={style.wrapper}>
-            <h2>Attempt to load data failed</h2>
+            <h2>Attempt to load members failed</h2>
           </div>
         );
       default:

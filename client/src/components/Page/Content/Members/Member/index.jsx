@@ -3,7 +3,7 @@ import React from 'react';
 import * as style from './style';
 
 const Member = (props) => (
-  <div class='member' style={style.wrapper}>
+  <div className='member' style={style.wrapper}>
     <div>
       <img style={style.picture} src={props.picture} alt="member icon"/>
     </div>

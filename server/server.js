@@ -19,23 +19,9 @@ const staticFiles = express.static(path.join(__dirname, '../../client/build'))
 
 app.use(staticFiles)
 
-/*
-    This is for testing and not part of the application
-    Pending deletion
- */
-router.get('/cities', (req, res) => {
-  const cities = [
-    {name: 'New York City', population: 8175133},
-    {name: 'Los Angeles',   population: 3792621},
-    {name: 'Chicago',       population: 2695598}
-  ]
-  res.json(cities)
-})
-
 router.get('/events', (req, res) => {
   db.collection('events').find().toArray()
     .then(events => {
-      const metadata = { total_count: events.length}
       res.json(events)
     })
     .catch(error => {
@@ -49,7 +35,6 @@ router.get('/events', (req, res) => {
 router.get('/projects', (req, res) => {
   db.collection('projects').find().toArray()
     .then(projects => {
-      const metadata = { total_count: projects.length}
       res.json(projects)
     })
     .catch(error => {
@@ -61,8 +46,18 @@ router.get('/projects', (req, res) => {
 router.get('/members', (req, res) => {
   db.collection('members').find().toArray()
     .then(members => {
-      const metadata = { total_count: members.length}
       res.json(members)
+    })
+    .catch(error => {
+      console.log(error);
+      res.status(500).json({ message: 'Internal Server Error' })
+    })
+})
+
+router.get('/navbuttons', (req, res) => {
+  db.collection('navbuttons').find().toArray()
+    .then(navbuttons => {
+      res.json(navbuttons)
     })
     .catch(error => {
       console.log(error);
