@@ -1,3 +1,53 @@
+## Page
+element {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: "Source Sans Pro","SourceSansPro",sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+  color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## body
+body {
+	background-color: #201D23 !important;
+  font-family: "Source Sans Pro", "SourceSansPro", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #686868;
+  background-color: transparent;
+  margin: 0;
+}
+
+nav {
+  // is bootstrap container
+  width: 1160px;
+  margin-right: auto;
+	margin-left: auto;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+
+
+
 ## Popup
 ### <h1>
 - font-weight: 400;
