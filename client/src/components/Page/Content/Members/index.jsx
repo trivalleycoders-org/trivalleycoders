@@ -20,16 +20,21 @@ class Members extends Component {
       case 'success':
         ku.log('props.members.length', this.props.members.length, 'red');
         return (
-          <div id='members' style={style.wrapper}>
-            {this.props.members.map((m) => (
-              <Member
-                key={m._id}
-                picture={m.picture}
-                name={m.name}
-                role={m.role}
-                index={m.index}
-              />
-            ))}
+          <div>
+            <div>
+              Team & Contributors
+            </div>
+            <div id='members' style={style.wrapper}>
+              {this.props.members.map((m) => (
+                <Member
+                  key={m._id}
+                  picture={m.picture}
+                  name={m.name}
+                  role={m.role}
+                  index={m.index}
+                />
+              ))}
+            </div>
           </div>
         )
       case 'failure':
