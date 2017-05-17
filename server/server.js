@@ -70,6 +70,18 @@ router.get('/members', (req, res) => {
     })
 })
 
+router.get('/techlogos', (req, res) => {
+  db.collection('techlogos').find().toArray()
+    .then(techlogos => {
+      const metadata = { total_count: techlogos.length}
+      res.json(techlogos)
+    })
+    .catch(error => {
+      console.log(error);
+      res.status(500).json({ message: 'Internal Server Error' })
+    })
+})
+
 app.use(router)
 
 app.use('/*', staticFiles)

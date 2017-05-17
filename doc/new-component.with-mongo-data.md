@@ -13,7 +13,7 @@
 ## Add to api/api.js
 
 
-## Create api call in api/index.js
+## Create api call in client/api/index.js
 
 ## Create actions
 - requestReadNAME - calls api for data

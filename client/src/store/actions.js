@@ -15,6 +15,11 @@ export const replaceMembers = (members) => ({
   payload: members,
 });
 
+export const replaceTechlogos = (techlogos) => ({
+  type: 'app/replaceTechlogos',
+  payload: techlogos,
+});
+
 export const markRequestPending = (key) => ({
   type: 'app/markRequestPending',
   meta: { key },
@@ -76,4 +81,10 @@ export const requestReadMembers = createRequestThunk({
   request: api.members.readList,
   key: 'readMembers',
   success: [ replaceMembers ]
+});
+
+export const requestReadTechlogos = createRequestThunk({
+  request: api.techlogos.readList,
+  key: 'readTechlogos',
+  success: [ replaceTechlogos ]
 });
