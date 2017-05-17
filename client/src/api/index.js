@@ -3,6 +3,7 @@ import * as ku from '../../../lib/ke-utils';
 const events = new Schema('events', { idAttribute: '_id' });
 const projects = new Schema('projects', { idAttribute: '_id' });
 const members = new Schema('members', { idAttribute: '_id' });
+const techlogos = new Schema('techlogos', { idAttribute: '_id' });
 const navButtons = new Schema('navButtons', { idAttribute: '_id' } );
 
 export const rejectErrors = (res) => {
@@ -24,7 +25,7 @@ export const fetchJson = (url, options = {}) => (
     },
   })
   .then(rejectErrors)
-  .then((res) => res.json())
+  .then((res) => res.json())//I bet this .json does not need to be here
 );
 
 export default {
@@ -73,6 +74,14 @@ export default {
         });
     },
   },
+
+  techlogos: {
+    readList() {
+      return fetchJson('/techlogos')
+        .then((data) => {
+          const normalized = normalize(data, arrayOf(techlogos));
+          const o = {
+            techlogos: normalized.entities.techlogos || {},
 
   navButtons: {
     readList() {

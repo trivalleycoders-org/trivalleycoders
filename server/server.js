@@ -54,6 +54,17 @@ router.get('/members', (req, res) => {
     })
 })
 
+router.get('/techlogos', (req, res) => {
+  db.collection('techlogos').find().toArray()
+    .then(techlogos => {
+      const metadata = { total_count: techlogos.length}
+      res.json(techlogos)
+    })
+    .catch(error => {
+      console.log(error);
+      res.status(500).json({ message: 'Internal Server Error' })
+    })
+
 router.get('/navbuttons', (req, res) => {
   db.collection('navbuttons').find().toArray()
     .then(navbuttons => {

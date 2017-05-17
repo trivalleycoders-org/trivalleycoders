@@ -7,6 +7,9 @@ export const getProjects = (state) =>
 export const getMembers = (state) =>
   state.members.membersIds.map((id) => state.members.membersById[id]);
 
+export const getTechlogos = (state) =>
+state.techlogos.techlogosIds.map((id) => state.techlogos.techlogosById[id]);
+
 export const getNavButtons = (state) =>
   state.navButtons.navButtonsIds.map((id) => state.navButtons.navButtonsById[id]);
 

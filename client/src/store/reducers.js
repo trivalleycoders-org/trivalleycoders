@@ -83,6 +83,26 @@ export const membersIds = (state = [], { type, payload }) => {
   }
 };
 
+export const techlogosById = ( state = {}, { type, payload }) => {
+  switch (type) {
+    case 'app/replaceTechlogos':
+      ku.log('techlogosById.payload', payload, 'green');
+      return payload.techlogos;
+    default:
+      return state;
+  }
+}
+
+export const techlogosIds = (state = [], { type, payload }) => {
+  switch (type) {
+    case 'app/replaceTechlogos':
+      ku.log('techlogosIds', payload, 'green');
+      return payload.ids;
+    default:
+      return state;
+  }
+};
+
 export const requests = (state = {}, { type, payload, meta }) => {
   switch (type) {
     case 'app/markRequestPending':
@@ -109,6 +129,12 @@ export default combineReducers({
     membersById,
     membersIds,
   }),
+  
+  techlogos: combineReducers({
+    techlogosById,
+    techlogosIds,
+  }),
+  
   navButtons: combineReducers({
     navButtonsById,
     navButtonsIds,

@@ -34,7 +34,7 @@ db.members.insert([
   {
     picture: 'http://klequis.com/images/tvc/male-person.02.png',
     name: 'Chad',
-    role:  'Web Developer',
+    role:  'Full Stack Developer',
     index: 5,
   },
 ]);
