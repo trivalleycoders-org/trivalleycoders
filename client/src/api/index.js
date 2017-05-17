@@ -82,6 +82,12 @@ export default {
           const normalized = normalize(data, arrayOf(techlogos));
           const o = {
             techlogos: normalized.entities.techlogos || {},
+              ids: normalized.result,
+          };
+          return o;
+        });
+    },
+  },
 
   navButtons: {
     readList() {

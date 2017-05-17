@@ -64,6 +64,7 @@ router.get('/techlogos', (req, res) => {
       console.log(error);
       res.status(500).json({ message: 'Internal Server Error' })
     })
+})
 
 router.get('/navbuttons', (req, res) => {
   db.collection('navbuttons').find().toArray()
