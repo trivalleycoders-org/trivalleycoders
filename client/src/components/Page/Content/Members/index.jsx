@@ -20,11 +20,9 @@ class Members extends Component {
       case 'success':
         ku.log('props.members.length', this.props.members.length, 'red');
         return (
-          <div>
-            <div>
-              Team & Contributors
-            </div>
-            <div id='members' style={style.wrapper}>
+          <div id='members' style={style.wrapper}>
+            <h1>Team & Contributors</h1>
+            <div style={style.members}>
               {this.props.members.map((m) => (
                 <Member
                   key={m._id}
@@ -40,7 +38,7 @@ class Members extends Component {
       case 'failure':
         return (
           <div id='members' style={style.wrapper}>
-            <h2>Attempt to load data failed</h2>
+            <h2>Attempt to load members failed</h2>
           </div>
         );
       default:

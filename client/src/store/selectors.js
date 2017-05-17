@@ -10,6 +10,9 @@ export const getMembers = (state) =>
 export const getTechlogos = (state) =>
 state.techlogos.techlogosIds.map((id) => state.techlogos.techlogosById[id]);
 
+export const getNavButtons = (state) =>
+  state.navButtons.navButtonsIds.map((id) => state.navButtons.navButtonsById[id]);
+
 // redux selectors
 export const getRequest = (state, key) =>
   state.requests[key] || {};

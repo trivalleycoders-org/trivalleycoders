@@ -12,11 +12,11 @@ export const wrapper = {
 
 export const title = {
   textAlign: 'center',
-  color: 'white',
+  // color: 'white',
 }
 
 export const text = {
-  color: 'white',
+  // color: 'white',
 }
 
 export const logos = {
