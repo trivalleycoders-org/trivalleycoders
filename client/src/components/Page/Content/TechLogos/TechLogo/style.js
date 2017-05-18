@@ -11,11 +11,11 @@ export const wrapper = {
 
 export const logoSquare = {
   border: '1px solid green',
-  maxWidth: 70,
+  maxHeight: 70,
 }
 
 export const logoRectangle = {
   border: '1px solid orange',
-  maxWidth: 110,
+  maxHeight: 70,
   // maxHeight: 70,
 }

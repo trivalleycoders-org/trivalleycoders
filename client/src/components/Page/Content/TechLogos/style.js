@@ -10,8 +10,22 @@ export const title = {
   textAlign: 'center',
 }
 
-export const logos = {
+export const logo = {
+  margin: 10,
+}
+
+export const row = {
   display: 'flex',
   flexFlow: 'row wrap',
-  justifyContent: 'space-around',
+  justifyContent: 'flex-start',
+}
+
+export const rowTitle = {
+	display: 'flex',
+	alignItems: 'baseline',
+
+}
+
+export const rowStyle = {
+	background: 'green',
 }

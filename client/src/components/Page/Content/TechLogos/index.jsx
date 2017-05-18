@@ -1,6 +1,6 @@
 // TechLogos
 import React from 'react';
-import { Grid, Row } from 'react-bootstrap';
+import { Grid, Row, Col } from 'react-bootstrap';
 import { Component } from 'react';
 import { PropTypes } from 'react';
 import { connect } from 'react-redux';
@@ -10,36 +10,76 @@ import * as style from './style';
 import TechLogo from './TechLogo';
 import * as ku from '../../../../../../lib/ke-utils'
 
-class Techlogos extends Component {
+class TechLogos extends Component {
   componentWillMount() {
     this.props.requestReadTechlogos();
   }
 
   render() {
+    ku.log('techLogos', this.props.techLogos, 'green')
     const{ readTechlogosRequest } = this.props;
     switch (readTechlogosRequest.status) {
       case 'success':
-        ku.log('props.techlogos.length', this.props.techlogos.length, 'red');
         return (
           <Grid>
             <Row>
               <h1 style={style.title}>Learn With Us</h1>
               <p>Our core compentency is the MERN stack, Mongo, Express, React and Node. When you join the group we guide you from beginner learning HTML, CSS & JavaScript to a software developer building apps with the MERN stack.</p>
               <p>As a beginner you will get help learning the basics. When you are ready you will work on real projects for real clients gaining knowledge and valuable experience along the way.</p>
-              <h1>the basics</h1>
-              <h1>MERN Stack</h1>
-              <h1>Additional</h1>
-              <h1>Tools</h1>
-              <div id='logos' style={style.logos}>
-                {this.props.techlogos.map((t) => (
-                  <TechLogo
-                    key={t._id}
-                    name={t.name}
-                    url={t.url}
-                    shape={t.shape}
-                  />
-                ))}
-              </div>
+              <Grid>
+                <Row style={style.rowStyle}>
+                  <Col md={4} style={style.rowTitle}>
+                    <h1>the basics</h1>
+                  </Col>
+                  <Col md={8} style={style.row}>
+                    {this.props.techLogos.filter((t) => 
+                      t.category === 'basics'
+                      ).map((t) => (
+                      <TechLogo
+                        key={t._id}
+                        style={style.logo}
+                        name={t.name}
+                        url={t.url}
+                        shape={t.shape}
+                      />
+                    ))}
+                  </Col>
+                </Row>
+                <Row style={style.rowStyle}>
+                  <Col md={4} style={style.rowTitle}>
+                    <h1>MERN Stack</h1>
+                  </Col>
+                  <Col md={8} style={style.row}>
+                    {this.props.techLogos.filter((t) => 
+                      t.category === 'mern'
+                      ).map((t) => (
+                      <TechLogo
+                        key={t._id}
+                        name={t.name}
+                        url={t.url}
+                        shape={t.shape}
+                      />
+                    ))}
+                  </Col>
+                </Row>
+                <Row>
+                  <Col md={4}>
+                    <h1>Tools</h1>
+                  </Col>
+                  <Col md={8} style={style.row}>
+                    {this.props.techLogos.filter((t) => 
+                      t.category === 'tools'
+                      ).map((t) => (
+                      <TechLogo
+                        key={t._id}
+                        name={t.name}
+                        url={t.url}
+                        shape={t.shape}
+                      />
+                    ))}
+                  </Col>
+                </Row>
+              </Grid>
             </Row>
           </Grid>
         )
@@ -59,14 +99,14 @@ class Techlogos extends Component {
   }
 }
 
-Techlogos.propTypes = {
+TechLogos.propTypes = {
   requestReadTechlogos: PropTypes.func.isRequired,
   readTechlogosRequest: PropTypes.object.isRequired,
 }
 
 const mapStateToProps = (state) => ({
   readTechlogosRequest: selectors.getRequest(state, 'readTechlogos'),
-  techlogos: selectors.getTechlogos(state),
+  techLogos: selectors.getTechlogos(state),
 });
 
-export default connect(mapStateToProps, actionCreators)(Techlogos);
+export default connect(mapStateToProps, actionCreators)(TechLogos);
