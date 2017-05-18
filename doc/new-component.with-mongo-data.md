@@ -10,8 +10,6 @@
 ## Create api route
 - Create new route (see router.get('/projects', ...) as an example)
 
-## Add to api/api.js
-
 
 ## Create api call in client/api/index.js
 

@@ -77,6 +77,17 @@ router.get('/navbuttons', (req, res) => {
     })
 })
 
+router.get('/sponsors', (req, res) => {
+  db.collection('sponsors').find().toArray()
+    .then(sponsors => {
+      res.json(sponsors)
+    })
+    .catch(error => {
+      console.log(error);
+      res.status(500).json({ message: 'Internal Server Error' })
+    })
+})
+
 app.use(router)
 
 app.use('/*', staticFiles)

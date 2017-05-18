@@ -5,6 +5,7 @@ const projects = new Schema('projects', { idAttribute: '_id' });
 const members = new Schema('members', { idAttribute: '_id' });
 const techlogos = new Schema('techlogos', { idAttribute: '_id' });
 const navButtons = new Schema('navButtons', { idAttribute: '_id' } );
+const sponsors = new Schema('sponsors', { idAttribute: '_id' } );
 
 export const rejectErrors = (res) => {
   const { status } = res;
@@ -96,6 +97,20 @@ export default {
           const normalized = normalize(data, arrayOf(navButtons));
           const o = {
             navButtons: normalized.entities.navButtons || {},
+            ids: normalized.result,
+          };
+          return o;
+        });
+    },
+  },
+
+  sponsors: {
+    readList() {
+      return fetchJson('/sponsors')
+        .then((data) => {
+          const normalized = normalize(data, arrayOf(sponsors));
+          const o = {
+            sponsors: normalized.entities.sponsors || {},
             ids: normalized.result,
           };
           return o;

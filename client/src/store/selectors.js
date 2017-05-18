@@ -13,6 +13,9 @@ export const getTechlogos = (state) =>
 export const getNavButtons = (state) =>
   state.navButtons.navButtonsIds.map((id) => state.navButtons.navButtonsById[id]);
 
+export const getSponsors = (state) =>
+  state.sponsors.sponsorsIds.map((id) => state.sponsors.sponsorsById[id]);  
+
 // redux selectors
 export const getRequest = (state, key) =>
   state.requests[key] || {};

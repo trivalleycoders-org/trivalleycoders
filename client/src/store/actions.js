@@ -25,6 +25,11 @@ export const replaceTechlogos = (techlogos) => ({
   payload: navButtons,
 });
 
+  export const replaceSponsors = (sponsors) => ({
+  type: 'app/replaceSponsors',
+  payload: sponsors,
+});
+
 export const markRequestPending = (key) => ({
   type: 'app/markRequestPending',
   meta: { key },
@@ -98,5 +103,10 @@ export const requestReadNavButtons = createRequestThunk({
   request: api.navButtons.readList,
   key: 'readNavButtons',
   success: [ replaceNavButtons ]
+});
 
+export const requestReadSponsors = createRequestThunk({
+  request: api.sponsors.readList,
+  key: 'readSponsors',
+  success: [ replaceSponsors ]
 });
