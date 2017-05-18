@@ -38,6 +38,18 @@ class Members extends Component {
                 </div>
               </Row>
             </Grid>
+            <h1>Team & Contributors</h1>
+            <div style={style.members}>
+              {this.props.members.map((m) => (
+                <Member
+                  key={m._id}
+                  picture={m.picture}
+                  name={m.name}
+                  role={m.role}
+                  index={m.index}
+                />
+              ))}
+            </div>
           </div>
         )
       case 'failure':
