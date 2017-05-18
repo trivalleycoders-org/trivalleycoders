@@ -8,12 +8,12 @@ const TechLogo = (props) => {
   return (
     <div id='tech-logo' style={style.wrapper}>
       <div>
-        {props.name}
-      </div>
-      <div>
         <a href="#">
           <img style={logoStyle} src={props.url} alt=""></img>
         </a>
+      </div>
+      <div>
+        {props.name}
       </div>
     </div>
   )
