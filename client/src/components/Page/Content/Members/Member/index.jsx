@@ -7,7 +7,7 @@ const Member = (props) => (
     <div>
       <img style={style.picture} src={props.picture} alt="member icon"/>
     </div>
-    <div>
+    <div style={style.name}>
       {props.name}
     </div>
     <div>

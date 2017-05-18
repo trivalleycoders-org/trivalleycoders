@@ -3,10 +3,15 @@ export const wrapper = {
   flexDirection: 'column',
   textAlign: 'center',
   width: '181px',
-  // backgroundColor: 'lightgray',
+  backgroundColor: 'white',
+  margin: 5,
   // border: '1px solid black'
 };
 
 export const picture = {
   maxWidth: 100,
 };
+
+export const name = {
+  fontWeight: 'bold',
+}

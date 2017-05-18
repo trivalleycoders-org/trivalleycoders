@@ -22,15 +22,18 @@ class Projects extends Component {
       case 'success':
         return (
           <div id='projects' style={style.wrapper}>
-            {this.props.projects.map((p) => (
-              <Project
-                key={p._id}
-                projectName={p.projectName}
-                ownerName={p.ownerName}
-                projectType={p.projectType}
-                technologies={p.technologies}
-              />
-            ))}
+            <h1 style={style.title}>Projects</h1>
+            <div style={style.projects}>
+              {this.props.projects.map((p) => (
+                <Project
+                  key={p._id}
+                  projectName={p.projectName}
+                  ownerName={p.ownerName}
+                  projectType={p.projectType}
+                  technologies={p.technologies}
+                />
+              ))}
+            </div>
           </div>
         )
       case 'failure':

@@ -22,14 +22,17 @@ class Events extends Component {
       case 'success':
         return (
           <div id='events' style={style.wrapper}>
-            {this.props.events.map((e) => (
-              <Event
-                key={e._id}
-                date={e.date}
-                name={e.name}
-                location={e.location}
-              />
-            ))}
+            <h1 style={style.title}>Events</h1>
+            <div style={style.events}>
+              {this.props.events.map((e) => (
+                <Event
+                  key={e._id}
+                  date={e.date}
+                  name={e.name}
+                  location={e.location}
+                />
+              ))}
+            </div>
           </div>
         )
       case 'failure':
