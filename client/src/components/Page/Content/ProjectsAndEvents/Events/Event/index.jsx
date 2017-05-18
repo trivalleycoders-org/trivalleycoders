@@ -5,13 +5,14 @@ import * as style from './style';
 
 const Event = (props) => (
   <div id='event' style={style.wrapper}>
-    <div>
-      {props.date}
+    <div style={style.date}>
+      {props.date.substr(0,7)}
     </div>
-    <div>
-      {props.name}
+    <div style={style.name}>
+      <a href="#">{props.name}</a>
+
     </div>
-    <div>
+    <div style={style.location}>
       {props.location}
     </div>
   </div>

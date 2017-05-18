@@ -5,16 +5,16 @@ import * as style from './style';
 
 const Project = (props) => (
   <div id='project' style={style.wrapper}>
-    <div>
+    <div style={style.projectName}>
       {props.projectName}
     </div>
-    <div>
+    <div style={style.ownerName}>
       {props.ownerName}
     </div>
-    <div>
+    <div style={style.projectType}>
       {props.projectType}
     </div>
-    <div>
+    <div style={style.technologies}>
       {props.technologies}
     </div>
   </div>
