@@ -6,6 +6,7 @@ import {
   Col,
   Jumbotron,
 } from 'react-bootstrap';
+import ButtonDefault from '../../../../elements/ButtonDefault'
 import * as style from './style';
 
 const Hero = () => (
@@ -20,6 +21,11 @@ const Hero = () => (
 
         <p>Tri-Valley Coders meets every Thursday from 9:00am to 12:00pm with frequent Saturday morning meetings as well. Click below to join.</p>
       </div>
+      <ButtonDefault
+        caption='Join Us'
+        url='https://www.meetup.com/trivalleycoders/'
+      >
+      </ButtonDefault>
     </Jumbotron>
   </div>
 );
