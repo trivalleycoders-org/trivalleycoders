@@ -1,6 +1,6 @@
 // Header
 export const wrapper = {
-  padding: '10px 0 10px 0',
+  // padding: '10px 0 10px 0',
 };
 
 export const vAlign = {

@@ -10,12 +10,10 @@ export const wrapper = {
 };
 
 export const logoSquare = {
-  border: '1px solid green',
   maxHeight: 70,
 }
 
 export const logoRectangle = {
-  border: '1px solid orange',
   maxHeight: 70,
   // maxHeight: 70,
 }

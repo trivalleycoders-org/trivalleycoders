@@ -1,3 +1,9 @@
+## reference
+http://es-di.com/sdcontent/foundation/dark/
+http://getbootstrap.com/examples/justified-nav/
+http://getbootstrap.com/examples/justified-nav/
+
+
 ## Page
 element {
 	display: flex;

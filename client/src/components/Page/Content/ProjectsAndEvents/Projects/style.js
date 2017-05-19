@@ -1,8 +1,4 @@
 export const wrapper = {
-
-  backgroundColor: 'lightgray',
-
-  // border: '1px solid black'
 };
 
 export const projects = {
@@ -11,5 +7,5 @@ export const projects = {
 }
 
 export const title = {
-  textAlign: 'center',
+  // textAlign: 'center',
 }

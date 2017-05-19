@@ -7,6 +7,7 @@ import * as actionCreators from '../../../../store/actions';
 import * as selectors from '../../../../store/selectors'
 import * as style from './style';
 import { Button } from 'react-bootstrap';
+import ButtonMenu from '../../../../elements/ButtonMenu'
 
 class Navigation extends Component {
   componentWillMount() {
@@ -20,28 +21,27 @@ class Navigation extends Component {
         return (
           <div id='navButtons' style={style.wrapper}>
             {this.props.navButtons.map((b) => (
-              <Button
-                key={b._id} 
-                style={style.navBtn}
-                >
+              <ButtonMenu
+                key={b._id}
+                caption={b.caption}
+              >
                 {b.caption}
-              </Button>
+              </ButtonMenu>
             ))}
           </div>
         )
-
       case 'failure':
        return (
           <div id='navButtons' style={style.wrapper}>
             <h2>Attempt to load navButtons failed</h2>
           </div>
-        ); 
-      default: 
+        );
+      default:
         return (
           <div id='navButtons' style={style.wrapper}>
             <h2>Loading data...</h2>
           </div>
-        );  
+        );
     }
   }
 };
@@ -57,4 +57,3 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, actionCreators)(Navigation);
-

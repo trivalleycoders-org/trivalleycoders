@@ -2,9 +2,9 @@ export const wrapper = {
   display: 'flex',
   flexDirection: 'column',
   textAlign: 'center',
-  width: '181px',
-  backgroundColor: 'white',
-  margin: 5,
+  // width: '181px',
+  // backgroundColor: 'white',
+  // margin: 5,
   // border: '1px solid black'
 };
 

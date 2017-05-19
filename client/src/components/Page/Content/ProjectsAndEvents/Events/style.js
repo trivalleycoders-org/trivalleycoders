@@ -1,6 +1,4 @@
 export const wrapper = {
-  backgroundColor: 'lightgray',
-  // border: '1px solid black'
 };
 
 export const events = {
@@ -9,5 +7,5 @@ export const events = {
 }
 
 export const title = {
-  textAlign: 'center',
+  // textAlign: 'center',
 }
