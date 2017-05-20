@@ -17,13 +17,13 @@ export const grid = {
   display: 'flex',
   flexFlow: 'column nowrap',
   alignItems: 'flex-start',
-  backgroundColor: 'blue',
+  // backgroundColor: 'blue',
 }
 
 export const row = {
   display: 'flex',
   alignItems: 'center',
-  backgroundColor: 'green',
+  // backgroundColor: 'green',
   width: '100%',
 }
 
