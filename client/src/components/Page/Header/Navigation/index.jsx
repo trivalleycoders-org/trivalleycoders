@@ -6,8 +6,7 @@ import { connect } from 'react-redux';
 import * as actionCreators from '../../../../store/actions';
 import * as selectors from '../../../../store/selectors'
 import * as style from './style';
-import { Button } from 'react-bootstrap';
-import ButtonMenu from '../../../../elements/ButtonMenu'
+import Button from '../../../../elements/Button'
 
 class Navigation extends Component {
   componentWillMount() {
@@ -21,12 +20,14 @@ class Navigation extends Component {
         return (
           <div id='navButtons' style={style.wrapper}>
             {this.props.navButtons.map((b) => (
-              <ButtonMenu
+              <Button
                 key={b._id}
                 caption={b.caption}
+                type={'menu'}
+                colorStatus={'success'}
               >
                 {b.caption}
-              </ButtonMenu>
+              </Button>
             ))}
           </div>
         )

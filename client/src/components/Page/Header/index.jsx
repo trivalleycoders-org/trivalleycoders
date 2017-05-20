@@ -14,8 +14,8 @@ import Navigation from './Navigation';
 
 const Header = () => (
   <div id='header' style={style.wrapper}>
-    <Grid>
-      <Row style={style.vAlign}>
+    <Grid style={style.grid}>
+      <Row style={style.row}>
         <Col md={1}>
           <Logo />
         </Col>

@@ -1,8 +1,10 @@
 // Nav
 export const wrapper = {
   display: 'flex',
-  flexWrap: 'wrap',
+  flexDirection: 'row wrap',
   justifyContent: 'flex-end',
+  // alignItems: 'center',
+  // alignContent: 'center',
 };
 
 export const navBtn = {

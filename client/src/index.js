@@ -5,7 +5,7 @@ import configureStore from './store';
 import Page from './components/Page';
 // import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
-import './foundation.css';
+// import './foundation.css';
 
 ReactDOM.render(
   <Provider store={configureStore()}>

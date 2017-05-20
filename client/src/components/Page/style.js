@@ -1,4 +1,0 @@
-// Page
-export const wrapper = {
-  
-};
