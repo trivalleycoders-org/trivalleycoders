@@ -8,7 +8,7 @@ import * as actionCreators from '../../../../store/actions';
 import * as selectors from '../../../../store/selectors'
 import * as style from './style';
 import TechLogo from './TechLogo';
-import * as ku from '../../../../../lib/ke-utils'
+import * as ku from '../../../../lib/ke-utils'
 
 class TechLogos extends Component {
   componentWillMount() {

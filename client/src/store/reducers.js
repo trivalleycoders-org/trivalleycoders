@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 // import { dissoc } from 'ramda';
 import { merge } from 'ramda';
-import * as ku from '../../lib/ke-utils';
+import * as ku from '../lib/ke-utils';
 
 export const eventsById = ( state = {}, { type, payload }) => {
   switch (type) {
