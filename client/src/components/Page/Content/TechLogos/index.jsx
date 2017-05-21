@@ -8,7 +8,7 @@ import * as actionCreators from '../../../../store/actions';
 import * as selectors from '../../../../store/selectors'
 import * as style from './style';
 import TechLogo from './TechLogo';
-import * as ku from '../../../../../../lib/ke-utils'
+import * as ku from '../../../../../lib/ke-utils'
 
 class TechLogos extends Component {
   componentWillMount() {
@@ -32,7 +32,7 @@ class TechLogos extends Component {
                     <h1>the basics</h1>
                   </Col>
                   <Col md={8} style={style.row}>
-                    {this.props.techLogos.filter((t) => 
+                    {this.props.techLogos.filter((t) =>
                       t.category === 'basics'
                       ).map((t) => (
                       <TechLogo
@@ -50,7 +50,7 @@ class TechLogos extends Component {
                     <h1>MERN Stack</h1>
                   </Col>
                   <Col md={8} style={style.row}>
-                    {this.props.techLogos.filter((t) => 
+                    {this.props.techLogos.filter((t) =>
                       t.category === 'mern'
                       ).map((t) => (
                       <TechLogo
@@ -67,7 +67,7 @@ class TechLogos extends Component {
                     <h1>Tools</h1>
                   </Col>
                   <Col md={8} style={style.row}>
-                    {this.props.techLogos.filter((t) => 
+                    {this.props.techLogos.filter((t) =>
                       t.category === 'tools'
                       ).map((t) => (
                       <TechLogo

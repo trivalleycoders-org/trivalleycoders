@@ -1,5 +1,5 @@
 import { normalize, Schema, arrayOf } from 'normalizr';
-import * as ku from '../../../lib/ke-utils';
+import * as ku from '../../lib/ke-utils';
 const events = new Schema('events', { idAttribute: '_id' });
 const projects = new Schema('projects', { idAttribute: '_id' });
 const members = new Schema('members', { idAttribute: '_id' });
