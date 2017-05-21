@@ -6,11 +6,11 @@ module.exports = {
     secure: true
   },
   db: {
-    provider: "pg",
-    connection: process.env.DATABASE_URL
+    provider: "mongodb",
+    connection: process.env.MONGODB_URI
   },
   redis: {
     url: "redis://some-redis-server:6379"
-  }
+  },
   log: "debug"
 };
