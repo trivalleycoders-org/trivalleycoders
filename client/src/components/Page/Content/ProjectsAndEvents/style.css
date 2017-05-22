@@ -1,0 +1,5 @@
+.projects-events-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}

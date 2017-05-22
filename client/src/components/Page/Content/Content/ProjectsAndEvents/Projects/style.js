@@ -1,7 +1,7 @@
 export const wrapper = {
 };
 
-export const events = {
+export const projects = {
   display: 'flex',
   flexFlow: 'row wrap',
 }

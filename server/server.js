@@ -6,6 +6,8 @@ import express from 'express'
 import path from 'path'
 // import events from './seed-data/events'
 import { MongoClient } from 'mongodb';
+
+var config = require('./config');
 const app = express()
 
 app.use(bodyParser.json())
@@ -97,8 +99,11 @@ app.listen(app.get('port'), () => {
   console.log(`Listening on ${app.get('port')}`)
 })
 
+console.log("config " + config.db.connection);//dotenv is not working correctly.  Probably webpack
+console.log("db " + process.env.MONGODB_URI);
+console.log("env " + process.env.NODE_ENV);
 
-MongoClient.connect('mongodb://localhost/tvcwebsite').then(connection => {
+MongoClient.connect(config.db.connection).then(connection => {
   db = connection;
   app.listen(3002, () => {
     console.log('App started on port 3000');

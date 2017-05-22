@@ -1,0 +1,23 @@
+
+.section-hero {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 100%;
+  max-width: 1170px;
+  border: 1px solid white;
+}
+
+.grid-hero {
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: 83.3333333%;
+
+  align-items: center;
+
+}
+
+.hero-headings {
+
+  text-align: center;
+}

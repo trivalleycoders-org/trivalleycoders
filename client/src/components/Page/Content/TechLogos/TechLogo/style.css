@@ -1,0 +1,16 @@
+/* TechLogo */
+.tech-logo-wrapper {
+  /*
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 100%;
+  max-width: 1170px;
+  border: 1px solid white;
+    background-color: blue;
+    */
+}
+
+.logo-style {
+  max-width: 70px;
+}

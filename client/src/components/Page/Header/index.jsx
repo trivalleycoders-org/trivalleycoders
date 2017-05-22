@@ -6,29 +6,28 @@ import {
   Col,
 } from 'react-bootstrap';
 
-import * as style from './style';
+import * as style from './style.css';
+
 // import Brand from './Brand';
 import Logo from './Logo';
 import SiteTitle from './SiteTitle'
 import Navigation from './Navigation';
 
 const Header = () => (
-  <div id='header' style={style.wrapper}>
-    <Grid style={style.grid}>
-      <Row style={style.row}>
-        <Col md={1}>
-          <Logo />
-        </Col>
-        <Col md={5}>
-          <SiteTitle />
-        </Col>
-        <Col md={6}>
-          <Navigation />
-        </Col>
-      </Row>
-    </Grid>
+  <Grid id='header' className="grid-wrapper">
+    <Row>
+      <Col md={1}>
+        <Logo />
+      </Col>
+      <Col md={5}>
+        <SiteTitle />
+      </Col>
+      <Col md={6}>
+        <Navigation />
+      </Col>
+    </Row>
+  </Grid>
 
-  </div>
 );
 
 export default Header;
