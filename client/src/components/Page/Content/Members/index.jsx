@@ -7,7 +7,7 @@ import { Grid, Row } from 'react-bootstrap';
 import * as actionCreators from '../../../../store/actions';
 import * as selectors from '../../../../store/selectors'
 import Member from './Member';
-import * as style from './style';
+import * as style from './style.css';
 import * as ku from '../../../../lib/ke-utils';
 
 class Members extends Component {
@@ -19,36 +19,31 @@ class Members extends Component {
     const { readMembersRequest } = this.props;
     switch (readMembersRequest.status) {
       case 'success':
-        ku.log('props.members.length', this.props.members.length, 'red');
         return (
-          <div id='members' style={style.wrapper}>
-            <Grid>
-              <Row>
-                <h1 style={style.title}>Members</h1>
-                <div style={style.members}>
-                  {this.props.members.map((m) => (
-                    <Member
-                      key={m._id}
-                      picture={m.picture}
-                      name={m.name}
-                      role={m.role}
-                      index={m.index}
-                    />
-                  ))}
-                </div>
-              </Row>
-            </Grid>
+          <div id='members' className='section-outer'>
+            <h1 className='members-title'>Members</h1>
+            <div className='members'>
+              {this.props.members.map((m) => (
+                <Member
+                  key={m._id}
+                  picture={m.picture}
+                  name={m.name}
+                  role={m.role}
+                  index={m.index}
+                />
+              ))}
+            </div>
           </div>
         )
       case 'failure':
         return (
-          <div id='members' style={style.wrapper}>
+          <div id='members'>
             <h2>Attempt to load members failed</h2>
           </div>
         );
       default:
         return (
-          <div id='members' style={style.wrapper}>
+          <div id='members'>
             <h2>Loading data...</h2>
           </div>
         );
