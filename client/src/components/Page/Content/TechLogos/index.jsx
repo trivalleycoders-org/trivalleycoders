@@ -51,64 +51,59 @@ class TechLogos extends Component {
           />
         ))
         return (
-          <div >
-            <div >
-              <Grid >
-                <Row>
-                  <Col md={12}>
-                    <div className='tech-logos-heading'>
-                      <h1>Learn With Us</h1>
-                    </div>
-                    <div className='tech-logos-text'>
-                      <p>Our core compentency is the MERN stack, Mongo, Express, React and Node. When you join the group we guide you from beginner learning HTML, CSS & JavaScript to a software developer building apps with the MERN stack.</p>
-                      <p>As a beginner you will get help learning the basics. When you are ready you will work on real projects for real clients gaining knowledge and valuable experience along the way.</p>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Grid>
-                    <Row>
-                      <Col md={4}>
-                        <span>the basics</span>
-                      </Col>
-                      <Col md={8}>
-                        {basics}
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col md={4}>
-                        <span>MERN Stack</span>
-                      </Col>
-                      <Col md={8}>
-                        {mernStack}
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col md={4}>
-                        <span>Tools</span>
-                      </Col>
-                      <Col md={8}>
-                        {tools}
-                      </Col>
-                    </Row>
-                  </Grid>
-                </Row>
-              </Grid>
+          <div className='section-outer'>
+            <div className='section-inner'>
+              <div className='content-width'>
+                <div className='tech-logos-heading'>
+                  <h1>Learn With Us</h1>
+                </div>
+                <div className='tech-logos-text'>
+                  <p>Our core compentency is the MERN stack, Mongo, Express, React and Node. When you join the group we guide you from beginner learning HTML, CSS & JavaScript to a software developer building apps with the MERN stack.</p>
+                  <p>As a beginner you will get help learning the basics. When you are ready you will work on real projects for real clients gaining knowledge and valuable experience along the way.</p>
+                </div>
+
+                <Grid>
+                  <Row>
+                    <Col md={4}>
+                      <h2>The Basics</h2>
+                    </Col>
+                    <Col md={8} className='logo-layout'>
+                      {basics}
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col md={4}>
+                      <h2>MERN Stack</h2>
+                    </Col>
+                    <Col md={8} className='logo-layout'>
+                      {mernStack}
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col md={4}>
+                      <h2>Tools</h2>
+                    </Col>
+                    <Col md={8} className='logo-layout'>
+                      {tools}
+                    </Col>
+                  </Row>
+                </Grid>
+              </div>
             </div>
           </div>
-        )
-      case 'failure':
-        return (
-          <div id='techlogos'>
-            <h2>Attempt to load data failed</h2>
-          </div>
-        );
-      default:
-        return (
-          <div id='techlogos'>
-            <h2>Loading data...</h2>
-          </div>
-        );
+          )
+            case 'failure':
+            return (
+            <div id='techlogos'>
+              <h2>Attempt to load data failed</h2>
+            </div>
+            );
+            default:
+            return (
+            <div id='techlogos'>
+              <h2>Loading data...</h2>
+            </div>
+            );
     }
   }
 }
