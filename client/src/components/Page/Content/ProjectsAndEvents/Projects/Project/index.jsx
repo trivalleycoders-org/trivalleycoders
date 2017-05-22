@@ -1,11 +1,11 @@
 // Project
 import React from 'react';
-import * as style from './style';
+import * as style from './style.css';
 
 
 const Project = (props) => (
-  <div id='project' style={style.wrapper}>
-    <div style={style.projectName}>
+  <div id='project' className='project-wrapper'>
+    <div className='project-name'>
       {props.projectName}
     </div>
     <div style={style.ownerName}>

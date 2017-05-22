@@ -1,0 +1,13 @@
+.project-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 5px;
+  background-color: white;
+  text-align: center;
+  margin: 5px;
+  color: black;
+}
+
+.project-name {
+  font-weight: bold;
+}

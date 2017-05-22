@@ -15,9 +15,7 @@ class Projects extends Component {
   }
 
   render() {
-    ku.log('Projects.render()', '', 'red');
     const { readProjectsRequest } = this.props;
-    ku.log('readProjectsRequest.status', readProjectsRequest.status, 'red');
     switch (readProjectsRequest.status) {
       case 'success':
         return (
