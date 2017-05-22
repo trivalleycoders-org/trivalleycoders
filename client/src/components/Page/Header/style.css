@@ -1,35 +1,6 @@
 /* Header */
-/*
-export const wrapper = {
-  // padding: '10px 0 10px 0',
-  border: '1px solid white',
-  // margin: 'auto',
-  width: auto;
-};
-
-export const vAlign = {
-
-}
-*/
 
 .grid-wrapper {
   border: 1px solid white;
-  width: 100%;
-  max-width: 1170px;
   background-color: blue;
 }
-
-
-.row-1 {
-  display: 'flex';
-  flex-flow: row nowrap;
-
-}
-/*
-export const col = {
-  display: 'flex',
-  flexFlow: 'row nowrap',
-  alignItems: 'center',
-  height: '100%',
-}
-*/

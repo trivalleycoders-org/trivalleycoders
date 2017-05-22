@@ -16,89 +16,99 @@ class TechLogos extends Component {
   }
 
   render() {
-    ku.log('techLogos', this.props.techLogos, 'green')
     const{ readTechlogosRequest } = this.props;
     switch (readTechlogosRequest.status) {
       case 'success':
+        const basics = this.props.techLogos.filter((t) =>
+          t.category === 'basics'
+        ).map((t) => (
+          <TechLogo
+            key={t._id}
+            style={style.logo}
+            name={t.name}
+            url={t.url}
+            shape={t.shape}
+          />
+        ))
+        const mernStack = this.props.techLogos.filter((t) =>
+          t.category === 'mern'
+        ).map((t) => (
+          <TechLogo
+            key={t._id}
+            name={t.name}
+            url={t.url}
+            shape={t.shape}
+          />
+        ))
+        const tools = this.props.techLogos.filter((t) =>
+          t.category === 'tools'
+        ).map((t) => (
+          <TechLogo
+            key={t._id}
+            name={t.name}
+            url={t.url}
+            shape={t.shape}
+          />
+        ))
         return (
-          <Grid className='tech-logos-wrapper'>
-            <Row className='tech-logos-row-outer'>
-              <div className='tech-logos-heading'>
-                <h1>Learn With Us</h1>
-              </div>
-              <div className='tech-logos-text'>
-                <p>Our core compentency is the MERN stack, Mongo, Express, React and Node. When you join the group we guide you from beginner learning HTML, CSS & JavaScript to a software developer building apps with the MERN stack.</p>
-                <p>As a beginner you will get help learning the basics. When you are ready you will work on real projects for real clients gaining knowledge and valuable experience along the way.</p>
-              </div>
-              <Grid>
+          <div >
+            <div >
+              <Grid >
                 <Row>
-                  <Col md={4} className='tech-logos-heading'>
-                    <h1>the basics</h1>
-                  </Col>
-                  <Col md={8} style={style.rowLogo}>
-                    {this.props.techLogos.filter((t) =>
-                      t.category === 'basics'
-                    ).map((t) => (
-                      <TechLogo
-                        key={t._id}
-                        style={style.logo}
-                        name={t.name}
-                        url={t.url}
-                        shape={t.shape}
-                      />
-                    ))}
+                  <Col md={12}>
+                    <div className='tech-logos-heading'>
+                      <h1>Learn With Us</h1>
+                    </div>
+                    <div className='tech-logos-text'>
+                      <p>Our core compentency is the MERN stack, Mongo, Express, React and Node. When you join the group we guide you from beginner learning HTML, CSS & JavaScript to a software developer building apps with the MERN stack.</p>
+                      <p>As a beginner you will get help learning the basics. When you are ready you will work on real projects for real clients gaining knowledge and valuable experience along the way.</p>
+                    </div>
                   </Col>
                 </Row>
                 <Row>
-                  <Col md={4} style={style.rowTitle}>
-                    <h1>MERN Stack</h1>
-                  </Col>
-                  <Col md={8} style={style.rowLogo}>
-                    {this.props.techLogos.filter((t) =>
-                      t.category === 'mern'
-                    ).map((t) => (
-                      <TechLogo
-                        key={t._id}
-                        name={t.name}
-                        url={t.url}
-                        shape={t.shape}
-                      />
-                    ))}
-                  </Col>
-                </Row>
-                <Row>
-                  <Col md={4}>
-                    <h1>Tools</h1>
-                  </Col>
-                  <Col md={8} style={style.rowLogo}>
-                    {this.props.techLogos.filter((t) =>
-                      t.category === 'tools'
-                    ).map((t) => (
-                      <TechLogo
-                        key={t._id}
-                        name={t.name}
-                        url={t.url}
-                        shape={t.shape}
-                      />
-                    ))}
-                  </Col>
+                  <Grid>
+                    <Row>
+                      <Col md={4}>
+                        <span>the basics</span>
+                      </Col>
+                      <Col md={8}>
+                        {basics}
+                      </Col>
+                    </Row>
+                    <Row>
+                      <Col md={4}>
+                        <span>MERN Stack</span>
+                      </Col>
+                      <Col md={8}>
+                        {mernStack}
+                      </Col>
+                    </Row>
+                    <Row>
+                      <Col md={4}>
+                        <span>Tools</span>
+                      </Col>
+                      <Col md={8}>
+                        {tools}
+                      </Col>
+                    </Row>
+                  </Grid>
                 </Row>
               </Grid>
-            </Row>
-          </Grid>
+            </div>
+          </div>
         )
-    case 'failure':
-      return (
-        <div id='techlogos' style={style.wrapper}>
-          <h2>Attempt to load data failed</h2>
-        </div>
-      );
-    default:
-      return (
-        <div id='techlogos' style={style.wrapper}>
-          <h2>Loading data...</h2>
-        </div>
-      );
+      case 'failure':
+        return (
+          <div id='techlogos'>
+            <h2>Attempt to load data failed</h2>
+          </div>
+        );
+      default:
+        return (
+          <div id='techlogos'>
+            <h2>Loading data...</h2>
+          </div>
+        );
     }
   }
 }

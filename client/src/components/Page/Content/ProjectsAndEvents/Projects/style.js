@@ -1,6 +1,3 @@
-export const wrapper = {
-};
-
 export const projects = {
   display: 'flex',
   flexFlow: 'row wrap',

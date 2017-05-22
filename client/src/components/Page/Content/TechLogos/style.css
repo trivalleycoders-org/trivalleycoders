@@ -1,17 +1,4 @@
 /* TechLogos */
-.tech-logos-wrapper {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  border: 1px solid white;
-  width: 100%;
-  max-width: 1170px;
-  background-color: blue;
-}
-
-.tech-logos-row-outer {
-  max-width: 83.3333333%;
-}
 
 .tech-logos-heading {
   text-align: center;
@@ -19,4 +6,10 @@
 
 .tech-logos-text {
   text-align: justify;
+}
+
+.col-pad {
+  padding: 5px;
+  background-color: gray;
+  border: 1px solid yellow;
 }

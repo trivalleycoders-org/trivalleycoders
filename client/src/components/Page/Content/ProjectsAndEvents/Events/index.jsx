@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import * as actionCreators from '../../../../../store/actions';
 import * as selectors from '../../../../../store/selectors';
 import Event from './Event';
-import * as style from './style';
+import * as style from './style.css';
 import * as ku from '../../../../../lib/ke-utils'
 
 class Events extends Component {

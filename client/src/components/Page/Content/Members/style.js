@@ -1,7 +1,3 @@
-export const wrapper = {
-
-};
-
 export const title = {
   textAlign: 'center',
 }
