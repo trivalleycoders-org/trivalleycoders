@@ -12,6 +12,9 @@ const app = express()
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
+// if (process.env.NODE_ENV === 'production') {
+//   app.use(express.static('client/build'));
+// }
 
 let db;
 
@@ -98,10 +101,6 @@ app.set('port', (process.env.PORT || 3001))
 app.listen(app.get('port'), () => {
   console.log(`Listening on ${app.get('port')}`)
 })
-
-console.log("config " + config.db.connection);//dotenv is not working correctly.  Probably webpack
-console.log("db " + process.env.MONGODB_URI);
-console.log("env " + process.env.NODE_ENV);
 
 MongoClient.connect(config.db.connection).then(connection => {
   db = connection;
