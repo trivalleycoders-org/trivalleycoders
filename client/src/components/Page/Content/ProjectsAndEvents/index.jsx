@@ -6,7 +6,7 @@ import Projects from './Projects';
 import Events from './Events';
 
 const ProjectsAndEvents = () => (
-  <div id='page-and-events' className='projects-events-wrapper'>
+  <div id='page-and-events' className='section-outer'>
     <Grid>
       <Row>
         <Col md={6}>
