@@ -4,11 +4,10 @@ import { Grid, Row, Col } from 'react-bootstrap';
 import { Component } from 'react';
 import { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import * as actionCreators from '../../../../store/actions';
-import * as selectors from '../../../../store/selectors'
+import * as actionCreators from '../../../store/actions';
+import * as selectors from '../../../store/selectors'
 import * as style from './style.css';
 import TechLogo from './TechLogo';
-import * as ku from '../../../../lib/ke-utils'
 
 class TechLogos extends Component {
   componentWillMount() {
@@ -51,46 +50,38 @@ class TechLogos extends Component {
           />
         ))
         return (
-          <div className='section-outer'>
-            <div className='section-inner'>
-              <div className='content-width'>
-                <div className=''>
-                  <h2 className='title-green'>Learn With Us</h2>
-                </div>
-                <div className=''>
+                <Grid>
+
+                  <h2>Learn With Us</h2>
                   <p>Our core compentency is the MERN stack, Mongo, Express, React and Node. When you join the group we guide you from beginner learning HTML, CSS & JavaScript to a software developer building apps with the MERN stack.</p>
                   <p>As a beginner you will get help learning the basics. When you are ready you will work on real projects for real clients gaining knowledge and valuable experience along the way.</p>
-                </div>
-
-                <Grid>
-                  <Row>
-                    <Col md={4}>
-                      <h2>The Basics</h2>
-                    </Col>
-                    <Col md={8} className='logo-layout'>
-                      {basics}
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col md={4}>
-                      <h2>MERN Stack</h2>
-                    </Col>
-                    <Col md={8} className='logo-layout'>
-                      {mernStack}
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col md={4}>
-                      <h2>Tools</h2>
-                    </Col>
-                    <Col md={8} className='logo-layout'>
-                      {tools}
-                    </Col>
-                  </Row>
+                  <Grid>
+                    <Row className='row-tech-logos'>
+                      <Col md={4}>
+                        <h4>The Basics</h4>
+                      </Col>
+                      <Col md={8} className='col-tech-logos'>
+                        {basics}
+                      </Col>
+                    </Row>
+                    <Row className='row-tech-logos'>
+                      <Col md={4}>
+                        <h4>MERN Stack</h4>
+                      </Col>
+                      <Col md={8} className='col-tech-logos'>
+                        {mernStack}
+                      </Col>
+                    </Row>
+                    <Row className='row-tech-logos'>
+                      <Col md={4}>
+                        <h4>Tools</h4>
+                      </Col>
+                      <Col md={8} className='col-tech-logos'>
+                        {tools}
+                      </Col>
+                    </Row>
+                  </Grid>
                 </Grid>
-              </div>
-            </div>
-          </div>
           )
             case 'failure':
             return (

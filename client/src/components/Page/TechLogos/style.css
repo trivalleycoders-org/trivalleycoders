@@ -1,1 +1,10 @@
 /* TechLogos */
+
+
+.row-tech-logos {
+  padding: 10px 0;
+}
+.col-tech-logos {
+  display: flex;
+  flex-flow: row nowrap;
+}

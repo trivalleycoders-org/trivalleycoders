@@ -4,8 +4,8 @@ import { Component } from 'react';
 import { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { Table } from 'react-bootstrap'
-import * as actionCreators from '../../../../store/actions';
-import * as selectors from '../../../../store/selectors';
+import * as actionCreators from '../../../store/actions';
+import * as selectors from '../../../store/selectors';
 import Project from './Project';
 import * as style from './style.css';
 
@@ -21,19 +21,18 @@ class Projects extends Component {
         return (
           <div>
             <h1 >Projects</h1>
-            <Table>
-              <tbody>
-                {this.props.projects.map((p) => (
-                  <Project
-                    key={p._id}
-                    projectName={p.projectName}
-                    ownerName={p.ownerName}
-                    projectType={p.projectType}
-                    technologies={p.technologies}
-                  />
-                ))}
-              </tbody>
-            </Table>
+            <div className='projects-wrapper'>
+
+              {this.props.projects.map((p) => (
+                <Project
+                  key={p._id}
+                  projectName={p.projectName}
+                  ownerName={p.ownerName}
+                  projectType={p.projectType}
+                  technologies={p.technologies}
+                />
+              ))}
+            </div>
           </div>
         )
       case 'failure':

@@ -3,12 +3,11 @@ import React from 'react';
 import { Component } from 'react';
 import { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { Grid, Row } from 'react-bootstrap';
-import * as actionCreators from '../../../../store/actions';
-import * as selectors from '../../../../store/selectors'
+import { Grid, Row, Thumbnail } from 'react-bootstrap';
+import * as actionCreators from '../../../store/actions';
+import * as selectors from '../../../store/selectors'
 import Member from './Member';
 import * as style from './style.css';
-import * as ku from '../../../../lib/ke-utils';
 
 class Members extends Component {
   componentWillMount() {
@@ -20,17 +19,20 @@ class Members extends Component {
     switch (readMembersRequest.status) {
       case 'success':
         return (
-            <div className='members'>
-              {this.props.members.map((m) => (
-                <Member
-                  key={m._id}
-                  picture={m.picture}
-                  name={m.name}
-                  role={m.role}
-                  index={m.index}
-                />
-              ))}
-            </div>
+            <Grid>
+              <h1>Members</h1>
+              <div className='members'>
+                {this.props.members.map((m) => (
+                  <Member
+                    key={m._id}
+                    picture={m.picture}
+                    name={m.name}
+                    role={m.role}
+                    index={m.index}
+                  />
+                ))}
+              </div>
+            </Grid>
         )
       case 'failure':
         return (

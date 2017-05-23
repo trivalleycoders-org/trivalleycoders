@@ -3,8 +3,9 @@ import * as style from './style.css';
 import { Component } from 'react';
 import { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import * as actionCreators from '../../../../store/actions';
-import * as selectors from '../../../../store/selectors'
+import * as actionCreators from '../../../store/actions';
+import * as selectors from '../../../store/selectors';
+import { Grid } from 'react-bootstrap';
 import Sponsor from './Sponsor';
 
 class Sponsors extends Component {
@@ -17,8 +18,8 @@ class Sponsors extends Component {
     switch (readSponsorsRequest.status) {
       case 'success':
         return (
-          <div id='sponsors' className='section-outer'>
-            <h1 className='section-title'>Our Sponsors</h1>
+          <Grid>
+            <h1>Our Sponsors</h1>
             <div className='sponsors'>
               {this.props.sponsors.map((s) => (
                 <Sponsor
@@ -29,7 +30,7 @@ class Sponsors extends Component {
                 />
               ))}
             </div>
-          </div>
+          </Grid>
         )
       case 'failure':
         return (

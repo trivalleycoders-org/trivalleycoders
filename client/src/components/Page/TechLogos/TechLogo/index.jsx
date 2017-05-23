@@ -1,21 +1,19 @@
 // TechLogo
 
 import React from 'react';
+import { Grid, Row, Col, Thumbnail } from 'react-bootstrap';
 import * as style from './style.css';
 
 const TechLogo = (props) => {
   const logoStyle = props.shape === 'square' ? style.logoSquare : style.logoRectangle;
   return (
-    <div id='tech-logo' className='tech-logo-wrapper'>
-      <div>
-        <a href="#">
-          <img className='logo-style' src={props.url} alt=""></img>
-        </a>
-      </div>
-      <div>
-        {props.name}
-      </div>
-    </div>
+    <Grid>
+      <Row>
+        <Thumbnail href="http://klequis.com" src={props.url} alt="logo">
+          <h4>{props.name}</h4>
+        </Thumbnail>
+      </Row>
+    </Grid>
   )
 };
 

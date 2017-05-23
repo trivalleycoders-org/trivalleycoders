@@ -1,6 +1,6 @@
-/* Members */
+/* Projects */
 
-.members {
+.projects-wrapper {
   display: flex;
   flex-flow: row wrap;
 }
