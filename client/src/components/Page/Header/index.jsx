@@ -14,10 +14,9 @@ import SiteTitle from './SiteTitle'
 import Navigation from './Navigation';
 
 const Header = () => (
-  <div id='header' className="section-outer">
-    <div className="section-inner">
+
       <Grid>
-        <Row>
+        <Row className='header-row'>
           <Col md={1}>
             <Logo />
           </Col>
@@ -29,8 +28,7 @@ const Header = () => (
           </Col>
         </Row>
       </Grid>
-    </div>
-  </div>
+
 );
 
 export default Header;

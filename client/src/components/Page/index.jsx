@@ -12,7 +12,7 @@ import * as style from './style.css';
 
 const Page = () => {
   return (
-    <Grid className="grid-page">
+    <Grid>
       <Header />
       <Content />
       <Footer />

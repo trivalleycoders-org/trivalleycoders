@@ -1,16 +1,1 @@
 /* TechLogos */
-
-.logo-layout {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-
-}
-
-.tech-logos-heading {
-  text-align: center;
-}
-
-.tech-logos-text {
-  text-align: justify;
-}

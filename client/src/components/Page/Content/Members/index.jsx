@@ -20,8 +20,6 @@ class Members extends Component {
     switch (readMembersRequest.status) {
       case 'success':
         return (
-          <div id='members' className='section-outer'>
-            <h1 className='section-title'>Members</h1>
             <div className='members'>
               {this.props.members.map((m) => (
                 <Member
@@ -33,7 +31,6 @@ class Members extends Component {
                 />
               ))}
             </div>
-          </div>
         )
       case 'failure':
         return (

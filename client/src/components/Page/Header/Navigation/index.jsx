@@ -5,8 +5,8 @@ import { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import * as actionCreators from '../../../../store/actions';
 import * as selectors from '../../../../store/selectors'
-import * as style from './style';
-import Button from '../../../../elements/Button'
+import * as style from './style.css';
+import { Nav, NavItem } from 'react-bootstrap'
 
 class Navigation extends Component {
   componentWillMount() {
@@ -18,28 +18,25 @@ class Navigation extends Component {
     switch (readNavButtonsRequest.status){
       case 'success':
         return (
-          <div id='navButtons' style={style.wrapper}>
+          <Nav id='navButtons' bsStyle='pills' activeKey={1}>
             {this.props.navButtons.map((b) => (
-              <Button
+              <NavItem
                 key={b._id}
-                caption={b.caption}
-                type={'menu'}
-                colorStatus={'success'}
               >
                 {b.caption}
-              </Button>
+              </NavItem>
             ))}
-          </div>
+          </Nav>
         )
       case 'failure':
        return (
-          <div id='navButtons' style={style.wrapper}>
+          <div id='navButtons'>
             <h2>Attempt to load navButtons failed</h2>
           </div>
         );
       default:
         return (
-          <div id='navButtons' style={style.wrapper}>
+          <div id='navButtons'>
             <h2>Loading data...</h2>
           </div>
         );

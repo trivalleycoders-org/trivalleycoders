@@ -1,6 +1,5 @@
-/* Header */
+.header-row {
+  display: flex;
+  flex-flow: row nowrap;
 
-.grid-wrapper {
-  border: 1px solid white;
-  background-color: blue;
 }
