@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import * as actionCreators from '../../../../../store/actions';
 import * as selectors from '../../../../../store/selectors';
 import Project from './Project';
-import * as style from './style';
+import * as style from './style.css';
 import * as ku from '../../../../../lib/ke-utils'
 
 class Projects extends Component {
@@ -19,9 +19,9 @@ class Projects extends Component {
     switch (readProjectsRequest.status) {
       case 'success':
         return (
-          <div id='projects' style={style.wrapper}>
-            <h1 style={style.title}>Projects</h1>
-            <div style={style.projects}>
+          <div id='projects'>
+            <h1 className='section-title'>Projects</h1>
+            <div className='projects'>
               {this.props.projects.map((p) => (
                 <Project
                   key={p._id}
@@ -36,13 +36,13 @@ class Projects extends Component {
         )
       case 'failure':
         return (
-          <div id='projects' style={style.wrapper}>
+          <div id='projects'>
             <h2>Attempt to get projects failed</h2>
           </div>
         );
       default:
         return (
-          <div id='projects' style={style.wrapper}>
+          <div id='projects'>
             <h2>Loading data...</h2>
           </div>
         );

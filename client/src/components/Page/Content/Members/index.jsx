@@ -21,7 +21,7 @@ class Members extends Component {
       case 'success':
         return (
           <div id='members' className='section-outer'>
-            <h1 className='members-title'>Members</h1>
+            <h1 className='section-title'>Members</h1>
             <div className='members'>
               {this.props.members.map((m) => (
                 <Member

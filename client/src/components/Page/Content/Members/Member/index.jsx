@@ -1,13 +1,13 @@
 // Member
 import React from 'react';
-import * as style from './style';
+import * as style from './style.css';
 
 const Member = (props) => (
-  <div className='member' style={style.wrapper}>
+  <div className='member'>
     <div>
-      <img style={style.picture} src={props.picture} alt="member icon"/>
+      <img className='member-picture' src={props.picture} alt="member icon"/>
     </div>
-    <div style={style.name}>
+    <div className='member-name'>
       {props.name}
     </div>
     <div>

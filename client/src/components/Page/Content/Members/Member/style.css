@@ -1,0 +1,19 @@
+/* Member */
+.member {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  width: 130px;
+  height: 150px;
+  background-color: white;
+}
+
+.member-picture {
+  max-width: 100px;
+}
+
+.member-name {
+  font-weight: bold;
+}

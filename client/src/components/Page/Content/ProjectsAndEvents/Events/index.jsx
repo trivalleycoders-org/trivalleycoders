@@ -21,9 +21,9 @@ class Events extends Component {
     switch (readEventsRequest.status) {
       case 'success':
         return (
-          <div id='events' style={style.wrapper}>
-            <h1 style={style.title}>Events</h1>
-            <div style={style.events}>
+          <div id='events'>
+            <h1 className='section-title'>Events</h1>
+            <div>
               {this.props.events.map((e) => (
                 <Event
                   key={e._id}
@@ -37,13 +37,13 @@ class Events extends Component {
         )
       case 'failure':
         return (
-          <div id='events' style={style.wrapper}>
+          <div id='events'>
             <h2>Attempt to get events failed</h2>
           </div>
         );
       default:
         return (
-          <div id='events' style={style.wrapper}>
+          <div id='events'>
             <h2>Loading data...</h2>
           </div>
         );

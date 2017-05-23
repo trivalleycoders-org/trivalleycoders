@@ -1,0 +1,19 @@
+/* Sponsor */
+.sponsor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  width: 181px;
+  height: 150px;
+  background-color: white;
+}
+
+.sponsor-picture {
+  max-width: 100px;
+}
+
+.sponsor-name {
+  font-weight: bold;
+}

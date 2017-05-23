@@ -12,7 +12,7 @@ body {
 body {
   padding: 0;
   margin: 0;
-  font-family: "Source Sans Pro", "SourceSansPro", sans-serif;
+  font-family: "Source Sans Pro", "SourceSansPro", sans-serif;*/
   font-weight: normal;
   line-height: 1.5;
   color: #a5a5a5;
@@ -35,6 +35,7 @@ body {
   width: 100%;
   max-width: 1170px;
   border: 1px solid white;
+  /*background-color: transparent;*/
 }
 
 .content-width {
@@ -48,4 +49,27 @@ body {
   flex-flow: column nowrap;
   align-items: center;
   border: 1px solid white;
+}
+
+.section-title {
+  text-align: center;
+}
+
+.background-tvc-green {
+  /*background-color: #0f9b4a;*/
+  /*background-color: #0DD527;*/
+
+  background-color: #13d16b;
+  background-image: linear-gradient(to bottom, #34E97C, #1B984F);
+}
+
+.title-green {
+  font-family: 'titillium', san-serif;
+  line-height: 1;
+  color: white;
+  font-size: 42px;
+  font-weight: 400;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
 }

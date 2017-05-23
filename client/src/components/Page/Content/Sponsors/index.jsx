@@ -1,5 +1,5 @@
 import React from 'react';
-import * as style from './style';
+import * as style from './style.css';
 import { Component } from 'react';
 import { PropTypes } from 'react';
 import { connect } from 'react-redux';
@@ -17,27 +17,29 @@ class Sponsors extends Component {
     switch (readSponsorsRequest.status) {
       case 'success':
         return (
-          <div id='sponsors' style={style.wrapper}>
-		    <h1>Our Sponsors</h1>
-		    {this.props.sponsors.map((s) => (
-                    <Sponsor
-                      key={s._id}
-                      picture={s.picture}
-                      name={s.name}
-                      index={s.index}
-                    />
-                  ))}
-		  </div>
+          <div id='sponsors' className='section-outer'>
+            <h1 className='section-title'>Our Sponsors</h1>
+            <div className='sponsors'>
+              {this.props.sponsors.map((s) => (
+                <Sponsor
+                  key={s._id}
+                  picture={s.picture}
+                  name={s.name}
+                  index={s.index}
+                />
+              ))}
+            </div>
+          </div>
         )
       case 'failure':
         return (
-          <div id='sponsors' style={style.wrapper}>
+          <div id='sponsors'>
             <h2>Attempt to load sponsors failed</h2>
           </div>
         );
       default:
         return (
-          <div id='sponsors' style={style.wrapper}>
+          <div id='sponsors'>
             <h2>Loading data...</h2>
           </div>
         );

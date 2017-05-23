@@ -1,13 +1,13 @@
 // Sponsor
 import React from 'react';
-import * as style from './style';
+import * as style from './style.css';
 
 const Sponsor = (props) => (
-  <div className='sponsor' style={style.wrapper}>
+  <div className='sponsor'>
     <div>
-      <img style={style.picture} src={props.picture} alt="sponsor icon"/>
+      <img className='sponsor-picture' src={props.picture} alt="sponsor icon"/>
     </div>
-    <div style={style.name}>
+    <div className='sponsor-name'>
       {props.name}
     </div>
   </div>
