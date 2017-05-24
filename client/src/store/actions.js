@@ -15,10 +15,6 @@ export const replaceMembers = (members) => ({
   payload: members,
 });
 
-// export const getMember = (id) => ({
-//   type: 'app/getMember',
-//   payload: {id},
-// });
 
 export const insertMember = (member) => ({
   type: 'app/insertMember',

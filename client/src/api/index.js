@@ -64,7 +64,10 @@ export default {
 
   members: {
     readList() {
-      return fetchJson('/members', { method: 'GET' })
+      return fetchJson(
+        '/members',
+        { method: 'GET' }
+      )
         .then((data) => {
           const normalized = normalize(data, arrayOf(members));
           const o = {
@@ -76,7 +79,10 @@ export default {
     },
 
     create() {
-      return fetchJson('/members', { method: 'POST' });
+      return fetchJson(
+        '/members',
+        { method: 'POST' }
+      );
     },
 
     update(id, content) {
