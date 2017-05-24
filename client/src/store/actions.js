@@ -15,6 +15,30 @@ export const replaceMembers = (members) => ({
   payload: members,
 });
 
+// export const getMember = (id) => ({
+//   type: 'app/getMember',
+//   payload: {id},
+// });
+
+export const insertMember = (member) => ({
+  type: 'app/insertMember',
+  payload: member,
+});
+
+export const updateMember = (content, id, timestamp = Date.now()) => ({
+  type: 'app/updateMember',
+  payload: {
+    id,
+    content,
+    timestamp,
+  },
+});
+
+export const removeMember = (id) => ({
+  type: 'app/removeMember',
+  payload: { id },
+});
+
 export const replaceTechlogos = (techlogos) => ({
   type: 'app/replaceTechlogos',
   payload: techlogos,
@@ -91,6 +115,30 @@ export const requestReadMembers = createRequestThunk({
   request: api.members.readList,
   key: 'readMembers',
   success: [ replaceMembers ]
+});
+
+// export const requestReadMember = createRequestThunk({
+//   request: api.members.get,
+//   key: (id) => `getMember/${id}`,
+//   success: [ (member) => getMember(member.id) ],
+// });
+
+export const requestCreateMembers = createRequestThunk({
+  request: api.members.create,
+  key: 'createMember',
+  success: [ insertMember ],
+});
+
+export const requestUpdateMember = createRequestThunk({
+  request: api.members.update,
+  key: (id) => `updateMember/${id}`,
+  success: [ updateMember ],
+});
+
+export const requestDeleteMember = createRequestThunk({
+  request: api.members.delete,
+  key: (id) => `deleteMember/${id}`,
+  success: [ (member) => removeMember(member.id) ],
 });
 
 export const requestReadTechlogos = createRequestThunk({
