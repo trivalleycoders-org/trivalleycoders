@@ -19,7 +19,8 @@ class Members extends Component {
     switch (readMembersRequest.status) {
       case 'success':
         return (
-            <Grid>
+          <div className='green-border'>
+            <Grid className='members-grid blue-border'>
               <h1>Members</h1>
               <div className='members'>
                 {this.props.members.map((m) => (
@@ -33,6 +34,7 @@ class Members extends Component {
                 ))}
               </div>
             </Grid>
+          </div>
         )
       case 'failure':
         return (

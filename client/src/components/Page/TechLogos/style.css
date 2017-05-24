@@ -1,5 +1,9 @@
 /* TechLogos */
 
+.container.tech-logos-grid {
+  width: 1170px;
+  
+}
 
 .row-tech-logos {
   padding: 10px 0;

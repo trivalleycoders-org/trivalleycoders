@@ -1,5 +1,20 @@
+/* Header */
+
+.container.header-grid {
+  width: 1170px;
+}
+
 .header-row {
   display: flex;
   flex-flow: row nowrap;
+}
 
+.header-col {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: flex-end;
 }

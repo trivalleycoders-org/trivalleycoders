@@ -17,7 +17,7 @@ import * as style from './style.css';
 
 const Page = () => {
   return (
-    <Grid>
+    <Grid className='page-grid red-border'>
       <Header />
       <Hero />
       <TechLogos />

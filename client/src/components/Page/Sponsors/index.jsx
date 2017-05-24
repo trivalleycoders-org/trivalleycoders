@@ -18,19 +18,21 @@ class Sponsors extends Component {
     switch (readSponsorsRequest.status) {
       case 'success':
         return (
-          <Grid>
-            <h1>Our Sponsors</h1>
-            <div className='sponsors'>
-              {this.props.sponsors.map((s) => (
-                <Sponsor
-                  key={s._id}
-                  picture={s.picture}
-                  name={s.name}
-                  index={s.index}
-                />
-              ))}
-            </div>
-          </Grid>
+          <div className='green-border'>
+            <Grid className='sponsors-grid blue-border'>
+              <h1>Our Sponsors</h1>
+              <div className='sponsors'>
+                {this.props.sponsors.map((s) => (
+                  <Sponsor
+                    key={s._id}
+                    picture={s.picture}
+                    name={s.name}
+                    index={s.index}
+                  />
+                ))}
+              </div>
+            </Grid>
+          </div>
         )
       case 'failure':
         return (

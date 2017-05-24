@@ -50,38 +50,40 @@ class TechLogos extends Component {
           />
         ))
         return (
-                <Grid>
+          <div className='green-border'>
+            <Grid className='tech-logos-grid blue-border'>
 
-                  <h2>Learn With Us</h2>
-                  <p>Our core compentency is the MERN stack, Mongo, Express, React and Node. When you join the group we guide you from beginner learning HTML, CSS & JavaScript to a software developer building apps with the MERN stack.</p>
-                  <p>As a beginner you will get help learning the basics. When you are ready you will work on real projects for real clients gaining knowledge and valuable experience along the way.</p>
-                  <Grid>
-                    <Row className='row-tech-logos'>
-                      <Col md={4}>
-                        <h4>The Basics</h4>
-                      </Col>
-                      <Col md={8} className='col-tech-logos'>
-                        {basics}
-                      </Col>
-                    </Row>
-                    <Row className='row-tech-logos'>
-                      <Col md={4}>
-                        <h4>MERN Stack</h4>
-                      </Col>
-                      <Col md={8} className='col-tech-logos'>
-                        {mernStack}
-                      </Col>
-                    </Row>
-                    <Row className='row-tech-logos'>
-                      <Col md={4}>
-                        <h4>Tools</h4>
-                      </Col>
-                      <Col md={8} className='col-tech-logos'>
-                        {tools}
-                      </Col>
-                    </Row>
-                  </Grid>
-                </Grid>
+              <h2>Learn With Us</h2>
+              <p>Our core compentency is the MERN stack, Mongo, Express, React and Node. When you join the group we guide you from beginner learning HTML, CSS & JavaScript to a software developer building apps with the MERN stack.</p>
+              <p>As a beginner you will get help learning the basics. When you are ready you will work on real projects for real clients gaining knowledge and valuable experience along the way.</p>
+              <Grid>
+                <Row className='row-tech-logos'>
+                  <Col md={4}>
+                    <h4>The Basics</h4>
+                  </Col>
+                  <Col md={8} className='col-tech-logos'>
+                    {basics}
+                  </Col>
+                </Row>
+                <Row className='row-tech-logos'>
+                  <Col md={4}>
+                    <h4>MERN Stack</h4>
+                  </Col>
+                  <Col md={8} className='col-tech-logos'>
+                    {mernStack}
+                  </Col>
+                </Row>
+                <Row className='row-tech-logos'>
+                  <Col md={4}>
+                    <h4>Tools</h4>
+                  </Col>
+                  <Col md={8} className='col-tech-logos'>
+                    {tools}
+                  </Col>
+                </Row>
+              </Grid>
+            </Grid>
+          </div>
           )
             case 'failure':
             return (

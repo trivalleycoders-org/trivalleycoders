@@ -18,7 +18,7 @@ class Navigation extends Component {
     switch (readNavButtonsRequest.status){
       case 'success':
         return (
-          <Nav id='navButtons' bsStyle='pills' activeKey={1}>
+          <Nav id='navButtons' bsStyle='pills' activeKey={1} className='green-border'>
             {this.props.navButtons.map((b) => (
               <NavItem
                 key={b._id}
