@@ -1,0 +1,6 @@
+/* Sponsors */
+
+.sponsors {
+  display: flex;
+  flex-flow: row wrap;
+}
