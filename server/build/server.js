@@ -26,7 +26,11 @@ _sourceMapSupport2.default.install();
 // import events from './seed-data/events'
 
 
+<<<<<<< HEAD
 var config = require('./config');
+=======
+var config = require('../config');
+>>>>>>> aa29a1ab486724ea42c1af3ed96ad8b2add38013
 var app = (0, _express2.default)();
 
 app.use(_bodyParser2.default.json());
@@ -106,10 +110,13 @@ app.listen(app.get('port'), function () {
   console.log('Listening on ' + app.get('port'));
 });
 
+<<<<<<< HEAD
 console.log("config " + config.db.connection); //dotenv is not working correctly.  Probably webpack
 console.log("db " + process.env.MONGODB_URI);
 console.log("env " + process.env.NODE_ENV);
 
+=======
+>>>>>>> aa29a1ab486724ea42c1af3ed96ad8b2add38013
 _mongodb.MongoClient.connect(config.db.connection).then(function (connection) {
   db = connection;
   app.listen(3002, function () {
