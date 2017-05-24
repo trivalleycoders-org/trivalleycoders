@@ -102,13 +102,6 @@ app.listen(app.get('port'), () => {
   console.log(`Listening on ${app.get('port')}`)
 })
 
-<<<<<<< HEAD
-console.log("config " + config.db.connection);//dotenv is not working correctly.  Probably webpack
-console.log("db " + process.env.MONGODB_URI);
-console.log("env " + process.env.NODE_ENV);
-
-=======
->>>>>>> aa29a1ab486724ea42c1af3ed96ad8b2add38013
 MongoClient.connect(config.db.connection).then(connection => {
   db = connection;
   app.listen(3002, () => {
