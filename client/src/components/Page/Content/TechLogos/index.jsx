@@ -109,4 +109,5 @@ const mapStateToProps = (state) => ({
   techLogos: selectors.getTechlogos(state),
 });
 
+
 export default connect(mapStateToProps, actionCreators)(TechLogos);
