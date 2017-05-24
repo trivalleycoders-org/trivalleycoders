@@ -1,9 +1,12 @@
 import React from 'react';
-import * as style from './style';
+import { Grid } from 'react-bootstrap'
+import * as style from './style.css';
 
 const Footer = () => (
-  <div id='footer' style={style.wrapper}>
-    <p>Footer</p>
+  <div className='green-border'>
+    <Grid className='footer-grid blue-border'>
+      <p>Footer</p>
+    </Grid>
   </div>
 );
 

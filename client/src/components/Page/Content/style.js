@@ -1,5 +1,0 @@
-// Content
-
-export const wrapper = {
-  
-};

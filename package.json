@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "concurrently": "^3.4.0",
+    "dotenv-webpack": "^1.4.5",
     "lodash": "^4.17.4"
   },
   "scripts": {

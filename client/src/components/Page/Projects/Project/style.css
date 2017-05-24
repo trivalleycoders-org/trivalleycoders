@@ -1,0 +1,12 @@
+/* Project */
+
+.project-title {
+  font-weight: bold;
+}
+
+.project-panel {
+  width: 130px;
+  height: 130px;
+  text-align: center;
+  margin: 0 5px;
+}

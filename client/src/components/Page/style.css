@@ -1,26 +1,25 @@
 /* Page */
 
-body {
-  margin: 0;
+.container {
+  width: auto;
 }
 
-body {
-  font-size: 100%;
-  box-sizing: border-box;
+.page-grid {
+  padding-left: 0;
+  padding-right: 0;
+}
+.blue-border {
+  border: 1px solid blue;
 }
 
-body {
-  padding: 0;
-  margin: 0;
-  font-family: "Source Sans Pro", "SourceSansPro", sans-serif;
-  font-weight: normal;
-  line-height: 1.5;
-  color: #a5a5a5;
-  background: #121212;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.green-border {
+  border: 1px solid green;
 }
 
-body {
-  height: 100%;
+.red-border {
+  border: 1px solid red;
+}
+
+.orange-border {
+  border: 1px solid orange;
 }
