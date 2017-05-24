@@ -3,41 +3,45 @@ import React from 'react';
 import { Component } from 'react';
 import { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import * as actionCreators from '/../store/actions';
-import * as selectors from '/../store/selectors'
-import * as style from './style';
-import * as ku from '/../lib/ke-utils';
+import { Form, FormGroup, Col, FormControl, Button, Modal } from 'react-bootstrap';
+import * as actionCreators from '../../store/actions';
+import * as selectors from '../../store/selectors'
+import * as style from './style.css';
 
 class NewMemberForm extends Component {
   componentWillMount() {
-    this.props.requestReadMember(this.props.id);//this is probably wrong
+    // this.props.requestReadMember(this.props.id);//this is probably wrong
   }
 
+/*
   handleSubmit(event) {
     alert('A name was submitted: ' + this.state.value);
     event.preventDefault();
   }
-
+*/
   render() {
-    ku.log('props.member', this.props.member, 'green');
     return (
-      <div id='member' style={style.wrapper}>
-        <h1 style={style.title}>Member</h1>
-        <div style={style.member}>
-         <form onSubmit={this.handleSubmit}>
-          <label>
-            Name:
-            <input type="text" value={this.state.value} onChange={this.handleChange} />
-          </label>
-          <input type="submit" value="Submit" />
-      </form>
-        </div>
+      <div className="static-modal">
+        <Modal.Dialog>
+          <Modal.Header>
+            <Modal.Title>Modal title</Modal.Title>
+          </Modal.Header>
+
+          <Modal.Body>
+            One fine body...
+          </Modal.Body>
+
+          <Modal.Footer>
+            <Button>Close</Button>
+            <Button bsStyle="primary">Save changes</Button>
+          </Modal.Footer>
+        </Modal.Dialog>
       </div>
-    )
+    );
   }
 }
 
-Member.propTypes = {
+NewMemberForm.propTypes = {
   requestReadMember: PropTypes.func.isRequired,
   readMemberRequest: PropTypes.object.isRequired,
 }

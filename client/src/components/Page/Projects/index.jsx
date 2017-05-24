@@ -21,7 +21,7 @@ class Projects extends Component {
       case 'success':
         return (
           <div className='green-border'>
-            <Grid className='projects-grid blue-border'>
+            <Grid id='projects' className='projects-grid blue-border'>
               <h1 >Projects</h1>
               <div className='projects-wrapper'>
 

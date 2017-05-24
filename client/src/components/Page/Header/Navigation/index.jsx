@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import * as actionCreators from '../../../../store/actions';
 import * as selectors from '../../../../store/selectors'
 import * as style from './style.css';
-import { Nav, NavItem } from 'react-bootstrap'
+import { Nav, Navbar, NavItem } from 'react-bootstrap'
 
 class Navigation extends Component {
   componentWillMount() {
@@ -18,15 +18,25 @@ class Navigation extends Component {
     switch (readNavButtonsRequest.status){
       case 'success':
         return (
-          <Nav id='navButtons' bsStyle='pills' activeKey={1} className='green-border'>
-            {this.props.navButtons.map((b) => (
-              <NavItem
-                key={b._id}
-              >
-                {b.caption}
-              </NavItem>
-            ))}
-          </Nav>
+          <Navbar>
+            <Navbar.Header>
+              <Navbar.Brand>
+
+              </Navbar.Brand>
+              <Navbar.Toggle />
+            </Navbar.Header>
+
+            <Nav id='navButtons' bsStyle='pills' navbar justified activeKey={1} className='green-border'>
+              {this.props.navButtons.map((b) => (
+                <NavItem
+                  key={b._id}
+                  href="products"
+                >
+                  {b.caption}
+                </NavItem>
+              ))}
+            </Nav>
+          </Navbar>
         )
       case 'failure':
        return (
