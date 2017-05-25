@@ -17,15 +17,21 @@ import * as style from './style.css';
 
 const Page = () => {
   return (
-    <Grid className='page-grid red-border'>
-      <Header />
-      <Hero />
-      <TechLogos />
-      <Events />
-      <Projects />
-      <Members />
-      <Sponsors />
-      <Footer />
+    <Grid className='page-grid-outer red-border'>
+      <Row className='page-grid-outer-row red-border'>
+        <Grid>
+          <Row>
+            <Header />
+            <Hero />
+            <TechLogos />
+            <Events />
+            <Projects />
+            <Members />
+            <Sponsors />
+            <Footer />
+          </Row>
+        </Grid>
+      </Row>
     </Grid>
   )
 }

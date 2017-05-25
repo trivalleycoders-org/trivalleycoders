@@ -3,15 +3,21 @@ import React from 'react';
 import { Component } from 'react';
 import { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { Grid, Row, Thumbnail } from 'react-bootstrap';
+import { Grid, Row, Thumbnail, Button } from 'react-bootstrap';
 import * as actionCreators from '../../../store/actions';
 import * as selectors from '../../../store/selectors'
 import Member from './Member';
+import NewMemberForm from '../../../elements/NewMemberForm'
 import * as style from './style.css';
 
 class Members extends Component {
   componentWillMount() {
     this.props.requestReadMembers();
+    this.handleNewMemberClick = this.handleNewMemberClick.bind(this);
+  }
+
+  handleNewMemberClick() {
+    alert('clicked');
   }
 
   render() {
@@ -21,18 +27,21 @@ class Members extends Component {
         return (
           <div className='green-border'>
             <Grid className='members-grid blue-border'>
-              <h1>Members</h1>
-              <div className='members'>
-                {this.props.members.map((m) => (
-                  <Member
-                    key={m._id}
-                    picture={m.picture}
-                    name={m.name}
-                    role={m.role}
-                    index={m.index}
-                  />
-                ))}
-              </div>
+              <Row>
+                <Button onClick={this.handleNewMemberClick}>Add Member</Button>
+                <h1>Members</h1>
+                <div className='members'>
+                  {this.props.members.map((m) => (
+                    <Member
+                      key={m._id}
+                      picture={m.picture}
+                      name={m.name}
+                      role={m.role}
+                      index={m.index}
+                    />
+                  ))}
+                </div>
+              </Row>
             </Grid>
           </div>
         )
