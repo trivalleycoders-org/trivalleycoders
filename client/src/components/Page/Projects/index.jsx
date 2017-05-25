@@ -7,7 +7,7 @@ import { Table } from 'react-bootstrap'
 import * as actionCreators from '../../../store/actions';
 import * as selectors from '../../../store/selectors';
 import Project from './Project';
-import { Grid } from 'react-bootstrap';
+import { Grid, Row } from 'react-bootstrap';
 import * as style from './style.css';
 
 class Projects extends Component {
@@ -22,19 +22,21 @@ class Projects extends Component {
         return (
           <div className='green-border'>
             <Grid id='projects' className='projects-grid blue-border'>
-              <h1 >Projects</h1>
-              <div className='projects-wrapper'>
+              <Row>
+                <h1 >Projects</h1>
+                <div className='projects-wrapper'>
 
-                {this.props.projects.map((p) => (
-                  <Project
-                    key={p._id}
-                    projectName={p.projectName}
-                    ownerName={p.ownerName}
-                    projectType={p.projectType}
-                    technologies={p.technologies}
-                  />
-                ))}
-              </div>
+                  {this.props.projects.map((p) => (
+                    <Project
+                      key={p._id}
+                      projectName={p.projectName}
+                      ownerName={p.ownerName}
+                      projectType={p.projectType}
+                      technologies={p.technologies}
+                    />
+                  ))}
+                </div>
+              </Row>
             </Grid>
           </div>
         )

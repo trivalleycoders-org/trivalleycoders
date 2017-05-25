@@ -27,19 +27,21 @@ class Members extends Component {
         return (
           <div className='green-border'>
             <Grid className='members-grid blue-border'>
-              <Button onClick={this.handleNewMemberClick}>Add Member</Button>
-              <h1>Members</h1>
-              <div className='members'>
-                {this.props.members.map((m) => (
-                  <Member
-                    key={m._id}
-                    picture={m.picture}
-                    name={m.name}
-                    role={m.role}
-                    index={m.index}
-                  />
-                ))}
-              </div>
+              <Row>
+                <Button onClick={this.handleNewMemberClick}>Add Member</Button>
+                <h1>Members</h1>
+                <div className='members'>
+                  {this.props.members.map((m) => (
+                    <Member
+                      key={m._id}
+                      picture={m.picture}
+                      name={m.name}
+                      role={m.role}
+                      index={m.index}
+                    />
+                  ))}
+                </div>
+              </Row>
             </Grid>
           </div>
         )

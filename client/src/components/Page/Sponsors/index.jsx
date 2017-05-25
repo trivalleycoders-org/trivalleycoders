@@ -5,7 +5,7 @@ import { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import * as actionCreators from '../../../store/actions';
 import * as selectors from '../../../store/selectors';
-import { Grid } from 'react-bootstrap';
+import { Grid, Row } from 'react-bootstrap';
 import Sponsor from './Sponsor';
 
 class Sponsors extends Component {
@@ -20,17 +20,19 @@ class Sponsors extends Component {
         return (
           <div className='green-border'>
             <Grid className='sponsors-grid blue-border'>
-              <h1>Our Sponsors</h1>
-              <div className='sponsors'>
-                {this.props.sponsors.map((s) => (
-                  <Sponsor
-                    key={s._id}
-                    picture={s.picture}
-                    name={s.name}
-                    index={s.index}
-                  />
-                ))}
-              </div>
+              <Row>
+                <h1>Our Sponsors</h1>
+                <div className='sponsors'>
+                  {this.props.sponsors.map((s) => (
+                    <Sponsor
+                      key={s._id}
+                      picture={s.picture}
+                      name={s.name}
+                      index={s.index}
+                    />
+                  ))}
+                </div>
+              </Row>
             </Grid>
           </div>
         )

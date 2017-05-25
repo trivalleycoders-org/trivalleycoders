@@ -1,22 +1,7 @@
 /* Header */
 
-.container .header-grid {
-  width: 1170px;
-}
-
-.header-row {
-  /*display: flex;*/
-  /*flex-flow: row nowrap;*/
-}
-
-.header-col {
-  /*display: flex;*/
-  /*align-items: center;*/
-}
-
-.header-nav {
-  /*justify-content: flex-end;*/
-  /*display: flex;*/
+#nav-grid {
+  /*width: 1170px;*/
 }
 
 .navbar-inverse {
@@ -24,9 +9,28 @@
  background-color: transparent;
  background-repeat: no-repeat;
  border-radius: 0;
- border: none;
+ border: 1px solid blue;
 }
 
+
+/*.container .header-grid {
+  width: 1170px;
+}
+.header-row {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.header-col {
+  display: flex;
+  align-items: center;
+}
+.header-nav {
+  justify-content: flex-end;
+  display: flex;
+}
+.navbar {
+  width: 1170;
+}
 #nav-bar-grid {
   background-color: gray;
   padding: 0;
@@ -34,26 +38,20 @@
   flex-flow: column nowrap;
   align-content: stretch;
 }
-
 #nav-bar-brand {
   background-color: orange;
   display: none;
 }
-
 #nav-bar {
   background-color: orange;
   margin: 0;
 }
-
-/* just debug below this line */
 #nav-bar-grid-row {
   background-color: green;
 }
-
 #nav-bar-header {
   background-color: yellow;
 }
-
 #nav-bar-grid-col-1 {
   background-color: lightblue;
 }
@@ -69,37 +67,5 @@
 
 #nav-bar-nav {
   background-color: lightgray;
-}
-
-/*
-.navbar {
- margin: 0;
-}
-
-#nav-bar .container-fluid {
-  padding: 0;
-
-}
-
-#nav-bar-grid {
-  padding: 0;
-}
-#nav-bar-grid-row {
-  width: auto;
-}
-*/
-
-
-/*
-.nav-tmp {
-  background-color: blue;
-  color: blue;
-  width: 1170px;
-}
-*/
-/*
-.header-colors {
-  background-color: transparent;
-  color: black;
 }
 */

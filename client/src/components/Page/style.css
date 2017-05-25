@@ -5,10 +5,16 @@
 
 }
 
-.page-grid {
+.page-grid-outer {
   padding-left: 0;
   padding-right: 0;
 }
+
+.page-grid-outer-row {
+  /*width: 1170px;*/
+  margin: auto;
+}
+
 .blue-border {
   border: 1px solid blue;
 }
