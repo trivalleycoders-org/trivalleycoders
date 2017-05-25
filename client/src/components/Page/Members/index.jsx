@@ -28,7 +28,7 @@ class Members extends Component {
           <div className='green-border'>
             <Grid className='members-grid blue-border'>
               <Row>
-                <Button onClick={this.handleNewMemberClick}>Add Member</Button>
+                <NewMemberForm />
                 <h1>Members</h1>
                 <div className='members'>
                   {this.props.members.map((m) => (

@@ -1,54 +1,81 @@
-// Members
 import React from 'react';
 import { Component } from 'react';
 import { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { Form, FormGroup, Col, FormControl, Button, Modal } from 'react-bootstrap';
-import * as actionCreators from '../../store/actions';
-import * as selectors from '../../store/selectors'
+import { Grid, Row, Thumbnail, Button, Modal, Popover, Tooltip,OverlayTrigger  } from 'react-bootstrap';
 import * as style from './style.css';
 
-class NewMemberForm extends Component {
-  componentWillMount() {
-    // this.props.requestReadMember(this.props.id);//this is probably wrong
-  }
+const NewMemberForm = React.createClass({
+  getInitialState() {
+    return { showModal: false };
+  },
 
-/*
-  handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
-    event.preventDefault();
-  }
-*/
+  close() {
+    this.setState({ showModal: false });
+  },
+
+  open() {
+    this.setState({ showModal: true });
+  },
+
   render() {
+    const popover = (
+      <Popover id="modal-popover" title="popover">
+        very popover. such engagement
+      </Popover>
+    );
+    const tooltip = (
+      <Tooltip id="modal-tooltip">
+        wow.
+      </Tooltip>
+    );
+
     return (
-      <div className="static-modal">
-        <Modal.Dialog>
-          <Modal.Header>
-            <Modal.Title>Modal title</Modal.Title>
+      <div>
+        <p>Click to get the full Modal experience!</p>
+
+        <Button
+          bsStyle="primary"
+          bsSize="large"
+          onClick={this.open}
+        >
+          Launch demo modal
+        </Button>
+
+        <Modal show={this.state.showModal} onHide={this.close}>
+          <Modal.Header closeButton>
+            <Modal.Title>Modal heading</Modal.Title>
           </Modal.Header>
-
           <Modal.Body>
-            One fine body...
-          </Modal.Body>
+            <h4>Text in a modal</h4>
+            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
 
+            <h4>Popover in a modal</h4>
+            <p>there is a <OverlayTrigger overlay={popover}><a href="#">popover</a></OverlayTrigger> here</p>
+
+            <h4>Tooltips in a modal</h4>
+            <p>there is a <OverlayTrigger overlay={tooltip}><a href="#">tooltip</a></OverlayTrigger> here</p>
+
+            <hr />
+
+            <h4>Overflowing text to show scroll behavior</h4>
+            <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+            <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+            <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+            <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+            <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+            <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+          </Modal.Body>
           <Modal.Footer>
-            <Button>Close</Button>
-            <Button bsStyle="primary">Save changes</Button>
+            <Button onClick={this.close}>Close</Button>
           </Modal.Footer>
-        </Modal.Dialog>
+        </Modal>
       </div>
     );
   }
-}
-
-NewMemberForm.propTypes = {
-  requestReadMember: PropTypes.func.isRequired,
-  readMemberRequest: PropTypes.object.isRequired,
-}
-
-const mapStateToProps = (state) => ({
-  readMemberRequest: selectors.getRequest(state, 'readMember'),
-  member: selectors.getMember(state),
 });
 
-export default connect(mapStateToProps, actionCreators)(NewMemberForm);
+export default NewMemberForm;
