@@ -17,9 +17,9 @@ import * as style from './style.css';
 
 const Page = () => {
   return (
-    <Grid className='page-grid-outer red-border'>
+    <Grid className='page-grid-outer red-border' fluid>
       <Row className='page-grid-outer-row red-border'>
-        <Grid>
+        <Grid fluid>
           <Row>
             <Header />
             <Hero />

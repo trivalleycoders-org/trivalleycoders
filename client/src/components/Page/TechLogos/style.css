@@ -1,7 +1,12 @@
 /* TechLogos */
 
-.container.tech-logos-grid {
+.container .tech-logos-grid {
   width: 1170px;
+}
+
+.tech-logos-row {
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .row-tech-logos {

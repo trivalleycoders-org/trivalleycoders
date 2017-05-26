@@ -2,7 +2,6 @@
 
 .container {
   width: auto;
-
 }
 
 .page-grid-outer {
@@ -13,6 +12,10 @@
 .page-grid-outer-row {
   /*width: 1170px;*/
   margin: auto;
+}
+
+.green-text {
+  color: #34E97C;
 }
 
 .blue-border {

@@ -11,17 +11,18 @@ import Navigation from './Navigation';
 
 const Header = () => (
   <div id='nav-bar-outer' className='green-border'>
-    <Grid id='nav-grid' class='nav-grid'>
+    <Grid id='nav-grid' className='navbar-grid'>
       <Row id='nav-row'>
         <Navbar id='navbar' inverse collapseOnSelect>
-          <Navbar.Header id='navbar-header'>
-            <Navbar.Brand id='navbar-brand'>
-              <a href="#">React-Bootstrap</a>
+          <Navbar.Header id='navbar-header' class='navbar-header'>
+            <Logo />
+            <Navbar.Brand id='navbar-brand' className='navbar-brand'>
+              <a id='brand-anchor' className='brand-anchor' href="#">Tri-Valley Coders</a>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
           <Navbar.Collapse id='navbar-collapse'>
-            <Nav id='nav'>
+            <Nav id='nav-pullRight' pullRight>
               <NavItem eventKey={1} href="#">Link</NavItem>
               <NavItem eventKey={2} href="#">Link</NavItem>
               <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
@@ -31,8 +32,6 @@ const Header = () => (
                 <MenuItem divider />
                 <MenuItem eventKey={3.3}>Separated link</MenuItem>
               </NavDropdown>
-            </Nav>
-            <Nav id='nav-pullRight' pullRight>
               <NavItem eventKey={1} href="#">Link Right</NavItem>
               <NavItem eventKey={2} href="#">Link Right</NavItem>
             </Nav>

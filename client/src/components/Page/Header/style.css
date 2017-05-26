@@ -1,7 +1,21 @@
 /* Header */
 
-#nav-grid {
-  /*width: 1170px;*/
+.container .navbar-grid {
+  width: 1170px;
+}
+
+.navbar-header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: 400px;
+  /*background-color: lightgray;*/
+}
+
+#brand-anchor {
+  margin-left: 10px;
+  color: #34E97C;
+  font-size: 34px;
 }
 
 .navbar-inverse {
@@ -10,62 +24,12 @@
  background-repeat: no-repeat;
  border-radius: 0;
  border: 1px solid blue;
+ margin-bottom: 0;
 }
 
-
-/*.container .header-grid {
-  width: 1170px;
-}
-.header-row {
+#navbar-collapse {
   display: flex;
-  flex-flow: row nowrap;
-}
-.header-col {
-  display: flex;
+  flex-flow: row;
   align-items: center;
-}
-.header-nav {
-  justify-content: flex-end;
-  display: flex;
-}
-.navbar {
-  width: 1170;
-}
-#nav-bar-grid {
-  background-color: gray;
-  padding: 0;
-  display: flex;
-  flex-flow: column nowrap;
-  align-content: stretch;
-}
-#nav-bar-brand {
-  background-color: orange;
-  display: none;
-}
-#nav-bar {
-  background-color: orange;
-  margin: 0;
-}
-#nav-bar-grid-row {
-  background-color: green;
-}
-#nav-bar-header {
-  background-color: yellow;
-}
-#nav-bar-grid-col-1 {
-  background-color: lightblue;
-}
-#nav-bar-grid-col-2 {
-  background-color: lightblue;
-}
-#nav-bar-grid-col-3 {
-  background-color: lightblue;
-}
-#nav-bar-collapse {
-  background-color: gray;
-}
-
-#nav-bar-nav {
   background-color: lightgray;
 }
-*/

@@ -52,7 +52,7 @@ class TechLogos extends Component {
         return (
           <div className='green-border'>
             <Grid className='tech-logos-grid blue-border'>
-              <Row>
+              <Row id='tech-logos-row' className='tech-logos-row'>
                 <h2>Learn With Us</h2>
                 <p>Our core compentency is the MERN stack, Mongo, Express, React and Node. When you join the group we guide you from beginner learning HTML, CSS & JavaScript to a software developer building apps with the MERN stack.</p>
                 <p>As a beginner you will get help learning the basics. When you are ready you will work on real projects for real clients gaining knowledge and valuable experience along the way.</p>
