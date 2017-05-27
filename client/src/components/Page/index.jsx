@@ -5,8 +5,8 @@ import {
   Row,
   Col,
 } from 'react-bootstrap';
+import Navigation from './Navigation'
 import Header from './Header';
-import Hero from './Hero';
 import TechLogos from './TechLogos';
 import Events from './Events';
 import Projects from './Projects';
@@ -17,12 +17,12 @@ import * as style from './style.css';
 
 const Page = () => {
   return (
-    <Grid className='page-grid-outer red-border' fluid>
-      <Row className='page-grid-outer-row red-border'>
+    <Grid className='page-grid-outer' fluid>
+      <Row className='page-grid-outer-row'>
         <Grid fluid>
           <Row>
+            <Navigation />
             <Header />
-            <Hero />
             <TechLogos />
             <Events />
             <Projects />

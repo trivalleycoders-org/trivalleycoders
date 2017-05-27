@@ -1,20 +1,14 @@
 // TechLogo
 
 import React from 'react';
-import { Grid, Row, Col, Thumbnail } from 'react-bootstrap';
+import { Panel, Image } from 'react-bootstrap';
 import * as style from './style.css';
 
-const TechLogo = (props) => {
-  const logoStyle = props.shape === 'square' ? style.logoSquare : style.logoRectangle;
-  return (
-    <Grid>
-      <Row>
-        <Thumbnail href="http://klequis.com" src={props.url} alt="logo">
-          <h4>{props.name}</h4>
-        </Thumbnail>
-      </Row>
-    </Grid>
-  )
-};
+const TechLogo = (props) => (
+    <Panel id='tech-logo-panel' className='tech-logo-panel'>
+      <Image id='tech-logo-image' className='tech-logo-image' href="http://klequis.com" src={props.url} alt="logo" />
+      <h4 id='tech-logo-caption'>{props.name}</h4>
+    </Panel>
+);
 
 export default TechLogo;

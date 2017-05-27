@@ -1,35 +1,7 @@
 /* Header */
 
-.container .navbar-grid {
-  width: 1170px;
-}
-
-.navbar-header {
+.header-row {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   align-items: center;
-  width: 400px;
-  /*background-color: lightgray;*/
-}
-
-#brand-anchor {
-  margin-left: 10px;
-  color: #34E97C;
-  font-size: 34px;
-}
-
-.navbar-inverse {
- background-image: none;
- background-color: transparent;
- background-repeat: no-repeat;
- border-radius: 0;
- border: 1px solid blue;
- margin-bottom: 0;
-}
-
-#navbar-collapse {
-  display: flex;
-  flex-flow: row;
-  align-items: center;
-  background-color: lightgray;
 }

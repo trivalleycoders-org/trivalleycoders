@@ -20,10 +20,10 @@ class Projects extends Component {
     switch (readProjectsRequest.status) {
       case 'success':
         return (
-          <div className='green-border'>
-            <Grid id='projects' className='projects-grid blue-border'>
-              <Row>
-                <h1 >Projects</h1>
+          <section id='projects'>
+            <Grid className='outer-grid'>
+              <Row className='main-row'>
+                <h1 className='section-title'>Projects</h1>
                 <div className='projects-wrapper'>
 
                   {this.props.projects.map((p) => (
@@ -38,19 +38,27 @@ class Projects extends Component {
                 </div>
               </Row>
             </Grid>
-          </div>
+          </section>
         )
       case 'failure':
         return (
-          <div id='projects'>
-            <h2>Attempt to get projects failed</h2>
-          </div>
+          <section id='projects'>
+            <Grid className='outer-grid'>
+              <Row className='main-row'>
+                <h2>Attempt to get projects failed</h2>
+              </Row>
+            </Grid>
+          </section>
         );
       default:
         return (
-          <div id='projects'>
-            <h2>Loading data...</h2>
-          </div>
+          <section id='projects'>
+            <Grid className='outer-grid'>
+              <Row className='main-row'>
+                <h2>Loading data...</h2>
+              </Row>
+            </Grid>
+          </section>
         );
     }
   }

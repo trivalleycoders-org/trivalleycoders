@@ -26,7 +26,6 @@ class TechLogos extends Component {
             style={style.logo}
             name={t.name}
             url={t.url}
-            shape={t.shape}
           />
         ))
         const mernStack = this.props.techLogos.filter((t) =>
@@ -36,7 +35,6 @@ class TechLogos extends Component {
             key={t._id}
             name={t.name}
             url={t.url}
-            shape={t.shape}
           />
         ))
         const tools = this.props.techLogos.filter((t) =>
@@ -46,58 +44,61 @@ class TechLogos extends Component {
             key={t._id}
             name={t.name}
             url={t.url}
-            shape={t.shape}
           />
         ))
         return (
-          <div className='green-border'>
-            <Grid className='tech-logos-grid blue-border'>
-              <Row id='tech-logos-row' className='tech-logos-row'>
-                <h2>Learn With Us</h2>
+          <section id='tech-logos'>
+            <Grid className='outer-grid'>
+              <Row className='main-row'>
+                <h1 className='section-title'>Learn With Us</h1>
                 <p>Our core compentency is the MERN stack, Mongo, Express, React and Node. When you join the group we guide you from beginner learning HTML, CSS & JavaScript to a software developer building apps with the MERN stack.</p>
                 <p>As a beginner you will get help learning the basics. When you are ready you will work on real projects for real clients gaining knowledge and valuable experience along the way.</p>
-                <Grid>
-                  <Row className='row-tech-logos'>
-                    <Col md={4}>
+                <Grid id='tech-logos-grid-inner'>
+                  <Row id='tech-logos-row-1' className='tech-logos-row-inner'>
+                    <Col id='col-1-1' md={4}>
                       <h4>The Basics</h4>
                     </Col>
-                    <Col md={8} className='col-tech-logos'>
+                    <Col id='col-1-2' md={8} className='col-tech-logos'>
                       {basics}
                     </Col>
                   </Row>
-                  <Row className='row-tech-logos'>
-                    <Col md={4}>
+                  <Row id='tech-logos-row-2' className='tech-logos-row-inner'>
+                    <Col id='col-2-1' md={4}>
                       <h4>MERN Stack</h4>
                     </Col>
-                    <Col md={8} className='col-tech-logos'>
+                    <Col id='col-2-2' md={8} className='col-tech-logos'>
                       {mernStack}
                     </Col>
                   </Row>
-                  <Row className='row-tech-logos'>
-                    <Col md={4}>
+                  <Row id='tech-logos-row-3' className='tech-logos-row-inner'>
+                    <Col id='col-3-1' md={4}>
                       <h4>Tools</h4>
                     </Col>
-                    <Col md={8} className='col-tech-logos'>
+                    <Col id='col-3-2' md={8} className='col-tech-logos'>
                       {tools}
                     </Col>
                   </Row>
                 </Grid>
               </Row>
             </Grid>
-          </div>
+          </section>
           )
-            case 'failure':
-            return (
-            <div id='techlogos'>
-              <h2>Attempt to load data failed</h2>
-            </div>
-            );
-            default:
-            return (
-            <div id='techlogos'>
-              <h2>Loading data...</h2>
-            </div>
-            );
+      case 'failure':
+        return (
+          <section id='tech-logos'>
+            <Grid className='outer-grid'>
+              <Row className='main-row'>
+                <h2>Attempt to load data failed</h2>
+              </Row>
+            </Grid>
+          </section>
+        );
+      default:
+        return (
+          <section>
+            <h2>Loading data...</h2>
+          </section>
+        );
     }
   }
 }

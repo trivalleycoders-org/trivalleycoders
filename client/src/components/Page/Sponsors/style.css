@@ -1,9 +1,5 @@
 /* Sponsors */
 
-.container .sponsors-grid {
-  width: 1170px;
-}
-
 .sponsors {
   display: flex;
   flex-flow: row wrap;

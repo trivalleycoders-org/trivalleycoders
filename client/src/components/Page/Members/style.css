@@ -1,9 +1,5 @@
 /* Members */
 
-.container.members-grid {
-  width: 1170px;
-}
-
 .members {
   display: flex;
   flex-flow: row wrap;

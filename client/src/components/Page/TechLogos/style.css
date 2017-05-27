@@ -1,18 +1,12 @@
 /* TechLogos */
 
-.container .tech-logos-grid {
-  width: 1170px;
-}
 
-.tech-logos-row {
-  padding-left: 10%;
-  padding-right: 10%;
-}
-
-.row-tech-logos {
-  padding: 10px 0;
-}
 .col-tech-logos {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.tech-logos-row-inner {
+  margin: 10px 0 10px 0;
 }

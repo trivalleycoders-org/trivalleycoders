@@ -1,9 +1,5 @@
 /* Projects */
 
-.container.projects-grid {
-  width: 1170px;
-}
-
 .projects-wrapper {
   display: flex;
   flex-flow: row wrap;

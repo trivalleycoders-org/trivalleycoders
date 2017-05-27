@@ -25,11 +25,10 @@ class Members extends Component {
     switch (readMembersRequest.status) {
       case 'success':
         return (
-          <div className='green-border'>
-            <Grid className='members-grid blue-border'>
-              <Row>
-                <NewMemberForm />
-                <h1>Members</h1>
+          <section id='members'>
+            <Grid className='outer-grid'>
+              <Row className='main-row'>
+                <h1 className='section-title'>Members</h1>
                 <div className='members'>
                   {this.props.members.map((m) => (
                     <Member
@@ -43,27 +42,35 @@ class Members extends Component {
                 </div>
               </Row>
             </Grid>
-          </div>
+          </section>
         )
       case 'failure':
         return (
-          <div id='members'>
-            <h2>Attempt to load members failed</h2>
-          </div>
+          <section id='members'>
+            <Grid className='outer-grid'>
+              <Row className='main-row'>
+                <h2>Attempt to load members failed</h2>
+              </Row>
+            </Grid>
+          </section>
         );
       default:
         return (
-          <div id='members'>
-            <h2>Loading data...</h2>
-          </div>
+          <section id='members'>
+            <Grid className='outer-grid'>
+              <Row className='main-row'>
+                <h2>Loading data...</h2>
+              </Row>
+            </Grid>
+          </section>
         );
     }
   }
 }
 
-Members.propTypes = {
-  requestReadMembers: PropTypes.func.isRequired,
-  readMembersRequest: PropTypes.object.isRequired,
+              Members.propTypes = {
+                requestReadMembers: PropTypes.func.isRequired,
+                readMembersRequest: PropTypes.object.isRequired,
 }
 
 const mapStateToProps = (state) => ({

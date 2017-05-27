@@ -1,4 +1,20 @@
 /* TechLogo */
-.tech-logo-size {
+
+.tech-logo-panel {
+  text-align: center;
+  height: 110px;
+  
+  margin: 0 10px;
+}
+
+.tech-logo-image {
   max-height: 60px;
+}
+
+.thumbnail .caption {
+  padding: 0;
+}
+
+.thumbnail .caption > h4 {
+  font-size: 12px ;
 }
