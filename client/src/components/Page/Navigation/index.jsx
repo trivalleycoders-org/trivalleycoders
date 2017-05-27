@@ -31,10 +31,13 @@ class Navigation extends Component {
                 <Nav id='nav-pullRight' pullRight>
                   <NavItem eventKey={1} href="#header">Home</NavItem>
                   <NavItem eventKey={2} href="#tech-logos">Learn</NavItem>
-                  <NavItem eventKey={2} href="#events">Events</NavItem>
-                  <NavItem eventKey={2} href="#projects">Projects</NavItem>
-                  <NavItem eventKey={2} href="#members">Members</NavItem>
-                  <NavItem eventKey={2} href="#sponsors">Sponsors</NavItem>
+                  <NavItem eventKey={3} href="#events">Events</NavItem>
+                  <NavItem eventKey={4} href="#projects">Projects</NavItem>
+                  <NavItem eventKey={5} href="#members">Members</NavItem>
+                  <NavItem eventKey={6} href="#sponsors">Sponsors</NavItem>
+                  <NavDropdown eventKey={7} title='Manage'>
+                    <MenuItem eventKey={7.1}>Add Member</MenuItem>
+                  </NavDropdown>
                 </Nav>
               </Navbar.Collapse>
             </Navbar>
