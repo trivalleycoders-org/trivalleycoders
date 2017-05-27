@@ -56,7 +56,7 @@ class TechLogos extends Component {
                 <Grid id='tech-logos-grid-inner'>
                   <Row id='tech-logos-row-1' className='tech-logos-row-inner'>
                     <Col id='col-1-1' md={4}>
-                      <h4>The Basics</h4>
+                      <h4 className='tech-logo-title'>The Basics</h4>
                     </Col>
                     <Col id='col-1-2' md={8} className='col-tech-logos'>
                       {basics}
@@ -64,7 +64,7 @@ class TechLogos extends Component {
                   </Row>
                   <Row id='tech-logos-row-2' className='tech-logos-row-inner'>
                     <Col id='col-2-1' md={4}>
-                      <h4>MERN Stack</h4>
+                      <h4 className='tech-logo-title'>MERN Stack</h4>
                     </Col>
                     <Col id='col-2-2' md={8} className='col-tech-logos'>
                       {mernStack}
@@ -72,7 +72,7 @@ class TechLogos extends Component {
                   </Row>
                   <Row id='tech-logos-row-3' className='tech-logos-row-inner'>
                     <Col id='col-3-1' md={4}>
-                      <h4>Tools</h4>
+                      <h4 className='tech-logo-title'>Tools</h4>
                     </Col>
                     <Col id='col-3-2' md={8} className='col-tech-logos'>
                       {tools}
