@@ -1,29 +1,5 @@
 /* Page */
-nav {
-  padding-left: 10%;
-  padding-right: 10%;
-  background-color: yellow;
-}
-section {
-  /*display: flex;
-  flex-flow: column nowrap;
-  align-items: center;*/
-  padding-left: 10%;
-  padding-right: 10%;
-  background-color: yellow;
-}
 
-header {
-  padding-left: 10%;
-  padding-right: 10%;
-  background-color: yellow;
-}
-
-footer {
-  padding-left: 10%;
-  padding-right: 10%;
-  background-color: yellow;
-}
 
 .container {
   width: auto;
@@ -55,8 +31,6 @@ footer {
   margin: auto;
 }
 
-
-
 .green-text {
   color: #34E97C;
 }
@@ -65,12 +39,103 @@ footer {
   border: 1px solid blue;
 }
 
-
-
 .red-border {
   border: 1px solid red;
 }
 
 .orange-border {
   border: 1px solid orange;
+}
+
+/*
+    PHONE
+ */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  body {
+    background-color: lightgreen;
+  }
+  nav {
+    background-color: lightgreen;
+  }
+  section {
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: lightgreen;
+  }
+
+  header {
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: lightgreen;
+  }
+
+  footer {
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: lightgreen;
+  }
+}
+
+/*
+    TABLET
+ */
+/*@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {*/
+@media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
+  body {
+      background-color: green;
+  }
+  nav {
+    background-color: green;
+  }
+  section {
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: green;
+  }
+
+  header {
+    padding-left: 1%;
+    padding-right: 10%;
+    background-color: green;
+  }
+
+  footer {
+    padding-left: 1%;
+    padding-right: 10%;
+    background-color: green;
+  }
+}
+
+
+/*
+    DESKTOP & LAPTOP
+ */
+/*@media only screen  and (min-width : 1224px) {*/
+@media only screen  and (min-width : 1025px) {
+  body {
+      background-color: yellow;
+  }
+  nav {
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: yellow;
+  }
+  section {
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: yellow;
+  }
+
+  header {
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: yellow;
+  }
+
+  footer {
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: yellow;
+  }
+
 }
