@@ -3,7 +3,6 @@ import React from 'react';
 import { Component } from 'react';
 import { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { Table } from 'react-bootstrap'
 import * as actionCreators from '../../../store/actions';
 import * as selectors from '../../../store/selectors';
 import Project from './Project';
@@ -20,11 +19,11 @@ class Projects extends Component {
     switch (readProjectsRequest.status) {
       case 'success':
         return (
-          <section id='projects'>
+          <section id='projects' >
             <Grid className='outer-grid'>
-              <Row className='main-row'>
+              <Row className='main-row orange-background'>
                 <h1 className='section-title'>Projects</h1>
-                <div className='projects-wrapper'>
+                <div className='projects-wrapper blue-background'>
 
                   {this.props.projects.map((p) => (
                     <Project

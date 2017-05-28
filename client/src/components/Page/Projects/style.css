@@ -3,4 +3,16 @@
 .projects-wrapper {
   display: flex;
   flex-flow: row wrap;
+  /*justify-content: space-around;*/
+  /*justify-content: center;*/
+  /*width: auto;*/
+  /*margin: auto;*/
+  /* align-content: center | stretch | space-between | space-around */
+
+  /*
+      This looks like the solution
+      http://jsfiddle.net/8jqbjese/12/
+      from: https://stackoverflow.com/questions/32802202/how-to-center-a-flex-container-but-left-align-flex-items
+   */
+
 }
