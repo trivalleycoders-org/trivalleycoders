@@ -3,6 +3,7 @@
 .projects-wrapper {
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
   /*justify-content: space-around;*/
   /*justify-content: center;*/
   /*width: auto;*/
@@ -10,9 +11,31 @@
   /* align-content: center | stretch | space-between | space-around */
 
   /*
-      This looks like the solution
+      This looks like the solution to the flex-start leaving a gap on the right at certain
+      viewer widths. It means not using flex.
       http://jsfiddle.net/8jqbjese/12/
       from: https://stackoverflow.com/questions/32802202/how-to-center-a-flex-container-but-left-align-flex-items
    */
+
+}
+
+/*
+    PHONE
+ */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+}
+
+/*
+    TABLET
+ */
+@media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
+
+}
+
+/*
+    DESKTOP & LAPTOP
+ */
+@media only screen  and (min-width : 1025px) {
 
 }

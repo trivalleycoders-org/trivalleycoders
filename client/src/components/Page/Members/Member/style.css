@@ -1,8 +1,48 @@
 /* Member */
 
 .panel-member {
-  text-align: center;
-  width: 160px;
-  height: 210px;
-  margin: 0 10px;
+  padding: 1.5%;
+}
+
+/*
+    PHONE
+ */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .panel-member {
+    text-align: center;
+    width: 155px;
+    height: 210px;
+    margin: 0 10px;
+  }
+  .panel-member-img-container {
+    padding: 10%;
+  }
+  .panel-body {
+    padding: 5px;
+  }
+
+}
+
+/*
+    TABLET
+ */
+@media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
+  .panel-member {
+    text-align: center;
+    width: 160px;
+    height: 210px;
+    margin: 0 10px;
+  }
+}
+
+/*
+    DESKTOP & LAPTOP
+ */
+@media only screen  and (min-width : 1025px) {
+  .panel-member {
+    text-align: center;
+    width: 160px;
+    height: 210px;
+    margin: 0 10px;
+  }
 }

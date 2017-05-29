@@ -21,9 +21,9 @@ class Projects extends Component {
         return (
           <section id='projects' >
             <Grid className='outer-grid'>
-              <Row className='main-row orange-background'>
+              <Row className='main-row'>
                 <h1 className='section-title'>Projects</h1>
-                <div className='projects-wrapper blue-background'>
+                <div className='projects-wrapper'>
 
                   {this.props.projects.map((p) => (
                     <Project

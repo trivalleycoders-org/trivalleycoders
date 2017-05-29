@@ -4,9 +4,41 @@
   font-weight: bold;
 }
 
-.project-panel {
-  width: 130px;
-  height: 130px;
-  text-align: center;
-  margin: 0 5px;
+
+
+/*
+    PHONE
+ */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .project-panel {
+    width: 130px;
+    height: 130px;
+    text-align: center;
+    margin: 5px 5px 5px 5px;
+  }
+}
+
+/*
+    TABLET
+ */
+@media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
+  .project-panel {
+    width: 130px;
+    height: 130px;
+    text-align: center;
+    margin: 0 5px;
+  }
+}
+
+/*
+    DESKTOP & LAPTOP
+ */
+@media only screen  and (min-width : 1025px) {
+  .project-panel {
+    width: 130px;
+    height: 130px;
+    text-align: center;
+    margin: 5px 5px 5px 5px;
+
+  }
 }

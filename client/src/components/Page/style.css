@@ -5,20 +5,27 @@
 }
 
 .outer-grid {
-  background-color: lightblue;
+  /*background-color: lightblue;*/
+  margin: auto;
 }
 
 .main-row {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  margin: auto;
   /*margin: auto;*/
-  background-color: lightgray;
+  /*background-color: lightgray;*/
 }
 
 .section-title {
   text-align: center;
 }
+
+.section-sub-title {
+  text-align: center;
+}
+
 .page-grid-outer {
   padding-left: 0;
   padding-right: 0;
