@@ -1,8 +1,6 @@
 /* Member */
 
-.panel-member {
-  padding: 1.5%;
-}
+
 
 /*
     PHONE
@@ -12,10 +10,11 @@
     text-align: center;
     width: 155px;
     height: 210px;
-    margin: 0 10px;
+    padding: 5px;
+    margin: 10px 10px;
   }
   .panel-member-img-container {
-    padding: 10%;
+    padding: 0px;
   }
   .panel-body {
     padding: 5px;
@@ -24,14 +23,36 @@
 }
 
 /*
+    panel-member: 150 x 214
+        margin: 5
+    panel-member-img-container: 150 x 150
+    picture: 150 x 150
+    member-name: 150 x 19
+        margin 10 0 10 0
+    member-role: 150 x 15
+        margin 10 0 10 0
+
+    Add Height
+    5 + 150 + 19 + 10 + 15 + 10 = 209
+ */
+
+
+/*
     TABLET
  */
 @media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
   .panel-member {
     text-align: center;
     width: 160px;
-    height: 210px;
-    margin: 0 10px;
+    /*height: 220px;*/
+    padding: 5px;
+    margin: 10px 10px;
+  }
+  .panel-member-img-container {
+    padding: 0;
+  }
+  .panel-body {
+    padding: 0;
   }
 }
 
@@ -43,6 +64,7 @@
     text-align: center;
     width: 160px;
     height: 210px;
+    padding: 5px;
     margin: 0 10px;
   }
 }

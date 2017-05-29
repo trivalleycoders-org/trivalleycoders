@@ -29,7 +29,7 @@ class Members extends Component {
               <Row className='main-row'>
                 <h1 className='section-title'>Members</h1>
                 <div className='members'>
-                  {this.props.members.map((m) => (
+                  {this.props.members.sort((a, b) => a.index - b.index).map((m) => (
                     <Member
                       key={m._id}
                       picture={m.picture}
