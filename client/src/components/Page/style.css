@@ -147,7 +147,7 @@
  */
 /*@media only screen  and (min-width : 1224px) {*/
 /*@media only screen  and (min-width : 1025px) {*/
-@media only screen  and (min-width : 1025px) {
+@media (min-width : 1025px) {
   body {
       background-color: yellow;
   }
@@ -173,5 +173,4 @@
     padding-right: 10%;
     background-color: yellow;
   }
-
 }

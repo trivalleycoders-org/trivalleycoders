@@ -7,7 +7,7 @@
 /*
     PHONE
  */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media (max-device-width : 480px) {
   .col-tech-logos {
     justify-content: space-around;
   }
@@ -20,7 +20,7 @@
     TABLET
  */
 /*@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {*/
-@media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
+@media (min-device-width : 481px) and (max-device-width : 1024px) {
   .col-tech-logos {
     justify-content: space-around;
   }
@@ -33,7 +33,7 @@
     DESKTOP & LAPTOP
  */
 /*@media only screen  and (min-width : 1224px) {*/
-@media only screen  and (min-width : 1025px) {
+@media (min-width : 1025px) {
   .col-tech-logos {
     justify-content: flex-start;
   }
