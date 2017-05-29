@@ -7,6 +7,7 @@ import * as actionCreators from '../../../store/actions'
 import * as selectors from '../../../store/selectors'
 import { Nav, Navbar, NavItem, NavDropdown, MenuItem } from 'react-bootstrap'
 import * as style from './style.css';
+import NewMemberForm from '../../../elements/NewMemberForm'
 
 
 class Navigation extends Component {
@@ -21,7 +22,7 @@ class Navigation extends Component {
         return (
           <nav>
             <Navbar id='navbar' inverse collapseOnSelect>
-              <Navbar.Header id='navbar-header' class='navbar-header'>
+              <Navbar.Header id='navbar-header' className='navbar-header'>
                 <Navbar.Brand id='navbar-brand' className='navbar-brand'>
 
                 </Navbar.Brand>
@@ -35,8 +36,10 @@ class Navigation extends Component {
                   <NavItem eventKey={4} href="#projects">Projects</NavItem>
                   <NavItem eventKey={5} href="#members">Members</NavItem>
                   <NavItem eventKey={6} href="#sponsors">Sponsors</NavItem>
-                  <NavDropdown eventKey={7} title='Manage'>
-                    <MenuItem eventKey={7.1}>Add Member</MenuItem>
+                  <NavDropdown id='navbar-manage' eventKey={7} title='Manage'>
+                    <MenuItem eventKey={7.1}>
+                      <NewMemberForm />
+                    </MenuItem>
                   </NavDropdown>
                 </Nav>
               </Navbar.Collapse>
