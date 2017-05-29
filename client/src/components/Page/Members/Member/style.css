@@ -1,52 +1,37 @@
 /* Member */
-
+.member-role {
+  margin-bottom: 0;
+}
 
 
 /*
     PHONE
  */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media (max-device-width : 480px) {
   .panel-member {
     text-align: center;
     width: 155px;
-    height: 210px;
     padding: 5px;
-    margin: 10px 10px;
+    margin: 10px;
   }
-  .panel-member-img-container {
-    padding: 0px;
+  .member-img-container {
+    padding: 0;
   }
   .panel-body {
-    padding: 5px;
+    padding: 0;
   }
 
 }
 
 /*
-    panel-member: 150 x 214
-        margin: 5
-    panel-member-img-container: 150 x 150
-    picture: 150 x 150
-    member-name: 150 x 19
-        margin 10 0 10 0
-    member-role: 150 x 15
-        margin 10 0 10 0
-
-    Add Height
-    5 + 150 + 19 + 10 + 15 + 10 = 209
- */
-
-
-/*
     TABLET
  */
-@media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
+@media (min-device-width : 481px) and (max-device-width : 1024px) {
   .panel-member {
     text-align: center;
     width: 160px;
-    /*height: 220px;*/
     padding: 5px;
-    margin: 10px 10px;
+    margin: 10px;
   }
   .panel-member-img-container {
     padding: 0;
@@ -54,17 +39,23 @@
   .panel-body {
     padding: 0;
   }
+
 }
 
 /*
     DESKTOP & LAPTOP
  */
-@media only screen  and (min-width : 1025px) {
+@media (min-width : 1025px) {
   .panel-member {
     text-align: center;
     width: 160px;
-    height: 210px;
     padding: 5px;
-    margin: 0 10px;
+    margin: 10px;
+  }
+  .member-img-container {
+    padding: 0;
+  }
+  .panel-body {
+    padding: 0;
   }
 }
