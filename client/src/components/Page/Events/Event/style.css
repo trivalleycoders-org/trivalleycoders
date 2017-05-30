@@ -6,7 +6,7 @@
  */
 @media (max-width : 480px) {
   .panel {
-    margin-bottom: 5px;
+    margin: 10px 0 10px 0;
     padding-top: 15px;
     padding-bottom: 15px;
     text-align: center;
