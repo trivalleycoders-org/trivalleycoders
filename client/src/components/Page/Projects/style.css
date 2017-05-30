@@ -22,14 +22,14 @@
 /*
     PHONE
  */
-@media (max-device-width : 480px) {
+@media (max-width : 480px) {
 
 }
 
 /*
     TABLET
  */
-@media (min-device-width : 481px) and (max-device-width : 1024px) {
+@media (min-width : 481px) and (max-width : 1024px) {
 
 }
 

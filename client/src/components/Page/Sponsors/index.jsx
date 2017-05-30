@@ -1,6 +1,5 @@
 // Sponsors
 import React from 'react';
-import * as style from './style.css';
 import { Component } from 'react';
 import { PropTypes } from 'react';
 import { connect } from 'react-redux';
@@ -8,6 +7,7 @@ import * as actionCreators from '../../../store/actions';
 import * as selectors from '../../../store/selectors';
 import { Grid, Row } from 'react-bootstrap';
 import Sponsor from './Sponsor';
+import './style.css';
 
 class Sponsors extends Component {
   componentWillMount() {

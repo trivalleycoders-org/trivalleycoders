@@ -7,7 +7,7 @@ import { Grid, Row } from 'react-bootstrap';
 import * as actionCreators from '../../../store/actions';
 import * as selectors from '../../../store/selectors'
 import Member from './Member';
-import * as style from './style.css';
+import './style.css';
 
 class Members extends Component {
   componentWillMount() {

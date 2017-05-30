@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import * as actionCreators from '../../../store/actions'
 import * as selectors from '../../../store/selectors'
 import { Nav, Navbar, NavItem, NavDropdown, MenuItem } from 'react-bootstrap'
-import * as style from './style.css';
+import './style.css';
 
 
 class Navigation extends Component {
@@ -21,7 +21,7 @@ class Navigation extends Component {
         return (
           <nav>
             <Navbar id='navbar' inverse collapseOnSelect>
-              <Navbar.Header id='navbar-header' class='navbar-header'>
+              <Navbar.Header id='navbar-header' className='navbar-header'>
                 <Navbar.Brand id='navbar-brand' className='navbar-brand'>
 
                 </Navbar.Brand>

@@ -1,7 +1,7 @@
 // Sponsor
 import React from 'react';
 import { Panel, Image } from 'react-bootstrap'
-import * as style from './style.css';
+import './style.css';
 
 const Sponsor = (props) => (
   <Panel className='panel-sponsor'>

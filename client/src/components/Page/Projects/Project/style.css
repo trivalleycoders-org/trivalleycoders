@@ -9,7 +9,7 @@
 /*
     PHONE
  */
-@media (max-device-width : 480px) {
+@media (max-width : 480px) {
   .project-panel {
     width: 130px;
     height: 130px;
@@ -21,7 +21,7 @@
 /*
     TABLET
  */
-@media (min-device-width : 481px) and (max-device-width : 1024px) {
+@media (min-width : 481px) and (max-width : 1024px) {
   .project-panel {
     width: 130px;
     height: 130px;

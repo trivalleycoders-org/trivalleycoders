@@ -1,7 +1,7 @@
 // Project
 import React from 'react';
 import { Panel } from 'react-bootstrap'
-import * as style from './style.css';
+import './style.css';
 
 
 const Project = (props) => (

@@ -7,7 +7,7 @@ import * as actionCreators from '../../../store/actions';
 import * as selectors from '../../../store/selectors';
 import { Table, Grid, Row } from 'react-bootstrap';
 import Event from './Event';
-import * as style from './style.css';
+// import './style.css';
 
 class Events extends Component {
   componentWillMount() {
@@ -23,7 +23,7 @@ class Events extends Component {
             <Grid className='outer-grid'>
               <Row className='main-row'>
                 <h1 className='section-title'>Events</h1>
-                <Table responsive>
+                <Table className='table' responsive>
                   <tbody>
                     {
                       this.props.events.map((e) => (

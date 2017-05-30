@@ -7,7 +7,7 @@ import * as actionCreators from '../../../store/actions';
 import * as selectors from '../../../store/selectors';
 import Project from './Project';
 import { Grid, Row } from 'react-bootstrap';
-import * as style from './style.css';
+import './style.css';
 
 class Projects extends Component {
   componentWillMount() {

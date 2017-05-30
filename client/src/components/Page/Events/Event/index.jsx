@@ -1,6 +1,6 @@
 // Events
 import React from 'react';
-import * as style from './style.css';
+// import './style.css';
 
 
 const Event = (props) => (

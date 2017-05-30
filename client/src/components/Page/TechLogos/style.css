@@ -7,7 +7,7 @@
 /*
     PHONE
  */
-@media (max-device-width : 480px) {
+@media (max-width : 480px) {
   .col-tech-logos {
     justify-content: space-around;
   }
@@ -20,12 +20,9 @@
     TABLET
  */
 /*@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {*/
-@media (min-device-width : 481px) and (max-device-width : 1024px) {
+@media (min-width : 481px) and (max-width : 1024px) {
   .col-tech-logos {
     justify-content: space-around;
-  }
-  .tech-logo-title {
-    text-align: center;
   }
 }
 

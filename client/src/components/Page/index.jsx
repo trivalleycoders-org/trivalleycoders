@@ -12,7 +12,7 @@ import Projects from './Projects';
 import Members from './Members';
 import Sponsors from './Sponsors';
 import Footer from './Footer';
-import * as style from './style.css';
+import './style.css';
 
 const Page = () => {
   return (
