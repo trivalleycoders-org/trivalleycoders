@@ -1,0 +1,29 @@
+/*Event*/
+
+
+/*
+    PHONE
+ */
+@media (max-width : 480px) {
+  .panel {
+    margin: 10px 0 10px 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+  }
+}
+
+/*
+    TABLET
+ */
+@media (min-width : 481px) and (max-width : 1024px) {
+
+}
+
+
+/*
+    DESKTOP & LAPTOP
+ */
+@media (min-width : 1025px) {
+
+}

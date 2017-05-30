@@ -1,11 +1,12 @@
 import { normalize, Schema, arrayOf } from 'normalizr';
-import * as ku from '../lib/ke-utils';
 const events = new Schema('events', { idAttribute: '_id' });
 const projects = new Schema('projects', { idAttribute: '_id' });
 const members = new Schema('members', { idAttribute: '_id' });
 const techlogos = new Schema('techlogos', { idAttribute: '_id' });
 const navButtons = new Schema('navButtons', { idAttribute: '_id' } );
 const sponsors = new Schema('sponsors', { idAttribute: '_id' } );
+// import * as ku from '../lib/ke-utils';
+
 
 export const rejectErrors = (res) => {
   const { status } = res;

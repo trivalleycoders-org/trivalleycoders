@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Row } from 'react-bootstrap'
-import * as style from './style.css';
+// import './style.css';
 
 const Footer = () => (
   <footer>

@@ -18,7 +18,7 @@ const styleOrange = [
   'font-weight: bold',
 ].join(';');
 
-
+/*
 const styleFunRed = [
   'border: 1px solid #3E0E02',
   'color: red',
@@ -28,6 +28,8 @@ const styleFunRed = [
   'text-align: center',
   'font-weight: bold',
 ].join(';');
+*/
+
 
 const getStyle = (styleName) => {
   let color;

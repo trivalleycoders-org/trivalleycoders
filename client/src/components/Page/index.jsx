@@ -3,7 +3,6 @@ import React from 'react';
 import {
   Grid,
   Row,
-  Col,
 } from 'react-bootstrap';
 import Navigation from './Navigation'
 import Header from './Header';
@@ -13,7 +12,7 @@ import Projects from './Projects';
 import Members from './Members';
 import Sponsors from './Sponsors';
 import Footer from './Footer';
-import * as style from './style.css';
+import './style.css';
 
 const Page = () => {
   return (

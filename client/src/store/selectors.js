@@ -7,8 +7,8 @@ export const getProjects = (state) =>
 export const getMembers = (state) =>
   state.members.membersIds.map((id) => state.members.membersById[id]);
 
-export const getNewMemberForm = (state) =>
-  state.getNewMemberForm;
+export const getNewMember = (state) =>
+  state.ui.newMember;
 
 export const getTechlogos = (state) =>
   state.techlogos.techlogosIds.map((id) => state.techlogos.techlogosById[id]);
@@ -17,7 +17,7 @@ export const getNavButtons = (state) =>
   state.navButtons.navButtonsIds.map((id) => state.navButtons.navButtonsById[id]);
 
 export const getSponsors = (state) =>
-  state.sponsors.sponsorsIds.map((id) => state.sponsors.sponsorsById[id]);  
+  state.sponsors.sponsorsIds.map((id) => state.sponsors.sponsorsById[id]);
 
 // redux selectors
 export const getRequest = (state, key) =>

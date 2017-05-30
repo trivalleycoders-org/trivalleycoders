@@ -3,11 +3,11 @@ import React from 'react';
 import { Component } from 'react';
 import { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { Grid, Row, Thumbnail, Button } from 'react-bootstrap';
+import { Grid, Row } from 'react-bootstrap';
 import * as actionCreators from '../../../store/actions';
 import * as selectors from '../../../store/selectors'
 import Member from './Member';
-import * as style from './style.css';
+import './style.css';
 
 class Members extends Component {
   componentWillMount() {
@@ -29,7 +29,7 @@ class Members extends Component {
               <Row className='main-row'>
                 <h1 className='section-title'>Members</h1>
                 <div className='members'>
-                  {this.props.members.map((m) => (
+                  {this.props.members.sort((a, b) => a.index - b.index).map((m) => (
                     <Member
                       key={m._id}
                       picture={m.picture}

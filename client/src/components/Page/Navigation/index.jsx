@@ -6,9 +6,8 @@ import { connect } from 'react-redux';
 import * as actionCreators from '../../../store/actions'
 import * as selectors from '../../../store/selectors'
 import { Nav, Navbar, NavItem, NavDropdown, MenuItem } from 'react-bootstrap'
-import * as style from './style.css';
+import './style.css';
 import NewMemberForm from '../../../elements/NewMemberForm'
-
 
 class Navigation extends Component {
   componentWillMount() {

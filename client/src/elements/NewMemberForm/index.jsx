@@ -22,7 +22,7 @@ import * as actionCreators from '../../store/actions';
 //                        submittable: false
 //                       };
 
-var firstValid, lastValid, roValid, passValid, emValid, sub;                      
+var firstValid, lastValid, roValid, passValid, emValid, sub;
 
 class NewMemberForm extends Component {
   componentWillMount() {
@@ -119,7 +119,7 @@ class NewMemberForm extends Component {
     const { newMemberForm } = this.props
     console.log("*********" + newMemberForm);
     // onChange={(event) => setNewMember('chad')}
-    setNewMember('chad');
+    // setNewMember('chad');
     const popover = (
       <Popover id="modal-popover" title="popover">
         very popover. such engagement
@@ -152,7 +152,7 @@ class NewMemberForm extends Component {
                       type="text"
                       value=""
                       placeholder="Enter first name"
-                      onChange={this.handleChange}
+                      onChange={(event) => actionCreators.setNewMember('chad')}
                     />
                     <FormControl.Feedback />
                     {true ? null : <HelpBlock>Must be greater than 1 letter.</HelpBlock>}
@@ -224,7 +224,7 @@ class NewMemberForm extends Component {
                     <HelpBlock>Must be greater than 3 characters.</HelpBlock>
                   </FormGroup>
                 </Col>
-              </Grid>  
+              </Grid>
             </form>
 
             <h4>Popover in a modal</h4>
@@ -251,7 +251,7 @@ class NewMemberForm extends Component {
 
 const mapStateToProps = (state) => ({
   // readNewMemberFormRequest: selectors.getRequest(state, 'readNewMemberForm'),
-  newMemberForm: selectors.getNewMemberForm(state),
+  newMember: selectors.getNewMember(state),
 });
 
 export default connect(mapStateToProps, actionCreators)(NewMemberForm);

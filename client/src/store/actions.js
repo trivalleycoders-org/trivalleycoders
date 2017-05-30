@@ -120,13 +120,13 @@ export const requestReadProjects = createRequestThunk({
 export const requestReadMembers = createRequestThunk({
   request: api.members.readList,
   key: 'readNewMemberForm',
-  success: [ replaceNewMemberForm ]
+  success: [ replaceMembers ]
 });
 
-export const requestReadNewMemberForm = createRequestThunk({
-  request: api.newMemberForm.readList,
-  key: 
-});
+// export const requestReadNewMemberForm = createRequestThunk({
+//   request: api.newMemberForm.readList,
+//   key:
+// });
 
 // export const requestReadMember = createRequestThunk({
 //   request: api.members.get,

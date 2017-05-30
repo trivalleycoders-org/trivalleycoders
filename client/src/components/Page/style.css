@@ -1,26 +1,31 @@
 /* Page */
 
-
 .container {
   width: auto;
 }
 
 .outer-grid {
-  background-color: lightblue;
+  /*background-color: lightblue;*/
+  margin: auto;
 }
 
 .main-row {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  background-color: lightgray;
-  /*padding-left: 10%;*/
-  /*padding-right: 10%;*/
+  margin: auto;
+  /*margin: auto;*/
+  /*background-color: lightgray;*/
 }
 
 .section-title {
   text-align: center;
 }
+
+.section-sub-title {
+  text-align: center;
+}
+
 .page-grid-outer {
   padding-left: 0;
   padding-right: 0;
@@ -35,6 +40,10 @@
   color: #34E97C;
 }
 
+
+/*
+    Temp styles
+ */
 .blue-border {
   border: 1px solid blue;
 }
@@ -47,10 +56,34 @@
   border: 1px solid orange;
 }
 
+.gray-background {
+  background-color: gray;
+}
+
+.light-gray-background {
+  background-color: lightgray;
+}
+
+.yellow-background {
+  background-color: yellow;
+}
+
+.orange-background {
+  background-color: orange;
+}
+
+.red-background {
+  background-color: red;
+}
+
+.blue-background {
+  background-color: blue;
+}
+
 /*
     PHONE
  */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media (max-width : 480px) {
   body {
     background-color: lightgreen;
   }
@@ -79,8 +112,7 @@
 /*
     TABLET
  */
-/*@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {*/
-@media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
+@media (min-width : 481px) and (max-width : 1024px) {
   body {
       background-color: green;
   }
@@ -95,13 +127,13 @@
 
   header {
     padding-left: 1%;
-    padding-right: 10%;
+    padding-right: 1%;
     background-color: green;
   }
 
   footer {
     padding-left: 1%;
-    padding-right: 10%;
+    padding-right: 1%;
     background-color: green;
   }
 }
@@ -110,8 +142,7 @@
 /*
     DESKTOP & LAPTOP
  */
-/*@media only screen  and (min-width : 1224px) {*/
-@media only screen  and (min-width : 1025px) {
+@media (min-width : 1025px) {
   body {
       background-color: yellow;
   }
@@ -137,5 +168,4 @@
     padding-right: 10%;
     background-color: yellow;
   }
-
 }
