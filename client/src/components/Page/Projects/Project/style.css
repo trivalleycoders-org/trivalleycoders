@@ -4,17 +4,22 @@
   font-weight: bold;
 }
 
-
+.owner-name {
+  font-weight: bold;
+}
 
 /*
     PHONE
  */
 @media (max-width : 480px) {
-  .project-panel {
-    width: 130px;
-    height: 130px;
+  .panel-project {
     text-align: center;
-    margin: 5px 5px 5px 5px;
+    width: 155px;
+    padding: 5px;
+    margin: 10px;
+  }
+  .panel-body {
+    padding: 0;
   }
 }
 
@@ -22,11 +27,14 @@
     TABLET
  */
 @media (min-width : 481px) and (max-width : 1024px) {
-  .project-panel {
-    width: 130px;
-    height: 130px;
+  .panel-project {
     text-align: center;
-    margin: 0 5px;
+    width: 160px;
+    padding: 5px;
+    margin: 10px;
+  }
+  .panel-body {
+    padding: 0;
   }
 }
 
@@ -34,11 +42,13 @@
     DESKTOP & LAPTOP
  */
 @media (min-width : 1025px) {
-  .project-panel {
-    width: 130px;
-    height: 130px;
+  .panel-project {
     text-align: center;
-    margin: 5px 5px 5px 5px;
-
+    width: 160px;
+    padding: 5px;
+    margin: 10px;
+  }
+  .panel-body {
+    padding: 0;
   }
 }

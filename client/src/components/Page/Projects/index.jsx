@@ -23,8 +23,7 @@ class Projects extends Component {
             <Grid className='outer-grid'>
               <Row className='main-row'>
                 <h1 className='section-title'>Projects</h1>
-                <div className='projects-wrapper'>
-
+                <div className='projects'>
                   {this.props.projects.map((p) => (
                     <Project
                       key={p._id}
