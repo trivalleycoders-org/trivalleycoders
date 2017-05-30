@@ -15,6 +15,16 @@ export const replaceMembers = (members) => ({
   payload: members,
 });
 
+export const setNewMember = (firstName) => ({
+  type: 'app/setNewMember',
+  payload: {
+    firstName,
+  },
+});
+
+export const clearNewMember = () => ({
+  type: 'app/clearNewMember',
+});
 
 export const insertMember = (member) => ({
   type: 'app/insertMember',
@@ -109,8 +119,13 @@ export const requestReadProjects = createRequestThunk({
 
 export const requestReadMembers = createRequestThunk({
   request: api.members.readList,
-  key: 'readMembers',
-  success: [ replaceMembers ]
+  key: 'readNewMemberForm',
+  success: [ replaceNewMemberForm ]
+});
+
+export const requestReadNewMemberForm = createRequestThunk({
+  request: api.newMemberForm.readList,
+  key: 
 });
 
 // export const requestReadMember = createRequestThunk({

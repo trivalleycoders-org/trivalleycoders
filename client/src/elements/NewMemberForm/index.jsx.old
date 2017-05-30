@@ -4,8 +4,6 @@ import { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { Grid, Row, Col, Thumbnail, Button, Modal, Popover, Tooltip, OverlayTrigger, FormGroup, ControlLabel, FormControl, HelpBlock  } from 'react-bootstrap';
 import * as style from './style.css';
-import * as selectors from '../../store/selectors'
-import * as actionCreators from '../../store/actions';
 
 // const initialState = { showModal: false,
 //                        firstName: '',
@@ -24,12 +22,7 @@ import * as actionCreators from '../../store/actions';
 
 var firstValid, lastValid, roValid, passValid, emValid, sub;                      
 
-class NewMemberForm extends Component {
-  componentWillMount() {
-    // this.props.requestReadNewMemberForm();
-    // this.handleNewMemberClick = this.handleNewMemberClick.bind(this);
-  }
-
+class NewMemberForm extends Component{
   submit() {
     alert('toast data sent');
     // this.setState(initialState);
@@ -80,35 +73,35 @@ class NewMemberForm extends Component {
     }
     else if (valid != null && !valid){
       return 'error';
-    }
+   }
   }
 
   validateFirstName() {
-    // firstValid = this.lengthValidationHelper(1, this.state.firstName.length);
-    // return this.validReturnHelper(firstValid);
+    firstValid = this.lengthValidationHelper(1, this.state.firstName.length);
+    return this.validReturnHelper(firstValid);
   }
 
   validateLastName() {
-    // lastValid = this.lengthValidationHelper(1, this.state.lastName.length);
-    // return this.validReturnHelper(lastValid);
+    lastValid = this.lengthValidationHelper(1, this.state.lastName.length);
+    return this.validReturnHelper(lastValid);
   }
 
   validateEmail() {
-    // var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    // var emValid = re.test(this.state.email);
-    // if(this.state.email != '') {
-    //   return this.validReturnHelper(emValid);
-    // }
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var emValid = re.test(this.state.email);
+    if(this.state.email != '') {
+      return this.validReturnHelper(emValid);
+    }
   }
 
   validatePassword() {
-    // passValid = this.lengthValidationHelper(5, this.state.password.length);
-    // return this.validReturnHelper(passValid);
+    passValid = this.lengthValidationHelper(5, this.state.password.length);
+    return this.validReturnHelper(passValid);
   }
 
   validateRole() {
-    // roValid = this.lengthValidationHelper(3, this.state.role.length);
-    // return this.validReturnHelper(roValid);
+    roValid = this.lengthValidationHelper(3, this.state.role.length);
+    return this.validReturnHelper(roValid);
   }
 
   handleChange(e) {
@@ -116,10 +109,6 @@ class NewMemberForm extends Component {
   }
 
   render() {
-    const { newMemberForm } = this.props
-    console.log("*********" + newMemberForm);
-    // onChange={(event) => setNewMember('chad')}
-    setNewMember('chad');
     const popover = (
       <Popover id="modal-popover" title="popover">
         very popover. such engagement
@@ -133,11 +122,12 @@ class NewMemberForm extends Component {
 
     return (
       <div>
+
         <span onClick={this.open}>
           Add Member
         </span>
 
-        <Modal show={"this.state.showModal"} onHide={this.close}>
+        <Modal show={this.state.showModal} onHide={this.close}>
           <Modal.Header closeButton>
             <Modal.Title>Add Member</Modal.Title>
           </Modal.Header>
@@ -150,12 +140,12 @@ class NewMemberForm extends Component {
                     <FormControl
                       id="firstName"
                       type="text"
-                      value=""
+                      value={this.state.firstName}
                       placeholder="Enter first name"
                       onChange={this.handleChange}
                     />
                     <FormControl.Feedback />
-                    {true ? null : <HelpBlock>Must be greater than 1 letter.</HelpBlock>}
+                    {this.state.firstNameValid ? null : <HelpBlock>Must be greater than 1 letter.</HelpBlock>}
                   </FormGroup>
 
                   <FormGroup validationState={this.validateEmail()}>
@@ -163,7 +153,7 @@ class NewMemberForm extends Component {
                     <FormControl
                       id="email"
                       type="text"
-                      value="{this.state.email}"
+                      value={this.state.email}
                       placeholder="Enter email address"
                       onChange={this.handleChange}
                     />
@@ -175,7 +165,7 @@ class NewMemberForm extends Component {
                   <FormControl
                     id="photo"
                     type="text"
-                    value="{this.state.photo}"
+                    value={this.state.photo}
                     placeholder="Enter text"
                     onChange={this.handleChange}
                   />
@@ -190,7 +180,7 @@ class NewMemberForm extends Component {
                     <FormControl
                       id="lastName"
                       type="text"
-                      value="{this.state.lastName}"
+                      value={this.state.lastName}
                       placeholder="Enter last name"
                       onChange={this.handleChange}
                     />
@@ -203,7 +193,7 @@ class NewMemberForm extends Component {
                     <FormControl
                       id="password"
                       type="text"
-                      value="{this.state.password}"
+                      value={this.state.password}
                       placeholder="Enter password"
                       onChange={this.handleChange}
                     />
@@ -216,7 +206,7 @@ class NewMemberForm extends Component {
                     <FormControl
                       id="role"
                       type="text"
-                      value="{this.state.role}"
+                      value={this.state.role}
                       placeholder="Enter text"
                       onChange={this.handleChange}
                     />
@@ -236,22 +226,12 @@ class NewMemberForm extends Component {
             <hr />
           </Modal.Body>
           <Modal.Footer>
-            {true ? <Button onClick={this.submit}>Submit</Button> : null}
+            {this.state.submittable ? <Button onClick={this.submit}>Submit</Button> : null}
           </Modal.Footer>
         </Modal>
       </div>
-    )
+    );
   }
-}
+};
 
-// NewMemberForm.propTypes = {
-//   requestReadNewMemberForm: PropTypes.func.isRequired,
-//   readNewMemberFormRequest: PropTypes.object.isRequired,
-// }
-
-const mapStateToProps = (state) => ({
-  // readNewMemberFormRequest: selectors.getRequest(state, 'readNewMemberForm'),
-  newMemberForm: selectors.getNewMemberForm(state),
-});
-
-export default connect(mapStateToProps, actionCreators)(NewMemberForm);
+export default NewMemberForm;
