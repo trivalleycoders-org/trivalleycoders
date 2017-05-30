@@ -23,21 +23,17 @@ class Events extends Component {
             <Grid className='outer-grid'>
               <Row className='main-row'>
                 <h1 className='section-title'>Events</h1>
-                <Table className='table' responsive>
-                  <tbody>
-                    {
-                      this.props.events.map((e) => (
-                        <Event
-                          key={e._id}
-                          date={e.date}
-                          name={e.name}
-                          location={e.location}
-                        />
-                      )
-                      )
-                    }
-                  </tbody>
-                </Table>
+                {
+                  this.props.events.map((e) => (
+                    <Event
+                      key={e._id}
+                      date={e.date}
+                      name={e.name}
+                      location={e.location}
+                    />
+                  )
+                  )
+                }
               </Row>
             </Grid>
           </section>
