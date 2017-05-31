@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
 // import { dissoc } from 'ramda';
-import { merge } from 'ramda';
+import { merge, prepend } from 'ramda';
 import * as ku from '../lib/ke-utils';
 
 export const eventsById = ( state = {}, { type, payload }) => {
   switch (type) {
     case 'app/replaceEvents':
-      ku.log('eventsById.payload', payload, 'green');
+      // ku.log('eventsById.payload', payload, 'green');
       return payload.events;
     default:
       return state;
@@ -65,6 +65,8 @@ export const projectsIds = (state = [], { type, payload }) => {
 
 export const membersById = ( state = {}, { type, payload }) => {
   switch (type) {
+    case 'app/insertMember':
+      return merge(state, { [payload.id]: payload });
     case 'app/replaceMembers':
       // ku.log('membersById.payload', payload, 'green');
       return payload.members;
@@ -76,8 +78,22 @@ export const membersById = ( state = {}, { type, payload }) => {
 export const membersIds = (state = [], { type, payload }) => {
   switch (type) {
     case 'app/replaceMembers':
-      // ku.log('membersIds', payload, 'green');
       return payload.ids;
+    case 'app/insertMember':
+      ku.log('membersIds.payload', payload, 'green');
+      return prepend(payload._id, state);
+    default:
+      return state;
+  }
+};
+
+export const newMemberId = (state = null, { type, payload }) => {
+  switch (type) {
+    case 'app/newMemberId':
+      ku.log('newMemberId.type', type, 'green')
+      ku.log('newMemberId.payload', payload, 'green')
+      // return payload._id;
+      return payload._id;
     default:
       return state;
   }
@@ -118,17 +134,6 @@ export const sponsorsIds = (state = [], { type, payload }) => {
     case 'app/replaceSponsors':
       // ku.log('sponsorsIds', payload, 'green');
       return payload.ids;
-    default:
-      return state;
-  }
-};
-
-export const newMember = (state = {}, { type, payload }) => {
-  switch (type) {
-    case 'app/setNewMember':
-      return payload;
-    case 'app/clearNewMember':
-      return null;
     default:
       return state;
   }
@@ -176,7 +181,7 @@ export default combineReducers({
     sponsorsIds,
   }),
   ui: combineReducers({
-    newMember,
+    newMemberId,
   }),
   requests,
 })

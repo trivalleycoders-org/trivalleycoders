@@ -5,7 +5,7 @@ import { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import * as actionCreators from '../../../store/actions';
 import * as selectors from '../../../store/selectors';
-import { Table, Grid, Row } from 'react-bootstrap';
+import { Grid, Row } from 'react-bootstrap';
 import Event from './Event';
 // import './style.css';
 

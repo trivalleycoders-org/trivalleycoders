@@ -7,8 +7,14 @@ export const getProjects = (state) =>
 export const getMembers = (state) =>
   state.members.membersIds.map((id) => state.members.membersById[id]);
 
-export const getNewMember = (state) =>
-  state.ui.newMember;
+export const getMember = (state, _id) => {
+  console.log('state', state);
+  console.log('_id', _id);
+  return state.members.byId[_id] || null;
+}
+
+export const getNewMemberId = (state) =>
+  state.ui.newMemberId;
 
 export const getTechlogos = (state) =>
   state.techlogos.techlogosIds.map((id) => state.techlogos.techlogosById[id]);

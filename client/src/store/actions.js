@@ -15,15 +15,9 @@ export const replaceMembers = (members) => ({
   payload: members,
 });
 
-export const setNewMember = (firstName) => ({
-  type: 'app/setNewMember',
-  payload: {
-    firstName,
-  },
-});
-
-export const clearNewMember = () => ({
-  type: 'app/clearNewMember',
+export const newMemberId = (_id) => ({
+  type: 'app/newMemberId',
+  payload: { _id },
 });
 
 export const insertMember = (member) => ({
@@ -31,19 +25,16 @@ export const insertMember = (member) => ({
   payload: member,
 });
 
-export const updateMember = (content, id, timestamp = Date.now()) => ({
-  type: 'app/updateMember',
+export const updateMember = (_id, firstName, lastName, role, picture ) => ({
+  type: 'app/updatemember',
   payload: {
-    id,
-    content,
-    timestamp,
-  },
-});
-
-export const removeMember = (id) => ({
-  type: 'app/removeMember',
-  payload: { id },
-});
+    _id,
+    firstName,
+    lastName,
+    role,
+    picture,
+  }
+})
 
 export const replaceTechlogos = (techlogos) => ({
   type: 'app/replaceTechlogos',
@@ -65,20 +56,23 @@ export const markRequestPending = (key) => ({
   meta: { key },
 });
 
+
+/*
+    Variations of an actionCreator
+ */
+// This variation allows you to log
 export const markRequestSuccess = (key) => {
-  console.log('key', key)
+  // you can use console.log() here
   return ({
     type: 'app/markRequestSuccess',
     meta: { key },
   });
 }
-
-/*
-export const markRequestSuccess = (key) => ({
+// This variation is shorter but you can't log
+/*export const markRequestSuccess = (key) => ({
   type: 'app/markRequestSuccess',
   meta: { key },
-});
-*/
+});*/
 
 export const markRequestFailed = (reason, key) => ({
   type: 'app/markRequestFailed',
@@ -123,34 +117,17 @@ export const requestReadMembers = createRequestThunk({
   success: [ replaceMembers ]
 });
 
-// export const requestReadNewMemberForm = createRequestThunk({
-//   request: api.newMemberForm.readList,
-//   key:
-// });
-
-// export const requestReadMember = createRequestThunk({
-//   request: api.members.get,
-//   key: (id) => `getMember/${id}`,
-//   success: [ (member) => getMember(member.id) ],
-// });
-
-export const requestCreateMembers = createRequestThunk({
+export const requestCreateMember = createRequestThunk({
   request: api.members.create,
   key: 'createMember',
-  success: [ insertMember ],
+  success: [ insertMember, (member) => newMemberId(member._id) ],
 });
 
 export const requestUpdateMember = createRequestThunk({
   request: api.members.update,
-  key: (id) => `updateMember/${id}`,
-  success: [ updateMember ],
-});
-
-export const requestDeleteMember = createRequestThunk({
-  request: api.members.delete,
-  key: (id) => `deleteMember/${id}`,
-  success: [ (member) => removeMember(member.id) ],
-});
+  key: (_id) => `updateMember/${_id}`,
+  success: [ updateMember ]
+})
 
 export const requestReadTechlogos = createRequestThunk({
   request: api.techlogos.readList,

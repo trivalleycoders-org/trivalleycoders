@@ -13,6 +13,7 @@ import Members from './Members';
 import Sponsors from './Sponsors';
 import Footer from './Footer';
 import './style.css';
+import NewForm from './NewForm';
 
 const Page = () => {
   return (
@@ -20,6 +21,7 @@ const Page = () => {
       <Row className='page-grid-outer-row'>
         <Grid fluid>
           <Row>
+            <NewForm />
             <Navigation />
             <Header />
             <TechLogos />

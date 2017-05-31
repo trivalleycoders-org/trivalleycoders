@@ -7,7 +7,7 @@ import * as actionCreators from '../../../store/actions'
 import * as selectors from '../../../store/selectors'
 import { Nav, Navbar, NavItem, NavDropdown, MenuItem } from 'react-bootstrap'
 import './style.css';
-import NewMemberForm from '../../../elements/NewMemberForm'
+import NewMemberForm from '../../NewMemberForm'
 
 class Navigation extends Component {
   componentWillMount() {
@@ -37,7 +37,7 @@ class Navigation extends Component {
                   <NavItem eventKey={6} href="#sponsors">Sponsors</NavItem>
                   <NavDropdown id='navbar-manage' eventKey={7} title='Manage'>
                     <MenuItem eventKey={7.1}>
-                      <NewMemberForm />
+                      
                     </MenuItem>
                   </NavDropdown>
                 </Nav>

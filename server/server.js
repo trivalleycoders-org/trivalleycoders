@@ -1,11 +1,11 @@
 import SourceMapSupport from 'source-map-support';
 SourceMapSupport.install();
-// import 'babel-polyfill';
 import bodyParser from 'body-parser'
 import express from 'express'
 import path from 'path'
-// import events from './seed-data/events'
 import { MongoClient } from 'mongodb';
+import { ObjectId } from 'mongodb';
+import * as ku from '../client/src/lib/ke-utils'
 
 var config = require('./config');
 const app = express()
@@ -58,6 +58,55 @@ router.get('/members', (req, res) => {
       res.status(500).json({ message: 'Internal Server Error' })
     })
 })
+
+router.post('/members', (req, res) => {
+  const member = {
+    picture: "http://klequis.com/images/tvc/male-person-02.png",
+    firstName: "",
+    lastName: "",
+    role: "",
+    index: 0,
+  }
+  db.collection('members').insertOne(member)
+    .then(result =>
+      db.collection('members').find({_id: result.insertedId}).limit(1)
+      .next()
+    )
+    .then(savedMember => {
+      res.json(savedMember);
+    })
+    .catch(error => {
+      console.log(error);
+      res.status(500).json({ message: `Internal Server Error: ${error}`});
+    });
+});
+
+router.put('/members/:id', (req, res) => {
+  ku.log('router.put/members/:id', req, 'green');
+  let memberId;
+  try {
+    _id = new ObjectId(req.params.id);
+  } catch (error) {
+    resp.status(422).json({ message: `Invalid member._id: ${error}`});
+    return;
+  }
+  const member = req.body;
+  // Don't need the _id as stored in the member object so delete it
+  delete member._id;
+  // ** should do some validation here to check that all required
+  // data is present of of a valid type **
+
+  db.collection('members').updateOne({ _id: memberId },
+    db.collection('members').find({ _id: memberId }).limit(1).next()
+  )
+  .then(updatedMember => {
+    res.json(updatedMember);
+  })
+  .catch(error => {
+    console.log('put./members', error);
+    res.status(500).json( { message: `Internal server error: ${error}`});
+  });
+});
 
 router.get('/techlogos', (req, res) => {
   db.collection('techlogos').find().toArray()

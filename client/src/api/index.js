@@ -86,8 +86,13 @@ export default {
       );
     },
 
-    update(id, content) {
-      return fetchJson(`/members/${id}`, { method: 'PUT', body: JSON.stringify({ content }) }
+    update(id, newMember) {
+      console.log('members.update.id', id);
+      return fetchJson(
+        `/members/${id}`,
+        {
+          method: 'PUT',
+          body: JSON.stringify({ newMember }) }
       );
     },
 
