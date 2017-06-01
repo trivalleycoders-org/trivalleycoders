@@ -1,4 +1,4 @@
-#Tri-Valley Coders Website
+# Tri-Valley Coders Website
 
 ## Getting Setup
 It is assumed that you have Git, NPM & Node installed.
