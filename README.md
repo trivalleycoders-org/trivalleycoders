@@ -1,37 +1,40 @@
-# master branch
-## Running the project (from master)
-If Yarn is not installed then
-- $ npm install -g yarn
+#Tri-Valley Coders Website
 
-- clone the project
+## Getting Setup
+It is assumed that you have Git, NPM & Node installed.
+
+### Install MongoDB
+The MongoDB installation instructions are excellent so go straight there: [Install MongoDB Community Edition](https://docs.mongodb.com/manual/administration/install-community/)
+
+### Install Yarn
+- $ sudo npm install -g yarn
+
+### Clone the project
+- $ git clone https://github.com/trivalleycoders-org/trivalleycoders.git
+
+### Start Mongo and populate the database
+- $ sudo service mongod start
+- $ cd /(project-root)/doc/scripts
+- $ ./tvcwebsite.refresh.sh
+
+
+## Running the project
+
 - $ yarn install
 - $ yarn start
+- In your browser go to localhost:3000
+- To shut-down the project in terminal you need to press ctrl+c twice
 
-Your default browser should be launched automatically. If not, launch the app from localhost:3000
+## Branches
+- **master** - production code
+- **development** - buildable development code
 
-To shut-down the project in terminal you need to press ctrl+c twice
 
-## Making changes
-The only difference here is there is now two applications /client & /server. If you are working on the client then $ cd client and everything should be recognizable.
-
-# add-redux-part-2
-In addition to completing the Redux implementation (at least for Events) I folded MongoDB into this branch.
-
-Events are not coming from a MongoDB collection. This is not the goal for Events, they will come from the Meetup API. However, I wired-up Events to Mongo so we could go through doing so for projects as a group.
-
-**You must install Mongo and then run the initialization script to proceed**
-
-### Installing MongoDB
-The MongoDB installation instructions are excellent so go straight there [Install MongoDB Community Edition](https://docs.mongodb.com/manual/administration/install-community/)
-
-### Run the initialization script
+## Viewing MongoDB database
+There are 2 programs we have tried, RoboMongo and Mongo Express.
+Mongo Express is easy to install and use
 ````
-$ mongo project_root/server/scripts/init.mongo.js
-````
-
-### Install MongoExpress
-````
-$ npm install -g mongo-express
+$ sudo npm install -g mongo-express
 ````
 Then
 - Find the file .../mongo-express/config.default.js and make a copy as .../mongo-express/config.js
