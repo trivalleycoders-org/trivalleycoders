@@ -45,3 +45,11 @@ Then
 $ mongo-express -u yourUserName -p yourPassword -d tvcwebsite
 ````
 Ignoring error messages, look for the url. It is probably localhost:8081
+
+## Contributing
+We welcome and encourage all members of Tri-Valley Coders to contribute. There are many roles to fill. If you don't feel ready to code you can contribute to test cases, documentation and testing. If you would like to contribute contact Karl at klequis@trivalleycoders.org.
+
+**Why contribute?**
+- You have nothing better to do
+- You want to gain valuable experience working on a team and getting coaching from the more experienced team members
+- You want to work with a great group of people who are excited about making software
