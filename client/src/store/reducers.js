@@ -92,7 +92,6 @@ export const newMemberId = (state = null, { type, payload }) => {
     case 'app/newMemberId':
       ku.log('newMemberId.type', type, 'green')
       ku.log('newMemberId.payload', payload, 'green')
-      // return payload._id;
       return payload._id;
     default:
       return state;

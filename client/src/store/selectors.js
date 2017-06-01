@@ -1,3 +1,5 @@
+import * as ku from '../lib/ke-utils';
+
 export const getEvents = (state) =>
   state.events.eventsIds.map((id) => state.events.eventsById[id]);
 
@@ -8,13 +10,14 @@ export const getMembers = (state) =>
   state.members.membersIds.map((id) => state.members.membersById[id]);
 
 export const getMember = (state, _id) => {
-  console.log('state', state);
-  console.log('_id', _id);
   return state.members.byId[_id] || null;
 }
 
-export const getNewMemberId = (state) =>
-  state.ui.newMemberId;
+export const getNewMemberId = (state) => {
+  console.log('state', state, 'green');
+  return state.ui.newMemberId;
+}
+
 
 export const getTechlogos = (state) =>
   state.techlogos.techlogosIds.map((id) => state.techlogos.techlogosById[id]);
