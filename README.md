@@ -21,7 +21,7 @@ The MongoDB installation instructions are excellent so go straight there: [Insta
 ## Running the project
 
 - $ yarn install
-- $ yarn start
+- $ yarn startc
 - In your browser go to localhost:3000
 - To shut-down the project in terminal you need to press ctrl+c twice
 
