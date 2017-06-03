@@ -61,19 +61,20 @@ router.get('/members', (req, res) => {
 
 router.post('/members', (req, res) => {
   const member = {
-    picture: "http://klequis.com/images/tvc/male-person.02.png",
+    picture: "",
     firstName: "",
     lastName: "",
     role: "",
     index: 0,
   }
+  console.log('member', member);
   db.collection('members').insertOne(member)
     .then(result =>
       db.collection('members').find({_id: result.insertedId}).limit(1)
       .next()
     )
     .then(savedMember => {
-      // ku.log('savedMember', savedMember, 'red');
+      console.log('savedMember', savedMember);
       res.json(savedMember);
     })
     .catch(error => {
