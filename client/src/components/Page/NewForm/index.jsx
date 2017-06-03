@@ -31,7 +31,7 @@ class NewForm extends Component {
           <FormControl
             key={'firstName'}
             type="text"
-            onChange={(event) => updateMember(event.target.value)}
+            onChange={(event) => {event.persist(); console.log(event)}}//problem is how he is passing things into the onchange
             placeholder='First Name'
             value={member.firstName}
           />
@@ -69,10 +69,9 @@ class NewForm extends Component {
 };*/
 
 const mapStateToProps = (state) => {
-  // const newMemberId = selectors.getNewMemberId(state);
+  const newMemberId = selectors.getNewMemberId(state);
   const o = {
-    // member: selectors.getMember(state, newMemberId),
-    member: {},
+    member: selectors.getMember(state, newMemberId),
   }
   ku.log('o', o, 'red');
   return o;

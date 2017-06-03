@@ -26,7 +26,7 @@ export const insertMember = (member) => ({
 });
 
 export const updateMember = (_id, firstName, lastName, role, picture ) => ({
-  type: 'app/updatemember',
+  type: 'app/updateMember',
   payload: {
     _id,
     firstName,

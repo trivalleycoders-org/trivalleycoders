@@ -10,7 +10,10 @@ export const getMembers = (state) =>
   state.members.membersIds.map((id) => state.members.membersById[id]);
 
 export const getMember = (state, _id) => {
-  return state.members.byId[_id] || null;
+  if (_id != null) {
+    return state.members.byId[_id] || {};
+  }
+  return {_id: '000' };
 }
 
 export const getNewMemberId = (state) => {
