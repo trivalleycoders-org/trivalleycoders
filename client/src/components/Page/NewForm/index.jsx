@@ -73,7 +73,7 @@ const mapStateToProps = (state) => {
   const o = {
     member: selectors.getMember(state, newMemberId),
   }
-  ku.log('o', o, 'red');
+  // ku.log('o', o, 'red');
   return o;
 };
 

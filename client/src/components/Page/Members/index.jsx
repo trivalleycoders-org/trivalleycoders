@@ -12,12 +12,12 @@ import './style.css';
 class Members extends Component {
   componentWillMount() {
     this.props.requestReadMembers();
-    this.handleNewMemberClick = this.handleNewMemberClick.bind(this);
+    // this.handleNewMemberClick = this.handleNewMemberClick.bind(this);
   }
 
-  handleNewMemberClick() {
+  /*handleNewMemberClick() {
     alert('clicked');
-  }
+  }*/
 
   render() {
     const { readMembersRequest } = this.props;
@@ -32,8 +32,12 @@ class Members extends Component {
                   {this.props.members.sort((a, b) => a.index - b.index).map((m) => (
                     <Member
                       key={m._id}
-                      picture={m.picture}
-                      name={m.name}
+                      picture={
+                        m.picture
+                        ? m.picture
+                        : 'http://klequis.com/images/tvc/male-person.02.png'
+                      }
+                      name={m.firstName}
                       role={m.role}
                       index={m.index}
                     />
@@ -67,9 +71,9 @@ class Members extends Component {
   }
 }
 
-              Members.propTypes = {
-                requestReadMembers: PropTypes.func.isRequired,
-                readMembersRequest: PropTypes.object.isRequired,
+Members.propTypes = {
+  requestReadMembers: PropTypes.func.isRequired,
+  readMembersRequest: PropTypes.object.isRequired,
 }
 
 const mapStateToProps = (state) => ({
