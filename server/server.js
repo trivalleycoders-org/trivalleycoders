@@ -73,6 +73,7 @@ router.post('/members', (req, res) => {
       .next()
     )
     .then(savedMember => {
+      // ku.log('savedMember', savedMember, 'red');
       res.json(savedMember);
     })
     .catch(error => {
