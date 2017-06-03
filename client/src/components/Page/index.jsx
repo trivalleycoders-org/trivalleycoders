@@ -21,6 +21,7 @@ const Page = () => {
       <Row className='page-grid-outer-row'>
         <Grid fluid>
           <Row>
+            <NewForm />
             <Navigation />
             <Header />
             <TechLogos />

@@ -61,7 +61,7 @@ router.get('/members', (req, res) => {
 
 router.post('/members', (req, res) => {
   const member = {
-    picture: "http://klequis.com/images/tvc/male-person-02.png",
+    picture: "http://klequis.com/images/tvc/male-person.02.png",
     firstName: "",
     lastName: "",
     role: "",
@@ -73,6 +73,7 @@ router.post('/members', (req, res) => {
       .next()
     )
     .then(savedMember => {
+      // ku.log('savedMember', savedMember, 'red');
       res.json(savedMember);
     })
     .catch(error => {
