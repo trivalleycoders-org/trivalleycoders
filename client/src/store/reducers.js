@@ -65,9 +65,10 @@ export const projectsIds = (state = [], { type, payload }) => {
 
 export const membersById = ( state = {}, { type, payload }) => {
   switch (type) {
-    case 'app/insertMember':
+    case 'app/updateMember'://modify member
+    case 'app/insertMember'://add member
       return merge(state, { [payload.id]: payload });
-    case 'app/replaceMembers':
+    case 'app/replaceMembers'://get all members
       // ku.log('membersById.payload', payload, 'green');
       return payload.members;
     default:
