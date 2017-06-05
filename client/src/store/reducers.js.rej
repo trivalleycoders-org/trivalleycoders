@@ -1,0 +1,20 @@
+diff a/client/src/store/reducers.js b/client/src/store/reducers.js	(rejected hunks)
+@@ -65,11 +65,13 @@
+ 
+ export const membersById = ( state = {}, { type, payload }) => {
+   switch (type) {
+-    case 'app/updateMember'://modify member
+-    case 'app/insertMember'://add member
+-      return merge(state, { [payload.id]: payload });
+-    case 'app/replaceMembers'://get all members
+-      // ku.log('membersById.payload', payload, 'green');
++    case 'app/insertMember': // new/add
++      ku.log('type', type, 'green');
++      ku.log('payload', payload, 'green');
++      const o = merge(state, { [payload._id]: payload });
++      ku.log('membersById', o, 'green');
++      return o;
++    case 'app/replaceMembers': // read list load all
+       return payload.members;
+     default:
+       return state;

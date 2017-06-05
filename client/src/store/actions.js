@@ -15,9 +15,9 @@ export const replaceMembers = (members) => ({
   payload: members,
 });
 
-export const newMemberId = (_id) => ({
-  type: 'app/newMemberId',
-  payload: { _id },
+export const newMember = (newMember) => ({
+  type: 'app/newMember',
+  payload: { newMember },
 });
 
 export const insertMember = (member) => ({
@@ -27,6 +27,28 @@ export const insertMember = (member) => ({
 
 export const updateMember = (_id, firstName, lastName, role, picture ) => ({
   type: 'app/updateMember',
+  payload: {
+    _id,
+    firstName,
+    lastName,
+    role,
+    picture,
+  }
+})
+
+export const createNewMember = ( _id = "000", firstName = "", lastName = "", role = "", picture = "" ) => ({
+  type: 'app/createNewMember',
+  payload: {
+    _id,
+    firstName,
+    lastName,
+    role,
+    picture,
+  }
+})
+
+export const updateNewMember = (_id, firstName, lastName, role, picture ) => ({
+  type: 'app/updateNewMember',
   payload: {
     _id,
     firstName,
@@ -120,7 +142,7 @@ export const requestReadMembers = createRequestThunk({
 export const requestCreateMember = createRequestThunk({
   request: api.members.create,
   key: 'createMember',
-  success: [ insertMember, (member) => newMemberId(member._id) ],
+  success: [ insertMember, (member) => newMember(member) ],
 });
 
 export const requestUpdateMember = createRequestThunk({

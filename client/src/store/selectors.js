@@ -10,17 +10,19 @@ export const getMembers = (state) =>
   state.members.membersIds.map((id) => state.members.membersById[id]);
 
 export const getMember = (state, _id) => {
-  if (_id != null) {
     return state.members.byId[_id] || {};
+}
+
+export const getNewMember = (state) => {
+  if (state.ui.newMember != null){ 
+    ku.log('selector newMember', state.ui.newMember, 'blue');
+    return state.ui.newMember;
   }
-  return {_id: '000' };
+  else{
+    ku.log('selector no member', null, 'blue');
+    return null;
+  } 
 }
-
-export const getNewMemberId = (state) => {
-  console.log('state', state, 'green');
-  return state.ui.newMemberId;
-}
-
 
 export const getTechlogos = (state) =>
   state.techlogos.techlogosIds.map((id) => state.techlogos.techlogosById[id]);

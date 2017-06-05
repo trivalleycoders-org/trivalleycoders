@@ -8,11 +8,15 @@ import * as selectors from '../../../store/selectors';
 import * as ku from '../../../lib/ke-utils';
 
 // const NewForm = ({ updateMember, member, requestCreateMember, requestUpdateMember }) => {
+var first = true;
 class NewForm extends Component {
-  // ku.log('member', member, 'green');
-
   render() {
-    const { updateMember, member, requestCreateMember, requestUpdateMember } = this.props;
+    const { updateMember, createNewMember, updateNewMember, newMember, requestCreateMember, requestUpdateMember } = this.props;
+    if (first){
+      first = false;
+      createNewMember();
+    }
+    console.log("form", this.props.newMember());
     return (
       <div>
         <Button
@@ -21,7 +25,7 @@ class NewForm extends Component {
           New Member
         </Button>
         <Button
-          onClick={() => requestUpdateMember('member._id', member)}
+          onClick={() => requestUpdateMember('newMember', newMember)}
         >
           Save
         </Button>
@@ -31,30 +35,30 @@ class NewForm extends Component {
           <FormControl
             key={'firstName'}
             type="text"
-            onChange={(event) => {event.persist(); console.log(event)}}//problem is how he is passing things into the onchange
+            onChange={(event) => {updateNewMember(newMember._id, event.target.value)}}//problem is how he is passing things into the onchange
             placeholder='First Name'
-            value={member.firstName}
+            value={newMember.firstName}
           />
           <FormControl
             key={'lastName'}
             type="text"
-            onChange={(event) => updateMember(event.target.value)}
+            onChange={(event) => updateNewMember(newMember._id, newMember.firstName, event.target.value)}
             placeholder='Last Name'
-            value={member.lastName}
+            value={newMember.lastName}
           />
           <FormControl
             key={'picture'}
             type="text"
-            onChange={(event) => updateMember(event.target.value)}
+            onChange={(event) => updateNewMember(newMember._id, newMember.firstName, newMember.lastName, newMember.role, event.target.value)}
             placeholder='Picture'
-            value={member.picture}
+            value={newMember.picture}
           />
           <FormControl
             key={'role'}
             type="text"
-            onChange={(event) => updateMember(event.target.value)}
+            onChange={(event) => updateNewMember(newMember._id, newMember.firstName, newMember.lastName, event.target.value)}
             placeholder='Role'
-            value={member.role}
+            value={newMember.role}
           />
         </form>
       </div>
@@ -69,12 +73,14 @@ class NewForm extends Component {
 };*/
 
 const mapStateToProps = (state) => {
-  const newMemberId = selectors.getNewMemberId(state);
-  const o = {
-    member: selectors.getMember(state, newMemberId),
+  console.log(state.ui);
+  const newMember = selectors.getNewMember(state);
+  if (newMember != null) {
+    var temp = {newMember: newMember}
+    console.log("mapping newMember", temp);
+    return {temp};
   }
-  // ku.log('o', o, 'red');
-  return o;
+  else return {newMember: null};
 };
 
 export default connect(mapStateToProps, actionCreators)(NewForm);

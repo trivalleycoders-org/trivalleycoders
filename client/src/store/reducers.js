@@ -65,13 +65,11 @@ export const projectsIds = (state = [], { type, payload }) => {
 
 export const membersById = ( state = {}, { type, payload }) => {
   switch (type) {
-    case 'app/insertMember': // new/add
-      ku.log('type', type, 'green');
-      ku.log('payload', payload, 'green');
-      const o = merge(state, { [payload._id]: payload });
-      ku.log('membersById', o, 'green');
-      return o;
-    case 'app/replaceMembers': // read list load all
+    case 'app/updateMember'://modify member
+    case 'app/insertMember'://add member
+      return merge(state, { [payload.id]: payload });
+    case 'app/replaceMembers'://get all members
+      // ku.log('membersById.payload', payload, 'green');
       return payload.members;
     default:
       return state;
@@ -83,20 +81,19 @@ export const membersIds = (state = [], { type, payload }) => {
     case 'app/replaceMembers':
       return payload.ids;
     case 'app/insertMember':
-      ku.log('membersIds.payload', payload, 'green');
+      // ku.log('membersIds.payload', payload, 'green');
       return prepend(payload._id, state);
     default:
       return state;
   }
 };
 
-export const newMemberId = (state = null, { type, payload }) => {
+export const newMember = (state = null, { type, payload }) => {
   switch (type) {
-    case 'app/newMemberId':
-      /*ku.log('newMemberId.type', type, 'green')
-      ku.log('newMemberId.payload', payload, 'green')
-      ku.log('payload._id', payload._id, 'green')*/
-      return payload._id;
+    case 'app/createNewMember':
+    case 'app/updateNewMember':
+      ku.log('reduced newMember', payload, 'green');
+      return merge(state, payload);
     default:
       return state;
   }
@@ -184,7 +181,7 @@ export default combineReducers({
     sponsorsIds,
   }),
   ui: combineReducers({
-    newMemberId,
+    newMember,
   }),
   requests,
 })
