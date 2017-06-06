@@ -24,18 +24,18 @@ const staticFiles = express.static(path.join(__dirname, '../../client/build'))
 
 app.use(staticFiles)
 
-router.get('/events', (req, res) => {
-  db.collection('events').find().toArray()
-    .then(events => {
-      res.json(events)
-    })
-    .catch(error => {
-      console.log(error);
-      res.status(500).json({ message: 'Internal Server Error' })
-    })
-  // const e = events
-  // res.send(e)
-})
+// router.get('/events', (req, res) => {
+//   db.collection('events').find().toArray()
+//     .then(events => {
+//       res.json(events)
+//     })
+//     .catch(error => {
+//       console.log(error);
+//       res.status(500).json({ message: 'Internal Server Error' })
+//     })
+//   // const e = events
+//   // res.send(e)
+// })
 
 router.get('/projects', (req, res) => {
   db.collection('projects').find().toArray()

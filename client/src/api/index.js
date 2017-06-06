@@ -1,11 +1,14 @@
 import { normalize, Schema, arrayOf } from 'normalizr';
+//import axios from 'axios';
 import * as ku from '../lib/ke-utils';
-const events = new Schema('events', { idAttribute: '_id' });
+const events = new Schema('events', { idAttribute: 'time' });
 const projects = new Schema('projects', { idAttribute: '_id' });
 const members = new Schema('members', { idAttribute: '_id' });
 const techlogos = new Schema('techlogos', { idAttribute: '_id' });
 const navButtons = new Schema('navButtons', { idAttribute: '_id' } );
 const sponsors = new Schema('sponsors', { idAttribute: '_id' } );
+// Meetup Api
+const url = 'https://crossorigin.me/http://api.meetup.com/2/events?offset=0&format=json&limited_events=False&group_urlname=trivalleycoders&photo-host=secure&page=5&fields=&order=time&desc=false&status=upcoming&sig_id=186737513&sig=5fb3751fa7a6004ce0e74889648a52cb58cdca08';
 
 export const rejectErrors = (res) => {
   const { status } = res;
@@ -32,9 +35,10 @@ export const fetchJson = (url, options = {}) => (
 export default {
   events: {
     readList() {
-      return fetchJson('/events')
+      return fetchJson(url)
         .then((data) => {
-          const normalized = normalize(data, arrayOf(events));
+          ku.log('this is the', data.results);
+          const normalized = normalize(data.results, arrayOf(events));
           const o = {
             events: normalized.entities.events || {},
             ids: normalized.result,
