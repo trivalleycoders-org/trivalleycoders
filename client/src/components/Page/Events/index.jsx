@@ -18,6 +18,7 @@ class Events extends Component {
     const { readEventsRequest } = this.props;
     switch (readEventsRequest.status) {
       case 'success':
+      console.log("I am working", this.props.events);
         return (
           <div className='green-border'>
             <Grid className='events-grid blue-border'>
@@ -31,7 +32,7 @@ class Events extends Component {
                           key={e.time}
                           //date={e.date}
                           name={e.name}
-                          location={e.venue.name}
+                          //location={e.venue.name}
                         />
                       )
                       )
