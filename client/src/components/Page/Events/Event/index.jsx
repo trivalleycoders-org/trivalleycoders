@@ -6,13 +6,13 @@ import * as style from './style.css';
 const Event = (props) => (
   <tr>
     <td>
-      {props.date.substr(0,7)}
+      date
     </td>
     <td>
       <a href="#">{props.name}</a>
     </td>
     <td>
-      {props.location}
+      location
     </td>
   </tr>
 );

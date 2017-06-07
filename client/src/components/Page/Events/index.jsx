@@ -18,6 +18,7 @@ class Events extends Component {
     const { readEventsRequest } = this.props;
     switch (readEventsRequest.status) {
       case 'success':
+      console.log("I am working", this.props.events);
         return (
           <div className='green-border'>
             <Grid className='events-grid blue-border'>
@@ -28,10 +29,10 @@ class Events extends Component {
                     {
                       this.props.events.map((e) => (
                         <Event
-                          key={e._id}
-                          date={e.date}
+                          key={e.time}
+                          //date={e.date}
                           name={e.name}
-                          location={e.location}
+                          //location={e.venue.name}
                         />
                       )
                       )
