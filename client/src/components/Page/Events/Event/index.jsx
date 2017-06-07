@@ -4,20 +4,28 @@ import { Panel, Grid, Row, Col } from 'react-bootstrap';
 import './style.css';
 
 
-const Event = (props) => (
+const Event = (props) => {
+  console.log('*************hello Laua****************');
+  // const mapStateToProps = (state) => {
+  const meetupDate = () => {
+    return props.name
+    // return theDate;
+  }
+  return (
     <Row>
       <Panel>
         <Col sm={2} md={2}>
-          {props.date.substr(0,7)}
+          {meetupDate}
         </Col>
         <Col sm={5} md={5}>
-          <a href="#" className='text-nowrap'>{props.name}</a>
+          <a href="#">{props.name}</a>
         </Col>
         <Col sm={5} md={5}>
-          {props.location}
+          location
         </Col>
       </Panel>
     </Row>
-);
+  )
+};
 
 export default Event;

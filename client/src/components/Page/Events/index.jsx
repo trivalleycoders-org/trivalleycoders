@@ -26,10 +26,10 @@ class Events extends Component {
                 {
                   this.props.events.map((e) => (
                     <Event
-                      key={e._id}
-                      date={e.date}
+                      key={e.time}
+                      // date={e.date}
                       name={e.name}
-                      location={e.location}
+                      location={e.venue.name}
                     />
                   )
                   )
