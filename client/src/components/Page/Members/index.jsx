@@ -3,12 +3,11 @@ import React from 'react';
 import { Component } from 'react';
 import { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { Grid, Row, Thumbnail, Button } from 'react-bootstrap';
+import { Grid, Row } from 'react-bootstrap';
 import * as actionCreators from '../../../store/actions';
 import * as selectors from '../../../store/selectors'
 import Member from './Member';
-import NewMemberForm from '../../../elements/NewMemberForm'
-import * as style from './style.css';
+import './style.css';
 
 class Members extends Component {
   componentWillMount() {
@@ -25,13 +24,12 @@ class Members extends Component {
     switch (readMembersRequest.status) {
       case 'success':
         return (
-          <div className='green-border'>
-            <Grid className='members-grid blue-border'>
-              <Row>
-                <Button onClick={this.handleNewMemberClick}>Add Member</Button>
-                <h1>Members</h1>
+          <section id='members'>
+            <Grid className='outer-grid'>
+              <Row className='main-row'>
+                <h1 className='section-title'>Members</h1>
                 <div className='members'>
-                  {this.props.members.map((m) => (
+                  {this.props.members.sort((a, b) => a.index - b.index).map((m) => (
                     <Member
                       key={m._id}
                       picture={m.picture}
@@ -43,27 +41,35 @@ class Members extends Component {
                 </div>
               </Row>
             </Grid>
-          </div>
+          </section>
         )
       case 'failure':
         return (
-          <div id='members'>
-            <h2>Attempt to load members failed</h2>
-          </div>
+          <section id='members'>
+            <Grid className='outer-grid'>
+              <Row className='main-row'>
+                <h2>Attempt to load members failed</h2>
+              </Row>
+            </Grid>
+          </section>
         );
       default:
         return (
-          <div id='members'>
-            <h2>Loading data...</h2>
-          </div>
+          <section id='members'>
+            <Grid className='outer-grid'>
+              <Row className='main-row'>
+                <h2>Loading data...</h2>
+              </Row>
+            </Grid>
+          </section>
         );
     }
   }
 }
 
-Members.propTypes = {
-  requestReadMembers: PropTypes.func.isRequired,
-  readMembersRequest: PropTypes.object.isRequired,
+              Members.propTypes = {
+                requestReadMembers: PropTypes.func.isRequired,
+                readMembersRequest: PropTypes.object.isRequired,
 }
 
 const mapStateToProps = (state) => ({

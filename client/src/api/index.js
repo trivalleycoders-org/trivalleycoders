@@ -7,6 +7,7 @@ const members = new Schema('members', { idAttribute: '_id' });
 const techlogos = new Schema('techlogos', { idAttribute: '_id' });
 const navButtons = new Schema('navButtons', { idAttribute: '_id' } );
 const sponsors = new Schema('sponsors', { idAttribute: '_id' } );
+import * as ku from '../lib/ke-utils';
 
 // Meetup Api
 const url = 'http://api.meetup.com/2/events?offset=0&format=json&limited_events=False&group_urlname=trivalleycoders&photo-host=secure&page=5&fields=&order=time&desc=false&status=upcoming&sig_id=186737513&sig=5fb3751fa7a6004ce0e74889648a52cb58cdca08';

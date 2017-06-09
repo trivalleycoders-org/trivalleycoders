@@ -3,12 +3,11 @@ import React from 'react';
 import { Component } from 'react';
 import { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { Table } from 'react-bootstrap'
 import * as actionCreators from '../../../store/actions';
 import * as selectors from '../../../store/selectors';
 import Project from './Project';
 import { Grid, Row } from 'react-bootstrap';
-import * as style from './style.css';
+import './style.css';
 
 class Projects extends Component {
   componentWillMount() {
@@ -20,12 +19,11 @@ class Projects extends Component {
     switch (readProjectsRequest.status) {
       case 'success':
         return (
-          <div className='green-border'>
-            <Grid id='projects' className='projects-grid blue-border'>
-              <Row>
-                <h1 >Projects</h1>
-                <div className='projects-wrapper'>
-
+          <section id='projects' >
+            <Grid className='outer-grid'>
+              <Row className='main-row'>
+                <h1 className='section-title'>Projects</h1>
+                <div className='projects'>
                   {this.props.projects.map((p) => (
                     <Project
                       key={p._id}
@@ -38,19 +36,27 @@ class Projects extends Component {
                 </div>
               </Row>
             </Grid>
-          </div>
+          </section>
         )
       case 'failure':
         return (
-          <div id='projects'>
-            <h2>Attempt to get projects failed</h2>
-          </div>
+          <section id='projects'>
+            <Grid className='outer-grid'>
+              <Row className='main-row'>
+                <h2>Attempt to get projects failed</h2>
+              </Row>
+            </Grid>
+          </section>
         );
       default:
         return (
-          <div id='projects'>
-            <h2>Loading data...</h2>
-          </div>
+          <section id='projects'>
+            <Grid className='outer-grid'>
+              <Row className='main-row'>
+                <h2>Loading data...</h2>
+              </Row>
+            </Grid>
+          </section>
         );
     }
   }

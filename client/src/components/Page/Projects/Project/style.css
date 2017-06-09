@@ -4,9 +4,51 @@
   font-weight: bold;
 }
 
-.project-panel {
-  width: 130px;
-  height: 130px;
-  text-align: center;
-  margin: 0 5px;
+.owner-name {
+  font-weight: bold;
+}
+
+/*
+    PHONE
+ */
+@media (max-width : 480px) {
+  .panel-project {
+    text-align: center;
+    width: 155px;
+    padding: 5px;
+    margin: 10px;
+  }
+  .panel-body {
+    padding: 0;
+  }
+}
+
+/*
+    TABLET
+ */
+@media (min-width : 481px) and (max-width : 1024px) {
+  .panel-project {
+    text-align: center;
+    width: 160px;
+    padding: 5px;
+    margin: 10px;
+  }
+  .panel-body {
+    padding: 0;
+  }
+}
+
+/*
+    DESKTOP & LAPTOP
+ */
+@media (min-width : 1025px) {
+  .panel-project {
+    text-align: center;
+    width: 160px;
+    padding: 5px;
+    margin: 10px;
+  }
+  .panel-body {
+    padding: 0;
+  }
 }

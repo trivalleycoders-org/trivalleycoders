@@ -1,4 +1,54 @@
 /* TechLogo */
-.tech-logo-size {
-  max-height: 60px;
+.tech-logo-panel {
+  background-color: transparent;
+  border: none;
+}
+
+/*
+    PHONE
+ */
+@media (max-width : 480px) {
+  .tech-logo-panel {
+    text-align: center;
+    height: 90px;
+    margin: 0 5px;
+  }
+
+  .tech-logo-image {
+    max-height: 40px;
+  }
+
+}
+
+/*
+    TABLET
+ */
+/*@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {*/
+@media (min-width : 481px) and (max-width : 1024px) {
+  .tech-logo-panel {
+    text-align: center;
+    height: 90px;
+    margin: 0 5px;
+  }
+
+  .tech-logo-image {
+    max-height: 40px;
+  }
+}
+
+/*
+    DESKTOP & LAPTOP
+ */
+/*@media only screen  and (min-width : 1224px) {*/
+@media (min-width : 1025px) {
+  .tech-logo-panel {
+    text-align: center;
+    height: 110px;
+    margin: 0 10px;
+  }
+
+  .tech-logo-image {
+    max-height: 60px;
+  }
+
 }

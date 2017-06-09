@@ -1,21 +1,31 @@
 // Events
 import React from 'react';
-import * as style from './style.css';
+import { Panel, Grid, Row, Col } from 'react-bootstrap';
+import './style.css';
 
-
-const Event = (props) => (
-  <tr>
-    <td>
-      date
-    </td>
-    <td>
-      <a href="#">{props.name}</a>
-    </td>
-    <td>
-      location
-    </td>
-  </tr>
-);
+const Event = (props) => {
+  console.log('*************hello Laua****************');
+  // const mapStateToProps = (state) => {
+  const meetupDate = () => {
+    return props.name
+    // return theDate;
+  }
+  return (
+    <Row>
+      <Panel>
+        <Col sm={2} md={2}>
+          {meetupDate}
+        </Col>
+        <Col sm={5} md={5}>
+          <a href="#">{props.name}</a>
+        </Col>
+        <Col sm={5} md={5}>
+          location
+        </Col>
+      </Panel>
+    </Row>
+  )
+};
 
 export default Event;
 

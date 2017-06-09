@@ -1,8 +1,61 @@
 /* Member */
+.member-role {
+  margin-bottom: 0;
+}
 
-.panel-member {
-  text-align: center;
-  width: 160px;
-  height: 210px;
-  margin: 0 10px;
+
+/*
+    PHONE
+ */
+@media (max-width : 480px) {
+  .panel-member {
+    text-align: center;
+    width: 155px;
+    padding: 5px;
+    margin: 10px;
+  }
+  .member-img-container {
+    padding: 0;
+  }
+  .panel-body {
+    padding: 0;
+  }
+
+}
+
+/*
+    TABLET
+ */
+@media (min-width : 481px) and (max-width : 1024px) {
+  .panel-member {
+    text-align: center;
+    width: 160px;
+    padding: 5px;
+    margin: 10px;
+  }
+  .panel-member-img-container {
+    padding: 0;
+  }
+  .panel-body {
+    padding: 0;
+  }
+
+}
+
+/*
+    DESKTOP & LAPTOP
+ */
+@media (min-width : 1025px) {
+  .panel-member {
+    text-align: center;
+    width: 160px;
+    padding: 5px;
+    margin: 10px;
+  }
+  .member-img-container {
+    padding: 0;
+  }
+  .panel-body {
+    padding: 0;
+  }
 }
