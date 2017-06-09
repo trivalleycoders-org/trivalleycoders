@@ -10,6 +10,7 @@
   "dependencies": {
     "concurrently": "^3.4.0",
     "dotenv-webpack": "^1.4.5",
+    "fetch-jsonp": "^1.1.0",
     "lodash": "^4.17.4"
   },
   "scripts": {
