@@ -7,7 +7,7 @@ import * as actionCreators from '../../../store/actions';
 import * as selectors from '../../../store/selectors';
 import { Table, Grid, Row } from 'react-bootstrap';
 import Event from './Event';
-import * as style from './style.css';
+// import './style.css';
 
 class Events extends Component {
   componentWillMount() {
@@ -19,41 +19,45 @@ class Events extends Component {
     switch (readEventsRequest.status) {
       case 'success':
         return (
-          <div className='green-border'>
-            <Grid className='events-grid blue-border'>
-              <Row>
+          <section id='events'>
+            <Grid className='outer-grid'>
+              <Row className='main-row'>
                 <h1 className='section-title'>Events</h1>
-                <Table>
-                  <tbody>
-                    {
-                      this.props.events.map((e) => (
-                        <Event
-                          key={e._id}
-                          date={e.date}
-                          name={e.name}
-                          location={e.location}
-                        />
-                      )
-                      )
-                    }
-                  </tbody>
-                </Table>
+                {
+                  this.props.events.map((e) => (
+                    <Event
+                      key={e.time}
+                      // date={e.date}
+                      name={e.name}
+                      location={e.venue.name}
+                    />
+                  )
+                  )
+                }
               </Row>
             </Grid>
-          </div>
+          </section>
         )
 
       case 'failure':
         return (
-          <div id='events'>
-            <h2>Attempt to get events failed</h2>
-          </div>
+          <section id='events'>
+            <Grid className='outer-grid'>
+              <Row className='main-row'>
+                <h2>Attempt to get events failed</h2>
+              </Row>
+            </Grid>
+          </section>
         );
       default:
         return (
-          <div id='events'>
-            <h2>Loading data...</h2>
-          </div>
+          <section id='events'>
+            <Grid className='outer-grid'>
+              <Row className='main-row'>
+                <h2>Loading data...</h2>
+              </Row>
+            </Grid>
+          </section>
         );
     }
   }

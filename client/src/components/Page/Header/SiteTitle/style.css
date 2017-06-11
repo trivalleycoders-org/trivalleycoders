@@ -1,8 +1,1 @@
 /* SiteTitle */
-
-/*
-    Need to turn <h1> margin top to allow Flexbox to center align the title
- */
-.site-title-h1 {
-  margin: 0;
-}

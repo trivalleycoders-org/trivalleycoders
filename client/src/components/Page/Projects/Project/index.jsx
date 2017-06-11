@@ -1,15 +1,15 @@
 // Project
 import React from 'react';
 import { Panel } from 'react-bootstrap'
-import * as style from './style.css';
+import './style.css';
 
 
 const Project = (props) => (
-  <Panel className='project-panel'>
-    <div className='project-title'>{props.projectName}</div>
-    <div>{props.ownerName}</div>
-    <div>{props.projectType}</div>
-    <div>{props.technologies}</div>
+  <Panel id='panel-project' className='panel-project'>
+    <h4 className='project-title'>{props.projectName}</h4>
+    <h5 className='owner-name'>{props.ownerName}</h5>
+    <h6>{props.projectType}</h6>
+    <h6>{props.technologies}</h6>
   </Panel>
 );
 

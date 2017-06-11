@@ -1,46 +1,27 @@
 // Header
 import React from 'react';
-import { Grid, Row, Col, Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
+import { Grid, Row, Button} from 'react-bootstrap';
 
-import * as style from './style.css';
+import './style.css';
 
 // import Brand from './Brand';
 import Logo from './Logo';
 import SiteTitle from './SiteTitle'
-import Navigation from './Navigation';
 
 const Header = () => (
-  <div id='nav-bar-outer' className='green-border'>
-    <Grid id='nav-grid' class='nav-grid'>
-      <Row id='nav-row'>
-        <Navbar id='navbar' inverse collapseOnSelect>
-          <Navbar.Header id='navbar-header'>
-            <Navbar.Brand id='navbar-brand'>
-              <a href="#">React-Bootstrap</a>
-            </Navbar.Brand>
-            <Navbar.Toggle />
-          </Navbar.Header>
-          <Navbar.Collapse id='navbar-collapse'>
-            <Nav id='nav'>
-              <NavItem eventKey={1} href="#">Link</NavItem>
-              <NavItem eventKey={2} href="#">Link</NavItem>
-              <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-                <MenuItem eventKey={3.1}>Action</MenuItem>
-                <MenuItem eventKey={3.2}>Another action</MenuItem>
-                <MenuItem eventKey={3.3}>Something else here</MenuItem>
-                <MenuItem divider />
-                <MenuItem eventKey={3.3}>Separated link</MenuItem>
-              </NavDropdown>
-            </Nav>
-            <Nav id='nav-pullRight' pullRight>
-              <NavItem eventKey={1} href="#">Link Right</NavItem>
-              <NavItem eventKey={2} href="#">Link Right</NavItem>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
+  <header>
+    <Grid className='outer-grid'>
+      <Row className='main-row header-row'>
+        <Logo />
+        <SiteTitle />
+        <h2 className='section-sub-title'>Learn. Grow. Build. Succeed.</h2>
+        <h1 className='section-title'>A place to learn, collaborate and become a software developer</h1>
+        <p className='lead'>Tri-Valley Coders is a comfortable non-competitive place to learn about making software, both in person and online, for beginners and vetrans alike. Our members span the gammute in terms of age and experience, but they all have one thing in common, they are learning something new and looking to take their software development skills to the next level. (or: ... and preparing to take the next step in their career.)</p>
+        <p className='lead'>Tri-Valley Coders meets every Thursday from 9:00am to 12:00pm with frequent Saturday morning meetings as well. Click below to join.</p>
+        <Button>Join Us!</Button>
       </Row>
     </Grid>
-  </div>
+  </header>
 );
 
 export default Header;
