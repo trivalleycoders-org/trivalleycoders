@@ -1,6 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
-import { PropTypes } from 'react';
+import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
 import { Grid, Row, Thumbnail, Button, Modal, Popover, Tooltip,OverlayTrigger  } from 'react-bootstrap';
 import * as style from './style.css';

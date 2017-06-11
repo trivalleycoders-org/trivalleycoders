@@ -1,7 +1,7 @@
 // Navigation
 import React from 'react';
 import { Component } from 'react';
-import { PropTypes } from 'react';
+import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
 import * as actionCreators from '../../../store/actions'
 import * as selectors from '../../../store/selectors'

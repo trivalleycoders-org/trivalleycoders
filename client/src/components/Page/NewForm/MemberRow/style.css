@@ -1,0 +1,33 @@
+/* MemberRow */
+.member-role {
+  margin-bottom: 0;
+}
+
+.new-member-style {
+  background-color: blue;
+}
+
+
+
+/*
+    PHONE
+ */
+@media (max-width : 480px) {
+
+
+}
+
+/*
+    TABLET
+ */
+@media (min-width : 481px) and (max-width : 1024px) {
+
+
+}
+
+/*
+    DESKTOP & LAPTOP
+ */
+@media (min-width : 1025px) {
+
+}

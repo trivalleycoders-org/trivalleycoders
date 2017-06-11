@@ -5,7 +5,9 @@
   "proxy": "http://localhost:3001",
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "identicon.js": "^2.2.1",
     "normalizr": "^2.1.0",
+    "prop-types": "^15.5.10",
     "ramda": "^0.23.0",
     "react": "^15.5.4",
     "react-bootstrap": "^0.31.0",
@@ -13,8 +15,9 @@
     "react-redux": "^5.0.4",
     "react-scripts": "0.9.5",
     "redux": "^3.6.0",
-    "redux-thunk": "^2.2.0",
-    "redux-logger": "^3.0.1"
+    "redux-form": "^6.7.0",
+    "redux-logger": "^3.0.1",
+    "redux-thunk": "^2.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -22,7 +25,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "devDependencies": {
-    
-  }
+  "devDependencies": {}
 }

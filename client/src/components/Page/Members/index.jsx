@@ -1,7 +1,7 @@
 // Members
 import React from 'react';
 import { Component } from 'react';
-import { PropTypes } from 'react';
+import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
 import { Grid, Row } from 'react-bootstrap';
 import * as actionCreators from '../../../store/actions';
@@ -9,14 +9,11 @@ import * as selectors from '../../../store/selectors'
 import Member from './Member';
 import './style.css';
 
+
 class Members extends Component {
+
   componentWillMount() {
     this.props.requestReadMembers();
-    this.handleNewMemberClick = this.handleNewMemberClick.bind(this);
-  }
-
-  handleNewMemberClick() {
-    alert('clicked');
   }
 
   render() {
@@ -32,8 +29,9 @@ class Members extends Component {
                   {this.props.members.sort((a, b) => a.index - b.index).map((m) => (
                     <Member
                       key={m._id}
+                      _id={m._id}
                       picture={m.picture}
-                      name={m.name}
+                      name={m.firstName}
                       role={m.role}
                       index={m.index}
                     />
@@ -67,9 +65,9 @@ class Members extends Component {
   }
 }
 
-              Members.propTypes = {
-                requestReadMembers: PropTypes.func.isRequired,
-                readMembersRequest: PropTypes.object.isRequired,
+Members.propTypes = {
+  requestReadMembers: PropTypes.func.isRequired,
+  readMembersRequest: PropTypes.object.isRequired,
 }
 
 const mapStateToProps = (state) => ({

@@ -81,21 +81,29 @@ export default {
           return o;
         });
     },
-
     create() {
       return fetchJson(
         '/members',
         { method: 'POST' }
       );
     },
-
-    update(id, content) {
-      return fetchJson(`/members/${id}`, { method: 'PUT', body: JSON.stringify({ content }) }
+    update(id, member) {
+      ku.log('api.members.update: id', id, 'pink');
+      ku.log('api.members.update: member', member, 'pink')
+      return fetchJson(
+        `/members/${id}`,
+        {
+          method: 'PUT',
+          body: JSON.stringify({ member }) }
       );
     },
-
     delete(id) {
-      return fetchJson(`/members/${id}`, { method: 'DELETE' }
+      ku.log('api.members.delete: id', id, 'pink');
+      return fetchJson(
+        `/members/${id}`,
+        {
+          method: 'DELETE'
+        }
       );
     },
   },

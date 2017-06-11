@@ -18,18 +18,10 @@ const styleOrange = [
   'font-weight: bold',
 ].join(';');
 
-/*
-const styleFunRed = [
-  'border: 1px solid #3E0E02',
-  'color: red',
-  'text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3)',
-  'box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset, 0 2px 3px -5px rgba(0, 0, 0, 0.5), 0 -13px 2px -10px rgba(255, 255, 255, 0.4) inset',
-  'line-height: 10px',
-  'text-align: center',
+const stylePink = [
+  'color: #ff69b4',
   'font-weight: bold',
 ].join(';');
-*/
-
 
 const getStyle = (styleName) => {
   let color;
@@ -43,6 +35,12 @@ const getStyle = (styleName) => {
     case 'green':
       color = styleGreen;
       break;
+    case 'orange':
+      color = styleOrange;
+      break;
+    case 'pink':
+      color = stylePink;
+      break;
     default:
       color = '';
   }
@@ -52,6 +50,12 @@ const getStyle = (styleName) => {
 }
 
 module.exports = {
+  log(name, value = '', style = '') {
+    style = getStyle(style);
+    const message = `%c[log] ${name}`;
+    // eslint-disable-next-line no-console
+    console.log(message, style, value);
+  },
 
   p(text) {
     document.write("<p>" + text + "</p>");
@@ -97,13 +101,6 @@ module.exports = {
   pre(text) {
     const str = "<pre>" + text + "</pre>";
     document.write(str);
-  },
-
-  log(name, value = '', style = '') {
-    style = getStyle(style);
-    const message = `%c[log] ${name}`;
-    // eslint-disable-next-line no-console
-    console.log(message, style, value);
   },
 
   logFunction(name) {

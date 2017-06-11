@@ -1,38 +1,13 @@
 import api from '../api';
+import * as ku from '../lib/ke-utils'
+
+/*
+    payload must always be an object. If you are passing in a string you must put it in an object: e.g., payload: { value }. If the parameter(s) pass in are already an object then do: e.g., payload: objectName.
+ */
 
 export const replaceEvents = (events) => ({
   type: 'app/replaceEvents',
   payload: events,
-});
-
-export const replaceProjects = (projects) => ({
-  type: 'app/replaceProjects',
-  payload: projects,
-});
-
-export const replaceMembers = (members) => ({
-  type: 'app/replaceMembers',
-  payload: members,
-});
-
-
-export const insertMember = (member) => ({
-  type: 'app/insertMember',
-  payload: member,
-});
-
-export const updateMember = (content, id, timestamp = Date.now()) => ({
-  type: 'app/updateMember',
-  payload: {
-    id,
-    content,
-    timestamp,
-  },
-});
-
-export const removeMember = (id) => ({
-  type: 'app/removeMember',
-  payload: { id },
 });
 
 export const replaceTechlogos = (techlogos) => ({
@@ -40,35 +15,93 @@ export const replaceTechlogos = (techlogos) => ({
   payload: techlogos,
 });
 
-  export const replaceNavButtons = (navButtons) => ({
+export const replaceNavButtons = (navButtons) => ({
   type: 'app/replaceNavButtons',
   payload: navButtons,
 });
 
-  export const replaceSponsors = (sponsors) => ({
+export const replaceSponsors = (sponsors) => ({
   type: 'app/replaceSponsors',
   payload: sponsors,
+ });
+
+export const replaceProjects = (projects) => ({
+  type: 'app/replaceProjects',
+  payload: projects,
+});
+
+export const updateShowManageMembers = (value) => {
+  ku.log('actions.showManageMembers: value', value, 'green');
+  return {
+  // value will be true / false
+  type: 'app/updateShowManageMembers',
+  payload: { value },
+  }
+};
+
+export const replaceMembers = (members) => ({
+  type: 'app/replaceMembers',
+  payload: members,
+});
+
+export const updateNewMemberId = (value) => {
+  ku.log('actions.updateNewMemberId: value', value, 'green');
+  return {
+    type: 'app/updateNewMemberId',
+    payload: { value },
+  }
+};
+
+export const insertMember = (member) => {
+  // ku.log('actions.insertMember: member', member, 'green')
+  return {
+    type: 'app/insertMember',
+    payload: member,
+  }
+};
+
+export const updateMember = ( _id, firstName, lastName, role, picture, index ) => {
+  ku.log('actions.updateMember', `${_id}, ${firstName}, ${lastName}, ${role}, ${picture}, ${index}`, 'green')
+  // property 'formSort' will be set to the value of 'index'
+  return {
+    type: 'app/updateMember',
+    payload: {
+      _id,
+      firstName,
+      lastName,
+      role,
+      picture,
+      index,
+      formSort: index,
+    }
+  }
+}
+
+export const removeMember = (_id) => ({
+  type: 'app/removeMember',
+  payload: { _id },
 });
 
 export const markRequestPending = (key) => ({
   type: 'app/markRequestPending',
   meta: { key },
 });
-
+/*
+    Variations of an actionCreator
+ */
+// This variation allows you to log
 export const markRequestSuccess = (key) => {
-  console.log('key', key)
+  // you can use console.log() here
   return ({
     type: 'app/markRequestSuccess',
     meta: { key },
   });
 }
-
-/*
-export const markRequestSuccess = (key) => ({
+// This variation is shorter but you can't log
+/*export const markRequestSuccess = (key) => ({
   type: 'app/markRequestSuccess',
   meta: { key },
-});
-*/
+});*/
 
 export const markRequestFailed = (reason, key) => ({
   type: 'app/markRequestFailed',
@@ -113,28 +146,24 @@ export const requestReadMembers = createRequestThunk({
   success: [ replaceMembers ]
 });
 
-// export const requestReadMember = createRequestThunk({
-//   request: api.members.get,
-//   key: (id) => `getMember/${id}`,
-//   success: [ (member) => getMember(member.id) ],
-// });
-
-export const requestCreateMembers = createRequestThunk({
+export const requestCreateMember = createRequestThunk({
   request: api.members.create,
   key: 'createMember',
-  success: [ insertMember ],
+  success: [ insertMember, (member) => updateNewMemberId(member._id) ],
 });
 
 export const requestUpdateMember = createRequestThunk({
   request: api.members.update,
-  key: (id) => `updateMember/${id}`,
-  success: [ updateMember ],
-});
+  key: (_id) => `updateMember/${_id}`,
+  success: [ updateNewMemberId('none') ],
+  failure: [ ]
+})
 
 export const requestDeleteMember = createRequestThunk({
   request: api.members.delete,
-  key: (id) => `deleteMember/${id}`,
-  success: [ (member) => removeMember(member.id) ],
+  key: (_id) => `deleteMember/${_id}`,
+  success: [ (member) => removeMember(member._id), updateNewMemberId('none') ],
+  // failure:
 });
 
 export const requestReadTechlogos = createRequestThunk({

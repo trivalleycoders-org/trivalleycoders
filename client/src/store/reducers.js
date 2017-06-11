@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-// import { dissoc } from 'ramda';
-import { merge } from 'ramda';
+// import { merge, prepend, dissoc, without } from 'ramda';
+import { merge, prepend, dissoc } from 'ramda';
 import * as ku from '../lib/ke-utils';
 
 export const eventsById = ( state = {}, { type, payload }) => {
@@ -64,20 +64,43 @@ export const projectsIds = (state = [], { type, payload }) => {
 };
 
 export const membersById = ( state = {}, { type, payload }) => {
-  switch (type) {
-    case 'app/replaceMembers':
-      ku.log('membersById.payload', payload, 'green');
-      return payload.members;
-    default:
-      return state;
+  try {
+    switch (type) {
+      case 'app/updateMember':
+      case 'app/insertMember': // new/add & update
+        return merge(state, { [payload._id]: payload });
+      case 'app/replaceMembers': // read list load all
+        return payload.members;
+      case 'app/removeMember':
+        return dissoc(payload._id, state);
+      default:
+        return state;
+    }
+  } catch (e) {
+    ku.log('reducers.membersById', e, 'red');
   }
+
 }
 
 export const membersIds = (state = [], { type, payload }) => {
   switch (type) {
     case 'app/replaceMembers':
-      ku.log('membersIds', payload, 'green');
+      // ku.log('membersIds.payload', payload, 'orange');
       return payload.ids;
+    case 'app/insertMember':
+      return prepend(payload._id, state);
+    case 'app/removeMember':
+      return dissoc(payload._id, state);
+    default:
+      return state;
+  }
+};
+
+export const updateNewMemberId = (state = 'not-set', { type, payload }) => {
+  switch (type) {
+    case 'app/updateNewMemberId':
+      ku.log('reducers.newMemberId.payload', payload, 'orange');
+      return payload.value;
     default:
       return state;
   }
@@ -123,6 +146,18 @@ export const sponsorsIds = (state = [], { type, payload }) => {
   }
 };
 
+
+export const showManageMembers = (state = 'no-show', { type, payload }) => {
+
+  switch (type) {
+    case 'app/updateShowManageMembers':
+      ku.log('reducers.showManageMembers: payload', payload, 'orange');
+      return payload;
+    default:
+      return state;
+  }
+};
+
 export const requests = (state = {}, { type, payload, meta }) => {
   switch (type) {
     case 'app/markRequestPending':
@@ -163,6 +198,10 @@ export default combineReducers({
   sponsors: combineReducers({
     sponsorsById,
     sponsorsIds,
+  }),
+  ui: combineReducers({
+    updateNewMemberId,
+    showManageMembers,
   }),
   requests,
 })
