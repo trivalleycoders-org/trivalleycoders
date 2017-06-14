@@ -4,18 +4,16 @@ import { Panel, Grid, Row, Col } from 'react-bootstrap';
 import './style.css';
 
 const Event = (props) => {
-  console.log('*************hello Laua****************');
   
   const meetupDate = (props) => {
     let dateInfo = new Date(props.date);
     let dateArr = dateInfo.toString().split(' ').slice(0, 5);
     let timeArr = dateArr.pop().split(':').slice(0, 2);
-    let dateDetails = {
+    let details = {
       date: dateArr.slice(0, 3).join(' '),
       time: formatDate({timeArr}),
     } 
-
-    return `${dateDetails.date} ${dateDetails.time}`;
+    return `${details.date}, ${details.time}`;
   }
 
   
@@ -23,14 +21,16 @@ const Event = (props) => {
   return (
     <Row>
       <Panel>
-        <Col sm={2} md={2}>
-         <a href={props.url}>{meetupDate(props)}</a>
-        </Col>
-        <Col sm={5} md={5}>
+        <Col sm={5} md={5} lg={5}>
           <a href={props.url}>{props.name}</a>
         </Col>
-        <Col sm={5} md={5}>
-          <a href={props.url}>{props.location}</a>
+        <Col sm={4} md={4} lg={4}>
+          <strong>{`${props.locationName}`}</strong><br/>
+          {`${props.locationAddress}, 
+          ${props.locationCity}`}
+        </Col>
+         <Col sm={3} md={3} lg={3}>
+         {meetupDate(props)}
         </Col>
       </Panel>
     </Row>
@@ -49,11 +49,9 @@ const formatDate = ({timeArr}) => {
   // convert military time and add pm  
   }else if(hour > 12){
     hour = hour - 12;
-    hour.toString();
     return time = `${hour}:${minutes} PM`;
   //add am
   }else{
-    hour.toString();
     return time = `${hour}:${minutes} AM`;
   }
 }

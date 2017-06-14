@@ -23,23 +23,27 @@ class Events extends Component {
           <section id='events'>
             <Grid className='outer-grid'>
               <Row className='main-row'>
-                <h1 className='section-title'>Events</h1>
-                <Table>
-                  <tbody>
+                <div className='events'>
+                  <h1 className='section-title'>Events</h1>
+              
+                
                     {
                       this.props.events.map((e) => (
                         <Event
                           key={e.time}
                           date={e.time}
                           name={e.name}
-                          location={`${e.venue.name}, ${e.venue.address_1}, ${e.venue.city}`} 
+                          locationName={`${e.venue.name}`}
+                          locationAddress={`${e.venue.address_1}`}
+                          locationCity={`${e.venue.city}`} 
                           url={e.event_url}
                         />
                       )
                       )
                     }
-                  </tbody>
-                </Table>
+                  
+              
+               </div>
               </Row>
             </Grid>
           </section>
