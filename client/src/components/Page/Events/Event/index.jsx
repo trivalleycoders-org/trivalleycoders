@@ -1,15 +1,12 @@
 // Events
 import React from 'react';
-import { Panel, Grid, Row, Col } from 'react-bootstrap';
+import { Panel, Row, Col } from 'react-bootstrap';
 import './style.css';
 
 
 const Event = (props) => {
-  console.log('*************hello Laua****************');
-  // const mapStateToProps = (state) => {
   const meetupDate = () => {
     return props.name
-    // return theDate;
   }
   return (
     <Row>

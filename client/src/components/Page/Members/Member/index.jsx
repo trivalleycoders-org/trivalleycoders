@@ -10,7 +10,6 @@ const Member = (props) => {
   const getPicture = () => {
     let src;
     if (!props.picture) {
-      const id = props._id;
       // const data = new Identicon('d3b07384d113edec49eaa6238ad5ff00', 148).toString();
       const data = new Identicon(props._id, 148).toString();
       src = `data:image/png;base64,${data}`

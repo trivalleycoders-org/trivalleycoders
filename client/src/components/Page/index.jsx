@@ -9,12 +9,12 @@ import Navigation from './Navigation'
 import Header from './Header';
 import TechLogos from './TechLogos';
 import Events from './Events';
-import Projects from './Projects';
+// import Projects from './Projects';
 import Members from './Members';
 import Sponsors from './Sponsors';
 import Footer from './Footer';
 import './style.css';
-import NewForm from './NewForm';
+// import NewForm from './NewForm';
 // import * as ku from '../../lib/ke-utils';
 
 class Page extends Component {
@@ -25,11 +25,10 @@ class Page extends Component {
           <Grid fluid>
             <Row>
               <Navigation />
-              <NewForm />
               <Header />
               <TechLogos />
               <Events />
-              <Projects />
+              {/* <Projects /> */}
               <Members />
               <Sponsors />
               <Footer />

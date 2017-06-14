@@ -1,5 +1,5 @@
 import api from '../api';
-import * as ku from '../lib/ke-utils'
+// import * as ku from '../lib/ke-utils'
 
 /*
     payload must always be an object. If you are passing in a string you must put it in an object: e.g., payload: { value }. If the parameter(s) pass in are already an object then do: e.g., payload: objectName.
@@ -31,7 +31,7 @@ export const replaceProjects = (projects) => ({
 });
 
 export const updateShowManageMembers = (value) => {
-  ku.log('actions.showManageMembers: value', value, 'green');
+  // ku.log('actions.showManageMembers: value', value, 'green');
   return {
   // value will be true / false
   type: 'app/updateShowManageMembers',
@@ -45,7 +45,7 @@ export const replaceMembers = (members) => ({
 });
 
 export const updateNewMemberId = (value) => {
-  ku.log('actions.updateNewMemberId: value', value, 'green');
+  // ku.log('actions.updateNewMemberId: value', value, 'green');
   return {
     type: 'app/updateNewMemberId',
     payload: { value },
@@ -61,7 +61,7 @@ export const insertMember = (member) => {
 };
 
 export const updateMember = ( _id, firstName, lastName, role, picture, index ) => {
-  ku.log('actions.updateMember', `${_id}, ${firstName}, ${lastName}, ${role}, ${picture}, ${index}`, 'green')
+  // ku.log('actions.updateMember', `${_id}, ${firstName}, ${lastName}, ${role}, ${picture}, ${index}`, 'green')
   // property 'formSort' will be set to the value of 'index'
   return {
     type: 'app/updateMember',

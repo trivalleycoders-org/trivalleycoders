@@ -5,7 +5,8 @@ import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
 import * as actionCreators from '../../../store/actions'
 import * as selectors from '../../../store/selectors'
-import { Nav, Navbar, NavItem, NavDropdown, MenuItem } from 'react-bootstrap'
+// import { Nav, Navbar, NavItem, NavDropdown, MenuItem } from 'react-bootstrap'
+import { Nav, Navbar, NavItem } from 'react-bootstrap'
 import './style.css';
 
 
@@ -35,9 +36,9 @@ class Navigation extends Component {
                   <NavItem eventKey={4} href="#projects">Projects</NavItem>
                   <NavItem eventKey={5} href="#members">Members</NavItem>
                   <NavItem eventKey={6} href="#sponsors">Sponsors</NavItem>
-                  <NavDropdown eventKey={7} title='Manage'>
+                  {/* <NavDropdown eventKey={7} title='Manage'>
                     <MenuItem eventKey={7.1}>Add Member</MenuItem>
-                  </NavDropdown>
+                  </NavDropdown> */}
                 </Nav>
               </Navbar.Collapse>
             </Navbar>
