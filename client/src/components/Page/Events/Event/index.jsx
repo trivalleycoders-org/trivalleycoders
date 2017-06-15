@@ -17,7 +17,7 @@ const Event = (props) => {
   }
   return (
     <Row>
-      <Panel>
+      <Panel className='events-panel'>
         <Col sm={5} md={5} lg={5}>
           <a href={props.url}>{props.name}</a>
         </Col>
