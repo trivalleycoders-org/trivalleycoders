@@ -1,4 +1,7 @@
 /* Page */
+body {
+  color: white;
+}
 
 .container {
   width: auto;
@@ -144,28 +147,28 @@
  */
 @media (min-width : 1025px) {
   body {
-      background-color: yellow;
+      background-color: black;
   }
   nav {
     padding-left: 10%;
     padding-right: 10%;
-    background-color: yellow;
+    background-color: black;
   }
   section {
     padding-left: 10%;
     padding-right: 10%;
-    background-color: yellow;
+    background-color: black;
   }
 
   header {
     padding-left: 10%;
     padding-right: 10%;
-    background-color: yellow;
+    background-color: black;
   }
 
   footer {
     padding-left: 10%;
     padding-right: 10%;
-    background-color: yellow;
+    background-color: black;
   }
 }
