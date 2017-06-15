@@ -7,6 +7,7 @@ import * as actionCreators from '../../store/actions';
 import * as selectors from '../../store/selectors';
 import Navigation from './Navigation'
 import Header from './Header';
+import About from './About';
 import TechLogos from './TechLogos';
 import Events from './Events';
 // import Projects from './Projects';
@@ -26,6 +27,7 @@ class Page extends Component {
             <Row>
               <Navigation />
               <Header />
+              <About />
               <TechLogos />
               <Events />
               {/* <Projects /> */}

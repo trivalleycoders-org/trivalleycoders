@@ -83,6 +83,11 @@ body {
   background-color: blue;
 }
 
+section, footer {
+  margin-top:50px;
+  margin-bottom:50px;
+}
+
 /*
     PHONE
  */

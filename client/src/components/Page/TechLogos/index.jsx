@@ -126,13 +126,13 @@ class TechLogos extends Component {
       },
     ]
 
-    const other = arrOther.map((t) => (
-      <TechLogo
-        key={t.name}
-        name={t.name}
-        url={t.image}
-      />
-    ))
+    // const other = arrOther.map((t) => (
+    //   <TechLogo
+    //     key={t.name}
+    //     name={t.name}
+    //     url={t.image}
+    //   />
+    // ))
 
     const arrTools = [
       {
@@ -161,13 +161,13 @@ class TechLogos extends Component {
       },
     ]
 
-    const tools = arrTools.map((t) => (
-      <TechLogo
-        key={t.name}
-        name={t.name}
-        url={t.image}
-      />
-    ))
+    // const tools = arrTools.map((t) => (
+    //   <TechLogo
+    //     key={t.name}
+    //     name={t.name}
+    //     url={t.image}
+    //   />
+    // ))
 
     return (
       <section id='tech-logos'>
@@ -185,15 +185,6 @@ class TechLogos extends Component {
             <h3 className='tech-logo-title'>MERN Stack</h3>
             <div className='logo-row'>
               {mern}
-            </div>
-
-            <h3 className='tech-logo-title'>Supporting</h3>
-            <div className='logo-row'>
-              {other}
-            </div>
-            <h3 className='tech-logo-title'>Tools</h3>
-            <div className='logo-row'>
-              {tools}
             </div>
           </Row>
         </Grid>
