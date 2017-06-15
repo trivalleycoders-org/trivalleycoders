@@ -1,19 +1,16 @@
 /* TechLogos */
-.col-tech-logos {
+.logo-row {
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
 }
 
 /*
     PHONE
  */
 @media (max-width : 480px) {
-  .col-tech-logos {
-    justify-content: space-around;
-  }
-  .tech-logo-title {
-    text-align: center;
-  }
+
+
 }
 
 /*
@@ -21,9 +18,7 @@
  */
 /*@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {*/
 @media (min-width : 481px) and (max-width : 1024px) {
-  .col-tech-logos {
-    justify-content: space-around;
-  }
+
 }
 
 /*
@@ -31,10 +26,6 @@
  */
 /*@media only screen  and (min-width : 1224px) {*/
 @media (min-width : 1025px) {
-  .col-tech-logos {
-    justify-content: flex-start;
-  }
-
   .tech-logos-row-inner {
     margin: 10px 0 10px 0;
   }
