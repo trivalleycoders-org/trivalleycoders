@@ -9,9 +9,7 @@ import * as selectors from '../../../store/selectors'
 import Member from './Member';
 import './style.css';
 
-
 class Members extends Component {
-
   componentWillMount() {
     this.props.requestReadMembers();
   }

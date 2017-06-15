@@ -5,6 +5,7 @@
   "proxy": "http://localhost:3001",
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "fetch-jsonp": "^1.1.1",
     "identicon.js": "^2.2.1",
     "normalizr": "^2.1.0",
     "prop-types": "^15.5.10",

@@ -26,7 +26,6 @@ import iRamda from './../../../images/tech-logos/ramda.black.01.svg'
 import iRedux from './../../../images/tech-logos/redux.svg'
 import iUbuntu from './../../../images/tech-logos/ubuntu.svg'
 import iWebpack from './../../../images/tech-logos/webpack.svg'
-
 // Tools
 import iAtom from './../../../images/tech-logos/atom.svg'
 import iGit from './../../../images/tech-logos/git-logo-white.svg'
