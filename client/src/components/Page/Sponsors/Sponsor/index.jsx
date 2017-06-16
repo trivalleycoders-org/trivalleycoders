@@ -4,7 +4,7 @@ import { Panel, Image } from 'react-bootstrap'
 import './style.css';
 
 const Sponsor = (props) => (
-  <Panel className='panel-sponsor'>
+  <Panel className='panel-sponsor gray-panel'>
     <div id='sponsor-img-container' className='sponsor-img-container'>
       <Image className='sponsor-img' src={props.picture} responsive alt='sponsor picture' />
     </div>

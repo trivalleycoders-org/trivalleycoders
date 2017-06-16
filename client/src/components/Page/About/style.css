@@ -1,8 +1,6 @@
-/* Members */
+/* About */
 
-.members {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  margin: auto;
+.section-about {
+  /*smargin-bottom: 48px;*/
+  border: 1px solid white;
 }

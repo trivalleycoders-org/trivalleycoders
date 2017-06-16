@@ -13,6 +13,7 @@ import * as ku from '../lib/ke-utils';
 const url = 'http://api.meetup.com/2/events?offset=0&format=json&limited_events=False&group_urlname=trivalleycoders&photo-host=secure&page=5&fields=&order=time&desc=false&status=upcoming&sig_id=186737513&sig=5fb3751fa7a6004ce0e74889648a52cb58cdca08';
 
 export const rejectErrors = (res) => {
+  
   const { status } = res;
   if (status >= 200 && status < 300) {
     return res;

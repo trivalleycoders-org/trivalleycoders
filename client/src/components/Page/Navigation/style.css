@@ -1,5 +1,9 @@
 /* Navigation */
 
+
+.nav-bar {
+  border: 1px solid white;
+}
 /*.navbar-header {
   display: flex;
   flex-flow: row nowrap;

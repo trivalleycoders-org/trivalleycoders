@@ -20,14 +20,7 @@ class Navigation extends Component {
     switch (readNavButtonsRequest.status){
       case 'success':
         return (
-          <nav>
             <Navbar id='navbar' inverse collapseOnSelect>
-              <Navbar.Header id='navbar-header' className='navbar-header'>
-                <Navbar.Brand id='navbar-brand' className='navbar-brand'>
-
-                </Navbar.Brand>
-                <Navbar.Toggle />
-              </Navbar.Header>
               <Navbar.Collapse id='navbar-collapse'>
                 <Nav id='nav-pullRight' pullRight>
                   <NavItem eventKey={1} href="#header">Home</NavItem>
@@ -36,13 +29,10 @@ class Navigation extends Component {
                   <NavItem eventKey={4} href="#projects">Projects</NavItem>
                   <NavItem eventKey={5} href="#members">Members</NavItem>
                   <NavItem eventKey={6} href="#sponsors">Sponsors</NavItem>
-                  {/* <NavDropdown eventKey={7} title='Manage'>
-                    <MenuItem eventKey={7.1}>Add Member</MenuItem>
-                  </NavDropdown> */}
                 </Nav>
+                <Navbar.Toggle />
               </Navbar.Collapse>
             </Navbar>
-          </nav>
         )
       case 'failure':
        return (

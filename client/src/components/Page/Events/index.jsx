@@ -7,7 +7,7 @@ import * as actionCreators from '../../../store/actions';
 import * as selectors from '../../../store/selectors';
 import { Grid, Row } from 'react-bootstrap';
 import Event from './Event';
-// import './style.css';
+import './style.css';
 
 class Events extends Component {
   componentWillMount() {
@@ -19,30 +19,28 @@ class Events extends Component {
     switch (readEventsRequest.status) {
       case 'success':
         return (
-          <section id='events'>
+          <section id='events' className='events-section'>
             <Grid className='outer-grid'>
               <Row className='main-row'>
-                <div className='events'>
-                  <h1 className='section-title'>Events</h1>
-              
-                
-                    {
-                      this.props.events.map((e) => (
-                        <Event
-                          key={e.time}
-                          date={e.time}
-                          name={e.name}
-                          locationName={`${e.venue.name}`}
-                          locationAddress={`${e.venue.address_1}`}
-                          locationCity={`${e.venue.city}`} 
-                          url={e.event_url}
-                        />
-                      )
-                      )
-                    }
-                  
-              
-               </div>
+                <h1 className='section-title'>Events</h1>
+                <div>
+
+                  {
+                    this.props.events.map((e) => (
+                      <Event
+                        key={e.time}
+                        date={e.time}
+                        name={e.name}
+                        locationName={`${e.venue.name}`}
+                        locationAddress={`${e.venue.address_1}`}
+                        locationCity={`${e.venue.city}`}
+                        url={e.event_url}
+                      />
+                    )
+                    )
+                  }
+
+                </div>
               </Row>
             </Grid>
           </section>

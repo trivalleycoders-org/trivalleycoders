@@ -19,7 +19,7 @@ class Members extends Component {
     switch (readMembersRequest.status) {
       case 'success':
         return (
-          <section id='members'>
+          <section id='members' className='members-section green-background dark-font'>
             <Grid className='outer-grid'>
               <Row className='main-row'>
                 <h1 className='section-title'>Members</h1>

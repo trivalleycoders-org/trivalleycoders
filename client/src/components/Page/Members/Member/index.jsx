@@ -20,7 +20,7 @@ const Member = (props) => {
     return img;
   }
   return (
-    <Panel id='panel-member' className='panel-member'>
+    <Panel id='panel-member' className='panel-member gray-panel'>
       {/* className='img-sizing' */}
       <div id='member-img-container' className='member-img-container'>
         {/* <Image src={props.picture} responsive alt='member picture' /> */}

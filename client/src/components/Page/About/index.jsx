@@ -1,11 +1,10 @@
 // About
 import React from 'react';
 import { Grid, Row, Button} from 'react-bootstrap';
-
 import './style.css';
 
 const About = () => (
-  <section id='about'>
+  <section id='about' className='section-about'>
     <Grid className='outer-grid'>
       <Row className='main-row'>
         <h1 className='section-title'>A place to learn, collaborate and<br />become a software developer</h1>

@@ -1,4 +1,8 @@
 /* TechLogos */
+
+.tech-logos {
+  border: 1px solid black;
+}
 .logo-row {
   display: flex;
   flex-flow: row wrap;

@@ -1,6 +1,13 @@
 /* Page */
 body {
   color: white;
+  font-size: 1em;
+}
+
+#navbar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
 }
 
 .container {
@@ -8,7 +15,6 @@ body {
 }
 
 .outer-grid {
-  /*background-color: lightblue;*/
   margin: auto;
 }
 
@@ -17,8 +23,6 @@ body {
   flex-flow: column nowrap;
   align-items: center;
   margin: auto;
-  /*margin: auto;*/
-  /*background-color: lightgray;*/
 }
 
 .section-title {
@@ -27,6 +31,8 @@ body {
 
 .section-sub-title {
   text-align: center;
+  font-style: italic;
+  color: lightgray;
 }
 
 .page-grid-outer {
@@ -35,12 +41,118 @@ body {
 }
 
 .page-grid-outer-row {
-  /*width: 1170px;*/
   margin: auto;
 }
 
+/*
+    Background & Font Colors
+ */
 .green-text {
   color: #34E97C;
+}
+
+.green-background {
+  background-color: #32E278;
+}
+
+.dark-font {
+  color: black;
+}
+
+.gray-panel {
+  background-color: rgb(240,240,240);
+}
+
+section, footer {
+  /*margin-top:50px;
+  margin-bottom:50px;*/
+}
+
+/*
+    Media Queries
+ */
+/* PHONE */
+@media (max-width : 480px) {
+  body {
+    background-color: lightgreen;
+  }
+  nav {
+    background-color: lightgreen;
+  }
+  section {
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: lightgreen;
+  }
+
+  header {
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: lightgreen;
+  }
+
+  footer {
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: lightgreen;
+  }
+}
+
+/* TABLET */
+@media (min-width : 481px) and (max-width : 1024px) {
+  body {
+      background-color: green;
+  }
+  nav {
+    background-color: green;
+  }
+  section {
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: green;
+  }
+
+  header {
+    padding-left: 1%;
+    padding-right: 1%;
+    /*padding-top: 48px;
+    padding-bottom: 48px;*/
+    background-color: green;
+  }
+
+  footer {
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: green;
+  }
+}
+
+/* DESKTOP & LAPTOP */
+@media (min-width : 1025px) {
+  body {
+      /*background-color: black;*/
+      background-color: #201D23;
+  }
+  nav {
+    background-color: #201D23;
+  }
+  section {
+    background-color: #201D23;
+    padding-left: 10%;
+    padding-right: 10%;
+
+  }
+  header {
+    background-color: #201D23;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  footer {
+    background-color: #201D23;
+    padding-left: 10%;
+    padding-right: 10%;
+
+  }
 }
 
 
@@ -81,99 +193,4 @@ body {
 
 .blue-background {
   background-color: blue;
-}
-
-section, footer {
-  margin-top:50px;
-  margin-bottom:50px;
-}
-
-/*
-    PHONE
- */
-@media (max-width : 480px) {
-  body {
-    background-color: lightgreen;
-  }
-  nav {
-    background-color: lightgreen;
-  }
-  section {
-    padding-left: 1%;
-    padding-right: 1%;
-    background-color: lightgreen;
-  }
-
-  header {
-    padding-left: 1%;
-    padding-right: 1%;
-    background-color: lightgreen;
-  }
-
-  footer {
-    padding-left: 1%;
-    padding-right: 1%;
-    background-color: lightgreen;
-  }
-}
-
-/*
-    TABLET
- */
-@media (min-width : 481px) and (max-width : 1024px) {
-  body {
-      background-color: green;
-  }
-  nav {
-    background-color: green;
-  }
-  section {
-    padding-left: 1%;
-    padding-right: 1%;
-    background-color: green;
-  }
-
-  header {
-    padding-left: 1%;
-    padding-right: 1%;
-    background-color: green;
-  }
-
-  footer {
-    padding-left: 1%;
-    padding-right: 1%;
-    background-color: green;
-  }
-}
-
-
-/*
-    DESKTOP & LAPTOP
- */
-@media (min-width : 1025px) {
-  body {
-      background-color: black;
-  }
-  nav {
-    padding-left: 10%;
-    padding-right: 10%;
-    background-color: black;
-  }
-  section {
-    padding-left: 10%;
-    padding-right: 10%;
-    background-color: black;
-  }
-
-  header {
-    padding-left: 10%;
-    padding-right: 10%;
-    background-color: black;
-  }
-
-  footer {
-    padding-left: 10%;
-    padding-right: 10%;
-    background-color: black;
-  }
 }
