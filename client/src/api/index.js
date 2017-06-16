@@ -10,7 +10,7 @@ const sponsors = new Schema('sponsors', { idAttribute: '_id' } );
 import * as ku from '../lib/ke-utils';
 
 // Meetup Api
-const url = 'http://api.meetup.com/2/events?offset=0&format=json&limited_events=False&group_urlname=trivalleycoders&photo-host=secure&page=5&fields=&order=time&desc=false&status=upcoming&sig_id=186737513&sig=5fb3751fa7a6004ce0e74889648a52cb58cdca08';
+const urlEvents = 'http://api.meetup.com/2/events?offset=0&format=json&limited_events=False&group_urlname=trivalleycoders&photo-host=secure&page=5&fields=&order=time&desc=false&status=upcoming&sig_id=186737513&sig=5fb3751fa7a6004ce0e74889648a52cb58cdca08';
 
 export const rejectErrors = (res) => {
   const { status } = res;
@@ -45,7 +45,7 @@ export const fetchEvents = (url) => (
 export default {
   events: {
     readList() {
-      return fetchEvents(url)
+      return fetchEvents(urlEvents)
         .then((data) => {
           ku.log('this is the', data.results);
           const normalized = normalize(data.results, arrayOf(events));
