@@ -24,8 +24,6 @@ class Events extends Component {
               <Row className='main-row'>
                 <div className='events'>
                   <h1 className='section-title'>Events</h1>
-              
-                
                     {
                       this.props.events.map((e) => (
                         <Event
@@ -40,8 +38,6 @@ class Events extends Component {
                       )
                       )
                     }
-                  
-              
                </div>
               </Row>
             </Grid>
