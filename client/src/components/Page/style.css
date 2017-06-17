@@ -4,11 +4,11 @@ body {
   font-size: 1em;
 }
 
-#navbar {
+/*#navbar {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
-}
+}*/
 
 .container {
   width: auto;

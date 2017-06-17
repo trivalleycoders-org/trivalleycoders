@@ -6,8 +6,7 @@ import { connect } from 'react-redux';
 import classNames from 'classnames'
 import * as actionCreators from '../../../store/actions'
 import * as selectors from '../../../store/selectors'
-// import { Nav, Navbar, NavItem, NavDropdown, MenuItem } from 'react-bootstrap'
-import { Nav, Navbar, NavItem } from 'react-bootstrap'
+import { Grid, Row } from 'react-bootstrap'
 import './style.css';
 
 
@@ -15,43 +14,60 @@ class Navigation extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showMenu: false,
+      menuDown: false,
     }
   }
+
   componentWillMount() {
     this.props.requestReadNavButtons();
   }
 
   render() {
 
-    let cx = classNames({
-      topnav: true,
-      responsive: this.state.showMenu
+    let menuState = classNames(
+      {
+      menu: true,
+      // demo: true,
+      'menu-down': this.state.menuDown,
+      'menu-up': !this.state.menuDown,
+      'menu-item-down': this.state.menuDown,
+      'menu-item-up': !this.state.menuDown,
     })
 
-    const handleIconClick = () => {
+    let toggleBarState = classNames(
+      {
+        'toggle-bar': true,
+      }
+    )
+
+    const handleToggleBarClick = () => {
       let val;
-      this.state.showMenu
+      this.state.menuDown
         ? val = false
         : val = true
-      this.setState({showMenu: val})
+      this.setState({menuDown: val})
     }
+
     const { readNavButtonsRequest } = this.props;
     switch (readNavButtonsRequest.status){
       case 'success':
         return (
-          <div className={cx} id="myTopnav">
-            <a href="#home">Home</a>
-            <a href="#learn">Learn</a>
-            <a href="#events">Events</a>
-            <a href="#projects">Projects</a>
-            <a href="#members">Members</a>
-            <a href="#sponsors">Sponsors</a>
-            <a
-              className="icon"
-              onClick={() => handleIconClick()}
-            >&#9776;</a>
-          </div>
+            <nav id='nav'>
+              <ul className={menuState}>
+                <li className="menu-item" href="#home">Home</li>
+                <li className="menu-item" href="#learn">Learn</li>
+                <li className="menu-item" href="#events">Events</li>
+                <li className="menu-item" href="#projects">Projects</li>
+                <li className="menu-item" href="#members">Members</li>
+                <li className="menu-item" href="#sponsors">Sponsors</li>
+              </ul>
+              <span
+                className={toggleBarState}
+                onClick={() => handleToggleBarClick()}
+              >
+                &#9776;
+              </span>
+            </nav>
         )
       case 'failure':
        return (
