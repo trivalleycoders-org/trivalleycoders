@@ -19,7 +19,7 @@ class Events extends Component {
     switch (readEventsRequest.status) {
       case 'success':
         return (
-          <section id='events' className='events-section'>
+          <section id='events' className='events-section black-background'>
             <Grid className='outer-grid'>
               <Row className='main-row'>
                 <h1 className='section-title'>Events</h1>

@@ -19,7 +19,7 @@ class Sponsors extends Component {
     switch (readSponsorsRequest.status) {
       case 'success':
         return (
-          <section id='sponsors-section' className='sponsors-section'>
+          <section id='sponsors-section' className='sponsors-section black-background'>
             <Grid className='outer-grid'>
               <Row className='main-row'>
                 <h1 className='section-title'>Our Sponsors</h1>

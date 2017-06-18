@@ -26,8 +26,10 @@ class Page extends Component {
           <Grid id='page-grid-inner-fluid' fluid>
             <Row id='page-row-inner'>
               <Navigation />
-              <Header />
-              <About />
+              <div id='header-about' className='black-background'>
+                <Header />
+                <About />
+              </div>
               <TechLogos />
               <Events />
               {/* <Projects /> */}

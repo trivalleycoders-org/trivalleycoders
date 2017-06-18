@@ -26,12 +26,13 @@ class Navigation extends Component {
 
     let menuState = classNames(
       {
-      menu: true,
-      'menu-down': this.state.menuDown,
-      'menu-up': !this.state.menuDown,
-      'menu-item-down': this.state.menuDown,
-      'menu-item-up': !this.state.menuDown,
-    })
+        menu: true,
+        'menu-down': this.state.menuDown,
+        'menu-up': !this.state.menuDown,
+        'menu-item-down': this.state.menuDown,
+        'menu-item-up': !this.state.menuDown,
+      }
+    )
 
     let toggleBarState = classNames(
       {
@@ -51,7 +52,7 @@ class Navigation extends Component {
     switch (readNavButtonsRequest.status){
       case 'success':
         return (
-            <nav id='nav'>
+            <nav id='nav' className='black-background'>
               <ul className={menuState}>
                 <li><a href="#home" className="menu-item">Home</a></li>
                 <li><a href="#learn" className="menu-item">Learn</a></li>

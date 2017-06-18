@@ -1,14 +1,10 @@
 /* Page */
+
 body {
-  color: white;
+  /*color: white;*/
+  color: rgb(200, 200, 200);
   font-size: 1em;
 }
-
-/*#navbar {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-end;
-}*/
 
 .container {
   width: auto;
@@ -52,15 +48,40 @@ body {
 }
 
 .green-background {
-  background-color: #32E278;
+  /*background-color: #32E278;*/
+  /*background: linear-gradient(to top, #2eb05d, #44ffa0);*/
+  /*background: linear-gradient(to top, #28974f, #44ffa0);*/
+  /*background: linear-gradient(to top, #0abc00, #2ded00);*/
+  /*background-color: #009900;*/
+
+  /* lattice.cf
+  background-color: #13d16b;
+  background-image: linear-gradient(to bottom, #34E97C, #1B984F) */
+
+  background-image: linear-gradient(to bottom, #12a64d, #0f552c)
+
+
+}
+
+.black-background {
+  background: linear-gradient(to top, #1d1d1d, #3c3c3c);
+
+
 }
 
 .dark-font {
-  color: black;
+  /*color: rgb(35, 35, 35);*/
+  /*color: rgb(40, 40, 40);*/
+  /*color: rgb(45, 45, 45);*/
+  /*color: rgb(50, 50, 50);*/
+  /*color: rgb(55, 55, 55);*/
+  color: rgb(200, 200, 200)
 }
 
 .gray-panel {
-  background-color: rgb(240,240,240);
+  /*background-color: rgb(240,240,240);*/
+  background-color: transparent;
+  border: none;
 }
 
 section, footer {
@@ -100,30 +121,17 @@ section, footer {
 
 /* TABLET */
 @media (min-width : 481px) and (max-width : 1024px) {
-  body {
-      background-color: green;
-  }
-  nav {
-    background-color: green;
-  }
-  section {
-    padding-left: 1%;
-    padding-right: 1%;
-    background-color: green;
-  }
-
   header {
+    padding-top: 40px;
+    padding-bottom: 40px;
     padding-left: 1%;
     padding-right: 1%;
-    /*padding-top: 48px;
-    padding-bottom: 48px;*/
-    background-color: green;
   }
-
-  footer {
+  section, footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
     padding-left: 1%;
     padding-right: 1%;
-    background-color: green;
   }
 }
 
