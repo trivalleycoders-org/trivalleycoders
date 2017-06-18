@@ -27,7 +27,6 @@ class Navigation extends Component {
     let menuState = classNames(
       {
       menu: true,
-      // demo: true,
       'menu-down': this.state.menuDown,
       'menu-up': !this.state.menuDown,
       'menu-item-down': this.state.menuDown,
@@ -54,12 +53,12 @@ class Navigation extends Component {
         return (
             <nav id='nav'>
               <ul className={menuState}>
-                <li className="menu-item" href="#home">Home</li>
-                <li className="menu-item" href="#learn">Learn</li>
-                <li className="menu-item" href="#events">Events</li>
-                <li className="menu-item" href="#projects">Projects</li>
-                <li className="menu-item" href="#members">Members</li>
-                <li className="menu-item" href="#sponsors">Sponsors</li>
+                <li><a href="#home" className="menu-item">Home</a></li>
+                <li><a href="#learn" className="menu-item">Learn</a></li>
+                <li><a href="#events" className="menu-item">Events</a></li>
+                <li><a href="#projects" className="menu-item">Projects</a></li>
+                <li><a href="#members" className="menu-item">Members</a></li>
+                <li><a href="#sponsors" className="menu-item">Sponsors</a></li>
               </ul>
               <span
                 className={toggleBarState}

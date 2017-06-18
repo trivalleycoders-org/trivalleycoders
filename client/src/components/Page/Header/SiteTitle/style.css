@@ -1,5 +1,27 @@
 /* SiteTitle */
 
 .site-title {
-  font-size: 7.0em;
+  font-size: 4.5em;
+}
+
+/*
+    Media Queries
+ */
+/* PHONE */
+@media (max-width : 480px) {
+
+}
+
+/* TABLET */
+@media (min-width : 481px) and (max-width : 1024px) {
+  .site-title {
+    font-size: 5.0em;
+  }
+}
+
+/* DESKTOP & LAPTOP */
+@media (min-width : 1025px) {
+  .site-title {
+    font-size: 7.0em;
+  }
 }

@@ -19,13 +19,13 @@ nav {
   height: 40px;
   font-size: 18px;
   color: #595959;
-  background: #dbdbdb;
+  /*background: #dbdbdb;*/
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   transition: all .1s linear;
 }
 .toggle-bar:hover {
-  background: #cecece;
+  /*background: #cecece;*/
 }
 
 
@@ -52,6 +52,7 @@ nav {
   text-decoration: none;
   align-self: center;
   border-radius: 5px;
+  color: white;
   font-size: 14px;
   padding: 10px 15px;
   transition: background .2s linear;
@@ -61,25 +62,6 @@ nav {
   text-align: center;
   align-self: center;
   align-content: center;
-}
-
-/*klequis*/
-
-
-.demo {
-  background: #625b60;
-}
-
-.demo li a {
-  color: #fff;
-}
-
-.demo li a:hover {
-  background: #6d6268;
-}
-
-body {
-  /*background: #6c6b6e;*/
 }
 
 /* PHONE */
@@ -107,12 +89,6 @@ body {
   .menu-item-down {
     visibility: visible;
     opacity: 1;
-  }
-}
-
-@media (max-width: 600px) {
-  .menu li a {
-    font-size: 13px;
   }
 }
 
@@ -172,5 +148,14 @@ body {
     font-size: 2em;
     padding: 20px 7px 20px 7px;
 
+  }
+}
+
+@media (max-width: 600px) {
+  .menu {
+    margin: auto;
+  }
+  .menu li a {
+    font-size: 14px;
   }
 }

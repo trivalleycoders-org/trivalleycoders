@@ -21,10 +21,10 @@ import './style.css';
 class Page extends Component {
   render () {
     return (
-      <Grid className='page-grid-outer' fluid>
-        <Row className='page-grid-outer-row'>
-          <Grid fluid>
-            <Row>
+      <Grid id='page-grid-outer' className='page-grid-outer' fluid>
+        <Row id='page-row-outer' className='page-row-outer'>
+          <Grid id='page-grid-inner-fluid' fluid>
+            <Row id='page-row-inner'>
               <Navigation />
               <Header />
               <About />
