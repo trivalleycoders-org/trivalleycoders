@@ -17,9 +17,9 @@ const Event = (props) => {
   }
   return (
     <Row>
-      <Panel className='events-panel gray-panel'>
+      <Panel className='events-panel'>
         <Col sm={5} md={5} lg={5}>
-          <a className='events-anchor' href={props.url}>{props.name}</a>
+          <a className='event-anchor' href={props.url}>{props.name}</a>
         </Col>
         <Col sm={4} md={4} lg={4}>
           <strong>{`${props.locationName}`}</strong><br/>

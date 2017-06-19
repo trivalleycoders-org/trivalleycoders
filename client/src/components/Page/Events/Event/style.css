@@ -1,12 +1,16 @@
 /*Event*/
 
 .events-panel {
-	color: black;
+	/*color: black;*/
+  background-color: rgba(180,180,180,0.1);
+  border: none;
+  padding: 5px;
 }
 
-.events-anchor {
-	color: black;
+.event-anchor {
+  color: white;
 }
+
 
 /*
     PHONE
