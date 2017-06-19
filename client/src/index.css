@@ -1,3 +1,49 @@
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), url(./fonts/Roboto-Regular.ttf) format('ttf');
+}
+
+/*
+    Temp styles
+ */
+
+/*
+.blue-border {
+  border: 1px solid blue;
+}
+
+.red-border {
+  border: 1px solid red;
+}
+
+.orange-border {
+  border: 1px solid orange;
+}
+
+.gray-background {
+  background-color: gray;
+}
+
+.light-gray-background {
+  background-color: lightgray;
+}
+
+.yellow-background {
+  background-color: yellow;
+}
+
+.orange-background {
+  background-color: orange;
+}
+
+.red-background {
+  background-color: red;
+}
+
+.blue-background {
+  background-color: blue;
+}*/
+
 /*
 body  {
   background-color: black;
