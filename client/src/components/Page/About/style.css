@@ -4,3 +4,12 @@
   /*smargin-bottom: 48px;*/
   /*border: 1px solid white;*/
 }
+
+.join-us-btn {
+  font-size: 1.7em;
+  font-weight: bold;
+}
+
+.join-us-text {
+  margin-left: 10px;
+}
