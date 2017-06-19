@@ -15,11 +15,12 @@ const Event = (props) => {
     }
     return `${details.date}, ${details.time}`;
   }
+
   return (
     <Row>
       <Panel className='events-panel'>
         <Col sm={5} md={5} lg={5}>
-          <a className='event-anchor' href={props.url}>{props.name}</a>
+          <a target="_blank" href={props.url}>{props.name}</a>
         </Col>
         <Col sm={4} md={4} lg={4}>
           <strong>{`${props.locationName}`}</strong><br/>
