@@ -1,11 +1,12 @@
 {
-  "name": "crea",
+  "name": "trivalleycoders",
+  "description": "website for Tri-Valley Coders",
   "version": "1.0.0",
   "main": "index.js",
   "repository": {},
   "license": "MIT",
   "engines": {
-    "node": "6.9.5"
+    "node": "6.11.0"
   },
   "dependencies": {
     "concurrently": "^3.4.0",
