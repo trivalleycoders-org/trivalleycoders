@@ -5,8 +5,6 @@ import express from 'express'
 import path from 'path'
 import { MongoClient } from 'mongodb';
 import { ObjectId } from 'mongodb';
-import * as ku from '../client/src/lib/ke-utils'
-
 
 var config = require('./config');
 const app = express()
@@ -89,10 +87,6 @@ router.post('/members', (req, res) => {
 });
 
 router.put('/members/:id', (req, res) => {
-  // ku.log('router.put/members/:id body', req.body);
-  // ku.log('req.params.id', req.params.id);
-  // ku.log('req.body.firstName', req.body.member.firstName)
-
   // Convert _id to format needed by mongo
   let memberId;
   try {
@@ -104,7 +98,6 @@ router.put('/members/:id', (req, res) => {
   // Don't need the _id as stored in the member object so delete it
   delete res._id;
 
-  // ku.log('memberId', memberId);
   // const member = req.body;
 
   // ** should do some validation here to check that all required
