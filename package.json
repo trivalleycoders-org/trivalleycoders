@@ -2,6 +2,7 @@
   "name": "trivalleycoders",
   "description": "website for Tri-Valley Coders",
   "version": "1.0.0",
+  "private": true,
   "main": "index.js",
   "repository": {},
   "license": "MIT",
@@ -16,7 +17,7 @@
   "scripts": {
     "build": "concurrently \"cd client && yarn build\" \"cd server && yarn build\"",
     "install": "(cd client && yarn) && (cd server && yarn)",
-    "start": "concurrently \"cd client && yarn start PORT=3000\" \"cd server && yarn start PORT=3001\"",
+    "start": "concurrently \"cd client && PORT=3000 yarn start\" \"cd server && PORT=3001 yarn start\"",
     "start:prod": "cd server && yarn start:prod",
     "heroku-postbuild": "yarn build"
   }

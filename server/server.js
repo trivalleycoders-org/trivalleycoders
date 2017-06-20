@@ -5,7 +5,9 @@ import express from 'express'
 import path from 'path'
 import { MongoClient } from 'mongodb';
 import { ObjectId } from 'mongodb';
+import path from 'path'
 import * as ku from '../client/src/lib/ke-utils'
+
 
 var config = require('./config');
 const app = express()
@@ -21,7 +23,6 @@ let db;
 const router = express.Router()
 
 const staticFiles = express.static(path.join(__dirname, '../../client/build'))
-
 app.use(staticFiles)
 
 // router.get('/events', (req, res) => {
