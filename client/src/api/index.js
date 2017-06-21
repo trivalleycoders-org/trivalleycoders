@@ -1,16 +1,19 @@
 import { normalize, Schema, arrayOf } from 'normalizr';
 // import fetchJsonp from '../../../node_modules/fetch-jsonp/build/fetch-jsonp.js';
-import fetchJsonp from 'fetch-jsonp';
+import 'whatwg-fetch'
+// import fetchJsonp from 'fetch-jsonp';
 const events = new Schema('events', { idAttribute: 'time' });
 const projects = new Schema('projects', { idAttribute: '_id' });
 const members = new Schema('members', { idAttribute: '_id' });
 const techlogos = new Schema('techlogos', { idAttribute: '_id' });
 const navButtons = new Schema('navButtons', { idAttribute: '_id' } );
 const sponsors = new Schema('sponsors', { idAttribute: '_id' } );
-import * as ku from '../lib/ke-utils';
+// import * as ku from '../lib/ke-utils';
 
 // Meetup Api
-const urlEvents = 'https://api.meetup.com/2/events?offset=0&format=json&limited_events=False&group_urlname=trivalleycoders&photo-host=secure&page=5&fields=&order=time&desc=false&status=upcoming&sig_id=186737513&sig=5fb3751fa7a6004ce0e74889648a52cb58cdca08';
+// const urlEvents = 'https://api.meetup.com/2/events?offset=0&format=json&limited_events=False&group_urlname=trivalleycoders&photo-host=secure&page=5&fields=&order=time&desc=false&status=upcoming&sig_id=186737513&sig=5fb3751fa7a6004ce0e74889648a52cb58cdca08';
+
+const urlEvents = 'https://api.meetup.com/trivalleycoders/events?&sign=true&photo-host=public&page=20'
 
 export const rejectErrors = (res) => {
 
@@ -37,7 +40,7 @@ export const fetchJson = (url, options = {}) => (
 
 export const fetchEvents = (url) => (
 
-  fetchJsonp(url)
+  fetch(url)
     .then((response) => {
       return response.json();
     })
@@ -48,7 +51,6 @@ export default {
     readList() {
       return fetchEvents(urlEvents)
         .then((data) => {
-          ku.log('this is the', data.results);
           const normalized = normalize(data.results, arrayOf(events));
           const o = {
             events: normalized.entities.events || {},
@@ -99,8 +101,8 @@ export default {
       );
     },
     update(id, member) {
-      ku.log('api.members.update: id', id, 'pink');
-      ku.log('api.members.update: member', member, 'pink')
+      // ku.log('api.members.update: id', id, 'pink');
+      // ku.log('api.members.update: member', member, 'pink')
       return fetchJson(
         `/members/${id}`,
         {
@@ -109,7 +111,7 @@ export default {
       );
     },
     delete(id) {
-      ku.log('api.members.delete: id', id, 'pink');
+      // ku.log('api.members.delete: id', id, 'pink');
       return fetchJson(
         `/members/${id}`,
         {
