@@ -46,16 +46,9 @@ class Page extends Component {
 
 const mapStateToProps = (state) => {
   let showManageMembers = selectors.getShowManageMembers(state);
-  if (showManageMembers === null) {
-    console.log('showManageMembers', 'is null');
-  } else {
-    console.log('showManageMembers', showManageMembers);
-  }
-
   const o = {
     showManageMembers: showManageMembers
   }
-
    return o;
 }
 // export default Page;

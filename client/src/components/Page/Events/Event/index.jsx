@@ -1,7 +1,26 @@
 // Events
 import React from 'react';
-import { Panel, Grid, Row, Col } from 'react-bootstrap';
+import { Panel, Row, Col } from 'react-bootstrap';
 import './style.css';
+
+
+const formatDate = ({timeArr}) => {
+  let hour = parseInt(timeArr.slice(0, 2), 10);
+  let minutes = timeArr.slice(1);
+
+  // remove leading 0
+  if(hour[0] === '0'){
+    hour = hour.toString().slice(1);
+    return `${hour}:${minutes} AM`;
+  // convert military time and add pm
+  }else if(hour > 12){
+    hour -= 12;
+    return `${hour}:${minutes} PM`;
+  //add am
+  }else{
+    return `${hour}:${minutes} AM`;
+  }
+}
 
 const Event = (props) => {
 
@@ -27,31 +46,12 @@ const Event = (props) => {
           {`${props.locationAddress},
           ${props.locationCity}`}
         </Col>
-         <Col sm={3} md={3} lg={3}>
-         {meetupDate(props)}
+        <Col sm={3} md={3} lg={3}>
+          {meetupDate(props)}
         </Col>
       </Panel>
     </Row>
   )
 };
-
-const formatDate = ({timeArr}) => {
-  let hour = parseInt(timeArr.slice(0, 2));
-  let minutes = timeArr.slice(1);
-  let time = '';
-
-  // remove leading 0
-  if(hour[0] === '0'){
-    hour = hour.toString().slice(1);
-    return time = `${hour}:${minutes} AM`;
-  // convert military time and add pm
-  }else if(hour > 12){
-    hour = hour - 12;
-    return time = `${hour}:${minutes} PM`;
-  //add am
-  }else{
-    return time = `${hour}:${minutes} AM`;
-  }
-}
 
 export default Event;

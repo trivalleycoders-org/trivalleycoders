@@ -1,6 +1,6 @@
 // TechLogos
 import React from 'react';
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Grid, Row } from 'react-bootstrap';
 import { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
@@ -40,7 +40,7 @@ import iNode from './../../../images/tech-logos/nodejs.svg'
 // import i from './../../../images/tech-logos'
 //
 // Utils
-import * as ku from './../../../lib/ke-utils'
+// import * as ku from './../../../lib/ke-utils'
 
 class TechLogos extends Component {
   render() {

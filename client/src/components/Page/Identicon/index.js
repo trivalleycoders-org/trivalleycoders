@@ -1,14 +1,14 @@
 import React from 'react'
 import { Image } from 'react-bootstrap'
 import IdenticonJs from 'identicon.js';
-import * as ku from '../../../lib/ke-utils'
+// import * as ku from '../../../lib/ke-utils'
 
 const getRandomNumber = (min, max) => {
-  return parseInt(Math.random() * (max - min) + min);
+  return parseInt(Math.random() * (max - min) + min, 10);
 }
 const randomColorValue = (min=100, max=255) => {
   const ret = getRandomNumber(min, max)
-  ku.log('randomColorValue', ret, 'blue')
+  // ku.log('randomColorValue', ret, 'blue')
   return ret
 }
 

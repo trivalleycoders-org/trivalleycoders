@@ -1,6 +1,6 @@
 // Header
 import React from 'react';
-import { Grid, Row, Button} from 'react-bootstrap';
+import { Grid, Row} from 'react-bootstrap';
 
 import './style.css';
 

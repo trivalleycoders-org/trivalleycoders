@@ -6,7 +6,6 @@ import { connect } from 'react-redux';
 import classNames from 'classnames'
 import * as actionCreators from '../../../store/actions'
 import * as selectors from '../../../store/selectors'
-import { Grid, Row } from 'react-bootstrap'
 import './style.css';
 
 

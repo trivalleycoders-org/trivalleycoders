@@ -3,7 +3,7 @@ import React from 'react';
 import { Panel, Image } from 'react-bootstrap'
 import './style.css';
 import Identicon from './../../Identicon'
-import * as ku from '../../../../lib/ke-utils'
+// import * as ku from '../../../../lib/ke-utils'
 
 // const getRandomNumber = (min, max) => {
 //   return parseInt(Math.random() * (max - min) + min);
@@ -38,7 +38,7 @@ import * as ku from '../../../../lib/ke-utils'
 const Member = (props) => {
 
   const getPicture = () => {
-    let src;
+    // let src;
     if (!props.picture) {
 
       return <Identicon
