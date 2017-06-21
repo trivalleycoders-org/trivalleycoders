@@ -3,3 +3,18 @@
 .events-section {
   /*border: 1px solid white;*/
 }
+
+.events-failed-message {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 15px 0 15px 0;
+}
+
+.meeting-schedule-text {
+  margin-left: 10px;
+}
+
+.ul-meeting-schedule {
+  margin: 20px 0 30px 0;
+}
