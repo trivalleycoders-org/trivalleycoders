@@ -6,7 +6,7 @@
 .logo-row {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 /*
@@ -22,7 +22,11 @@
  */
 /*@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {*/
 @media (min-width : 481px) and (max-width : 1024px) {
-
+  .logo-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
 }
 
 /*

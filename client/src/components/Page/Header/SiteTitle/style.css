@@ -1,8 +1,14 @@
 /* SiteTitle */
 
+/*header {
+  padding: 30px 0 45px 0;
+}*/
+
 .site-title {
-  font-size: 4.5em;
+  font-size: 3.3em;
+  text-align: center;
 }
+
 
 /*
     Media Queries
