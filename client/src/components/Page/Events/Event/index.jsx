@@ -39,10 +39,10 @@ const Event = (props) => {
     <Row>
       <Panel className='events-panel'>
         <Col sm={5} md={5} lg={5}>
-          <a target="_blank" href={props.url}>{props.name}</a>
+          <a className='event-anchor' target="_blank" href={props.url}>{props.name}</a>
         </Col>
         <Col sm={4} md={4} lg={4}>
-          <strong>{`${props.locationName}`}</strong><br/>
+          <i>{`${props.locationName}`}</i><br/>
           {`${props.locationAddress},
           ${props.locationCity}`}
         </Col>

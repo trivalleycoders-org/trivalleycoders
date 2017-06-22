@@ -1,7 +1,7 @@
 /*Event*/
 
 .events-panel {
-	/*color: black;*/
+  font-size: 1.3em;
   background-color: rgba(180,180,180,0.1);
   border: none;
   padding: 5px;
@@ -9,6 +9,9 @@
 
 .event-anchor {
   color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+
 }
 
 
