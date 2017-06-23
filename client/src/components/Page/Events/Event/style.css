@@ -4,13 +4,13 @@
   font-size: 1.3em;
   border: none;
   padding: 5px;
+  text-align: left;
 }
 
 .event-anchor {
   color: white;
   font-weight: bold;
   font-size: 1.2em;
-
 }
 
 

@@ -157,24 +157,24 @@ h6 {
 @media (min-width : 1025px) {
   body {
       /*background-color: black;*/
-      background-color: #201D23;
+      /*background-color: #201D23;*/
   }
   nav {
-    background-color: #201D23;
+    /*background-color: #201D23;*/
   }
   section {
-    background-color: #201D23;
+    /*background-color: #201D23;*/
     padding-left: 10%;
     padding-right: 10%;
 
   }
   header {
-    background-color: #201D23;
+    /*background-color: #201D23;*/
     padding-left: 10%;
     padding-right: 10%;
   }
   footer {
-    background-color: #201D23;
+    /*backgrounds-color: #201D23;*/
     padding-left: 10%;
     padding-right: 10%;
 
