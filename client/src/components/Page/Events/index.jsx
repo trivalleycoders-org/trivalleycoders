@@ -10,6 +10,8 @@ import Event from './Event';
 import iMeetup from './../../../images/meetup-swarm.svg'
 import './style.css';
 
+let i = 1;
+
 class Events extends Component {
   componentWillMount() {
     this.props.requestReadEvents();
@@ -20,7 +22,7 @@ class Events extends Component {
     switch (readEventsRequest.status) {
       case 'success':
         return (
-          <section id='events' className='events-section black-background'>
+          <section id='events' className='events-section'>
             <Grid className='outer-grid'>
               <Row className='main-row'>
                 <h1 className='section-title'>Events</h1>
@@ -35,6 +37,7 @@ class Events extends Component {
                         locationAddress={`${e.venue.address_1}`}
                         locationCity={`${e.venue.city}`}
                         url={e.event_url}
+                        index={i++}
                       />
                     )
                     )

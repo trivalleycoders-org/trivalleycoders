@@ -18,3 +18,14 @@
 .ul-meeting-schedule {
   margin: 20px 0 30px 0;
 }
+
+.row .odd {
+  background-color: rgba(180,180,180,0.1);
+}
+
+.panel {
+  background-color: transparent;
+  border-radius: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
