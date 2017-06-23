@@ -39,7 +39,7 @@ const Event = (props) => {
     <Row className={props.index % 2 != 0 ? 'odd' : ''}>
       <Panel className='events-panel'>
         <Col sm={5} md={5} lg={5}>
-          <a className='event-anchor' target="_blank" href={props.url}>{props.name}</a>
+          <a className='event-anchor' href={props.url}>{props.name}</a>
         </Col>
         <Col sm={4} md={4} lg={4}>
           <i>{`${props.locationName}`}</i><br/>
