@@ -3,3 +3,14 @@
 .footer {
   /*border: 1px solid white;*/
 }
+
+.fa {
+	padding: 5px;
+	color: white;
+}
+
+.fa-btns {
+	display: flex;
+	flex-direction: row;
+}
+
