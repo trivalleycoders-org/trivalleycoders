@@ -13,34 +13,14 @@ import iHTML from './../../../images/tech-logos/html-5.01.svg'
 import iCSS from './../../../images/tech-logos/css-3.01.svg'
 import iJS from './../../../images/tech-logos/javascript.svg'
 // MERN
-import iMongo from './../../../images/tech-logos/mongodb.on-black.01.svg'
-// import iMongo from './../../../images/tech-logos/mongodb.svg'
-import iExpress from './../../../images/tech-logos/express.on-black.01.svg'
-// import iExpress from './../../../images/tech-logos/express.svg'
+// import iMongo from './../../../images/tech-logos/mongodb.on-black.01.svg'
+import iMongo from './../../../images/tech-logos/mongodb.svg'
+// import iExpress from './../../../images/tech-logos/express.on-black.01.svg'
+import iExpress from './../../../images/tech-logos/express.svg'
 import iReact from './../../../images/tech-logos/react.svg'
 import iNode from './../../../images/tech-logos/nodejs.on-black.01.svg'
 // import iNode from './../../../images/tech-logos/nodejs.svg'
-// // Other
-// import iBabel from './../../../images/tech-logos/babel.svg'
-// import iBootstrap from './../../../images/tech-logos/bootstrap.svg'
-// import iNodemon from './../../../images/tech-logos/nodemon.svg'
-// import iPromises from './../../../images/tech-logos/promises.svg'
-// import iRamda from './../../../images/tech-logos/ramda.black.01.svg'
-// import iRedux from './../../../images/tech-logos/redux.svg'
-// import iUbuntu from './../../../images/tech-logos/ubuntu.svg'
-// import iWebpack from './../../../images/tech-logos/webpack.svg'
-// // Tools
-// import iAtom from './../../../images/tech-logos/atom.svg'
-// import iGit from './../../../images/tech-logos/git-logo-white.svg'
-// import iGitHub from './../../../images/tech-logos/github.octocat.on-white.jpg'
-// import iNPM from './../../../images/tech-logos/npm.svg'
-// import iSublime from './../../../images/tech-logos/sublime.hicolor.256x256.png'
-// import iSlack from './../../../images/tech-logos/slack.svg'
-//
-// import i from './../../../images/tech-logos'
-//
-// Utils
-// import * as ku from './../../../lib/ke-utils'
+
 
 class TechLogos extends Component {
   render() {
@@ -97,83 +77,6 @@ class TechLogos extends Component {
       />
     ))
 
-    // const arrOther = [
-    //   {
-    //     name: 'Babel',
-    //     image: iBabel,
-    //   },
-    //   {
-    //     name: 'Bootstrap',
-    //     image: iBootstrap,
-    //   },
-    //   {
-    //     name: 'Nodemon',
-    //     image: iNodemon,
-    //   },
-    //   {
-    //     name: 'Promises',
-    //     image: iPromises,
-    //   },
-    //   {
-    //     name: 'Ramda',
-    //     image: iRamda,
-    //   },
-    //   {
-    //     name: 'Redux',
-    //     image: iRedux,
-    //   },
-    //   {
-    //     name: 'Ubuntu',
-    //     image: iUbuntu,
-    //   },
-    //   {
-    //     name: 'Webpack',
-    //     image: iWebpack,
-    //   },
-    // ]
-
-    // const other = arrOther.map((t) => (
-    //   <TechLogo
-    //     key={t.name}
-    //     name={t.name}
-    //     url={t.image}
-    //   />
-    // ))
-
-    // const arrTools = [
-    //   {
-    //     name: 'Atom',
-    //     image: iAtom,
-    //   },
-    //   {
-    //     name: 'Git',
-    //     image: iGit,
-    //   },
-    //   {
-    //     name: 'GitHub',
-    //     image: iGitHub,
-    //   },
-    //   {
-    //     name: 'NPM',
-    //     image: iNPM,
-    //   },
-    //   {
-    //     name: 'Sublime',
-    //     image: iSublime,
-    //   },
-    //   {
-    //     name: 'Slack',
-    //     image: iSlack,
-    //   },
-    // ]
-
-    // const tools = arrTools.map((t) => (
-    //   <TechLogo
-    //     key={t.name}
-    //     name={t.name}
-    //     url={t.image}
-    //   />
-    // ))
 
     return (
       <section id='tech-logos' className='tech-logos green-background dark-font'>

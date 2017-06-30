@@ -3,25 +3,42 @@
 .events-panel {
   font-size: 1.3em;
   border: none;
-  padding: 5px;
   text-align: left;
+  padding-bottom: 5px;
 }
 
-.event-anchor {
-  color: white;
+.event-name-col {
+  margin-bottom: 10px;
+}
+
+#event-name-anchor {
+  color: #34E97C;
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.12em;
+  text-decoration: none;
 }
 
+#event-name-anchor:hover {
+  text-decoration-line: underline;
+}
+
+.event-location-name {
+  margin-bottom: 0;
+  font-size: 1.05em;
+}
+
+.event-location-address {
+  margin-bottom: 0;
+}
 
 /*
     PHONE
  */
 @media (max-width : 480px) {
   .panel {
-    margin: 10px 0 10px 0;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    /*margin: 10px 0 10px 0;*/
+    /*spadding-top: 15px;*/
+    /*spadding-bottom: 15px;*/
     text-align: center;
   }
 }

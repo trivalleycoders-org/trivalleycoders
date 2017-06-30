@@ -6,7 +6,7 @@ const Footer = () => (
   <footer id='footer' className='footer black-background'>
     <Grid className='outer-grid'>
       <Row className='main-row'>
-        <div class="fa-btns">
+        <div className="fa-btns">
 	      	<a href="https://github.com/trivalleycoders-org">
 	          <i className="fa fa-github fa-2x" aria-hidden="true"></i>
 	        </a>

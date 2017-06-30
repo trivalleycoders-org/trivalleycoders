@@ -1,9 +1,24 @@
 /* About */
 
+.section-about {
+  padding-bottom: 35px;
+}
+
+.about-intro {
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.about-p2 {
+  margin-top: 5px;
+}
 
 .join-us-text {
-  font-size: 1.5em;
-  letter-spacing: 0.1em;
+  font-size: 1.4em;
+  letter-spacing: 0.05em;
   font-weight:400;
   vertical-align: middle;
+  margin-left: 10px;
 }

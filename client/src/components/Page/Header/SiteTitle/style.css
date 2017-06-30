@@ -1,12 +1,9 @@
 /* SiteTitle */
 
-/*header {
-  padding: 30px 0 45px 0;
-}*/
-
 .site-title {
-  font-size: 3.3em;
+  font-size: 3.2em;
   text-align: center;
+  margin: 20px 0 10px 0;
 }
 
 

@@ -14,7 +14,7 @@ const Header = () => (
       <Row className='main-row header-row'>
         <Logo />
         <SiteTitle />
-        <h2 className='section-sub-title'>Learn Build Grow Succeed</h2>
+        <h2 className='section-sub-title header-text'>Learn Build Grow Succeed</h2>
       </Row>
     </Grid>
   </header>

@@ -1,9 +1,12 @@
 /* Events */
 
 .events-section {
-  /*border: 1px solid white;*/
+  padding-top: 15px;
 }
 
+events-title {
+  margin-bottom: 20px;
+}
 .events-failed-message {
   display: flex;
   flex-flow: column nowrap;

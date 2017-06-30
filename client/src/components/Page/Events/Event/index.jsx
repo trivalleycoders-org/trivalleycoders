@@ -38,13 +38,13 @@ const Event = (props) => {
   return (
     <Row className={props.index % 2 != 0 ? 'odd' : ''}>
       <Panel className='events-panel'>
-        <Col sm={5} md={5} lg={5}>
-          <a className='event-anchor' href={props.url}>{props.name}</a>
+        <Col className='event-name-col' sm={5} md={5} lg={5}>
+          <a id='event-name-anchor' className='event-name-anchor' href={props.url}>{props.name}</a>
         </Col>
         <Col sm={4} md={4} lg={4}>
-          <i>{`${props.locationName}`}</i><br/>
-          {`${props.locationAddress},
-          ${props.locationCity}`}
+          <p className='event-location-name'><i>{`${props.locationName}`}</i></p>
+          <p className='event-location-address'>{props.locationAddress}</p>
+          <p>{props.locationCity}</p>
         </Col>
         <Col sm={3} md={3} lg={3}>
           {meetupDate(props)}

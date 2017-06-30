@@ -10,16 +10,12 @@ font-size: 1.3em;
 }
 
 header {
-  padding-top: 30px;
-  padding-bottom: 20px;
   padding-left: 1%;
   padding-right: 1%;
   background-color: #201D23;
 }
 
 section, footer {
-  padding-top: 30px;
-  padding-bottom: 30px;
   padding-left: 1%;
   padding-right: 1%;
   background-color: #201D23;
@@ -30,14 +26,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   font-style: normal;
   text-rendering: optimizeLegibility;
-  margin-top: 0;
-  margin-bottom: 0.5rem;
   line-height: 1.4
 }
 
 h1 {
   font-size: 3.0rem;
-  margin-bottom: 1.5rem;
 }
 
 h2 {
@@ -79,12 +72,9 @@ h6 {
   text-align: center;
 }
 
-
-
 .section-sub-title {
   text-align: center;
   font-style: italic;
-  /*color: lightgray;*/
 }
 
 .page-grid-outer {
@@ -104,33 +94,11 @@ h6 {
 }
 
 .green-background {
-  /*background-color: #32E278;*/
-  /*background: linear-gradient(to top, #2eb05d, #44ffa0);*/
-  /*background: linear-gradient(to top, #28974f, #44ffa0);*/
-
-  /*a) background-color: #009900;*/
-  /* lattice.cf
-   background-color: #13d16b;
-  /*background-image: linear-gradient(to bottom, #34E97C, #0f552c) */
-  /*b) background-image: linear-gradient(to bottom, #12a64d 90%, #1B984F)*/
-  /*cbackground-image: linear-gradient(to bottom, #12a64d, #12a64d)*/
-  /*background-image: linear-gradient(to bottom, #5cb85c 0%, #419641 100%);*/
   background-image: linear-gradient(to bottom, #42a552 0%, #42a552 100%);
-  /*background-color: #328e32ff;*/
-
 }
 
 .black-background {
   background: linear-gradient(to top, #1d1d1d, #3c3c3c);
-}
-
-.dark-font {
-  /*color: rgb(35, 35, 35);*/
-  /*color: rgb(40, 40, 40);*/
-  /*color: rgb(45, 45, 45);*/
-  /*color: rgb(50, 50, 50);*/
-  /*color: rgb(55, 55, 55);*/
-  /*color: rgb(200, 200, 200)*/
 }
 
 .gray-panel {
@@ -138,8 +106,6 @@ h6 {
   background-color: transparent;
   border: none;
 }
-
-
 
 /*
     Media Queries

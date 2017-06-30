@@ -1,12 +1,16 @@
 /* TechLogos */
 
 .tech-logos {
-  /*border: 1px solid black;*/
+  padding-bottom: 15px;
 }
 .logo-row {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+}
+
+.tech-logo-title {
+  font-weight: bold;
 }
 
 /*
