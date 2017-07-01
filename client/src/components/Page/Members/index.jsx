@@ -1,76 +1,82 @@
 // Members
 import React from 'react';
 import { Component } from 'react';
-import { PropTypes } from 'prop-types';
-import { connect } from 'react-redux';
 import { Grid, Row } from 'react-bootstrap';
-import * as actionCreators from '../../../store/actions';
-import * as selectors from '../../../store/selectors'
+import pChad from '../../../images/chad.jpg';
+import pLaura from '../../../images/laura.jpeg';
+import pMichael from '../../../images/michael.jpg';
+import pNathan from '../../../images/nathan.jpg';
+import pSharmina from '../../../images/sharmina.jpg';
 import Member from './Member';
 import './style.css';
 
 class Members extends Component {
-  componentWillMount() {
-    this.props.requestReadMembers();
-  }
-
   render() {
-    const { readMembersRequest } = this.props;
-    switch (readMembersRequest.status) {
-      case 'success':
-        return (
-          <section id='members' className='members-section green-background dark-font'>
-            <Grid className='outer-grid'>
-              <Row className='main-row'>
-                <h1 className='section-title'>Members</h1>
-                <div className='members'>
-                  {this.props.members.sort((a, b) => a.index - b.index).map((m) => (
-                    <Member
-                      key={m._id}
-                      _id={m._id}
-                      picture={m.picture}
-                      name={m.firstName}
-                      role={m.role}
-                      index={m.index}
-                    />
-                  ))}
-                </div>
-              </Row>
-            </Grid>
-          </section>
-        )
-      case 'failure':
-        return (
-          <section id='members'>
-            <Grid className='outer-grid'>
-              <Row className='main-row'>
-                <h2>Attempt to load members failed</h2>
-              </Row>
-            </Grid>
-          </section>
-        );
-      default:
-        return (
-          <section id='members'>
-            <Grid className='outer-grid'>
-              <Row className='main-row'>
-                <h2>Loading data...</h2>
-              </Row>
-            </Grid>
-          </section>
-        );
-    }
+
+    const arrMembers = [
+      {
+        id: '7a8a0c654b89f157524be1b68adf9dbecc4f1db0',
+        picture: '',
+        name: 'Karl',
+        role: 'Web Developer & Organizer',
+      },
+      {
+        id: 102,
+        picture: pChad,
+        name: 'Chad',
+        role: 'Full-Stack Developer',
+      },
+      {
+        id: 103,
+        picture: pLaura,
+        name: 'Laura',
+        role: 'Web Developer',
+      },
+      {
+        id: 104,
+        picture: pMichael,
+        name: 'Michael',
+        role: 'Sr Web Developer'
+      },
+      {
+        id: 105,
+        picture: pNathan,
+        name: 'En Zyme',
+        role: 'Python & Data Science',
+      },
+      {
+        id: 106,
+        picture: pSharmina,
+        name: 'Sharmina',
+        role: 'Web Developer',
+      },
+    ]
+
+    const members = arrMembers.map((m) => (
+      <Member
+        key={m.id}
+        _id={m.id}
+        picture={m.picture}
+        name={m.firstName}
+        role={m.role}
+        index={m.index}
+      />
+    ))
+    return (
+      <section id='members' className='members-section green-background dark-font'>
+        <Grid className='outer-grid'>
+          <Row className='main-row'>
+            <h1 className='section-title'>Members</h1>
+            <div className='members'>
+              {members}
+            </div>
+          </Row>
+        </Grid>
+      </section>
+    )
+
   }
 }
 
-Members.propTypes = {
-  requestReadMembers: PropTypes.func.isRequired,
-  readMembersRequest: PropTypes.object.isRequired,
-}
 
-const mapStateToProps = (state) => ({
-  readMembersRequest: selectors.getRequest(state, 'readMembers'),
-  members: selectors.getMembers(state),
-});
-
-export default connect(mapStateToProps, actionCreators)(Members);
+export default Members;

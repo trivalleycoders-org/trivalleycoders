@@ -1,6 +1,8 @@
 /* Member */
 
-
+.members {
+  padding-bottom: 15px;
+}
 .panel-member {
   text-align: center;
   width: 155px;
@@ -8,6 +10,10 @@
   margin: 10px;
 }
 .member-img-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
   padding: 0;
 }
 

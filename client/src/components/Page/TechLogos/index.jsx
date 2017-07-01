@@ -77,13 +77,12 @@ class TechLogos extends Component {
       />
     ))
 
-
     return (
       <section id='tech-logos' className='tech-logos green-background dark-font'>
         <Grid className='outer-grid'>
           <Row className='main-row'>
             <h1 className='section-title'>Learn With Us</h1>
-            <p className='lead'>Our core compentency is the MERN stack, Mongo, Express, React and Node. When you join the group we guide you from beginner learning HTML, CSS & JavaScript to a software developer building apps with the MERN stack.</p>
+            <p className='lead'>Our core compentency is the MERN stack, Mongo, Express, React and Node. When you join the group we guide you from beginner learning HTML, CSS & JavaScript to a software developer building apps with the MERN (<b>M</b>ongoDB, <b>E</b>xpress, <b>R</b>eact & <b>N</b>ode.js) stack.</p>
             <p className='lead'>As a beginner you will get help learning the basics. When you are ready you will work on real projects for real clients gaining knowledge and valuable experience along the way.</p>
           </Row>
           <Row className='row-tech-logos'>
@@ -102,14 +101,5 @@ class TechLogos extends Component {
   }
 }
 
-TechLogos.propTypes = {
-  requestReadTechlogos: PropTypes.func.isRequired,
-  readTechlogosRequest: PropTypes.object.isRequired,
-}
 
-const mapStateToProps = (state) => ({
-  readTechlogosRequest: selectors.getRequest(state, 'readTechlogos'),
-  techLogos: selectors.getTechlogos(state),
-});
-
-export default connect(mapStateToProps, actionCreators)(TechLogos);
+export default TechLogos;

@@ -9,7 +9,7 @@ const Sponsor = (props) => (
       <Image className='sponsor-img' src={props.picture} responsive alt='sponsor picture' />
     </div>
     <h4 id='sponsor-name' className=''>{props.name}</h4>
-    <h5 id='sponsor-role' className='sponsor-role'>??</h5>
+    <h5 id='sponsor-tagline' className='sponsor-tagline'>{props.tagLine}</h5>
   </Panel>
 );
 
