@@ -31,7 +31,7 @@ class Sponsors extends Component {
       <section id='sponsors-section' className='sponsors-sections'>
         <Grid className='outer-grid'>
           <Row className='main-row'>
-            <h1 className='section-title'>Our Sponsors</h1>
+            <h1 className='section-title green-text'>Our Sponsors</h1>
             <div className='sponsors'>
               {sponsors}
             </div>
