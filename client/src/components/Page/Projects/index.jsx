@@ -11,7 +11,7 @@ import './style.css';
 
 class Projects extends Component {
   componentWillMount() {
-    this.props.requestReadProjects();
+    // this.props.requestReadProjects();
   }
 
   render() {
