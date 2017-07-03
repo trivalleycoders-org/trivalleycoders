@@ -2,6 +2,7 @@
 import React from 'react';
 import { Component } from 'react';
 import classNames from 'classnames'
+import Logo from '../../elements/Logo';
 import './style.css';
 
 
@@ -22,14 +23,15 @@ class Navigation extends Component {
         'menu-up': !this.state.menuDown,
         'menu-item-down': this.state.menuDown,
         'menu-item-up': !this.state.menuDown,
+        'hamburger': true,
       }
     )
 
-    let toggleBarState = classNames(
-      {
-        'toggle-bar': true,
-      }
-    )
+    // let toggleBarState = classNames(
+    //   {
+    //     'toggle-bar': true,
+    //   }
+    // )
 
     const handleToggleBarClick = () => {
       let val;
@@ -40,21 +42,27 @@ class Navigation extends Component {
     }
 
     return (
-        <nav id='nav' className='black-background'>
-          <ul className={menuState}>
-            <li><a href="#home" className="menu-item">Home</a></li>
-            <li><a href="#learn" className="menu-item">Learn</a></li>
-            <li><a href="#events" className="menu-item">Events</a></li>
-            <li><a href="#projects" className="menu-item">Projects</a></li>
-            <li><a href="#members" className="menu-item">Members</a></li>
-            <li><a href="#sponsors" className="menu-item">Sponsors</a></li>
-          </ul>
-          <span
-            className={toggleBarState}
-            onClick={() => handleToggleBarClick()}
-          >
-            &#9776;
-          </span>
+
+        <nav id='nav'>
+          <div id="top-bar" className='top-bar'>
+            <Logo />
+            <span
+              className="toggle-bar"
+              onClick={() => handleToggleBarClick()}
+            >
+              &#9776;
+            </span>
+          </div>
+          <div className='tvc-menu'>
+
+            <ul className={menuState}>
+              <li><a href="#page-learn" className="menu-item">Learn</a></li>
+              <li><a href="#page-events" className="menu-item">Events</a></li>
+              <li><a href="#page-members" className="menu-item">Members</a></li>
+              <li><a href="#page-sponsors" className="menu-item">Sponsors</a></li>
+            </ul>
+
+          </div>
         </nav>
     )
   }

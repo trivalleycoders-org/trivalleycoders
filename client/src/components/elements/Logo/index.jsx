@@ -1,7 +1,7 @@
 // Logo
 import React from 'react';
 import { Image } from 'react-bootstrap';
-import iLogo from '../../../../images/tvc.05.green.02.svg'
+import iLogo from './tvc.05.green.02.svg'
 import './style.css';
 
 const Logo = () => (
