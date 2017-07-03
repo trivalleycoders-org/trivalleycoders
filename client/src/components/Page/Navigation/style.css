@@ -31,8 +31,6 @@ nav {
   height: 40px;
   font-size: 25px;
   color: white;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
   transition: all .1s linear;
 }
 .toggle-bar:hover {
@@ -60,7 +58,6 @@ nav {
 .menu li a {
   text-decoration: none;
   align-self: center;
-  border-radius: 5px;
   color: white;
   font-size: 14px;
   padding: 10px 15px;

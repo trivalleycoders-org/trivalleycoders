@@ -1,9 +1,5 @@
 /* Sponsors */
 
-.sponsors-section {
-  /*border: 1px solid white;*/
-}
-
 .sponsors {
   display: flex;
   flex-flow: row wrap;

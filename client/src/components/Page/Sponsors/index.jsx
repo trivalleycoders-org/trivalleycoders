@@ -28,7 +28,7 @@ class Sponsors extends Component {
       />
     ))
     return (
-      <section id='sponsors-section' className='sponsors-sections'>
+      <section id='sponsors-section'>
         <Grid className='outer-grid'>
           <Row className='main-row'>
             <h1 className='section-title green-text'>Our Sponsors</h1>

@@ -5,7 +5,7 @@ import './style.css';
 import SiteTitle from './SiteTitle'
 
 const Header = () => (
-  <header id='header' className='header'>
+  <header id='header'>
     <Grid className='outer-grid'>
       <Row className='main-row header-row'>
         <SiteTitle />

@@ -1,8 +1,5 @@
 /* Members */
 
-.members-section {
-  /*border: 1px solid black;*/
-}
 .members {
   display: flex;
   flex-flow: row wrap;
