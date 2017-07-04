@@ -25,7 +25,7 @@ class Events extends Component {
           <section id='events' className='events-section'>
             <Grid className='outer-grid'>
               <Row className='main-row'>
-                <h1 className='events-title section-title green-text'>Events</h1>
+                <h1 id='events-title' className='events-title section-title green-text'>Events</h1>
                 <div>
                   {
                     this.props.events.map((e) => (

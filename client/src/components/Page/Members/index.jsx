@@ -57,7 +57,7 @@ class Members extends Component {
         key={m.id}
         _id={m.id}
         picture={m.picture}
-        name={m.firstName}
+        name={m.name}
         role={m.role}
         index={m.index}
       />

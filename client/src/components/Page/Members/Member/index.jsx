@@ -21,8 +21,8 @@ const Member = (props) => {
       <div id='member-img-container' className='member-img-container'>
         {getPicture()}
       </div>
-      <h4 id='member-member-name' className=''>{props.name}</h4>
-      <h5 id='member-member-role' className='member-role'>{props.role}</h5>
+      <h4 id='member-name'>{props.name}</h4>
+      <h5 id='member-role' className='member-role'>{props.role}</h5>
     </Panel>
   )
 };

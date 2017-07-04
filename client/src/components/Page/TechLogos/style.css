@@ -3,14 +3,15 @@
 .tech-logos {
   padding-bottom: 15px;
 }
+.logo-title {
+  font-size: 1.6em;
+  text-align: center;
+}
 .logo-row {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-}
-
-.tech-logo-title {
-  font-weight: bold;
+  padding: 15px 0 20px 0;
 }
 
 /*
@@ -26,11 +27,13 @@
  */
 /*@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {*/
 @media (min-width : 481px) and (max-width : 1024px) {
+
   .logo-row {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
   }
+
 }
 
 /*

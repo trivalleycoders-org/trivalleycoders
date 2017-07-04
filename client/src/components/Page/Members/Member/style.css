@@ -21,12 +21,12 @@
   padding: 0;
 }
 
-#member-member-name {
+#member-name {
   font-size: 1.3em;
-  font-weight: bolder;
+  font-weight: 300;
 }
 
-#member-member-role {
+#member-role {
   font-size: 1.0em;
 }
 

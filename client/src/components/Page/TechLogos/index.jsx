@@ -14,9 +14,9 @@ import iMongo from './../../../images/tech-logos/mongodb.svg'
 // import iExpress from './../../../images/tech-logos/express.on-black.01.svg'
 import iExpress from './../../../images/tech-logos/express.svg'
 import iReact from './../../../images/tech-logos/react.svg'
-import iNode from './../../../images/tech-logos/nodejs.on-black.01.svg'
+// import iNode from './../../../images/tech-logos/nodejs.on-black.01.svg'
 // import iNode from './../../../images/tech-logos/nodejs.svg'
-
+import iNode from './../../../images/tech-logos/nodejs.on-green.svg'
 
 class TechLogos extends Component {
   render() {
@@ -25,14 +25,17 @@ class TechLogos extends Component {
       {
         name: 'HTML 5',
         image: iHTML,
+        style: "small-image",
       },
       {
         name: 'CSS 3',
         image: iCSS,
+        style: "small-image",
       },
       {
         name: 'JavaScript',
         image: iJS,
+        style: "small-image",
       },
     ]
     const basics = arrBasics.map((t) => (
@@ -40,6 +43,7 @@ class TechLogos extends Component {
         key={t.name}
         name={t.name}
         url={t.image}
+        style={t.style}
       />
     ))
 
@@ -47,20 +51,22 @@ class TechLogos extends Component {
       {
         name: 'MongoDB',
         image: iMongo,
-        style: 'express-logo',
+        style: 'wide-image',
       },
       {
         name: 'Express',
         image: iExpress,
-        style: 'express-logo',
+        style: 'express-image',
       },
       {
         name: 'React',
         image: iReact,
+        style: "small-image",
       },
       {
         name: 'Node',
         image: iNode,
+        style: "small-image",
       },
     ]
 
@@ -74,19 +80,19 @@ class TechLogos extends Component {
     ))
 
     return (
-      <section id='tech-logos' className='tech-logos green-background dark-font'>
+      <section id='tech-logos' className='tech-logos green-background'>
         <Grid className='outer-grid'>
           <Row className='main-row'>
             <h1 className='section-title'>Learn With Us</h1>
             <p className='lead'>Our core compentency is the MERN stack, Mongo, Express, React and Node. When you join the group we guide you from beginner learning HTML, CSS & JavaScript to a software developer building apps with the MERN (<b>M</b>ongoDB, <b>E</b>xpress, <b>R</b>eact & <b>N</b>ode.js) stack.</p>
             <p className='lead'>As a beginner you will get help learning the basics. When you are ready you will work on real projects for real clients gaining knowledge and valuable experience along the way.</p>
           </Row>
-          <Row className='row-tech-logos'>
-            <h3 className='tech-logo-title'>The Basics</h3>
+          <Row>
+            <h3 className='logo-title'>The Basics</h3>
             <div className='logo-row'>
               {basics}
             </div>
-            <h3 className='tech-logo-title'>MERN Stack</h3>
+            <h3 className='logo-title'>MERN Stack</h3>
             <div className='logo-row'>
               {mern}
             </div>
@@ -96,6 +102,5 @@ class TechLogos extends Component {
     )
   }
 }
-
 
 export default TechLogos;

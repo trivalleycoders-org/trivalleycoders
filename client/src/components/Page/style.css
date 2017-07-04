@@ -124,6 +124,9 @@ h6 {
 /* TABLET */
 @media (min-width : 481px) and (max-width : 1024px) {
 
+  .main-row {
+    padding: 0 20px 0 20px;
+  }
 }
 
 /* DESKTOP & LAPTOP */

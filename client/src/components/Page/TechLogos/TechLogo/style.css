@@ -1,37 +1,33 @@
 /* TechLogo */
 
-.tech-logo-panel {
-  /* commen */
-  border: none;
-  text-align: center;
-  margin-left: 100px;
-  padding: 10px 20px;
-  /* phone */
-  height: 90px;
-  margin: 0 5px;
+.logo-item {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 10px;
+  justify-content: space-between;
 }
 
-.tech-logo-image {
-  max-height: 40px;
-}
-
-.tech-logo-panel {
+.img-container {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  border: none;
+  height: 100%;
 }
 
-.tech-logo-title {
+.logo-text {
+  font-size: 1.0em;
   text-align: center;
 }
 
-.express-logo {
-  max-height: 30px;
+.small-image {
+  max-height: 55px;
 }
-
-.logo-name {
-  margin: 5px 0 0 0;
+.wide-image {
+  max-height: 65px;
+  max-width: 180px;
+}
+.express-image {
+  max-width: 160px
 }
 
 /*
@@ -47,10 +43,7 @@
  */
 /*@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {*/
 @media (min-width : 481px) and (max-width : 1024px) {
-  .tech-logo-panel {
-    height: 90px;
-    margin: 0 5px;
-  }
+
 }
 
 /*
@@ -58,12 +51,5 @@
  */
 /*@media only screen  and (min-width : 1224px) {*/
 @media (min-width : 1025px) {
-  .tech-logo-panel {
-    height: 110px;
-    margin: 0 10px;
-  }
 
-  .tech-logo-image {
-    max-height: 60px;
-  }
 }
