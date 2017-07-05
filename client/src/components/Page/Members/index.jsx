@@ -63,7 +63,7 @@ class Members extends Component {
       />
     ))
     return (
-      <section id='members' className='green-background dark-font'>
+      <section id='members'>
         <Grid className='outer-grid'>
           <Row className='main-row'>
             <h1 className='section-title'>Members</h1>

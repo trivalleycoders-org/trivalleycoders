@@ -42,12 +42,11 @@ class Navigation extends Component {
     }
 
     return (
-
         <nav id='nav'>
-          <div id="top-bar" className='top-bar'>
+          <div id='top-bar' className='top-bar'>
             <Logo />
             <span
-              className="toggle-bar"
+              className='toggle-bar'
               onClick={() => handleToggleBarClick()}
             >
               &#9776;
@@ -64,8 +63,8 @@ class Navigation extends Component {
 
           </div>
         </nav>
-    )
-  }
-};
+          )
+          }
+          };
 
 export default Navigation;

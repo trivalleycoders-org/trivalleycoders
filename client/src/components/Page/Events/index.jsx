@@ -50,7 +50,7 @@ class Events extends Component {
 
       case 'failure':
         return (
-          <section id='events'  className='events-section black-background'>
+          <section id='events'  className='events-section'>
             <Grid className='outer-grid'>
               <Row className='main-row'>
                 <h1 className='section-title'>Events</h1>
@@ -74,7 +74,7 @@ class Events extends Component {
         );
       default:
         return (
-          <section id='events'  className='events-section black-background'>
+          <section id='events'  className='events-section'>
             <Grid className='outer-grid'>
               <Row className='main-row'>
                 <h2>Loading data...</h2>

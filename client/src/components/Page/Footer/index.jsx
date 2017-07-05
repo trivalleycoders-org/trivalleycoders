@@ -3,7 +3,7 @@ import { Grid, Row } from 'react-bootstrap';
 import './style.css';
 
 const Footer = () => (
-  <footer id='footer' className='footer black-background'>
+  <footer id='footer' className='footer'>
     <Grid className='outer-grid'>
       <Row className='main-row'>
         <div className="fa-btns">

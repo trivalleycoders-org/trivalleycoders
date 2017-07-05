@@ -25,7 +25,7 @@ class Page extends Component {
         <Row id='page-row-outer' className='page-row-outer'>
           <Grid id='page-grid-inner-fluid' fluid>
             <Row id='page-row-inner'>
-              <div id="page-top">
+              <div id="page-top" className='black-background'>
                 <Navigation />
               </div>
               <div id='header-about' className='black-background'>
@@ -33,20 +33,22 @@ class Page extends Component {
                 <About />
               </div>
 
-              <div id="page-learn">
+              <div id='page-learn' className='green-background'>
                 <TechLogos />
               </div>
-              <div id="page-events">
+              <div id="page-events" className='black-background'>
                 <Events />
               </div>
               {/* <Projects /> */}
-              <div id="page-members">
+              <div id='page-members' className='green-background'>
                 <Members />
               </div>
-              <div id="page-sponsors">
+              <div id='page-sponsors' className='black-background'>
                 <Sponsors />
               </div>
-              <Footer />
+              <div id='page-footer' className='gradient-black-background'>
+                <Footer />
+              </div>
             </Row>
           </Grid>
         </Row>

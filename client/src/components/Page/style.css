@@ -3,24 +3,19 @@
 body {
   text-align: justify;
   color: white;
+  background-color: transparent;
 }
-
 body .lead {
-font-size: 1.3em;
+  font-size: 1.3em;
 }
-
 header {
   padding-left: 1%;
   padding-right: 1%;
-  background-color: #201D23;
 }
-
 section, footer {
   padding-left: 1%;
   padding-right: 1%;
-  background-color: #201D23;
 }
-
 h1, h2, h3, h4, h5, h6 {
   font-family: Roboto, Arial, san-serif;
   font-weight: normal;
@@ -28,85 +23,70 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility;
   line-height: 1.4
 }
-
 h1 {
   font-size: 3.0rem;
 }
-
 h2 {
   font-size: 2.5rem;
 }
-
 h3 {
   font-size: 1.9375rem;
 }
-
 h4 {
   font-size: 1.5625rem;
 }
-
 h5 {
   font-size: 1.25rem;
 }
-
 h6 {
   font-size: 1.0rem;
 }
-
 .container {
   width: auto;
 }
-
 .outer-grid {
   margin: auto;
+  max-width: 1080px;
 }
-
 .main-row {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   margin: auto;
 }
-
 .section-title {
   text-align: center;
 }
-
 .section-sub-title {
   text-align: center;
   font-style: italic;
 }
-
 .page-grid-outer {
   padding-left: 0;
   padding-right: 0;
 }
-
 .page-row-outer {
   margin: auto;
 }
-
 /*
     Background & Font Colors
  */
 .green-text {
   color: #34E97C;
 }
-
 .green-background {
   background-image: linear-gradient(to bottom, #42a552 0%, #42a552 100%);
 }
-
 .black-background {
+  background-color: #201D23;
+}
+.gradient-black-background {
   background: linear-gradient(to top, #1d1d1d, #3c3c3c);
 }
-
 .gray-panel {
-  /*background-color: rgb(240,240,240);*/
   background-color: transparent;
   border: none;
 }
-
 /*
     Media Queries
  */
@@ -118,7 +98,6 @@ h6 {
     padding-right: 1%;
   }
 
-
 }
 
 /* TABLET */
@@ -127,32 +106,24 @@ h6 {
   .main-row {
     padding: 0 20px 0 20px;
   }
+
 }
 
 /* DESKTOP & LAPTOP */
 @media (min-width : 1025px) {
-  body {
-      /*background-color: black;*/
-      /*background-color: #201D23;*/
-  }
-  nav {
-    /*background-color: #201D23;*/
-  }
+
   section {
-    /*background-color: #201D23;*/
     padding-left: 10%;
     padding-right: 10%;
 
   }
   header {
-    /*background-color: #201D23;*/
     padding-left: 10%;
     padding-right: 10%;
   }
   footer {
-    /*backgrounds-color: #201D23;*/
     padding-left: 10%;
     padding-right: 10%;
-
   }
+
 }

@@ -80,7 +80,7 @@ class TechLogos extends Component {
     ))
 
     return (
-      <section id='tech-logos' className='tech-logos green-background'>
+      <section id='tech-logos' className='tech-logos'>
         <Grid className='outer-grid'>
           <Row className='main-row'>
             <h1 className='section-title'>Learn With Us</h1>
