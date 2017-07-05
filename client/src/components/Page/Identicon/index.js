@@ -26,11 +26,17 @@ const generateIdenticon = (hash) => {
     size: 148, // 420px square
     format: 'png', // use SVG instead of PNG
   };
+
   // const data = new Identicon(props._id, 148).toString();
   const data = new IdenticonJs(hash, options).toString();
   // const data = new Identicon('c157a79031e1c40f85931829bc5fc552', options).toString();
   const src = `data:image/png;base64,${data}`
-  return <Image src={src} responsive alt='member picture' />
+  return <Image
+    className='member-img'
+    src={src}
+    responsive
+    alt='member picture'
+         />
 }
 
 const Identicon = (props) => {

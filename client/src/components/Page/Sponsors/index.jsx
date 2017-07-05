@@ -28,15 +28,13 @@ class Sponsors extends Component {
       />
     ))
     return (
-      <section id='sponsors-section'>
-        <Grid className='outer-grid'>
-          <Row className='main-row'>
-            <h1 className='section-title green-text'>Our Sponsors</h1>
-            <div className='sponsors'>
-              {sponsors}
-            </div>
-          </Row>
-        </Grid>
+      <section id='sponsors-section' className='black-background'>
+        <div className='section-container container-fluid sponsors-container'>
+          <h1 className='section-title green-text'>Our Sponsors</h1>
+          <div className='sponsors'>
+            {sponsors}
+          </div>
+        </div>
       </section>
     )
   }

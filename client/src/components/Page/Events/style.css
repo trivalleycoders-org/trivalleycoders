@@ -1,11 +1,7 @@
 /* Events */
 
-.events-section {
-  padding-top: 15px;
-}
-
 #events-title {
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
 }
 .events-failed-message {
   display: flex;
@@ -22,13 +18,12 @@
   margin: 20px 0 30px 0;
 }
 
-.row .odd {
-  background-color: rgba(180,180,180,0.1);
-}
-
 .panel {
   background-color: transparent;
   border-radius: 0;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+.events-container {
+  font-size: 0.9em;
 }

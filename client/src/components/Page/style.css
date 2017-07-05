@@ -8,6 +8,15 @@ body {
 body .lead {
   font-size: 1.3em;
 }
+
+section, header, footer {
+  overflow: hidden;
+}
+section {
+  padding-top: 15px;
+  padding-bottom: 35px;
+}
+/*
 header {
   padding-left: 1%;
   padding-right: 1%;
@@ -15,13 +24,15 @@ header {
 section, footer {
   padding-left: 1%;
   padding-right: 1%;
-}
+}*/
+
 h1, h2, h3, h4, h5, h6 {
   font-family: Roboto, Arial, san-serif;
   font-weight: normal;
   font-style: normal;
   text-rendering: optimizeLegibility;
-  line-height: 1.4
+  line-height: 1.4;
+  text-align: center;
 }
 h1 {
   font-size: 3.0rem;
@@ -44,28 +55,24 @@ h6 {
 .container {
   width: auto;
 }
-.outer-grid {
-  margin: auto;
-  max-width: 1080px;
-}
-.main-row {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  margin: auto;
-}
 .section-title {
-  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 20px;
 }
 .section-sub-title {
-  text-align: center;
+  /*text-align: center;*/
   font-style: italic;
 }
-.page-grid-outer {
+/*.page-grid-outer {
   padding-left: 0;
   padding-right: 0;
 }
 .page-row-outer {
+  margin: auto;
+}*/
+
+.eight-columns {
+  max-width: 900px;
   margin: auto;
 }
 /*
@@ -83,36 +90,38 @@ h6 {
 .gradient-black-background {
   background: linear-gradient(to top, #1d1d1d, #3c3c3c);
 }
-.gray-panel {
-  background-color: transparent;
-  border: none;
+
+.section-container {
+  max-width: 1080px;
+  margin: auto;
 }
+
 /*
     Media Queries
  */
 /* PHONE */
 @media (max-width : 480px) {
 
-  section, header, footer {
+  /*section, header, footer {
     padding-left: 1%;
     padding-right: 1%;
-  }
+  }*/
 
 }
 
 /* TABLET */
 @media (min-width : 481px) and (max-width : 1024px) {
 
-  .main-row {
+  /*.main-row {
     padding: 0 20px 0 20px;
-  }
+  }*/
 
 }
 
 /* DESKTOP & LAPTOP */
 @media (min-width : 1025px) {
 
-  section {
+  /*section {
     padding-left: 10%;
     padding-right: 10%;
 
@@ -124,6 +133,6 @@ h6 {
   footer {
     padding-left: 10%;
     padding-right: 10%;
-  }
+  }*/
 
 }

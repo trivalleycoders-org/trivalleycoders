@@ -1,18 +1,20 @@
 /* TechLogos */
 
 .tech-logos {
-  padding-bottom: 15px;
+  /*padding-bottom: 15px;*/
 }
 .logo-title {
   font-size: 1.6em;
   text-align: center;
+  margin-top: 25px;
 }
 .logo-row {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  padding: 15px 0 20px 0;
+  /*padding: 15px 0 20px 0;*/
 }
+
 
 /*
     PHONE
@@ -31,7 +33,7 @@
   .logo-row {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    /*justify-content: center;*/
   }
 
 }
@@ -42,6 +44,6 @@
 /*@media only screen  and (min-width : 1224px) {*/
 @media (min-width : 1025px) {
   .tech-logos-row-inner {
-    margin: 10px 0 10px 0;
+    /*margin: 10px 0 10px 0;*/
   }
 }

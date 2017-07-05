@@ -63,15 +63,13 @@ class Members extends Component {
       />
     ))
     return (
-      <section id='members'>
-        <Grid className='outer-grid'>
-          <Row className='main-row'>
-            <h1 className='section-title'>Members</h1>
-            <div className='members'>
-              {members}
-            </div>
-          </Row>
-        </Grid>
+      <section id='members' className='green-background'>
+        <div className='section-container container-fluid members-container'>
+          <h1 className='section-title'>Members</h1>
+          <div className='members'>
+            {members}
+          </div>
+        </div>
       </section>
     )
 

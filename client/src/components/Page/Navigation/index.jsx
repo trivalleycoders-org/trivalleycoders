@@ -42,27 +42,28 @@ class Navigation extends Component {
     }
 
     return (
-        <nav id='nav'>
-          <div id='top-bar' className='top-bar'>
-            <Logo />
-            <span
-              className='toggle-bar'
-              onClick={() => handleToggleBarClick()}
-            >
-              &#9776;
-            </span>
-          </div>
-          <div className='tvc-menu'>
+        <section id='nav' className='black-background'>
+          <div className='section-container container-fluid'>
+            <div id='top-bar' className='top-bar'>
+              <Logo />
+              <span
+                className='toggle-bar'
+                onClick={() => handleToggleBarClick()}
+              >
+                &#9776;
+              </span>
+            </div>
+            <div className='tvc-menu'>
 
-            <ul className={menuState}>
-              <li><a href="#page-learn" className="menu-item">Learn</a></li>
-              <li><a href="#page-events" className="menu-item">Events</a></li>
-              <li><a href="#page-members" className="menu-item">Members</a></li>
-              <li><a href="#page-sponsors" className="menu-item">Sponsors</a></li>
-            </ul>
-
+              <ul className={menuState}>
+                <li><a href="#page-learn" className="menu-item">Learn</a></li>
+                <li><a href="#page-events" className="menu-item">Events</a></li>
+                <li><a href="#page-members" className="menu-item">Members</a></li>
+                <li><a href="#page-sponsors" className="menu-item">Sponsors</a></li>
+              </ul>
+            </div>
           </div>
-        </nav>
+        </section>
           )
           }
           };

@@ -1,26 +1,24 @@
 // TechLogos
 import React from 'react';
-import { Grid, Row } from 'react-bootstrap';
 import { Component } from 'react';
 import TechLogo from './TechLogo';
 import './style.css';
 // Basics
-import iHTML from './../../../images/tech-logos/html-5.01.svg'
-import iCSS from './../../../images/tech-logos/css-3.01.svg'
-import iJS from './../../../images/tech-logos/javascript.svg'
+import iHTML from './tech-logos/html-5.01.svg'
+import iCSS from './tech-logos/css-3.01.svg'
+import iJS from './tech-logos/javascript.svg'
 // MERN
-// import iMongo from './../../../images/tech-logos/mongodb.on-black.01.svg'
-import iMongo from './../../../images/tech-logos/mongodb.svg'
-// import iExpress from './../../../images/tech-logos/express.on-black.01.svg'
-import iExpress from './../../../images/tech-logos/express.svg'
-import iReact from './../../../images/tech-logos/react.svg'
-// import iNode from './../../../images/tech-logos/nodejs.on-black.01.svg'
-// import iNode from './../../../images/tech-logos/nodejs.svg'
-import iNode from './../../../images/tech-logos/nodejs.on-green.svg'
+// import iMongo from './tech-logos/mongodb.on-black.01.svg'
+import iMongo from './tech-logos/mongodb.svg'
+// import iExpress from './tech-logos/express.on-black.01.svg'
+import iExpress from './tech-logos/express.svg'
+import iReact from './tech-logos/react.svg'
+// import iNode from './tech-logos/nodejs.on-black.01.svg'
+// import iNode from './tech-logos/nodejs.svg'
+import iNode from './tech-logos/nodejs.on-green.svg'
 
 class TechLogos extends Component {
   render() {
-    // image, url, name
     const arrBasics = [
       {
         name: 'HTML 5',
@@ -80,14 +78,12 @@ class TechLogos extends Component {
     ))
 
     return (
-      <section id='tech-logos' className='tech-logos'>
-        <Grid className='outer-grid'>
-          <Row className='main-row'>
+      <section id='tech-logos' className='green-background'>
+        <div className='section-container container-fluid techlogo-container'>
+          <div className='tech-logo-sub-container eight-columns'>
             <h1 className='section-title'>Learn With Us</h1>
             <p className='lead'>Our core compentency is the MERN stack, Mongo, Express, React and Node. When you join the group we guide you from beginner learning HTML, CSS & JavaScript to a software developer building apps with the MERN (<b>M</b>ongoDB, <b>E</b>xpress, <b>R</b>eact & <b>N</b>ode.js) stack.</p>
             <p className='lead'>As a beginner you will get help learning the basics. When you are ready you will work on real projects for real clients gaining knowledge and valuable experience along the way.</p>
-          </Row>
-          <Row>
             <h3 className='logo-title'>The Basics</h3>
             <div className='logo-row'>
               {basics}
@@ -96,8 +92,8 @@ class TechLogos extends Component {
             <div className='logo-row'>
               {mern}
             </div>
-          </Row>
-        </Grid>
+          </div>
+        </div>
       </section>
     )
   }

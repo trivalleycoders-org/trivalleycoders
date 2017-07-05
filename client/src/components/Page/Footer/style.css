@@ -1,8 +1,14 @@
 /* Footer */
 
-.footer {
+/*.footer {
   padding-top: 15px;
 	padding-bottom: 15px;
+}*/
+
+.footer-container {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
 }
 
 .fa {
