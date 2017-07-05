@@ -5,6 +5,7 @@ body {
   color: white;
   background-color: transparent;
   font-size: 1.4em;
+
 }
 
 section, header, footer {
@@ -24,22 +25,22 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 h1 {
-  font-size: 3.0rem;
+  /*font-size: 3.0rem;*/
 }
 h2 {
-  font-size: 2.5rem;
+  /*font-size: 2.5rem;*/
 }
 h3 {
-  font-size: 1.9375rem;
+  /*font-size: 1.9375rem;*/
 }
 h4 {
-  font-size: 1.5625rem;
+  /*font-size: 1.5625rem;*/
 }
 h5 {
-  font-size: 1.25rem;
+  /*font-size: 1.25rem;*/
 }
 h6 {
-  font-size: 1.0rem;
+  /*font-size: 1.0rem;*/
 }
 .container {
   width: auto;
@@ -83,7 +84,9 @@ h6 {
 /* PHONE */
 @media (max-width : 480px) {
 
+  body {
 
+  }
 
 }
 
@@ -91,7 +94,7 @@ h6 {
 @media (min-width : 481px) and (max-width : 1024px) {
 
   body {
-    /*font-size: 10em;*/
+    font-size: 1.8em;
   }
 
 
