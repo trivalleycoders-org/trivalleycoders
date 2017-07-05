@@ -22,7 +22,7 @@
   line-height: 40px;
   cursor: pointer;
   height: 40px;
-  font-size: 25px;
+  /*font-size: 25px;*/
   color: white;
   transition: all .1s linear;
 }
@@ -52,7 +52,7 @@
   text-decoration: none;
   align-self: center;
   color: white;
-  font-size: 14px;
+  /*font-size: 14px;*/
   padding: 10px 15px;
   transition: background .2s linear;
 }
@@ -115,7 +115,7 @@
   }
   .menu-item {
     height: auto;
-    font-size: 2em;
+    /*font-size: 2em;*/
     padding: 20px 7px 20px 7px;
   }
 }
@@ -144,7 +144,7 @@
   }
   .menu-item {
     height: auto;
-    font-size: 2em;
+    /*font-size: 2em;*/
     padding: 20px 7px 20px 7px;
 
   }
@@ -155,6 +155,6 @@
     margin: auto;
   }
   .menu li a {
-    font-size: 14px;
+    /*font-size: 14px;*/
   }
 }

@@ -26,46 +26,20 @@
 }
 .member-name {
   font-weight: bold;
-  font-size: 1.2em;
+  /*font-size: 1.2em;*/
 }
 .member-role {
   margin-top: 3px;
-  font-size: 1.1em;
+  /*font-size: 1.1em;*/
 }
-
-/*.panel-member {
-  text-align: center;
-  width: 155px;
-  padding: 5px;
-  margin: 10px;
-}
-.member-img-container {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  padding: 0;
-}
-
-.panel-body {
-  padding: 0;
-}*/
-
 #member-name {
-  font-size: 1.3em;
+  /*font-size: 1.3em;*/
   font-weight: 300;
 }
 
 #member-role {
-  font-size: 1.0em;
-}
 
-/*.member-member-role {
-  margin-bottom: 0;
 }
-
-.panel-member {
-  border: none;
-}*/
 
 
 /*
@@ -79,18 +53,6 @@
     TABLET
  */
 @media (min-width : 481px) and (max-width : 1024px) {
-  /*.panel-member {
-    text-align: center;
-    width: 140px;
-    padding: 5px;
-    margin: 10px;
-  }
-  .panel-member-img-container {
-    padding: 0;
-  }
-  .panel-body {
-    padding: 0;
-  }*/
 
 }
 
@@ -98,16 +60,5 @@
     DESKTOP & LAPTOP
  */
 @media (min-width : 1025px) {
-  /*.panel-member {
-    text-align: center;
-    width: 160px;
-    padding: 5px;
-    margin: 10px;
-  }
-  .member-img-container {
-    padding: 0;
-  }
-  .panel-body {
-    padding: 0;
-  }*/
+
 }

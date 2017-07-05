@@ -1,7 +1,7 @@
 /* SiteTitle */
 
 .site-title {
-  font-size: 2.6em;
+  /*font-size: 2.6em;*/
   text-align: center;
   /*margin: 20px 0 10px 0;*/
 }
@@ -18,13 +18,13 @@
 /* TABLET */
 @media (min-width : 481px) and (max-width : 1024px) {
   .site-title {
-    font-size: 4.3em;
+    /*font-size: 4.3em;*/
   }
 }
 
 /* DESKTOP & LAPTOP */
 @media (min-width : 1025px) {
   .site-title {
-    font-size: 7.0em;
+    /*font-size: 7.0em;*/
   }
 }
