@@ -44,8 +44,17 @@ class Navigation extends Component {
     return (
         <section id='nav' className='black-background'>
           <div className='section-container container-fluid'>
-            <div id='top-bar' className='top-bar'>
+            <div className='nav-sub-container'>
               <Logo />
+
+              <div className='tvc-menu'>
+                <ul className={menuState}>
+                  <li><a href="#page-learn" className="menu-item">Learn</a></li>
+                  <li><a href="#page-events" className="menu-item">Events</a></li>
+                  <li><a href="#page-members" className="menu-item">Members</a></li>
+                  <li><a href="#page-sponsors" className="menu-item">Sponsors</a></li>
+                </ul>
+              </div>
               <span
                 className='toggle-bar'
                 onClick={() => handleToggleBarClick()}
@@ -53,15 +62,7 @@ class Navigation extends Component {
                 &#9776;
               </span>
             </div>
-            <div className='tvc-menu'>
 
-              <ul className={menuState}>
-                <li><a href="#page-learn" className="menu-item">Learn</a></li>
-                <li><a href="#page-events" className="menu-item">Events</a></li>
-                <li><a href="#page-members" className="menu-item">Members</a></li>
-                <li><a href="#page-sponsors" className="menu-item">Sponsors</a></li>
-              </ul>
-            </div>
           </div>
         </section>
           )
