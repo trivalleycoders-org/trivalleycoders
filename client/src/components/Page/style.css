@@ -66,9 +66,15 @@ h6 {
 .green-background {
   background-image: linear-gradient(to bottom, #42a552 0%, #42a552 100%);
 }
+
 .black-background {
   background-color: #201D23;
 }
+
+[if Webkit] .black-background {
+  background-color: orange;
+}
+
 .gradient-black-background {
   background: linear-gradient(to top, #1d1d1d, #3c3c3c);
 }
