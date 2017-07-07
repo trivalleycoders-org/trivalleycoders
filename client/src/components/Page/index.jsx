@@ -15,7 +15,6 @@ import Members from './Members';
 import Sponsors from './Sponsors';
 import Footer from './Footer';
 import './style.css';
-import Product from './Product'
 // import NewForm from './NewForm';
 // import * as ku from '../../lib/ke-utils';
 
@@ -24,7 +23,6 @@ class Page extends Component {
     return (
       <div className='page-wrapper'>
         <Navigation />
-        <Product />
         <Header />
         <About />
         <TechLogos />
