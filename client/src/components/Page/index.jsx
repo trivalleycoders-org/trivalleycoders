@@ -24,7 +24,6 @@ class Page extends Component {
     return (
       <div className='page-wrapper'>
         <Navigation />
-        <Product />
         <Header />
         <About />
         <TechLogos />
