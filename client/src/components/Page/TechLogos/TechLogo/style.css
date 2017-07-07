@@ -2,6 +2,7 @@
 
 .logo-item {
   display: flex;
+  display: -webkit-box;
   flex-flow: column nowrap;
   padding: 10px;
   justify-content: space-between;
