@@ -1,8 +1,7 @@
 /* TechLogo */
 
 .logo-item {
-
-
+  display: -webkit-box; /* fix for Safari problem */
   display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
   flex-flow: column nowrap;
   padding: 10px;
