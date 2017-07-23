@@ -2,8 +2,8 @@
 
 .logo-item {
 
-  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-  display: -webkit-box; /* fix for Safari problem */
+  display: flex;           /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  /*display: -webkit-box;*/ /* fix for Safari problem */
   flex-flow: column nowrap;
   padding: 10px;
   justify-content: space-between;
