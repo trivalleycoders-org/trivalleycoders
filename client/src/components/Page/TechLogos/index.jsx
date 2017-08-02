@@ -85,12 +85,16 @@ class TechLogos extends Component {
             <p>Our core compentency is the MERN stack, Mongo, Express, React and Node. When you join the group we guide you from beginner learning HTML, CSS & JavaScript to a software developer building apps with the MERN (<b>M</b>ongoDB, <b>E</b>xpress, <b>R</b>eact & <b>N</b>ode.js) stack.</p>
             <p>As a beginner you will get help learning the basics. When you are ready you will work on real projects for real clients gaining knowledge and valuable experience along the way.</p>
             <h3 className='logo-title'>The Basics</h3>
-            <div className='logo-row'>
-              {basics}
+            <div>
+              <div className='logo-row'>
+                {basics}
+              </div>
             </div>
             <h3 className='logo-title'>MERN Stack</h3>
-            <div className='logo-row'>
-              {mern}
+            <div>
+              <div className='logo-row'>
+                {mern}
+              </div>
             </div>
           </div>
         </div>
