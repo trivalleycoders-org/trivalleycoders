@@ -2,18 +2,15 @@
 import React from 'react';
 import { Component } from 'react';
 import { Grid, Row } from 'react-bootstrap';
-import pChad from '../../../images/chad.jpg';
-import pLaura from '../../../images/laura.jpeg';
-import pMichael from '../../../images/michael.jpg';
-import pNathan from '../../../images/nathan.jpg';
-import pSharmina from '../../../images/sharmina.jpg';
+import { members } from './member-data'
 import Member from './Member';
 import './style.css';
 
 class Members extends Component {
   render() {
+    console.log('members', members)
 
-    const members = arrMembers.map((m) => (
+    const renderMembers = members.map((m) => (
       <Member
         key={m.id}
         _id={m.id}
@@ -28,7 +25,7 @@ class Members extends Component {
         <div className='section-container container-fluid members-container'>
           <h1 className='section-title'>Members</h1>
           <div className='members'>
-            {members}
+            {renderMembers}
           </div>
         </div>
       </section>
