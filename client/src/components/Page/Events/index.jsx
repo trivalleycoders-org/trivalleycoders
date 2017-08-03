@@ -5,7 +5,6 @@ import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
 import * as actionCreators from '../../../store/actions';
 import * as selectors from '../../../store/selectors';
-import { Grid, Row, Button } from 'react-bootstrap';
 import Event from './Event';
 import iMeetup from './meetup-swarm.svg'
 import './style.css';
@@ -58,10 +57,10 @@ class Events extends Component {
                   <li>9:45 AM - Move to Dublin Library, 200 Civic Plaza, Dublin</li>
                   <li>10 AM - 12 PM - Code, get help and/or presentation</li>
                 </ul>
-                <Button className='meeting-schedule' href='https://www.meetup.com/trivalleycoders/?scroll=true' bsStyle='success' bsSize='large'>
+                <button className='meeting-schedule' href='https://www.meetup.com/trivalleycoders/?scroll=true' bsStyle='success' bsSize='large'>
                   <img src={iMeetup} width={40} alt='meetup logo'/>
                   Tri-Valley Coders Meeting Schedule
-                </Button>
+                </button>
               </div>
             </div>
           </section>

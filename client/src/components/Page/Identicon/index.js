@@ -1,5 +1,4 @@
 import React from 'react'
-import { Image } from 'react-bootstrap'
 import IdenticonJs from 'identicon.js';
 // import * as ku from '../../../lib/ke-utils'
 
@@ -31,11 +30,10 @@ const generateIdenticon = (hash) => {
   const data = new IdenticonJs(hash, options).toString();
   // const data = new Identicon('c157a79031e1c40f85931829bc5fc552', options).toString();
   const src = `data:image/png;base64,${data}`
-  return <Image
+  return <img
     className='member-img'
     src={src}
-    responsive
-    alt='member picture'
+    alt='member'
          />
 }
 

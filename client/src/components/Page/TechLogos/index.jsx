@@ -1,21 +1,7 @@
 // TechLogos
-import React from 'react';
-import { Component } from 'react';
+import React, { Component } from 'react';
 import TechLogo from './TechLogo';
 import './style.css';
-// Basics
-import iHTML from './tech-logos/html-5.01.svg'
-import iCSS from './tech-logos/css-3.01.svg'
-import iJS from './tech-logos/javascript.svg'
-// MERN
-// import iMongo from './tech-logos/mongodb.on-black.01.svg'
-import iMongo from './tech-logos/mongodb.svg'
-// import iExpress from './tech-logos/express.on-black.01.svg'
-import iExpress from './tech-logos/express.svg'
-import iReact from './tech-logos/react.svg'
-// import iNode from './tech-logos/nodejs.on-black.01.svg'
-// import iNode from './tech-logos/nodejs.svg'
-import iNode from './tech-logos/nodejs.on-green.svg'
 import { basicsLogos, mernLogos } from './logo-data'
 
 class TechLogos extends Component {

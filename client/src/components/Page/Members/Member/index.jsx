@@ -1,6 +1,5 @@
 // Member
 import React from 'react';
-import { Panel, Image } from 'react-bootstrap'
 import './style.css';
 import Identicon from './../../Identicon'
 // import * as ku from '../../../../lib/ke-utils'
@@ -14,7 +13,7 @@ const Member = (props) => {
         hash={props._id}
              />
     } else {
-      return <Image className='member-img' src={props.picture} responsive alt='member picture' />
+      return <img className='member-img' src={props.picture} responsive alt='member picture' />
     }
   }
   return (

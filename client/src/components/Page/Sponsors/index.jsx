@@ -1,7 +1,6 @@
 // Sponsors
 import React from 'react';
 import { Component } from 'react';
-import { Grid, Row } from 'react-bootstrap';
 import sZelda from '../../../images/zelda.sponsor.jpeg'
 import Sponsor from './Sponsor';
 import './style.css';

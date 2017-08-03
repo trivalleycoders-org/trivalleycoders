@@ -1,7 +1,6 @@
 // TechLogo
 
 import React from 'react';
-import { Panel, Image } from 'react-bootstrap';
 import classNames from 'classnames'
 import './style.css';
 
