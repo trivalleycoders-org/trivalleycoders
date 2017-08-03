@@ -71,7 +71,7 @@ class Events extends Component {
               <div className='section-container container-fluid'>
                 <h2>Loading data...</h2>
               </div>
-          </section>
+            </section>
         );
     }
   }

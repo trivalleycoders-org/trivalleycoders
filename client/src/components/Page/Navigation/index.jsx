@@ -49,10 +49,10 @@ class Navigation extends Component {
 
               <div className='tvc-menu'>
                 <ul className={menuState}>
-                  <li><a href="#page-learn" className="menu-item">Learn</a></li>
-                  <li><a href="#page-events" className="menu-item">Events</a></li>
-                  <li><a href="#page-members" className="menu-item">Members</a></li>
-                  <li><a href="#page-sponsors" className="menu-item">Sponsors</a></li>
+                  <li><a href="#tech-logos" className="menu-item">Learn</a></li>
+                  <li><a href="#events" className="menu-item">Events</a></li>
+                  <li><a href="#members" className="menu-item">Members</a></li>
+                  <li><a href="#sponsors" className="menu-item">Sponsors</a></li>
                 </ul>
               </div>
               <span

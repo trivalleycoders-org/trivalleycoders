@@ -8,12 +8,6 @@
 }
 
 
-.top-bar {
-  /*display: flex;*/
-  /*flex-flow: row nowrap;*/
-  /*justify-content: space-between;*/
-}
-
 .toggle-bar {
   clear: both;
   display: block;
@@ -22,15 +16,9 @@
   line-height: 40px;
   cursor: pointer;
   height: 40px;
-  /*font-size: 25px;*/
   color: white;
   transition: all .1s linear;
 }
-.toggle-bar:hover {
-  /*background: #cecece;*/
-}
-
-
 .menu {
   list-style-type: none;
   padding: 0;
@@ -45,14 +33,12 @@
 .menu li {
   display: flex;
   align-self: center;
-  /*width: 95%;*/
 }
 
 .menu li a {
   text-decoration: none;
   align-self: center;
   color: white;
-  /*font-size: 14px;*/
   padding: 10px 15px;
   transition: background .2s linear;
 }
@@ -63,9 +49,10 @@
   align-content: center;
 }
 
-.hamburger {
+/*.hamburger {
   font-size: 40px;
-}
+}*/
+
 /* PHONE */
 @media (max-width : 480px) {
   .menu-up {
