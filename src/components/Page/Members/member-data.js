@@ -9,7 +9,7 @@ export const members = [
     id: '7a8a0c654b89f157524be1b68adf9dbecc4f1db0',
     picture: '',
     name: 'Karl',
-    role: 'Web Developer & Organizer',
+    role: 'Organizer Web Developer',
   },
   {
     id: 102,
@@ -21,7 +21,7 @@ export const members = [
     id: 103,
     picture: pLaura,
     name: 'Laura',
-    role: 'Web Developer',
+    role: 'Co-organizer Web Developer',
   },
   {
     id: 104,
@@ -39,7 +39,7 @@ export const members = [
     id: 106,
     picture: pSharmina,
     name: 'Sharmina',
-    role: 'Web Developer',
+    role: 'Co-organizer Web Developer',
   },
 ]
 
