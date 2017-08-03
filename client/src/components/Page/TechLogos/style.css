@@ -1,13 +1,11 @@
 /* TechLogos */
 
-.tech-logos {
-  /*padding-bottom: 15px;*/
-}
 .logo-title {
   /*font-size: 1.6em;*/
   text-align: center;
   margin-top: 25px;
 }
+
 .logo-row {
   display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
@@ -15,26 +13,5 @@
   display: -webkit-flex;     /* NEW - Chrome */
   display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
   flex-flow: row wrap;
-  justify-content: space-around;
-}
-
-/*
-    PHONE
- */
-@media (max-width : 480px) {
-
-}
-
-/*
-    TABLET
- */
-@media (min-width : 481px) and (max-width : 1024px) {
-
-}
-
-/*
-    DESKTOP & LAPTOP
- */
-@media (min-width : 1025px) {
-
+  justify-content: center;
 }

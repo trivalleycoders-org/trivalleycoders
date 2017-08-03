@@ -1,58 +1,29 @@
 /* TechLogo */
 
-.logo-item {
-
-  display: flex;           /* NEW, Spec - Opera 12.1, Firefox 20+ */
-  /*display: -webkit-box;*/ /* fix for Safari problem */
-  flex-flow: column nowrap;
-  padding: 10px;
-  justify-content: space-between;
-}
-
-.img-container {
-  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-  flex-flow: column nowrap;
-  justify-content: center;
-  height: 100%;
-}
-
-.logo-text {
-  /*font-size: 1.0em;*/
-  margin-top: 3px;
+.tech-logo {
+  margin: 10px 10px 5px 10px;
   text-align: center;
 }
 
-.small-image {
-  max-height: 45px;
+.logo-text {
+  margin-top: 4px;
+  text-align: center;
+  font-size: 0.7em;
 }
+
 .wide-image {
-  max-height: 55px;
   max-width: 180px;
 }
+
 .express-image {
-  max-width: 145px
+  max-width: 145px;
 }
 
-/*
-    PHONE
- */
-@media (max-width : 480px) {
-
+.extra-tmp {
+  border: 0.5px solid white;
 
 }
 
-/*
-    TABLET
- */
-/*@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {*/
-@media (min-width : 481px) and (max-width : 1024px) {
-
-}
-
-/*
-    DESKTOP & LAPTOP
- */
-/*@media only screen  and (min-width : 1224px) {*/
-@media (min-width : 1025px) {
-
+.logo-height {
+  height: 45px;
 }

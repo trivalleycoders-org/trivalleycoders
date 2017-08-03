@@ -19,13 +19,9 @@ const Member = (props) => {
   }
   return (
     <div className='member-item'>
-      <div className='member-img-container'>
-        {getPicture()}
-      </div>
-      <div className='member-text'>
-        <span className='member-name'>{props.name}</span>
-        <span className='member-role'>{props.role}</span>
-      </div>
+      {getPicture()}
+      <span className='member-name'>{props.name}</span>
+      <span className='member-role'>{props.role}</span>
     </div>
   )
 };

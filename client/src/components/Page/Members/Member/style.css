@@ -3,62 +3,20 @@
 .member-item {
   display: flex;
   flex-flow: column nowrap;
-  padding: 10px;
+  padding: 15px 10px;
   justify-content: space-between;
   max-width: 130px;
+  text-align: center;
 }
 
-.member-container {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  height: 100%;
-}
 .member-img {
   max-height: 110px;
 }
-.member-text {
-  display: flex;
-  flex-flow: column nowrap;
-  height: 100%;
-  text-align: center;
-  margin-top: 10px;
-}
+
 .member-name {
   font-weight: bold;
-  /*font-size: 1.2em;*/
 }
+
 .member-role {
   margin-top: 3px;
-  /*font-size: 1.1em;*/
-}
-#member-name {
-  /*font-size: 1.3em;*/
-  font-weight: 300;
-}
-
-#member-role {
-
-}
-
-
-/*
-    PHONE
- */
-@media (max-width : 480px) {
-
-}
-
-/*
-    TABLET
- */
-@media (min-width : 481px) and (max-width : 1024px) {
-
-}
-
-/*
-    DESKTOP & LAPTOP
- */
-@media (min-width : 1025px) {
-
 }

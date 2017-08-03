@@ -9,15 +9,14 @@ const TechLogo = (props) => {
   const imageStyle = classNames(
     {
       // 'tech-logo-image': true,
-      [props.style]: props.style ? true : false,
+      [props.style]: true,
+      'logo-height': true,
     }
   )
   return (
-    <div className='logo-item'>
-      <div className="img-container">
-        <img className={imageStyle} src={props.url} alt="logo" />
-      </div>
-      <span className='logo-text'>{props.name}</span>
+    <div className='tech-logo'>
+      <img className={imageStyle} src={props.url} alt="logo" />
+      <div className='logo-text'>{props.name}</div>
     </div>
   );
 };

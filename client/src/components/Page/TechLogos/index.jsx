@@ -16,27 +16,11 @@ import iReact from './tech-logos/react.svg'
 // import iNode from './tech-logos/nodejs.on-black.01.svg'
 // import iNode from './tech-logos/nodejs.svg'
 import iNode from './tech-logos/nodejs.on-green.svg'
+import { basicsLogos, mernLogos } from './logo-data'
 
 class TechLogos extends Component {
   render() {
-    const arrBasics = [
-      {
-        name: 'HTML 5',
-        image: iHTML,
-        style: "small-image",
-      },
-      {
-        name: 'CSS 3',
-        image: iCSS,
-        style: "small-image",
-      },
-      {
-        name: 'JavaScript',
-        image: iJS,
-        style: "small-image",
-      },
-    ]
-    const basics = arrBasics.map((t) => (
+    const basics = basicsLogos.map((t) => (
       <TechLogo
         key={t.name}
         name={t.name}
@@ -45,30 +29,7 @@ class TechLogos extends Component {
       />
     ))
 
-    const arrMERN = [
-      {
-        name: 'MongoDB',
-        image: iMongo,
-        style: 'wide-image',
-      },
-      {
-        name: 'Express',
-        image: iExpress,
-        style: 'express-image',
-      },
-      {
-        name: 'React',
-        image: iReact,
-        style: "small-image",
-      },
-      {
-        name: 'Node',
-        image: iNode,
-        style: "small-image",
-      },
-    ]
-
-    const mern = arrMERN.map((t) => (
+    const mern = mernLogos.map((t) => (
       <TechLogo
         key={t.name}
         name={t.name}
@@ -85,10 +46,8 @@ class TechLogos extends Component {
             <p>Our core compentency is the MERN stack, Mongo, Express, React and Node. When you join the group we guide you from beginner learning HTML, CSS & JavaScript to a software developer building apps with the MERN (<b>M</b>ongoDB, <b>E</b>xpress, <b>R</b>eact & <b>N</b>ode.js) stack.</p>
             <p>As a beginner you will get help learning the basics. When you are ready you will work on real projects for real clients gaining knowledge and valuable experience along the way.</p>
             <h3 className='logo-title'>The Basics</h3>
-            <div>
-              <div className='logo-row'>
-                {basics}
-              </div>
+            <div className='logo-row'>
+              {basics}
             </div>
             <h3 className='logo-title'>MERN Stack</h3>
             <div>
