@@ -34,5 +34,10 @@
 }
 
 .img-women-learning {
-  max-width: 400px;
+  max-width: 370px;
+}
+
+.tech-logo-subcontainer {
+  font-size: 1.3em;
+  padding-left: 30px;
 }

@@ -22,11 +22,12 @@
 
 .events-list {
   width: 0.5833333333;
-  margin-left: 15px;
+  margin: 0 15px;
 }
 
 .events-image {
   margin: auto;
+  padding-left: 50px;
 }
 
 .img-laptop-coffee {
