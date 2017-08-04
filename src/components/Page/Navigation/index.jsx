@@ -40,7 +40,7 @@ class Navigation extends Component {
 
     return (
         <section id='nav' className='black-background nav-section'>
-          <div className='section-container container-fluid'>
+          <div className='section-container'>
             <div className='nav-sub-container'>
               <div>
                 <Logo />

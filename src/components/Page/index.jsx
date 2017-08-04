@@ -1,14 +1,14 @@
 // Page
-import React from 'react';
-import { Component } from 'react';
+import React from 'react'
+import { Component } from 'react'
 import Navigation from './Navigation'
-import About from './About'
-import TechLogos from './TechLogos';
-import Events from './Events';
-import Members from './Members';
-import Sponsors from './Sponsors';
-import Footer from './Footer';
-import './style.css';
+import Header from './Header'
+import TechLogos from './TechLogos'
+import Events from './Events'
+import Members from './Members'
+import Sponsors from './Sponsors'
+import Footer from './Footer'
+import './style.css'
 // import * as ku from '../../lib/ke-utils';
 
 class Page extends Component {
@@ -16,7 +16,7 @@ class Page extends Component {
     return (
       <div className='page-wrapper'>
         <Navigation />
-        <About />
+        <Header />
         <TechLogos />
         <Events />
         <Members />
