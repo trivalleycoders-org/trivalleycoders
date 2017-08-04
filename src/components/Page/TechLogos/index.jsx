@@ -31,7 +31,7 @@ class TechLogos extends Component {
         <div className='section-container container-fluid techlogo-container'>
           <div className='tech-logos-body'>
             <div className='tech-logos-image'>
-              <Image src={iWomenLearning} className='img-women-learning' alt='women learning' />
+              <Image src={iWomenLearning} responsive className='img-women-learning' alt='women learning' />
             </div>
             <div className='tech-logo-sub-container'>
               <h1 className='section-title'>Learn With Us</h1>
