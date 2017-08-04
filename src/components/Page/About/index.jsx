@@ -2,12 +2,14 @@
 import React from 'react';
 import './style.css';
 import { Button } from 'react-bootstrap'
-import iMeetup from './meetup-swarm.svg'
+import iMeetup from './images/meetup-swarm.svg'
+import Header from './Header'
 
 const About = () => (
-  <section id='about' className='black-background'>
+  <section id='about' className='black-background about-section'>
     <div className='section-container container-fluid about-container'>
-      <div className='about-sub-container eight-columns'>
+      <div className='about-sub-container'>
+        <Header />
         <p className='about-subtitle green-text'>A place to learn, collaborate and become a software developer</p>
         <p>Tri-Valley Coders is a place to learn the full gaumet of software development skills including: writing code, using developer tools and collaborating on projects. We offer the not just learning experiences but the opportunity to work on actual projects for real clients.</p>
         <p>We have a collaborative and supportive structure with roles for beginners as well as experienced devlopers to learn new skills. Both our members and organizers bring a wide variety of experience and skill levels.</p>

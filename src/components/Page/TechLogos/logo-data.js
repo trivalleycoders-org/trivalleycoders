@@ -1,12 +1,12 @@
 // logo-data.js
-import iHTML from './tech-logos/html-5.01.svg'
-import iCSS from './tech-logos/css-3.01.svg'
-import iJS from './tech-logos/javascript.svg'
-import iMongo from './tech-logos/mongodb.svg'
-import iExpress from './tech-logos/express.svg'
-// import iExpress from './tech-logos/edit/express1.svg' // resized
-import iReact from './tech-logos/react.svg'
-import iNode from './tech-logos/nodejs.on-green.svg'
+import iHTML from './images/html-5.01.svg'
+import iCSS from './images/css-3.01.svg'
+import iJS from './images/javascript.svg'
+import iMongo from './images/mongodb.svg'
+import iExpress from './images/express.svg'
+// import iExpress from './images/edit/express1.svg' // resized
+import iReact from './images/react.svg'
+import iNode from './images/nodejs.on-green.svg'
 
 export const basicsLogos = [
   {

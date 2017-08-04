@@ -6,8 +6,10 @@ import { connect } from 'react-redux';
 import * as actionCreators from '../../../store/actions';
 import * as selectors from '../../../store/selectors';
 import Event from './Event';
-import iMeetup from './meetup-swarm.svg'
+import iMeetup from './images/meetup-swarm.svg'
 import './style.css';
+import iLaptopCoffee from './images/laptop-coffee.jpeg'
+import { Image } from 'react-bootstrap'
 
 let i = 1;
 
@@ -21,26 +23,33 @@ class Events extends Component {
     switch (readEventsRequest.status) {
       case 'success':
         return (
-          <section id='events' className='black-background'>
-            <div className='section-container container-fluid events-container'>
-              <h1 id='events-title' className='section-title green-text'>Events</h1>
-              <div>
-                {
-                  this.props.events.map((e) => (
-                    <Event
-                      key={e.time}
-                      date={e.time}
-                      name={e.name}
-                      locationName={`${e.venue.name}`}
-                      locationAddress={`${e.venue.address_1}`}
-                      locationCity={`${e.venue.city}`}
-                      url={e.event_url}
-                      index={i++}
-                    />
-                  )
-                  )
-                }
+          <section id='events'>
+            <div className='section-container events-container'>
+
+              <div className='events-body'>
+                <div className='events-list'>
+                  <h1 id='events-title' className='section-title green-text'>Events</h1>
+                  {
+                    this.props.events.map((e) => (
+                      <Event
+                        key={e.time}
+                        date={e.time}
+                        name={e.name}
+                        locationName={`${e.venue.name}`}
+                        locationAddress={`${e.venue.address_1}`}
+                        locationCity={`${e.venue.city}`}
+                        url={e.event_url}
+                        index={i++}
+                      />
+                    )
+                    )
+                  }
+                </div>
+                <div className='events-image'>
+                  <Image src={iLaptopCoffee} responsive className='img-laptop-coffee' alt='laptop and coffee' />
+                </div>
               </div>
+
             </div>
           </section>
         )

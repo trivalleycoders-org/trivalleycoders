@@ -1,20 +1,24 @@
 /* About */
 
-.section-about {
-  /*padding-bottom: 35px;*/
+.about-container {
+  background-image: url('images/green-keyboard-wide.20percent.png');
+}
+
+section.about-section {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .about-subtitle {
   font-weight: bold;
   text-align: center;
-  /*padding-top: 25px;*/
 }
 
 .about-sub-container {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  /*font-size: 1.3em;*/
+  padding-bottom: 20px;
 }
 
 .join-us-button {
@@ -25,9 +29,9 @@
   max-width: 40px;
 }
 .join-us-text {
-  /*font-size: 1.3em;*/
+  font-size: 1.2em;
   letter-spacing: 0.04em;
-  font-weight:400;
+  font-weight: bold;
   vertical-align: middle;
   margin-left: 10px;
 }

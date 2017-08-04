@@ -1,6 +1,12 @@
 /* Navigation */
 
 /* base styles */
+
+section.nav-section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .nav-sub-container {
   display: flex;
   flex-flow: row nowrap;

@@ -15,3 +15,24 @@
   flex-flow: row wrap;
   justify-content: center;
 }
+
+.tech-logos-body {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.tech-logos-list {
+  width: 58.33333333%;
+  margin-left: 15px;
+}
+
+.tech-logos-image {
+  margin: auto;
+  width: 41.66666667%;
+  padding-right: 40px;
+}
+
+.img-women-learning {
+  max-width: 400px;
+}

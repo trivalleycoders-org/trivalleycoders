@@ -17,7 +17,6 @@ class Page extends Component {
     return (
       <div className='page-wrapper'>
         <Navigation />
-        <Header />
         <About />
         <TechLogos />
         <Events />

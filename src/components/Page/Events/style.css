@@ -1,21 +1,10 @@
 /* Events */
 
-#events-title {
-  /*margin-bottom: 20px;*/
-}
 .events-failed-message {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   padding: 15px 0 15px 0;
-}
-
-.meeting-schedule-text {
-  margin-left: 10px;
-}
-
-.ul-meeting-schedule {
-  margin: 20px 0 30px 0;
 }
 
 .panel {
@@ -24,6 +13,22 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.events-container {
-  /*font-size: 0.9em;*/
+
+.events-body {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.events-list {
+  width: 0.5833333333;
+  margin-left: 15px;
+}
+
+.events-image {
+  margin: auto;
+}
+
+.img-laptop-coffee {
+  max-width: 400px;
 }
