@@ -2,7 +2,6 @@
 import React from 'react';
 import { Component } from 'react';
 import Navigation from './Navigation'
-import Header from './Header';
 import About from './About'
 import TechLogos from './TechLogos';
 import Events from './Events';
