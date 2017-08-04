@@ -9,14 +9,16 @@
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
+	padding: 30px 0 20px 0;
 }
 
 .fa {
-	padding: 5px;
+	padding: 5px 10px;
 	color: white;
 }
 
 .fa-btns {
 	display: flex;
 	flex-direction: row;
+	padding-bottom: 15px;
 }

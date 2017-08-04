@@ -22,7 +22,7 @@ class Members extends Component {
     return (
       <section id='members' className='green-background'>
         <div className='section-container'>
-          <h1 className='section-title'>Members</h1>
+          <h1 className='section-title'>Team</h1>
           <div className='members'>
             {renderMembers}
           </div>
