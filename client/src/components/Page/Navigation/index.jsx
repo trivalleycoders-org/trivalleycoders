@@ -4,7 +4,6 @@ import { Component } from 'react';
 import classNames from 'classnames'
 import Logo from '../../elements/Logo';
 import './style.css';
-import SiteTitle from './SiteTitle'
 
 
 class Navigation extends Component {
@@ -25,10 +24,14 @@ class Navigation extends Component {
         'menu-item-down': this.state.menuDown,
         'menu-item-up': !this.state.menuDown,
         'hamburger': true,
-        'nav': true,
-        'nav-pills': true,
       }
     )
+
+    // let toggleBarState = classNames(
+    //   {
+    //     'toggle-bar': true,
+    //   }
+    // )
 
     const handleToggleBarClick = () => {
       let val;
@@ -39,13 +42,11 @@ class Navigation extends Component {
     }
 
     return (
-        <section id='nav' className='black-background nav-section'>
+        <section id='nav' className='black-background'>
           <div className='section-container container-fluid'>
             <div className='nav-sub-container'>
-              <div>
-                <Logo />
-                <SiteTitle />
-              </div>
+              <Logo />
+
               <div className='tvc-menu'>
                 <ul className={menuState}>
                   <li><a href="#tech-logos" className="menu-item">Learn</a></li>

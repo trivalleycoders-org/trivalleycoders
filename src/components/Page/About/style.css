@@ -2,6 +2,7 @@
 
 .about-container {
   background-image: url('images/green-keyboard-wide.20percent.png');
+  padding: 60px 40px 40px 40px;
 }
 
 section.about-section {

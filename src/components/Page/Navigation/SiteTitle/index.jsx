@@ -3,7 +3,7 @@ import React from 'react';
 import './style.css';
 
 const SiteTitle = () => (
-  <h1 className='green-text site-title'>Tri-Valley Coders</h1>
+  <span className='green-text site-title'>Tri-Valley Coders</span>
 );
 
 export default SiteTitle;
