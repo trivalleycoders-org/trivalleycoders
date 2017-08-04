@@ -1,7 +1,7 @@
 // Page
 import React from 'react'
 import { Component } from 'react'
-import Navigation from './Navigation'
+import TopBar from './TopBar'
 import Header from './Header'
 import TechLogos from './TechLogos'
 import Events from './Events'
@@ -15,7 +15,7 @@ class Page extends Component {
   render () {
     return (
       <div className='page-wrapper'>
-        <Navigation />
+        <TopBar />
         <Header />
         <TechLogos />
         <Events />
