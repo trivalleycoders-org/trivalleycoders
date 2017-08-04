@@ -3,8 +3,8 @@
 body {
   text-align: justify;
   color: white;
-  background-color: transparent;
-  font-size: 1.4em;
+  /*background-color: transparent;*/
+  /*font-size: 1.4em;*/
 
 }
 
@@ -17,31 +17,14 @@ section {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Roboto, Arial, san-serif;
+  /*font-family: Roboto, Arial, san-serif;
   font-weight: normal;
-  font-style: normal;
+  font-style: normal;*/
   text-rendering: optimizeLegibility;
-  line-height: 1.4;
+  /*line-height: 1.4;*/
   text-align: center;
 }
-h1 {
-  /*font-size: 3.0rem;*/
-}
-h2 {
-  /*font-size: 2.5rem;*/
-}
-h3 {
-  /*font-size: 1.9375rem;*/
-}
-h4 {
-  /*font-size: 1.5625rem;*/
-}
-h5 {
-  /*font-size: 1.25rem;*/
-}
-h6 {
-  /*font-size: 1.0rem;*/
-}
+
 .container {
   width: auto;
 }
@@ -62,17 +45,15 @@ h6 {
  */
 .green-text {
   color: #34E97C;
+  /*color: #62c462;*/
 }
 .green-background {
-  background-image: linear-gradient(to bottom, #42a552 0%, #42a552 100%);
+  /*background-image: linear-gradient(to bottom, #42a552 0%, #42a552 100%);*/
+  background-color: #42b142;
 }
 
 .black-background {
-  background-color: #201D23;
-}
-
-[if Webkit] .black-background {
-  background-color: orange;
+  /*background-color: #201D23;*/
 }
 
 .gradient-black-background {
@@ -87,27 +68,9 @@ h6 {
 /*
     Media Queries
  */
-/* PHONE */
-@media (max-width : 480px) {
-
-  body {
-
-  }
-
-}
-
 /* TABLET */
 @media (min-width : 481px) and (max-width : 1024px) {
-
   body {
-    font-size: 1.8em;
+    /*font-size: 1.8em;*/
   }
-
-
-}
-
-/* DESKTOP & LAPTOP */
-@media (min-width : 1025px) {
-
-
 }
