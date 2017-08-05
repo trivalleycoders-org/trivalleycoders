@@ -3,9 +3,6 @@
 body {
   text-align: justify;
   color: white;
-  /*background-color: transparent;*/
-  /*font-size: 1.4em;*/
-
 }
 
 section, header, footer {
@@ -17,11 +14,7 @@ section {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  /*font-family: Roboto, Arial, san-serif;
-  font-weight: normal;
-  font-style: normal;*/
   text-rendering: optimizeLegibility;
-  /*line-height: 1.4;*/
   text-align: center;
 }
 
@@ -36,24 +29,14 @@ h1, h2, h3, h4, h5, h6 {
   font-style: italic;
 }
 
-.eight-columns {
-  max-width: 900px;
-  margin: auto;
-}
 /*
     Background & Font Colors
  */
 .green-text {
   color: #34E97C;
-  /*color: #62c462;*/
 }
 .green-background {
   background-image: linear-gradient(to bottom, #42a552 0%, #42a552 100%);
-  /*background-color: #42b142;*/
-}
-
-.black-background {
-  /*background-color: #201D23;*/
 }
 
 .gradient-black-background {
@@ -68,9 +51,24 @@ h1, h2, h3, h4, h5, h6 {
 /*
     Media Queries
  */
+/* PHONE */
+@media (max-width : 480px) {
+  section {
+    padding-top: 15px;
+    padding-bottom: 35px;
+  }
+  .section-title {
+    margin-top: 25px;
+    margin-bottom: 20px;
+  }
+}
+
 /* TABLET */
 @media (min-width : 481px) and (max-width : 1024px) {
-  body {
-    /*font-size: 1.8em;*/
-  }
+
+}
+
+/* DESKTOP & LAPTOP */
+@media (min-width : 1025px) {
+
 }

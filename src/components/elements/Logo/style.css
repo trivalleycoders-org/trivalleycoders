@@ -4,3 +4,23 @@
   /*height: 40px;*/
   float: left;
 }
+
+/*
+    Media Queries
+ */
+/* PHONE */
+@media (max-width : 480px) {
+  .tvc-logo {
+    width: 30px;
+  }
+}
+
+/* TABLET */
+@media (min-width : 481px) and (max-width : 1024px) {
+
+}
+
+/* DESKTOP & LAPTOP */
+@media (min-width : 1025px) {
+
+}

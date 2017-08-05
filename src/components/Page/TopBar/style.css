@@ -11,3 +11,23 @@
   flex-flow: row nowrap;
   align-items: center;
 }
+
+/*
+    Media Queries
+ */
+/* PHONE */
+@media (max-width : 480px) {
+  .top-bar {
+    padding: 10px 0;
+  }
+}
+
+/* TABLET */
+@media (min-width : 481px) and (max-width : 1024px) {
+
+}
+
+/* DESKTOP & LAPTOP */
+@media (min-width : 1025px) {
+
+}

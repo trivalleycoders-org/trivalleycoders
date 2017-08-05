@@ -22,7 +22,7 @@ class Navigation extends Component {
       'menu-item-up': !this.state.menuDown,
       'hamburger': true,
       'nav': true,
-      'nav-pills': true
+      'nav-pills': !this.state.menuDown,
     })
 
     const handleToggleBarClick = () => {

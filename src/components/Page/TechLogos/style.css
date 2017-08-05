@@ -22,11 +22,6 @@
   justify-content: space-between;
 }
 
-.tech-logos-list {
-  width: 58.33333333%;
-  margin-left: 15px;
-}
-
 .tech-logos-image {
   margin: auto;
   width: 41.66666667%;
@@ -40,4 +35,31 @@
 .tech-logo-subcontainer {
   font-size: 1.3em;
   padding-left: 30px;
+}
+
+/*
+    Media Queries
+ */
+/* PHONE */
+@media (max-width : 480px) {
+  .tech-logos-image {
+    display: none;
+  }
+  .tech-logos-body {
+    display: inherit;
+  }
+  .tech-logo-subcontainer {
+    font-size: 1.0em;
+    padding-left: inherit;
+  }
+}
+
+/* TABLET */
+@media (min-width : 481px) and (max-width : 1024px) {
+
+}
+
+/* DESKTOP & LAPTOP */
+@media (min-width : 1025px) {
+
 }

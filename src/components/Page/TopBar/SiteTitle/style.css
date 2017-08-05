@@ -14,19 +14,17 @@
  */
 /* PHONE */
 @media (max-width : 480px) {
-
+  .site-title {
+    font-size: 1.6em;
+  }
 }
 
 /* TABLET */
 @media (min-width : 481px) and (max-width : 1024px) {
-  .site-title {
-    /*font-size: 4.3em;*/
-  }
+
 }
 
 /* DESKTOP & LAPTOP */
 @media (min-width : 1025px) {
-  .site-title {
-    /*font-size: 7.0em;*/
-  }
+
 }

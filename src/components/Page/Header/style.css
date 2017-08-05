@@ -26,7 +26,6 @@ h2.tagline, h4.subtagline {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  /*padding: 20px 0;*/
   padding: 0 100px;
   font-size: 1.3em;
 }
@@ -51,4 +50,37 @@ h2.tagline, h4.subtagline {
   font-weight: bold;
   vertical-align: middle;
   margin-left: 10px;
+}
+
+/*
+    Media Queries
+ */
+/* PHONE */
+@media (max-width : 480px) {
+  section.about-section {
+
+    background-image: url('images/green-keyboard.1905x942.png');
+    padding: 20px 15px 20px 15px;
+    background-size: cover;
+  }
+  .header-body {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 0;
+    font-size: 1.0em;
+  }
+  .subtagline {
+    padding-bottom: 20px;
+  }
+}
+
+/* TABLET */
+@media (min-width : 481px) and (max-width : 1024px) {
+
+}
+
+/* DESKTOP & LAPTOP */
+@media (min-width : 1025px) {
+
 }
