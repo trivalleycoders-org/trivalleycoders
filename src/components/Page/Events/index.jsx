@@ -25,7 +25,6 @@ class Events extends Component {
         return (
           <section id='events'>
             <div className='section-container events-container'>
-
               <div className='events-body'>
                 <div className='events-list'>
                   <h1 id='events-title' className='section-title green-text'>Events</h1>

@@ -38,7 +38,8 @@
     Media Queries
  */
 /* PHONE */
-@media (max-width : 480px) {
+@media (max-width: 480px) and (max-width: 736px)
+ {
   .events-image {
     display: none;
   }
