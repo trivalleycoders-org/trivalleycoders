@@ -1,12 +1,19 @@
-/* SiteTitle */
+# trivalleycoders.com media queries
 
-.site-title {
-  font-size: 2.2em;
-  text-align: left;
-  padding: 0;
-  margin-left: 40px;
+## Located in
+- Logo
+- Event
+- Events
+- Header
+- Sponsor
+- TechLogos
+- TopBar
+- SiteTitle
+- Navigation
 
-}
+
+
+
 
 
 /*
@@ -14,9 +21,7 @@
  */
 /* PHONE */
 @media (max-width : 480px) {
-  .site-title {
-    font-size: 1.4em;
-  }
+
 }
 
 /* TABLET */
@@ -28,3 +33,4 @@
 @media (min-width : 1025px) {
 
 }
+
