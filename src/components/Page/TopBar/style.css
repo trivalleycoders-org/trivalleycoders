@@ -1,33 +1,93 @@
+/* TopBar */
+
 .top-bar {
   display: flex;
   flex-flow: row nowrap;
+  align-items: flex-start;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
+  margin: 5px 0;
 }
-
-.branding {
+img {
+  vertical-align: middle;
+}
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+img.tvc-logo {
+  margin-left: 2px;
+  max-width: 50px;
+}
+.brand {
+  width:100%;
+}
+.branding-desktop {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+  flex-grow: 10;
 }
-
-/*
-    Media Queries
- */
-/* PHONE */
-@media (max-width : 480px) {
-  .top-bar {
-    padding: 10px 0;
-  }
+.branding-phone {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  flex-grow: 10;
+  text-align: center;
 }
-
-/* TABLET */
-@media (min-width : 481px) and (max-width : 1024px) {
-
+.brand-desktop {
+  font-size: 2.0em;
+  margin-left: 20px;
 }
-
-/* DESKTOP & LAPTOP */
-@media (min-width : 1025px) {
-
+a.menu-item {
+  text-decoration: none !important;
+}
+.menu-item {
+  background-color: transparent;
+  border: 1px solid #58565a;
+  border-radius: 5px;
+  text-align:center;
+  letter-spacing: 2px;
+}
+.menu-item:hover {
+  border-color: #22C365;
+  box-shadow: 0 0 0 8px rgba(34, 195, 101, 0.1);
+  color: white;
+}
+.desktop-menu-item {
+  margin: 0.4em;
+  padding: 3px 20px;
+}
+.desktop-menu-items {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  /*margin: auto;*/
+  flex-grow: 2;
+}
+.phone-menu-item {
+  width: 60%;
+  margin-top: 10px;
+  padding: 5px 20px;
+}
+.mobile-menu-div {
+  flex-flow: column;
+  border: 0.1px solid darkgray;
+  border: 0.1px solid rgba(50, 50, 50, 100);
+  flex-grow: 2;
+  margin: auto;
+  margin-right: 2px;
+}
+.hamburger {
+  width: 100%;
+  text-align: center;
+}
+.hide-mobile-menu {
+  display: none;
+}
+.show-mobile-menu {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
