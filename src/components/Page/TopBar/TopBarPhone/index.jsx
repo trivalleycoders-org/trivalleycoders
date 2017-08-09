@@ -33,7 +33,7 @@ class TopBarPhone extends Component {
 
     const configStyles = {
       color: brandColor,
-      fontSize: brandSizePhone,
+      // fontSize: brandSizePhone,
     }
 
     return (

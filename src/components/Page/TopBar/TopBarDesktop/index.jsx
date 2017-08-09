@@ -11,7 +11,7 @@ const TopBarDesktop = (props) => {
 
   const configStyles = {
     color: brandColor,
-    fontSize: brandSizeDesktop,
+    // fontSize: brandSizeDesktop,
   }
 
   return (

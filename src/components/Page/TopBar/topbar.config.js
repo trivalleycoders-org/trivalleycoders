@@ -4,8 +4,8 @@ export const brand = {
   logo: iLogo,
   brandName: 'Tri-Valley Coders',
   brandColor: '#34E97C',
-  brandSizePhone: '1.8em',
-  brandSizeDesktop: '2.2em',
+  brandSizePhone: '5vw',
+  brandSizeDesktop: '3.2vw',
 }
 
 export const menuItems = [
