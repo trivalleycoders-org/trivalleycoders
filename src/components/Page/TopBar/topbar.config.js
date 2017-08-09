@@ -30,7 +30,7 @@ export const menuItems = [
 export const breakPoints = {
   desktopMinWidth: 992,
   tabletMinWidth: 768,
-  tabletMaxWidth: 992,
+  tabletMaxWidth: 991,
   phoneMaxWidth: 769,
 }
 
