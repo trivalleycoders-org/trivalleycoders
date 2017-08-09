@@ -20,31 +20,30 @@ class Events extends Component {
 
   render() {
     const { readEventsRequest } = this.props;
+    const renderEvents = this.props.events.map((e) => (
+        <Event
+          key={e.time}
+          date={e.time}
+          name={e.name}
+          locationName={`${e.venue.name}`}
+          locationAddress={`${e.venue.address_1}`}
+          locationCity={`${e.venue.city}`}
+          url={e.event_url}
+          index={i++}
+        />
+      )
+    )
     switch (readEventsRequest.status) {
       case 'success':
         return (
           <section id='events'>
             <div className='section-container events-container'>
               <div className='events-body'>
-                <div className='events-list'>
+                <div className='events-left'>
                   <h1 id='events-title' className='section-title green-text'>Events</h1>
-                  {
-                    this.props.events.map((e) => (
-                      <Event
-                        key={e.time}
-                        date={e.time}
-                        name={e.name}
-                        locationName={`${e.venue.name}`}
-                        locationAddress={`${e.venue.address_1}`}
-                        locationCity={`${e.venue.city}`}
-                        url={e.event_url}
-                        index={i++}
-                      />
-                    )
-                    )
-                  }
+                  {renderEvents}
                 </div>
-                <div className='events-image'>
+                <div className='events-right'>
                   <Image src={iLaptopCoffee} responsive className='img-laptop-coffee' alt='laptop and coffee' />
                 </div>
               </div>

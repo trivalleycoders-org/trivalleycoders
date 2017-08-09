@@ -3,7 +3,7 @@ import React from 'react'
 
 const TopBarDesktop = (props) => {
 
-  const { brandName, logo, brandColor, brandSizeDesktop } = props.brand
+  const { brandName, logo, brandColor } = props.brand
 
   const renderMenuItems = props.menuItems.map((m) => (
     <a href={m.href} key={m.label} className='menu-item desktop-menu-item'>{m.label}</a>

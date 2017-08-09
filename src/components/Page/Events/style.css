@@ -20,12 +20,12 @@
   justify-content: space-between;
 }
 
-.events-list {
+.events-left {
   width: 0.5833333333;
   margin: 0 15px;
 }
 
-.events-image {
+.events-right {
   margin: auto;
   padding-left: 50px;
 }

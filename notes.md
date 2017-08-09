@@ -1,3 +1,8 @@
+## Calculation of TopBar Brand font-size
+- comes from here: https://madebymike.com.au/writing/precise-control-responsive-typography/
+
+
+
 # trivalleycoders.com media queries
 
 ## Located in
@@ -10,11 +15,6 @@
 - TopBar
 - SiteTitle
 - Navigation
-
-
-
-
-
 
 /*
     Media Queries

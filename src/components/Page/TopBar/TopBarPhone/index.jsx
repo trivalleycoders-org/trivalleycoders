@@ -12,7 +12,7 @@ class TopBarPhone extends Component {
 
   render() {
 
-    const { brandName, brandColor, brandSizePhone, logo } = this.props.brand
+    const { brandName, brandColor, logo } = this.props.brand
     // const { menuItems } = this.props.menuItems
     const mobileMenu = classNames({
       'hide-mobile-menu': !this.state.showMobileMenu,

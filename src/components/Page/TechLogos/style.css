@@ -1,7 +1,6 @@
 /* TechLogos */
 
 .logo-title {
-  /*font-size: 1.6em;*/
   text-align: center;
   margin-top: 25px;
 }
@@ -16,50 +15,35 @@
   justify-content: center;
 }
 
-.tech-logos-body {
+.techlogos-body {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
 }
 
-.tech-logos-image {
+.techlogos-left {
   margin: auto;
-  width: 41.66666667%;
-  padding-right: 40px;
+  padding: 0 40px
 }
 
-.img-women-learning {
-  max-width: 370px;
+.techlogos-right {
+  width: 0.5833333333;
+  margin: 0 15px;
+  font-size: 1.4em;
 }
 
-.tech-logo-subcontainer {
+.techlogos-medium-width {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  /*padding: 0 100px;*/
   font-size: 1.3em;
-  padding-left: 30px;
 }
 
-/*
-    Media Queries
- */
-/* PHONE */
-@media (max-width : 480px) {
-  .tech-logos-image {
-    display: none;
-  }
-  .tech-logos-body {
-    display: inherit;
-  }
-  .tech-logo-subcontainer {
-    font-size: 1.0em;
-    padding-left: inherit;
-  }
+.techlogos-section {
+  padding: 20px 15px 20px 15px;
 }
 
-/* TABLET */
-@media (min-width : 481px) and (max-width : 1024px) {
-
-}
-
-/* DESKTOP & LAPTOP */
-@media (min-width : 1025px) {
-
+.techlogos-body {
+  padding: 0 100px;
 }

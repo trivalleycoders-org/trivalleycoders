@@ -9,11 +9,10 @@ const Member = (props) => {
   const getPicture = () => {
     if (!props.picture) {
       return <Identicon
-        style='member-img'
         hash={props._id}
              />
     } else {
-      return <img className='member-img' src={props.picture} responsive alt='member picture' />
+      return <img className='member-img' src={props.picture} alt='member' />
     }
   }
   return (
