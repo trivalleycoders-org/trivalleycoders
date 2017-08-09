@@ -29,9 +29,9 @@ export const menuItems = [
 
 export const breakPoints = {
   desktopMinWidth: 992,
-  tabletMinWidth: 768,
+  tabletMinWidth: 769,
   tabletMaxWidth: 991,
-  phoneMaxWidth: 769,
+  phoneMaxWidth: 768,
 }
 
 export default { brand, menuItems, breakPoints }
