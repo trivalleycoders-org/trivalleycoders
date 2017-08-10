@@ -3,7 +3,42 @@
 
 
 
+## Full-size
+````html
+<div className='wrapper-full-width'>
+  <div className='wrapper-max-width-1080'>
+
+  </div>
+</div>
+
+````
+
+## Narrow text
+````html
+<div className='wrapper-full-width'>
+  <div className='wrapper-max-width-1080'>
+    <div className='wrapper-narrow-text'>
+    </div>
+  </div>
+</div>
+````
+
+
+
+
 # trivalleycoders.com media queries
+
+phone -768->  <-769- tablet -991-> <-992- desktop
+
+These are the current break points
+
+Need to change to tablet landscape and tablet portrait
+- get sizes from chrome
+
+
+
+phone -480-> <-481- tablet -1024-> <-1025- desktop
+
 
 ## Located in
 - Logo

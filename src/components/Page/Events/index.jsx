@@ -10,6 +10,8 @@ import iMeetup from './images/meetup-swarm.svg'
 import './style.css';
 import iLaptopCoffee from './images/laptop-coffee.jpeg'
 import { Image } from 'react-bootstrap'
+import Responsive from 'react-responsive'
+import { brand, menuItems, breakPoints } from '../TopBar/topbar.config.js'
 
 let i = 1;
 
@@ -19,6 +21,9 @@ class Events extends Component {
   }
 
   render() {
+    const NarrowWidth = ({ children }) => <Responsive maxWidth={breakPoints.narrowWidthMax} children={children} />
+    const MediumWidth = ({ children }) => <Responsive minWidth={breakPoints.mediumWidthMin} maxWidth={breakPoints.mediumWidthMax} children={children} />
+    const WideWidth = ({ children }) => <Responsive minWidth={breakPoints.wideWidthMin} children={children} />
     const { readEventsRequest } = this.props;
     const renderEvents = this.props.events.map((e) => (
         <Event
@@ -36,20 +41,31 @@ class Events extends Component {
     switch (readEventsRequest.status) {
       case 'success':
         return (
-          <section id='events'>
-            <div className='section-container events-container'>
-              <div className='events-body'>
-                <div className='events-left'>
-                  <h1 id='events-title' className='section-title green-text'>Events</h1>
-                  {renderEvents}
+          <div className='wrapper-full-width'>
+            <div className='wrapper-max-width-1080'>
+              <WideWidth>
+                <div className='events-body'>
+                  <div className='events-left'>
+                    <h1 id='events-title' className='section-title green-text'>Events</h1>
+                    {renderEvents}
+                  </div>
+                  <div className='events-right'>
+                    <Image src={iLaptopCoffee} responsive className='img-laptop-coffee' alt='laptop and coffee' />
+                  </div>
                 </div>
-                <div className='events-right'>
-                  <Image src={iLaptopCoffee} responsive className='img-laptop-coffee' alt='laptop and coffee' />
+              </WideWidth>
+              <MediumWidth>
+                <div className='wrapper-full-width'>
+                  <div className='wrapper-max-width-1080'>
+                    <h1 id='events-title' className='section-title green-text'>Events</h1>
+                    <div className='container-fluid'>
+                      {renderEvents}
+                    </div>
+                  </div>
                 </div>
-              </div>
-
+              </MediumWidth>
             </div>
-          </section>
+          </div>
         )
 
       case 'failure':

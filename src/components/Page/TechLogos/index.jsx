@@ -32,17 +32,23 @@ const TechLogos = (props) => {
   ))
 
   return (
-    <section id='techlogos' className='green-background techlogos-section'>
-      <div className='section-container techlogos-body'>
+
+    <div className='wrapper-full-width green-background'>
+      <div className='wrapper-max-width-1080'>
         <WideWdith>
-          <div className='techlogos-body'>
-            <div className='techlogos-left'>
-              <Image src={iWomenLearning} responsive className='img-women-learning' alt='women learning' />
+          <div className='techlogos-wide-container'>
+            <div className='techlogos-wide-top-container'>
+              <div className='techlogos-wide-left'>
+                <Image src={iWomenLearning} responsive className='img-women-learning' alt='women learning' />
+              </div>
+              <div className='techlogos-wide-right'>
+                <h1 className='section-title'>Learn With Us</h1>
+                <p>Our core compentency is the MERN stack, Mongo, Express, React and Node. When you join the group we guide you from beginner learning HTML, CSS & JavaScript to a software developer building apps with the MERN (<b>M</b>ongoDB, <b>E</b>xpress, <b>R</b>eact & <b>N</b>ode.js) stack.</p>
+                <p>As a beginner you will get help learning the basics. When you are ready you will work on real projects for real clients gaining knowledge and valuable experience along the way.</p>
+
+              </div>
             </div>
-            <div className='techlogos-right'>
-              <h1 className='section-title'>Learn With Us</h1>
-              <p>Our core compentency is the MERN stack, Mongo, Express, React and Node. When you join the group we guide you from beginner learning HTML, CSS & JavaScript to a software developer building apps with the MERN (<b>M</b>ongoDB, <b>E</b>xpress, <b>R</b>eact & <b>N</b>ode.js) stack.</p>
-              <p>As a beginner you will get help learning the basics. When you are ready you will work on real projects for real clients gaining knowledge and valuable experience along the way.</p>
+            <div className='techlogos-wide-bottom'>
               <h3 className='logo-title'>The Basics</h3>
               <div className='logo-row'>
                 {basics}
@@ -57,7 +63,7 @@ const TechLogos = (props) => {
           </div>
         </WideWdith>
         <MediumWidth>
-          <div className='techlogos-medium-width section-container'>
+          <div className='techlogos-medium-container wrapper-narrow-text'>
             <h1 className='section-title'>Learn With Us</h1>
             <p>Our core compentency is the MERN stack, Mongo, Express, React and Node. When you join the group we guide you from beginner learning HTML, CSS & JavaScript to a software developer building apps with the MERN (<b>M</b>ongoDB, <b>E</b>xpress, <b>R</b>eact & <b>N</b>ode.js) stack.</p>
             <p>As a beginner you will get help learning the basics. When you are ready you will work on real projects for real clients gaining knowledge and valuable experience along the way.</p>
@@ -76,27 +82,25 @@ const TechLogos = (props) => {
 
         </MediumWidth>
         <NarrowWidth>
-          <div className='techlogos-body'>
-            <div className='techlogos-right'>
-              <h1 className='section-title'>Learn With Us</h1>
-              <p>Our core compentency is the MERN stack, Mongo, Express, React and Node. When you join the group we guide you from beginner learning HTML, CSS & JavaScript to a software developer building apps with the MERN (<b>M</b>ongoDB, <b>E</b>xpress, <b>R</b>eact & <b>N</b>ode.js) stack.</p>
-              <p>As a beginner you will get help learning the basics. When you are ready you will work on real projects for real clients gaining knowledge and valuable experience along the way.</p>
-              <h3 className='logo-title'>The Basics</h3>
+          <div className='techlogos-medium-container wrapper-narrow-text'>
+            <h1 className='section-title'>Learn With Us</h1>
+            <p>Our core compentency is the MERN stack, Mongo, Express, React and Node. When you join the group we guide you from beginner learning HTML, CSS & JavaScript to a software developer building apps with the MERN (<b>M</b>ongoDB, <b>E</b>xpress, <b>R</b>eact & <b>N</b>ode.js) stack.</p>
+            <p>As a beginner you will get help learning the basics. When you are ready you will work on real projects for real clients gaining knowledge and valuable experience along the way.</p>
+            <h3 className='logo-title'>The Basics</h3>
+            <div className='logo-row'>
+              {basics}
+            </div>
+            <h3 className='logo-title'>MERN Stack</h3>
+            <div>
               <div className='logo-row'>
-                {basics}
-              </div>
-              <h3 className='logo-title'>MERN Stack</h3>
-              <div>
-                <div className='logo-row'>
-                  {mern}
-                </div>
+                {mern}
               </div>
             </div>
           </div>
         </NarrowWidth>
       </div>
-    </section>
-  )
-}
+    </div>
+      )
+      }
 
-export default TechLogos;
+      export default TechLogos;

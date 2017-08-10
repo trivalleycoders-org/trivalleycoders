@@ -15,35 +15,52 @@
   justify-content: center;
 }
 
-.techlogos-body {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-}
+/*.wrapper-full-width {
+  background-color: black;
+}*/
 
-.techlogos-left {
+.wrapper-max-width-1080 {
+  max-width: 1080px;
   margin: auto;
-  padding: 0 40px
+  padding: 40px 0;
 }
 
-.techlogos-right {
-  width: 0.5833333333;
-  margin: 0 15px;
-  font-size: 1.4em;
-}
-
-.techlogos-medium-width {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  /*padding: 0 100px;*/
+.wrapper-narrow-text {
+  margin: auto;
+  max-width: 820px;
+  padding: 5%;
   font-size: 1.3em;
 }
 
-.techlogos-section {
-  padding: 20px 15px 20px 15px;
+
+.techlogos-wide-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
-.techlogos-body {
-  padding: 0 100px;
+.techlogos-wide-top-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.techlogos-wide-right {
+  padding: 0 40px;
+  font-size: 1.3em;
+}
+
+.img-women-learning {
+  max-width: 450px;
+  padding: 20px;
+}
+
+.techlogos-wide-bottom {
+  padding-top: 30px;
 }
