@@ -8,7 +8,7 @@ import { brand, menuItems, breakPoints } from '../TopBar/topbar.config.js'
 
 const Header = () => {
   return (
-    <div className='wrapper-full-width'>
+    <div className='wrapper-full-width about-section'>
       <div className='wrapper-max-width-1080'>
         <div className='wrapper-narrow-text'>
           <h2 className='tagline'>Learn Build Grow Succeed</h2>
@@ -19,10 +19,12 @@ const Header = () => {
           <h2 className='green-text'>Our Philosophy</h2>
           <p><b><em>Don't Code Alone</em></b>: While self-study is an essential part of learning to make software, interacting with others is equally if not more important. When you learn by yourself you are alone with your own version of how to learn, or you are taking advice (sometimes good) online from people who have never met you. Further more, coding is a social and collaborative activity in which you work with other developers as well as members of QA, Project Management and much more.</p>
           <p><b><em>It's Called "Making Software"</em></b>: 'Learning to code' is all the rage but developers aren't hired to write code. Employers & clients need software they can deploy and that requires many skills in addition to coding, both technical and social.</p>
-          <Button className='join-us-button' bsStyle='success'>
-            <img className='join-meetup-logo' src={iMeetup} width={45} alt='meetup logo'/>
-            <span className='join-us-text'>Join Us via Meetup!</span>
-          </Button>
+          <div className='join-us-button-container'>
+            <Button bsStyle='success'>
+              <img className='join-meetup-logo' src={iMeetup} width={45} alt='meetup logo'/>
+              <span className='join-us-text'>Join Us via Meetup!</span>
+            </Button>
+          </div>
         </div>
       </div>
     </div>

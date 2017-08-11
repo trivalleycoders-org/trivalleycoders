@@ -9,15 +9,15 @@ const formatDate = ({timeArr}) => {
   let minutes = timeArr.slice(1);
 
   // remove leading 0
-  if(hour[0] === '0'){
+  if(hour[0] === '0') {
     hour = hour.toString().slice(1);
     return `${hour}:${minutes} AM`;
   // convert military time and add pm
-  }else if(hour > 12){
+  } else if(hour > 12) {
     hour -= 12;
     return `${hour}:${minutes} PM`;
   //add am
-  }else{
+  } else {
     return `${hour}:${minutes} AM`;
   }
 }
@@ -36,8 +36,8 @@ const Event = (props) => {
   }
 
   return (
-    <Row className={props.index % 2 !== 0 ? 'odd' : ''}>
-      <Panel className='events-panel'>
+    <Row className={props.index % 2 === 0 ? 'odd' : ''}>
+      <Panel className='events-panel events-panel-narrow'>
         <Col className='event-name-col' sm={5} md={5} lg={5}>
           <a id='event-name-anchor' href={props.url}>{props.name}</a>
         </Col>

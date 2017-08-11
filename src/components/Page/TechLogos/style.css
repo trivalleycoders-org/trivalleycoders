@@ -15,24 +15,6 @@
   justify-content: center;
 }
 
-/*.wrapper-full-width {
-  background-color: black;
-}*/
-
-.wrapper-max-width-1080 {
-  max-width: 1080px;
-  margin: auto;
-  padding: 40px 0;
-}
-
-.wrapper-narrow-text {
-  margin: auto;
-  max-width: 820px;
-  padding: 5%;
-  font-size: 1.3em;
-}
-
-
 .techlogos-wide-container {
   display: -webkit-box;
   display: -moz-box;
@@ -58,7 +40,7 @@
 
 .img-women-learning {
   max-width: 450px;
-  padding: 20px;
+  padding: 0 20px;
 }
 
 .techlogos-wide-bottom {

@@ -9,7 +9,7 @@ import Event from './Event';
 import iMeetup from './images/meetup-swarm.svg'
 import './style.css';
 import iLaptopCoffee from './images/laptop-coffee.jpeg'
-import { Image } from 'react-bootstrap'
+import { Button, Image } from 'react-bootstrap'
 import Responsive from 'react-responsive'
 import { brand, menuItems, breakPoints } from '../TopBar/topbar.config.js'
 
@@ -38,15 +38,16 @@ class Events extends Component {
         />
       )
     )
+    // console.log(readEventsRequest.status)
     switch (readEventsRequest.status) {
       case 'success':
         return (
           <div className='wrapper-full-width'>
             <div className='wrapper-max-width-1080'>
+              <h1 id='events-title' className='section-title green-text'>Events</h1>
               <WideWidth>
                 <div className='events-body'>
-                  <div className='events-left'>
-                    <h1 id='events-title' className='section-title green-text'>Events</h1>
+                  <div className='events-left events-left-align'>
                     {renderEvents}
                   </div>
                   <div className='events-right'>
@@ -55,23 +56,23 @@ class Events extends Component {
                 </div>
               </WideWidth>
               <MediumWidth>
-                <div className='wrapper-full-width'>
-                  <div className='wrapper-max-width-1080'>
-                    <h1 id='events-title' className='section-title green-text'>Events</h1>
-                    <div className='container-fluid'>
-                      {renderEvents}
-                    </div>
-                  </div>
+                <div className='container-fluid events-center-text'>
+                  {renderEvents}
                 </div>
               </MediumWidth>
+              <NarrowWidth>
+                <div className='container-fluid events-center-text'>
+                  {renderEvents}
+                </div>
+              </NarrowWidth>
             </div>
           </div>
         )
 
       case 'failure':
         return (
-          <section id='events'  className='black-background'>
-            <div className='section-container container-fluid'>
+          <section id='events'  className='wrapper-full-width black-background'>
+            <div className='wrapper-max-width-1080'>
               <h1 className='section-title'>Events</h1>
               <div className='events-failed-message lead'>
                 <h2>We meet every Thursday!</h2>
@@ -87,15 +88,15 @@ class Events extends Component {
               </div>
             </div>
           </section>
-            );
-            default:
-            return (
-            <section id='events'  className='black-background'>
-              <div className='section-container container-fluid'>
-                <h2>Loading data...</h2>
-              </div>
-            </section>
-        );
+        )
+      default:
+        return (
+          <section id='events'  className='black-background'>
+            <div className='section-container container-fluid'>
+              <h2>Loading data...</h2>
+            </div>
+          </section>
+        )
     }
   }
 }

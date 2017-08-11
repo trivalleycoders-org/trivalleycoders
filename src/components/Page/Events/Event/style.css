@@ -3,7 +3,7 @@
 .events-panel {
   /*font-size: 1.3em;*/
   border: none;
-  text-align: left;
+  /*text-align: left;*/
   padding-bottom: 5px;
 }
 .event-name-col {
@@ -20,38 +20,10 @@
 }
 .event-location-name {
   margin-bottom: 0;
-  /*font-size: 1.05em;*/
 }
 .event-location-address {
   margin-bottom: 0;
 }
 .odd {
   background-color: rgba(180,180,180,0.1);
-}
-
-/*
-    PHONE
- */
-@media (max-width : 480px) {
-  .panel {
-    /*margin: 10px 0 10px 0;*/
-    /*padding-top: 15px;*/
-    /*padding-bottom: 15px;*/
-    text-align: center;
-  }
-}
-
-/*
-    TABLET
- */
-@media (min-width : 481px) and (max-width : 1024px) {
-
-}
-
-
-/*
-    DESKTOP & LAPTOP
- */
-@media (min-width : 1025px) {
-
 }

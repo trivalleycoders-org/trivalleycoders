@@ -5,7 +5,7 @@
   flex-flow: row nowrap;
   align-items: flex-start;
   justify-content: space-between;
-  margin: 5px 0;
+  margin: 1.0% 0;
 }
 img {
   vertical-align: middle;
@@ -16,7 +16,7 @@ img {
   height: auto;
 }
 img.tvc-logo {
-  margin-left: 6px;
+  margin-left: 10px;
   max-width: 50px;
 }
 .brand {

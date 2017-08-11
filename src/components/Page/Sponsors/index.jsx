@@ -27,8 +27,8 @@ class Sponsors extends Component {
       />
     ))
     return (
-      <section id='sponsors' className='black-background'>
-        <div className='section-container container-fluid sponsors-container'>
+      <section id='sponsors' className='wrapper-full-width black-background'>
+        <div className='wrapper-max-width-1080'>
           <h1 className='section-title green-text'>Our Sponsors</h1>
           <div className='sponsors'>
             {sponsors}

@@ -37,3 +37,12 @@
 .events-medium-width-container {
   margin-left: 50px;
 }
+
+
+.events-center-text {
+  text-align: center;
+}
+
+.events-left-align {
+  text-align: left;
+}

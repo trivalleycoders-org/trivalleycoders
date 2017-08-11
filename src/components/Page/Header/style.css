@@ -1,9 +1,9 @@
 /* About */
 
-section.about-section {
+.about-section {
 
   background-image: url('images/green-keyboard.1905x942.png');
-  padding: 60px 40px 40px 40px;
+  /*padding: 60px 40px 40px 40px;*/
   background-size: cover;
 }
 
@@ -30,10 +30,7 @@ h2.tagline, h4.subtagline {
   font-size: 1.3em;
 }
 
-.join-us-button {
-  margin-top: 30px;
-  margin-bottom: 15px;
-}
+
 .join-meetup-logo {
   max-width: 40px;
 }
@@ -43,4 +40,9 @@ h2.tagline, h4.subtagline {
   font-weight: bold;
   vertical-align: middle;
   margin-left: 10px;
+}
+
+.join-us-button-container {
+  padding-top: 40px;
+  text-align: center;
 }

@@ -2,8 +2,8 @@ import React from 'react';
 import './style.css';
 
 const Footer = () => (
-  <footer id='footer' className='gradient-black-background'>
-    <div className='section-container footer-container'>
+  <footer className='gradient-black-background'>
+    <div className='wrapper-max-width-1080 footer-container'>
       <div className="fa-btns">
         <a href="https://github.com/trivalleycoders-org">
           <i className="fa fa-github fa-2x" aria-hidden="true"></i>

@@ -11,10 +11,6 @@ const Desktop = ({ children }) => <Responsive minWidth={breakPoints.desktopMinWi
 const Tablet = ({ children }) => <Responsive minWidth={breakPoints.tabletMinWidth} maxWidth={breakPoints.tabletMaxWidth} children={children} />
 const Phone = ({ children }) => <Responsive maxWidth={breakPoints.phoneMaxWidth} children={children} />
 
-// Default (desktop, tablet) and mobile setup
-// const Default = ({ children }) => <Responsive minWidth={768} children={children} />;
-// const Mobile = ({ children }) => <Responsive maxWidth={768} children={children} />;
-
 const TopBar = () => {
 
   return (

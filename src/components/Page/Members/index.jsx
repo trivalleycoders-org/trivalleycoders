@@ -20,8 +20,8 @@ class Members extends Component {
       />
     ))
     return (
-      <section id='members' className='green-background'>
-        <div className='section-container'>
+      <section id='members' className='wrapper-full-width green-background'>
+        <div className='wrapper-max-width-1080'>
           <h1 className='section-title'>Team</h1>
           <div className='members'>
             {renderMembers}
