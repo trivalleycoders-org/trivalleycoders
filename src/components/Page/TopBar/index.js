@@ -14,7 +14,7 @@ const Phone = ({ children }) => <Responsive maxWidth={breakPoints.phoneMaxWidth}
 const TopBar = () => {
 
   return (
-    <div>
+    <div className='topbar-wrapper-outer'>
       <Desktop>
         <TopBarDesktop
           brand={brand}

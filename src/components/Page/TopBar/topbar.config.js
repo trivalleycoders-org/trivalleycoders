@@ -1,8 +1,9 @@
-import iLogo from './tvc.new.03.svg'
+// import iLogo from './tvc.new.03.svg'
+
 
 export const brand = {
-  logo: iLogo,
-  brandName: 'Tri-Valley Coders',
+  // logo: iLogo,
+  brandName: 'TriValley Coders',
   brandColor: '#34E97C',
   brandSizePhone: '5vw',
   brandSizeDesktop: '3.2vw',

@@ -1,11 +1,16 @@
 /* TopBar */
 
+.topbar-wrapper-outer {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  /*background-color: red;*/
+}
 .top-bar {
   display: flex;
   flex-flow: row nowrap;
-  align-items: flex-start;
   justify-content: space-between;
-  margin: 1.0% 0;
+  /*background-color: green;*/
 }
 img {
   vertical-align: middle;
@@ -17,7 +22,7 @@ img {
 }
 img.tvc-logo {
   margin-left: 10px;
-  max-width: 50px;
+  min-height: 29.3333px;
 }
 .brand {
   width:100%;
@@ -28,7 +33,7 @@ img.tvc-logo {
   align-items: center;
   flex-grow: 10;
   /* calc ( min + (max-min) * ( (100vw - vpStart) / (vpEnd - vpStart) ))*/
-  font-size: calc( 14px + (16 - 14) * ( (50vw - 400px) / ( 800 - 400) ));
+  /*font-size: calc( 14px + (16 - 14) * ( (50vw - 400px) / ( 800 - 400) ));*/
   /*background-color: orange;*/
 }
 .branding-phone {
@@ -96,4 +101,16 @@ a.menu-item {
   display: flex;
   flex-flow: column;
   align-items: center;
+}
+
+.brand-text-trivalley {
+  font-family: 'Wallpoet', cursive;
+  font-size: 2.6em;
+}
+.brand-text-coders {
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 3.0em;
+  font-weight: 700;
+  color: #53EB76;
+  /*color: orange;*/
 }
