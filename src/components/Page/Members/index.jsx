@@ -3,7 +3,9 @@ import React from 'react';
 import { Component } from 'react';
 import { members } from './member-data'
 import Member from './Member';
-import './style.css';
+import styles from './style.css';
+import SectionWrapper from '../../elements/SectionWrapper'
+import Section from '../../elements/Section'
 
 class Members extends Component {
   render() {
@@ -20,14 +22,15 @@ class Members extends Component {
       />
     ))
     return (
-      <section id='members' className='wrapper-full-width green-background'>
-        <div className='wrapper-max-width-1080'>
-          <h1 className='section-title'>Team</h1>
-          <div className='members'>
-            {renderMembers}
+      <SectionWrapper>
+        <Section title='Team'>
+          <div className='wrapperMaxWidth820'>
+            <div className={styles.members}>
+              {renderMembers}
+            </div>
           </div>
-        </div>
-      </section>
+        </Section>
+      </SectionWrapper>
     )
 
   }

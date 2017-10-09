@@ -29,20 +29,37 @@ export const menuItems = [
 ]
 
 export const breakPoints = {
+  // Used in various components
   narrowWidthMax: 480,
   mediumWidthMin: 481,
   mediumWidthMax: 1024,
   wideWidthMin: 1025,
+
+  // Used in TopBar
   // Phone
   phoneMaxWidth: 768,
   // Tablet Portrait
   tabletMinWidth: 769,
-  tabletMaxWidth: 991,
-  // Tablet Landscape
-  // tabletMinWidth: 769,
-  // tabletMaxWidth: 991,
+  tabletMaxWidth: 800,
   // Desktop
-  desktopMinWidth: 992,
+  desktopMinWidth: 801,
 }
 
 export default { brand, menuItems, breakPoints }
+
+// export const breakPoints = {
+//   narrowWidthMax: 480,
+//   mediumWidthMin: 481,
+//   mediumWidthMax: 1024,
+//   wideWidthMin: 1025,
+//   // Phone
+//   phoneMaxWidth: 768,
+//   // Tablet Portrait
+//   tabletMinWidth: 769,
+//   tabletMaxWidth: 991,
+//   // Tablet Landscape
+//   // tabletMinWidth: 769,
+//   // tabletMaxWidth: 991,
+//   // Desktop
+//   desktopMinWidth: 992,
+// }

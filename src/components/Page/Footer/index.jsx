@@ -1,10 +1,12 @@
 import React from 'react';
 import './style.css';
+import SectionWrapper from '../../elements/SectionWrapper'
+import Section from '../../elements/Section'
 
 const Footer = () => (
-  <footer className='gradient-black-background'>
-    <div className='wrapper-max-width-1080 footer-container'>
-      <div className="fa-btns">
+  <SectionWrapper>
+    <Section>
+      <div className="faBtns">
         <a href="https://github.com/trivalleycoders-org">
           <i className="fa fa-github fa-2x" aria-hidden="true"></i>
         </a>
@@ -16,8 +18,8 @@ const Footer = () => (
         </a>
       </div>
       <p>&copy; 2017 Tri-Valley Coders &trade;. All rights reserved.</p>
-    </div>
-  </footer>
+    </Section>
+  </SectionWrapper>
 );
 
 export default Footer;

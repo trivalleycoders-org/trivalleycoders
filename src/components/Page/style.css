@@ -12,61 +12,22 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   margin: 0;
 }
-.container {
-  width: auto;
-}
-.wrapper-full-width {
-  /*padding-top: 52px;*/
-  padding-top: 3%;
-  padding-bottom: 3%;
-}
-.wrapper-max-width-1080 {
+
+/*:global(.wrapperMaxWidth1080) {
   max-width: 1080px;
   margin: auto;
+}*/
 
-}
-.wrapper-narrow-text {
-  margin: auto;
-  max-width: 820px;
-  padding: 0 5%;
-  font-size: 1.3em;
-}
-.section-title {
-  padding-bottom: 3%;
-}
-.section-sub-title {
+
+:global(.sectionSubTitle) {
   font-style: italic;
 }
-
-/*
-    Background & Font Colors
- */
-.green-text {
+:global(.container) {
+  width: auto;
+}
+:global(.greenText) {
   color: #34E97C;
 }
-.green-background {
+/*:global(.greenBackground) {
   background-image: linear-gradient(to bottom, #42a552 0%, #42a552 100%);
-}
-
-.gradient-black-background {
-  background: linear-gradient(to top, #1d1d1d, #3c3c3c);
-}
-
-
-/*
-    Media Queries
- */
-/* PHONE */
-@media (max-width : 480px) {
-
-}
-
-/* TABLET */
-@media (min-width : 481px) and (max-width : 1024px) {
-
-}
-
-/* DESKTOP & LAPTOP */
-@media (min-width : 1025px) {
-
-}
+}*/

@@ -12,12 +12,6 @@ export const members = [
     role: 'Organizer Web Developer',
   },
   {
-    id: 102,
-    picture: pChad,
-    name: 'Chad',
-    role: 'Full-Stack Developer',
-  },
-  {
     id: 103,
     picture: pLaura,
     name: 'Laura',

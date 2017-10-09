@@ -7,11 +7,12 @@ import * as actionCreators from '../../../store/actions';
 import * as selectors from '../../../store/selectors';
 import Event from './Event';
 import iMeetup from './images/meetup-swarm.svg'
-import './style.css';
-import iLaptopCoffee from './images/laptop-coffee.jpeg'
-import { Button, Image } from 'react-bootstrap'
+import styles from './style.css';
 import Responsive from 'react-responsive'
-import { brand, menuItems, breakPoints } from '../TopBar/topbar.config.js'
+import { breakPoints } from '../TopBar/topbar.config.js'
+import SectionTitle from '../../elements/SectionTitle'
+import SectionWrapper from '../../elements/SectionWrapper'
+import Section from '../../elements/Section'
 
 let i = 1;
 
@@ -21,10 +22,9 @@ class Events extends Component {
   }
 
   render() {
-    const NarrowWidth = ({ children }) => <Responsive maxWidth={breakPoints.narrowWidthMax} children={children} />
-    const MediumWidth = ({ children }) => <Responsive minWidth={breakPoints.mediumWidthMin} maxWidth={breakPoints.mediumWidthMax} children={children} />
-    const WideWidth = ({ children }) => <Responsive minWidth={breakPoints.wideWidthMin} children={children} />
+
     const { readEventsRequest } = this.props;
+
     const renderEvents = this.props.events.map((e) => (
         <Event
           key={e.time}
@@ -38,64 +38,32 @@ class Events extends Component {
         />
       )
     )
-    // console.log(readEventsRequest.status)
+
     switch (readEventsRequest.status) {
       case 'success':
         return (
-          <div className='wrapper-full-width'>
-            <div className='wrapper-max-width-1080'>
-              <h1 id='events-title' className='section-title green-text'>Events</h1>
-              <WideWidth>
-                <div className='events-body'>
-                  <div className='events-left events-left-align'>
-                    {renderEvents}
-                  </div>
-                  <div className='events-right'>
-                    <Image src={iLaptopCoffee} responsive className='img-laptop-coffee' alt='laptop and coffee' />
-                  </div>
-                </div>
-              </WideWidth>
-              <MediumWidth>
-                <div className='container-fluid events-center-text'>
-                  {renderEvents}
-                </div>
-              </MediumWidth>
-              <NarrowWidth>
-                <div className='container-fluid events-center-text'>
-                  {renderEvents}
-                </div>
-              </NarrowWidth>
-            </div>
-          </div>
+          <SectionWrapper>
+            <Section title='Events' green>
+              {renderEvents}
+            </Section>
+          </SectionWrapper>
         )
 
       case 'failure':
         return (
-          <section id='events'  className='wrapper-full-width black-background'>
-            <div className='wrapper-max-width-1080'>
-              <h1 className='section-title'>Events</h1>
-              <div className='events-failed-message lead'>
-                <h2>We meet every Thursday!</h2>
-                <ul className='ul-meeting-schedule'>
-                  <li>9:00 AM - Social time, Specialty's Cafe & Bakery, 5331 Hopyard Rd, Pleasanton</li>
-                  <li>9:45 AM - Move to Dublin Library, 200 Civic Plaza, Dublin</li>
-                  <li>10 AM - 12 PM - Code, get help and/or presentation</li>
-                </ul>
-                <button className='meeting-schedule' href='https://www.meetup.com/trivalleycoders/?scroll=true' bsStyle='success' bsSize='large'>
-                  <img src={iMeetup} width={40} alt='meetup logo'/>
-                  Tri-Valley Coders Meeting Schedule
-                </button>
-              </div>
-            </div>
-          </section>
+          <SectionWrapper>
+            <Section title='Events' green>
+              <p>Something went wrong. Our events cannot be shown now. Please visit our group on Meetup <a href='https://www.meetup.com/trivalleycoders/'>TriValley Coders on Meetup</a></p>
+            </Section>
+          </SectionWrapper>
         )
       default:
         return (
-          <section id='events'  className='black-background'>
-            <div className='section-container container-fluid'>
+          <SectionWrapper>
+            <Section title='Events' green>
               <h2>Loading data...</h2>
-            </div>
-          </section>
+            </Section>
+          </SectionWrapper>
         )
     }
   }

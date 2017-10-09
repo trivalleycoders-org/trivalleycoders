@@ -1,6 +1,6 @@
 // Member
 import React from 'react';
-import './style.css';
+import styles from './style.css';
 import Identicon from './../../Identicon'
 // import * as ku from '../../../../lib/ke-utils'
 
@@ -12,14 +12,14 @@ const Member = (props) => {
         hash={props._id}
              />
     } else {
-      return <img className='member-img' src={props.picture} alt='member' />
+      return <img className={styles.memberImg} src={props.picture} alt='member' />
     }
   }
   return (
-    <div className='member-item'>
+    <div className={styles.memberItem}>
       {getPicture()}
-      <span className='member-name'>{props.name}</span>
-      <span className='member-role'>{props.role}</span>
+      <span className={styles.memberName}>{props.name}</span>
+      <span className={styles.memberRole}>{props.role}</span>
     </div>
   )
 };

@@ -1,29 +1,24 @@
 // TopBarDesktop
 import React from 'react'
+import styles from './style.css'
+import classNames from 'classnames'
 
 const TopBarDesktop = (props) => {
-
-  const { brandName, logo, brandColor } = props.brand
-
+  
   const renderMenuItems = props.menuItems.map((m) => (
-    <a href={m.href} key={m.label} className='menu-item desktop-menu-item'>{m.label}</a>
-  ))
-
-  const configStyles = {
-    color: brandColor,
-    // fontSize: brandSizeDesktop,
-  }
+    <a href={m.href} key={m.label} className={styles.menuItem}>{m.label}</a>
+      ))
 
   return (
-    <div className='top-bar'>
-      <div className='branding-desktop'>
-        {/* <img className='tvc-logo image-responsive' src={logo} alt='tvc-logo' /> */}
-        <span className='brand-text-trivalley'>TriValley</span>
-        &nbsp;
-        <span className='brand-text-coders'>coders</span></div>
-      {/* <div className='brand brand-desktop' style={configStyles}>{brandName}</div> */}
-      <div className='desktop-menu-items'>
-        {renderMenuItems}
+    <div id='desktop-1' className={styles.wrapper}>
+      <div id='desktop-2' className={styles.topBar}>
+        <div id='desktop-3' className={styles.brandingDesktop}>
+          <span className={styles.wordTrivalleyDesktop}>TriValley</span>
+          &nbsp;
+          <span className={styles.wordCodersDesktop}>coders</span></div>
+        <div id='desktop-4' className={styles.desktopMenuItems}>
+          {renderMenuItems}
+        </div>
       </div>
     </div>
   )

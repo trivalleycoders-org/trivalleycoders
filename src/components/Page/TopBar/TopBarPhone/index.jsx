@@ -1,6 +1,7 @@
 // TopBarPhone
 import React, { Component } from 'react'
 import classNames from 'classnames'
+import styles from './style.css'
 
 class TopBarPhone extends Component {
   constructor(props) {
@@ -12,13 +13,22 @@ class TopBarPhone extends Component {
 
   render() {
 
-    const { brandName, brandColor, logo } = this.props.brand
-    // const { menuItems } = this.props.menuItems
-    const mobileMenu = classNames({
-      'hide-mobile-menu': !this.state.showMobileMenu,
-      'show-mobile-menu': this.state.showMobileMenu,
+    const mobileMenuStyle = classNames({
+      [styles.hideMobileMenu]: !this.state.showMobileMenu,
+      [styles.showMobileMenu]: this.state.showMobileMenu,
     })
 
+    const renderMenuStyles = classNames({
+      [styles.menuItem]: true,
+      [styles.phoneMenuItem]: true,
+    })
+
+    const hamburgerStyles = classNames({
+      'glyphicon': true,
+      'glyphicon-menu-hamburger': true,
+      [styles.hamburger]: true,
+
+    })
     const handleHamburgerClick = () => {
       let val;
       this.state.showMobileMenu
@@ -28,27 +38,27 @@ class TopBarPhone extends Component {
     }
 
     const renderMenuItems = this.props.menuItems.map((m) => (
-      <a href={m.href} key={m.label} className='menu-item phone-menu-item'>{m.label}</a>
+      <a href={m.href} key={m.label} className={renderMenuStyles}>{m.label}</a>
     ))
 
-    const configStyles = {
-      color: brandColor,
-      // fontSize: brandSizePhone,
-    }
-
     return (
-      <div>
-        <div className='top-bar'>
-          <div className='branding-phone'>
-            <img className='tvc-logo img-responsive' src={logo} alt='tvc-logo' />
-            <div className='brand brand-phone' style={configStyles}>{brandName}</div>
+      // so .wrapper should be a column with 2 rows
+      // row 1: brand and hamburger (flex-flow: row)
+      // row 2: the menu buttons (flex-flow: column)
+      <div id='phone-1' className={styles.wrapper}>
+        <div id='phone-2' className={styles.topBar}>
+          <div id='phone-3' className={styles.brandingPhone}>
+            <span className={styles.wordTrivalleyPhone}>TriValley</span>
+            &nbsp;
+            <span className={styles.wordCodersPhone}>coders</span>
           </div>
-          <div className='mobile-menu-div' onClick={() => handleHamburgerClick()}>
-            <div className="glyphicon glyphicon-menu-hamburger hamburger" aria-hidden="true">
-            </div>
+          <div id='phone-4' className={styles.hamburgerDiv} onClick={() => handleHamburgerClick()}>
+            <span id='phone-5' className={hamburgerStyles} aria-hidden="true">
+            </span>
           </div>
         </div>
-        <div className={mobileMenu}>
+
+        <div id='phone-6' className={mobileMenuStyle}>
           {renderMenuItems}
         </div>
       </div>

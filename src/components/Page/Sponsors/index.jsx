@@ -3,8 +3,9 @@ import React from 'react';
 import { Component } from 'react';
 import sZelda from './images/zelda.sponsor.jpeg'
 import Sponsor from './Sponsor';
-import './style.css';
-
+import styles from './style.css';
+import SectionWrapper from '../../elements/SectionWrapper'
+import Section from '../../elements/Section'
 class Sponsors extends Component {
 
 
@@ -27,14 +28,15 @@ class Sponsors extends Component {
       />
     ))
     return (
-      <section id='sponsors' className='wrapper-full-width black-background'>
-        <div className='wrapper-max-width-1080'>
-          <h1 className='section-title green-text'>Our Sponsors</h1>
-          <div className='sponsors'>
-            {sponsors}
+      <SectionWrapper>
+        <Section title='Our Sponsors'>
+          <div className='wrapperMaxWidth820'>
+            <div className={styles.sponsors}>
+              {sponsors}
+            </div>
           </div>
-        </div>
-      </section>
+        </Section>
+      </SectionWrapper>
     )
   }
 }

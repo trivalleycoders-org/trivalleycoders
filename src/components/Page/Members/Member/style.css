@@ -1,6 +1,6 @@
 /* Member */
 
-.member-item {
+.memberItem {
   display: flex;
   flex-flow: column nowrap;
   padding: 15px 10px;
@@ -9,14 +9,14 @@
   text-align: center;
 }
 
-.member-img {
+.memberImg {
   max-height: 110px;
 }
 
-.member-name {
+.memberName {
   font-weight: bold;
 }
 
-.member-role {
+.memberRole {
   margin-top: 3px;
 }

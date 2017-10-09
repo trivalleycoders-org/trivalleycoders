@@ -1,8 +1,8 @@
 // Events
 import React from 'react';
 import { Panel, Row, Col } from 'react-bootstrap';
-import './style.css';
-
+import styles from './style.css';
+import classNames from 'classnames'
 
 const formatDate = ({timeArr}) => {
   let hour = parseInt(timeArr.slice(0, 2), 10);
@@ -35,21 +35,26 @@ const Event = (props) => {
     return `${details.date}, ${details.time}`;
   }
 
+  const rowStyles = classNames({
+    [styles.odd]: props.index % 2 === 0,
+    [styles.eventsPanel]: true,
+  })
+
+// className={props.index % 2 === 0 ? styles.odd : ''}
   return (
-    <Row className={props.index % 2 === 0 ? 'odd' : ''}>
-      <Panel className='events-panel events-panel-narrow'>
-        <Col className='event-name-col' sm={5} md={5} lg={5}>
-          <a id='event-name-anchor' href={props.url}>{props.name}</a>
-        </Col>
-        <Col sm={4} md={4} lg={4}>
-          <p className='event-location-name'><i>{`${props.locationName}`}</i></p>
-          <p className='event-location-address'>{props.locationAddress}</p>
-          <p>{props.locationCity}</p>
-        </Col>
-        <Col sm={3} md={3} lg={3}>
-          {meetupDate(props)}
-        </Col>
-      </Panel>
+
+    <Row className={rowStyles}>
+      <Col className={styles.nameCol} sm={5} md={5} lg={5}>
+        <a id='nameAnchor' href={props.url}>{props.name}</a>
+      </Col>
+      <Col sm={4} md={4} lg={4}>
+        <p className={styles.locationName}><i>{`${props.locationName}`}</i></p>
+        <p className={styles.locationAddress}>{props.locationAddress}</p>
+        <p>{props.locationCity}</p>
+      </Col>
+      <Col sm={3} md={3} lg={3}>
+        {meetupDate(props)}
+      </Col>
     </Row>
   )
 };

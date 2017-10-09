@@ -1,27 +1,32 @@
 /*Event*/
 
-.events-panel {
-  /*font-size: 1.3em;*/
-  border: none;
-  /*text-align: left;*/
-  padding-bottom: 5px;
+.panel {
+
 }
-.event-name-col {
+
+.eventsPanel {
+  border: none;
+  padding-bottom: 5px;
+  background-color: transparent;
+  border-radius: 0;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
-#event-name-anchor {
+.nameCol {
+  margin-bottom: 10px;
+}
+#nameAnchor {
   color: #34E97C;
   font-weight: bold;
-  /*font-size: 1.12em;*/
   text-decoration: none;
 }
-#event-name-anchor:hover {
+#nameAnchor:hover {
   text-decoration-line: underline;
 }
-.event-location-name {
+.locationName {
   margin-bottom: 0;
 }
-.event-location-address {
+.locationAddress {
   margin-bottom: 0;
 }
 .odd {

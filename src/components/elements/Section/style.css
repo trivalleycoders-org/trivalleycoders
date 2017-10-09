@@ -1,0 +1,15 @@
+/* Section */
+.wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin: auto;
+  max-width: 820px;
+  padding: 0 5%;
+  font-size: 1.3em;
+  /*background-color: blue;*/
+}
+
+.greenBackground {
+  background-image: linear-gradient(to bottom, #42a552 0%, #42a552 100%);
+}

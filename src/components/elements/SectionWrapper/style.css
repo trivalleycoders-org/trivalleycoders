@@ -1,0 +1,11 @@
+/* SectionWrapper */
+.wrapper {
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  /*background-color: green;
+  border: 1px solid white;*/
+}
+
+.greenBackground {
+  background-image: linear-gradient(to bottom, #42a552 0%, #42a552 100%);
+}
