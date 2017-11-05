@@ -4,13 +4,16 @@ import styles from './style.css'
 import classNames from 'classnames';
 
 const SectionTitle = (props) => {
-  const titleStyles = classNames({
-    'greenText': props.colorName === 'green',
-    [styles.title]: true,
-  })
-
+  const styles = {
+    color: props.fontColor === 'green' ? '#34E97C' : '',
+    fontFamily: "'Lato', sans-serif",
+    margin: 0,
+    padding: 0,
+    textAlign: 'center',
+  }
+  
   return (
-    <h2 className={titleStyles}>{props.children}</h2>
+    <h2 style={styles}>{props.children}</h2>
   )
 }
 

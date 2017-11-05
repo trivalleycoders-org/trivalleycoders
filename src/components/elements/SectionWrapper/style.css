@@ -1,9 +1,11 @@
 /* SectionWrapper */
 .wrapper {
-  padding-top: 2.5%;
-  padding-bottom: 2.5%;
+  margin: 0 0 25px 0;
+  /*padding-top: 2.5%;*/
+  /*padding-bottom: 2.5%;*/
   /*background-color: green;
   border: 1px solid white;*/
+  
 }
 
 .greenBackground {

@@ -1,7 +1,9 @@
 /* Page */
 
+.pageWrapper {
+  font-family: 'Roboto', sans-serif !important;
+}
 body {
-  text-align: justify;
   color: white;
 }
 section, header, footer {
@@ -9,8 +11,8 @@ section, header, footer {
 }
 h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility;
-  text-align: center;
   margin: 0;
+  padding: 0;
 }
 
 /*:global(.wrapperMaxWidth1080) {
@@ -19,15 +21,12 @@ h1, h2, h3, h4, h5, h6 {
 }*/
 
 
-:global(.sectionSubTitle) {
-  font-style: italic;
-}
 :global(.container) {
   width: auto;
 }
-:global(.greenText) {
+/*:global(.greenText) {
   color: #34E97C;
-}
+}*/
 /*:global(.greenBackground) {
   background-image: linear-gradient(to bottom, #42a552 0%, #42a552 100%);
 }*/

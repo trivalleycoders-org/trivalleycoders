@@ -1,4 +1,3 @@
-import pChad from './images/chad.jpg';
 import pLaura from './images/laura.jpeg';
 import pMichael from './images/michael.jpg';
 import pNathan from './images/nathan.jpg';

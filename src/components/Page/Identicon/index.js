@@ -22,7 +22,7 @@ const generateIdenticon = (hash) => {
     ], // rgba black
     background: [255, 255, 255, 20], // rgba white
     margin: 0.1, // 20% margin
-    size: 148, // 420px square
+    size: 110, // 420px square
     format: 'png', // use SVG instead of PNG
   };
 

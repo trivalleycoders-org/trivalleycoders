@@ -1,34 +1,33 @@
 /*Event*/
 
-.panel {
-
-}
-
 .eventsPanel {
-  border: none;
-  padding-bottom: 5px;
   background-color: transparent;
+  border: none;
   border-radius: 0;
-  margin-top: 10px;
   margin-bottom: 10px;
+  margin-top: 10px;
+  padding-bottom: 5px;
 }
 .nameCol {
-  margin-bottom: 10px;
-}
-#nameAnchor {
-  color: #34E97C;
-  font-weight: bold;
-  text-decoration: none;
-}
-#nameAnchor:hover {
-  text-decoration-line: underline;
+  padding: 5px 0 5px 5px;
 }
 .locationName {
-  margin-bottom: 0;
-}
-.locationAddress {
-  margin-bottom: 0;
+  font-weight: 700;
 }
 .odd {
   background-color: rgba(180,180,180,0.1);
+}
+.addressCol {
+  padding: 5px 0;
+}
+.dateCol {
+  padding: 5px 0;
+}
+@media (max-width: 767px) {
+  .addressCol {
+    text-align: center;
+  }
+  .dateCol {
+    text-align: center;
+  }
 }

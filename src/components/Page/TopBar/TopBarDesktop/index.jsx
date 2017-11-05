@@ -1,10 +1,9 @@
 // TopBarDesktop
 import React from 'react'
 import styles from './style.css'
-import classNames from 'classnames'
 
 const TopBarDesktop = (props) => {
-  
+
   const renderMenuItems = props.menuItems.map((m) => (
     <a href={m.href} key={m.label} className={styles.menuItem}>{m.label}</a>
       ))

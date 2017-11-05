@@ -1,10 +1,5 @@
 /* TechLogos */
 
-.logoTitle {
-  text-align: center;
-  margin-top: 25px;
-}
-
 .logoRow1 {
   display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
@@ -22,37 +17,6 @@
   display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
   flex-flow: row wrap;
   justify-content: space-around;
+  align-items: center;
   margin-top: 20px;
-}
-
-.techlogosWideContainer {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-flow: column nowrap;
-}
-
-.techlogosWideTopContainer {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-flow: row nowrap;
-}
-
-.techlogosWideRight {
-  padding: 0 40px;
-  font-size: 1.3em;
-}
-
-.imgWomenLearning {
-  max-width: 450px;
-  padding: 0 20px;
-}
-
-.techlogosWideBottom {
-  padding-top: 30px;
 }

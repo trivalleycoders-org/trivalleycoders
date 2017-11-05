@@ -1,5 +1,6 @@
 /* TechLogo */
 
+
 .techLogo {
   margin: 10px;
 }
@@ -7,13 +8,4 @@
   margin-top: 4px;
   text-align: center;
   font-size: 0.7em;
-}
-.wideImage {
-  max-width: 180px;
-}
-.expressImage {
-  max-width: 145px;
-}
-.logoHeight {
-  height: 45px;
 }

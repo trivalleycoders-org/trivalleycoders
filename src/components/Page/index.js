@@ -6,16 +6,15 @@ import Events from './Events'
 import Members from './Members'
 import Sponsors from './Sponsors'
 import Footer from './Footer'
-import './style.css'
+import styles from './style.css'
 // import * as ku from '../../lib/ke-utils';
 
 const Page = () => {
-
     return (
-      <div id='page-wrapper' className='page-wrapper'>
-          <TopBar />
-          <Header />
-          <Events />
+      <div id='page-wrapper' className={styles.pageWrapper}>
+        <TopBar />
+        <Header />
+        <Events />
         <Members />
         <Sponsors />
         <Footer />

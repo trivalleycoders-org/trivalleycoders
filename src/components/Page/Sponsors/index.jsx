@@ -1,22 +1,30 @@
 // Sponsors
 import React from 'react';
 import { Component } from 'react';
-import sZelda from './images/zelda.sponsor.jpeg'
+import iZelda from './images/zelda.sponsor.jpeg'
+import iBRIIA from './images/briia-logo.01.png'
 import Sponsor from './Sponsor';
 import styles from './style.css';
 import SectionWrapper from '../../elements/SectionWrapper'
 import Section from '../../elements/Section'
-class Sponsors extends Component {
 
+class Sponsors extends Component {
 
   render() {
     const arrSponsors = [
       {
         id: 100,
-        picture: sZelda,
+        picture: iZelda,
         name: 'Zelda Kohn',
         tagLine: 'For all you realestate needs in the Tri-valley!',
       },
+      {
+        id: 200,
+        picture: iBRIIA,
+        name: 'BRIIA',
+        tagLine: 'Bishop Ranch Intelligence Innovation Accelerator',
+        // maxWidth: 10,
+      }
     ]
 
     const sponsors = arrSponsors.map((s) => (
@@ -25,6 +33,8 @@ class Sponsors extends Component {
         picture={s.picture}
         name={s.name}
         tagLine={s.tagLine}
+        width={s.maxWidth}
+        height={s.maxHeight}
       />
     ))
     return (

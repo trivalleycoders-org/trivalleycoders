@@ -9,7 +9,6 @@ import Section from '../../elements/Section'
 
 class Members extends Component {
   render() {
-    console.log('members', members)
 
     const renderMembers = members.map((m) => (
       <Member
@@ -21,9 +20,10 @@ class Members extends Component {
         index={m.index}
       />
     ))
+
     return (
       <SectionWrapper>
-        <Section title='Team'>
+        <Section title='Mentors'>
           <div className='wrapperMaxWidth820'>
             <div className={styles.members}>
               {renderMembers}
@@ -32,7 +32,6 @@ class Members extends Component {
         </Section>
       </SectionWrapper>
     )
-
   }
 }
 

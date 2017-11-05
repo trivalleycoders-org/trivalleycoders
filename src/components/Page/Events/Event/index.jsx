@@ -1,8 +1,9 @@
 // Events
 import React from 'react';
-import { Panel, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import styles from './style.css';
 import classNames from 'classnames'
+import A from '../../../elements/A'
 
 const formatDate = ({timeArr}) => {
   let hour = parseInt(timeArr.slice(0, 2), 10);
@@ -38,22 +39,31 @@ const Event = (props) => {
   const rowStyles = classNames({
     [styles.odd]: props.index % 2 === 0,
     [styles.eventsPanel]: true,
+    [styles.bgYellow]: true,
   })
+  // const nameColStyles = classNames({
+  //   [styles.nameCol]: true,
+  //   color: greenText
+  // })
 
 // className={props.index % 2 === 0 ? styles.odd : ''}
   return (
 
     <Row className={rowStyles}>
       <Col className={styles.nameCol} sm={5} md={5} lg={5}>
-        <a id='nameAnchor' href={props.url}>{props.name}</a>
+        <A href={props.url} fontColor={'green'}>{props.name}></A>
       </Col>
       <Col sm={4} md={4} lg={4}>
-        <p className={styles.locationName}><i>{`${props.locationName}`}</i></p>
-        <p className={styles.locationAddress}>{props.locationAddress}</p>
-        <p>{props.locationCity}</p>
+        <div className={styles.addressCol}>
+          <div className={styles.locationName}><i>{`${props.locationName}`}</i></div>
+          <div className={styles.locationAddress}>{props.locationAddress}</div>
+          <div>{props.locationCity}</div>
+        </div>
       </Col>
       <Col sm={3} md={3} lg={3}>
-        {meetupDate(props)}
+        <div className={styles.dateCol}>
+          {meetupDate(props)}
+        </div>
       </Col>
     </Row>
   )

@@ -1,7 +1,8 @@
 /* SectionSubTitle */
 .title {
-  color: rgb(100, 100, 100);
+  color: rgb(150, 150, 150);
+  font-family: 'Lato', sans-serif;
   margin: 0;
-  padding: 0px 0 5px 0;
-
+  padding: 0;
+  /*padding: 0px 0 5px 0;*/
 }

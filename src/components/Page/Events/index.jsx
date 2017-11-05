@@ -6,13 +6,9 @@ import { connect } from 'react-redux';
 import * as actionCreators from '../../../store/actions';
 import * as selectors from '../../../store/selectors';
 import Event from './Event';
-import iMeetup from './images/meetup-swarm.svg'
-import styles from './style.css';
-import Responsive from 'react-responsive'
-import { breakPoints } from '../TopBar/topbar.config.js'
-import SectionTitle from '../../elements/SectionTitle'
 import SectionWrapper from '../../elements/SectionWrapper'
 import Section from '../../elements/Section'
+import P from '../../elements/P'
 
 let i = 1;
 
@@ -43,7 +39,7 @@ class Events extends Component {
       case 'success':
         return (
           <SectionWrapper>
-            <Section title='Events' green>
+            <Section title='Events' fontColor='green'>
               {renderEvents}
             </Section>
           </SectionWrapper>
@@ -52,15 +48,15 @@ class Events extends Component {
       case 'failure':
         return (
           <SectionWrapper>
-            <Section title='Events' green>
-              <p>Something went wrong. Our events cannot be shown now. Please visit our group on Meetup <a href='https://www.meetup.com/trivalleycoders/'>TriValley Coders on Meetup</a></p>
+            <Section title='Events' fontColor='green'>
+              <P>Something went wrong. Our events cannot be shown now. Please visit our group on Meetup <a href='https://www.meetup.com/trivalleycoders/'>TriValley Coders on Meetup</a></P>
             </Section>
           </SectionWrapper>
         )
       default:
         return (
           <SectionWrapper>
-            <Section title='Events' green>
+            <Section title='Events' fontColor='green'>
               <h2>Loading data...</h2>
             </Section>
           </SectionWrapper>

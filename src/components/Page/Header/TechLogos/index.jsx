@@ -3,10 +3,6 @@ import React from 'react';
 import TechLogo from './TechLogo';
 import styles from './style.css';
 import { logoRow1, logoRow2 } from './logo-data'
-import { Image } from 'react-bootstrap'
-import iWomenLearning from './images/women-learning.jpeg'
-import SectionTitle from '../../../elements/SectionTitle'
-import classNames from 'classnames'
 
 const TechLogos = (props) => {
 
@@ -17,21 +13,21 @@ const TechLogos = (props) => {
       name={t.name}
       url={t.image}
       style={t.style}
+      maxWidth={t.maxWidth}
+      maxHeight={t.maxHeight}
     />
   ))
   const renderLogoRow2 = logoRow2.map((t) => (
     <TechLogo
       key={t.name}
-      // name={t.name}
       url={t.image}
       style={t.style}
+      maxWidth={t.maxWidth}
+      maxHeight={t.maxHeight}
     />
   ))
 
-
-
   return (
-
     <div>
       <div className={styles.logoRow1}>
         {renderLogoRow1}
