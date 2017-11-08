@@ -8,7 +8,7 @@ const SectionWrapper = (props) => {
     [styles.greenBackground]: props.greenBackground,
   })
   return (
-    <div className={wrapperStyles}>
+    <div className={wrapperStyles} id={props.id}>
       {props.children}
     </div>
   )

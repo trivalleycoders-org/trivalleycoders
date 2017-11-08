@@ -14,7 +14,7 @@ const Header = () => {
     [styles.btnSuccess]: true,
   })
   return (
-    <SectionWrapper>
+    <SectionWrapper id='home'>
       <Section title='A Community'>
         <P textAlign='justify'>TriValley Coders is a community of developers helping developers. We hold free bi-weekly meetings where beginner and experienced developers mix and learn together.</P>
         <div className={styles.buttonContainer}>

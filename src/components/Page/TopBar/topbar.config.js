@@ -11,16 +11,12 @@ export const brand = {
 
 export const menuItems = [
   {
-    label: 'Learn',
-    href: '#learn'
-  },
-  {
     label: 'Events',
     href: '#events',
   },
   {
-    label: 'Members',
-    href: '#members',
+    label: 'Mentors',
+    href: '#mentors',
   },
   {
     label: 'Sponsors',

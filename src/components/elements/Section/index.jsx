@@ -8,7 +8,7 @@ import SectionSubTitle from './SectionSubTitle'
 const Section = (props) => {
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id={props.id}>
       <div className={styles.titles}>
         <div className={styles.title}>
           <SectionTitle fontColor={props.color}>

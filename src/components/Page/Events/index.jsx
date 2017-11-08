@@ -38,7 +38,7 @@ class Events extends Component {
     switch (readEventsRequest.status) {
       case 'success':
         return (
-          <SectionWrapper>
+          <SectionWrapper id='events'>
             <Section title='Free Events' fontColor='green'>
               {renderEvents}
             </Section>

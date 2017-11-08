@@ -22,7 +22,7 @@ class Members extends Component {
     ))
 
     return (
-      <SectionWrapper>
+      <SectionWrapper id='mentors'>
         <Section title='Mentors'>
           <div className='wrapperMaxWidth820'>
             <div className={styles.members}>
