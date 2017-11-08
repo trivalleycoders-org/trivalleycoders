@@ -7,12 +7,11 @@ const Sponsor = (props) => {
   const imgStyles = {
     maxHeight: 72,
     margin: 'auto',
+    marginBottom: 10,
   }
   return (
     <div className={styles.panelSponsor}>
-      <div id='sponsor-img-container' className={styles.sponsorImgContainer}>
-        <img style={imgStyles} src={props.picture} alt='sponsor' />
-      </div>
+      <img style={imgStyles} src={props.picture} alt='sponsor' />
       <h4 id='sponsor-name' className={styles.sponsorName}>{props.name}</h4>
       <h5 id='sponsor-tagline' className={styles.tagLine}>{props.tagLine}</h5>
     </div>

@@ -5,12 +5,6 @@ import classNames from 'classnames'
 import styles from './style.css';
 
 const TechLogo = (props) => {
-  const imageStyle = classNames(
-    {
-      [props.style]: true, // wideImage or expressImage
-      [styles.logoHeight]: true, // sets max-height
-    }
-  )
   const imgStyle = {
     maxHeight: props.maxHeight,
     margin: 'auto',

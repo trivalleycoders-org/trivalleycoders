@@ -18,8 +18,10 @@ const Member = (props) => {
   return (
     <div className={styles.memberItem}>
       {getPicture()}
-      <span className={styles.memberName}>{props.name}</span>
-      <span className={styles.memberRole}>{props.role}</span>
+      <div className={styles.titles}>
+        <div className={styles.memberName}>{props.name}</div>
+        <div className={styles.memberRole}>{props.role}</div>
+      </div>
     </div>
   )
 };

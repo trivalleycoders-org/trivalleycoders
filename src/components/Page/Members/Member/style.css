@@ -4,7 +4,7 @@
   display: flex;
   flex-flow: column nowrap;
   padding: 15px 10px;
-  justify-content: space-between;
+  justify-content: flex-start;
   max-width: 130px;
   text-align: center;
 }
@@ -19,4 +19,7 @@
 
 .memberRole {
   margin-top: 3px;
+}
+.titles {
+  margin-top: 10px;
 }

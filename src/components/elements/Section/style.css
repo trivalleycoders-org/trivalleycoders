@@ -7,7 +7,7 @@
   margin: auto;
   max-width: 820px;
   padding: 35px 0 35px 0;
-  background-color: green;
+  /*background-color: green;*/
 }
 .greenBackground {
   background-image: linear-gradient(to bottom, #42a552 0%, #42a552 100%);
@@ -19,7 +19,7 @@
   margin-bottom: 10px;
 }
 .children {
-    background-color: orange;
+    /*background-color: orange;*/
     margin: auto;
 }
 /*@media (min-width : 320px) and (max-width : 480px) {

@@ -24,7 +24,7 @@ const Footer = () => {
   })
   const facebookStyle = classNames({
     'fa': true,
-    'fa-github': true,
+    'fa-facebook': true,
     'fa-2x': true,
     'fa-icon': true,
     [styles.faIcon]: true,
@@ -33,19 +33,21 @@ const Footer = () => {
   return (
     <SectionWrapper>
       <Section>
-        <div className={styles.faBtns}>
-          <A href="https://github.com/trivalleycoders-org">
-            <i className={gitHubStyle} aria-hidden="true"></i>
-          </A>
-          <A href="https://www.meetup.com/trivalleycoders//">
-            <i className={meetupStyle} aria-hidden="true"></i>
-          </A>
-          <A href="https://www.facebook.com/groups/free.code.camp.sanramon/">
-            <i className={facebookStyle} aria-hidden="true"></i>
-          </A>
+        <div className={styles.footerContainer}>
+          <div className={styles.faBtns}>
+            <A href="https://github.com/trivalleycoders-org">
+              <i className={gitHubStyle} aria-hidden="true"></i>
+            </A>
+            <A href="https://www.meetup.com/trivalleycoders//">
+              <i className={meetupStyle} aria-hidden="true"></i>
+            </A>
+            <A href="https://www.facebook.com/groups/free.code.camp.sanramon/">
+              <i className={facebookStyle} aria-hidden="true"></i>
+            </A>
+          </div>
+          <P>&copy; 2017 Tri-Valley Coders &trade;. All rights reserved.</P>
+          <P><i>Don't code alone!</i> &trade;</P>
         </div>
-        <P>&copy; 2017 Tri-Valley Coders &trade;. All rights reserved.</P>
-        <P><i>Don't code alone!</i> &trade;</P>
       </Section>
     </SectionWrapper>
   )

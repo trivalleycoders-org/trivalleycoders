@@ -19,6 +19,7 @@
 .faBtns {
 	display: flex;
 	flex-direction: row;
+  justify-content: space-around;
 	padding-bottom: 15px;
 }
 .facebook {
@@ -29,4 +30,7 @@
 }
 .faIcon {
   margin: 0 10px;
+}
+.copy {
+  text-align: center;
 }
