@@ -13,8 +13,8 @@ const Sponsor = (props) => {
       <div id='sponsor-img-container' className={styles.sponsorImgContainer}>
         <img style={imgStyles} src={props.picture} alt='sponsor' />
       </div>
-      <h4 id='sponsor-name'>{props.name}</h4>
-      <h5 id='sponsor-tagline'>{props.tagLine}</h5>
+      <h4 id='sponsor-name' className={styles.sponsorName}>{props.name}</h4>
+      <h5 id='sponsor-tagline' className={styles.tagLine}>{props.tagLine}</h5>
     </div>
   )
 };

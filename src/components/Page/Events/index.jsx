@@ -39,7 +39,7 @@ class Events extends Component {
       case 'success':
         return (
           <SectionWrapper>
-            <Section title='Events' fontColor='green'>
+            <Section title='Free Events' fontColor='green'>
               {renderEvents}
             </Section>
           </SectionWrapper>
@@ -48,7 +48,7 @@ class Events extends Component {
       case 'failure':
         return (
           <SectionWrapper>
-            <Section title='Events' fontColor='green'>
+            <Section title='Free Events' fontColor='green'>
               <P>Something went wrong. Our events cannot be shown now. Please visit our group on Meetup <a href='https://www.meetup.com/trivalleycoders/'>TriValley Coders on Meetup</a></P>
             </Section>
           </SectionWrapper>
@@ -56,7 +56,7 @@ class Events extends Component {
       default:
         return (
           <SectionWrapper>
-            <Section title='Events' fontColor='green'>
+            <Section title='Free Events' fontColor='green'>
               <h2>Loading data...</h2>
             </Section>
           </SectionWrapper>
