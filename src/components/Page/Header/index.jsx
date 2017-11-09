@@ -30,7 +30,7 @@ const Header = () => {
           <TechLogos />
         </div>
       </Section>
-      <Section title='More than Coding - Make Software'>
+      <Section title='More than Coding - Making Software'>
         <P justify>'Learning to code' is a great catch-phrase but it doesn't accurately describe what employers are looking for. At TriValley Coders we cover project creation to deployment and everything in between.</P>
       </Section>
 

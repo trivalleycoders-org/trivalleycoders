@@ -9,17 +9,16 @@
   padding-bottom: 5px;
 }
 .nameCol {
-  padding: 5px 0 5px 5px;
+  /*padding: 5px 0 5px 5px;*/
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: bold;
 }
-.locationName {
-  font-weight: 700;
-}
+
 .odd {
   background-color: rgba(180,180,180,0.1);
 }
-.addressCol {
-  padding: 5px 0;
-}
+
 .dateCol {
   padding: 5px 0;
 }
@@ -30,4 +29,15 @@
   .dateCol {
     text-align: center;
   }
+}
+.addressCol {
+  padding: 5px 0;
+}
+.locationName {
+  /*font-weight: 700;*/
+  font-style: italic;
+  font-size: 1.1em;
+}
+.locationAddress {
+  font-size: 0.9em;
 }

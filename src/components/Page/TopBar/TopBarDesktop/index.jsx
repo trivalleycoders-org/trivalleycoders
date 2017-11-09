@@ -1,6 +1,7 @@
 // TopBarDesktop
 import React from 'react'
 import styles from './style.css'
+import Inner from '../Inner'
 
 const TopBarDesktop = (props) => {
 
@@ -9,17 +10,17 @@ const TopBarDesktop = (props) => {
       ))
 
   return (
-    <div id='desktop-1' className={styles.wrapper}>
-      <div id='desktop-2' className={styles.topBar}>
-        <div id='desktop-3' className={styles.brandingDesktop}>
+    <Inner id='wrapper-inner'>
+      <div id='top-bar' className={styles.topBar}>
+        <div id='branding-desktop' className={styles.brandingDesktop}>
           <span className={styles.wordTrivalleyDesktop}>TriValley</span>
           &nbsp;
           <span className={styles.wordCodersDesktop}>coders</span></div>
-        <div id='desktop-4' className={styles.desktopMenuItems}>
+        <div id='desktop-menu-items' className={styles.desktopMenuItems}>
           {renderMenuItems}
         </div>
       </div>
-    </div>
+    </Inner>
   )
 }
 

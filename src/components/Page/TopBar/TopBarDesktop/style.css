@@ -17,7 +17,6 @@
   display: flex;
   flex-flow: row nowrap;
   flex-grow: 10;
-  padding: 0 20px 0 10px;
 }
 
 a.menuItem {
@@ -42,9 +41,8 @@ a.menuItem {
 .desktopMenuItems {
   align-items: center;
   display: flex;
-  flex-grow: 2;
   justify-content: flex-end;
-  padding: 0 10px;
+  padding: 0 0 0 0;
 }
 
 .wordTrivalleyDesktop {

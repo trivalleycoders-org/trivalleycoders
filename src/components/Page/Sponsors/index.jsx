@@ -40,10 +40,8 @@ class Sponsors extends Component {
     return (
       <SectionWrapper id='sponsors'>
         <Section title='Our Sponsors'>
-          <div className='wrapperMaxWidth820'>
-            <div className={styles.sponsors}>
-              {sponsors}
-            </div>
+          <div className={styles.sponsors}>
+            {sponsors}
           </div>
         </Section>
       </SectionWrapper>

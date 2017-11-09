@@ -1,5 +1,4 @@
 /* TopBarPhone */
-
 .wrapper {
   display: flex;
   flex-flow: column;
@@ -87,6 +86,6 @@ a.menuItem {
 }*/
 @media (max-width : 768px) {
   .wordTrivalleyPhone {
-    background-color: orange;
+    /*background-color: orange;*/
   }
 }

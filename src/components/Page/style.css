@@ -15,18 +15,6 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
-/*:global(.wrapperMaxWidth1080) {
-  max-width: 1080px;
-  margin: auto;
-}*/
-
-
 :global(.container) {
   width: auto;
 }
-/*:global(.greenText) {
-  color: #34E97C;
-}*/
-/*:global(.greenBackground) {
-  background-image: linear-gradient(to bottom, #42a552 0%, #42a552 100%);
-}*/

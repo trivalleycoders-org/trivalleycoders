@@ -41,28 +41,22 @@ const Event = (props) => {
     [styles.eventsPanel]: true,
     [styles.bgYellow]: true,
   })
-  // const nameColStyles = classNames({
-  //   [styles.nameCol]: true,
-  //   color: greenText
-  // })
 
-// className={props.index % 2 === 0 ? styles.odd : ''}
   return (
-
     <Row className={rowStyles}>
       <Col className={styles.nameCol} sm={5} md={5} lg={5}>
-        <A href={props.url} fontColor={'green'}>{props.name}></A>
-      </Col>
-      <Col sm={4} md={4} lg={4}>
-        <div className={styles.addressCol}>
-          <div className={styles.locationName}><i>{`${props.locationName}`}</i></div>
-          <div className={styles.locationAddress}>{props.locationAddress}</div>
-          <div>{props.locationCity}</div>
-        </div>
+        <A href={props.url} fontColor={'green'}>{props.name}</A>
       </Col>
       <Col sm={3} md={3} lg={3}>
         <div className={styles.dateCol}>
           {meetupDate(props)}
+        </div>
+      </Col>
+      <Col sm={4} md={4} lg={4}>
+        <div className={styles.addressCol}>
+          <div className={styles.locationName}>{`${props.locationName}`}</div>
+          <div className={styles.locationAddress}>{props.locationAddress}</div>
+          <div>{props.locationCity}</div>
         </div>
       </Col>
     </Row>

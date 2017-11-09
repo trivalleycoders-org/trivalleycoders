@@ -5,6 +5,7 @@ import React from 'react'
 import Responsive from 'react-responsive'
 import TopBarDesktop from './TopBarDesktop'
 import TopBarPhone from './TopBarPhone'
+import Wrapper from './Wrapper'
 import { brand, menuItems, breakPoints } from './topbar.config'
 
 const Desktop = ({ children }) => <Responsive minWidth={breakPoints.desktopMinWidth} children={children} />
@@ -14,7 +15,7 @@ const Phone = ({ children }) => <Responsive maxWidth={breakPoints.phoneMaxWidth}
 const TopBar = () => {
 
   return (
-    <div id='top-bar'>
+    <Wrapper id='wrapper'>
       <Desktop>
         <TopBarDesktop
           brand={brand}
@@ -33,7 +34,7 @@ const TopBar = () => {
           menuItems={menuItems}
         />
       </Phone>
-    </div>
+    </Wrapper>
   )
 
 }
