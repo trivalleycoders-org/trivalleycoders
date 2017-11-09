@@ -1,7 +1,7 @@
 import pLaura from './images/laura.jpeg';
 import pMichael from './images/michael.jpg';
 import pNathan from './images/nathan.jpg';
-import pSharmina from './images/sharmina.jpg';
+import pKevin from './images/kevin.jpg';
 
 export const members = [
   {
@@ -30,9 +30,15 @@ export const members = [
   },
   {
     id: 106,
-    picture: pSharmina,
-    name: 'Sharmina',
-    role: 'Co-organizer Web Developer',
+    picture: pKevin,
+    name: 'Kevin',
+    role: 'Web Developer',
+  },
+  {
+    id: '7a8a0c654b89fasdfghbe1b68adf9dbecc4f1db0',
+    picture: '',
+    name: 'Jim',
+    role: 'Web Developer',
   },
 ]
 
