@@ -1,7 +1,5 @@
 // SectionTitle
 import React from 'react'
-import styles from './style.css'
-import classNames from 'classnames';
 
 const SectionTitle = (props) => {
   const styles = {
@@ -11,7 +9,7 @@ const SectionTitle = (props) => {
     padding: 0,
     textAlign: 'center',
   }
-  
+
   return (
     <h2 style={styles}>{props.children}</h2>
   )

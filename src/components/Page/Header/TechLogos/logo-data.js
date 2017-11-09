@@ -4,7 +4,6 @@ import iCSS from './images/css-3.01.svg'
 import iJS from './images/javascript.svg'
 import iReact from './images/react.svg'
 import iNode from './images/nodejs.on-black.01.svg'
-import iMongoAndExpress from './images/mongo-and-experss.on-black.01.svg'
 import iMongo from './images/mongo.01.svg'
 import iExpress from './images/express.01.svg'
 

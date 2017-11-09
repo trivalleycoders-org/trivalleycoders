@@ -9,6 +9,7 @@ import Event from './Event';
 import SectionWrapper from '../../elements/SectionWrapper'
 import Section from '../../elements/Section'
 import P from '../../elements/P'
+import A from '../../elements/A'
 
 let i = 1;
 
@@ -49,7 +50,7 @@ class Events extends Component {
         return (
           <SectionWrapper>
             <Section title='Free Events' fontColor='green'>
-              <P>Something went wrong. Our events cannot be shown now. Please visit our group on Meetup <a href='https://www.meetup.com/trivalleycoders/'>TriValley Coders on Meetup</a></P>
+              <P>Something went wrong. Our events cannot be shown now. Please visit our group on Meetup <A href='https://www.meetup.com/trivalleycoders/'>TriValley Coders on Meetup</A></P>
             </Section>
           </SectionWrapper>
         )

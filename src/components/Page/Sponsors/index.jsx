@@ -1,6 +1,5 @@
 // Sponsors
 import React from 'react';
-import { Component } from 'react';
 import iZelda from './images/zelda.sponsor.jpeg'
 import iBRIIA from './images/briia-logo.01.png'
 import Sponsor from './Sponsor';
@@ -8,9 +7,8 @@ import styles from './style.css';
 import SectionWrapper from '../../elements/SectionWrapper'
 import Section from '../../elements/Section'
 
-class Sponsors extends Component {
+const Sponsors = () => {
 
-  render() {
     const arrSponsors = [
       {
         id: 100,
@@ -46,6 +44,5 @@ class Sponsors extends Component {
         </Section>
       </SectionWrapper>
     )
-  }
 }
 export default Sponsors;

@@ -1,15 +1,12 @@
 // Members
 import React from 'react';
-import { Component } from 'react';
 import { members } from './member-data'
 import Member from './Member';
 import styles from './style.css';
 import SectionWrapper from '../../elements/SectionWrapper'
 import Section from '../../elements/Section'
 
-class Members extends Component {
-  render() {
-
+const Members = () => {
     const renderMembers = members.map((m) => (
       <Member
         key={m.id}
@@ -24,16 +21,12 @@ class Members extends Component {
     return (
       <SectionWrapper id='mentors'>
         <Section title='Mentors'>
-          {/* <div className='wrapperMaxWidth820'> */}
           <div className={styles.members}>
             {renderMembers}
           </div>
-          {/* </div> */}
         </Section>
       </SectionWrapper>
     )
-  }
 }
-
 
 export default Members;

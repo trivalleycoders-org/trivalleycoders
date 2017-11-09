@@ -9,20 +9,21 @@
   padding-bottom: 5px;
 }
 .nameCol {
-  /*padding: 5px 0 5px 5px;*/
-  text-align: center;
+  /*text-align: center;*/
   font-size: 1.4em;
   font-weight: bold;
 }
-
 .odd {
   background-color: rgba(180,180,180,0.1);
 }
-
 .dateCol {
   padding: 5px 0;
+  font-size: 1.1em;
 }
 @media (max-width: 767px) {
+  .nameCol {
+    text-align: center;
+  }
   .addressCol {
     text-align: center;
   }
@@ -34,9 +35,8 @@
   padding: 5px 0;
 }
 .locationName {
-  /*font-weight: 700;*/
+  /*font-size: 1.1em;*/
   font-style: italic;
-  font-size: 1.1em;
 }
 .locationAddress {
   font-size: 0.9em;

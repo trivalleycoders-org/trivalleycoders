@@ -1,7 +1,6 @@
 // Sponsor
 import React from 'react';
 import styles from './style.css';
-import classNames from 'classnames'
 
 const Sponsor = (props) => {
   const imgStyles = {
