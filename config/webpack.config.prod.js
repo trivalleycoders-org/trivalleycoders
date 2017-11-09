@@ -153,6 +153,22 @@ module.exports = {
               compact: true,
             },
           },
+          // TRY IT
+          {
+            test: /\.css$/,
+            include: paths.bootstrap,
+            use: [
+              require.resolve('style-loader'),
+              {
+                loader: require.resolve('css-loader'),
+                options: {
+                  importLoaders: 1,
+                },
+              },
+            ],
+          },
+
+          // TRY IT
           // The notation here is somewhat confusing.
           // "postcss" loader applies autoprefixer to our CSS.
           // "css" loader resolves paths in CSS and adds assets as dependencies.
@@ -167,6 +183,7 @@ module.exports = {
           // in the main CSS file.
           {
             test: /\.css$/,
+            exclude: paths.bootstrap,
             loader: ExtractTextPlugin.extract(
               Object.assign(
                 {
@@ -177,6 +194,7 @@ module.exports = {
                       options: {
                         importLoaders: 1,
                         modules: true,
+                        localIdentName: '[name]__[local]__[hash:base64:5]',
                         minimize: true,
                         sourceMap: shouldUseSourceMap,
                       },
