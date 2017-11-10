@@ -8,7 +8,7 @@ export const members = [
     id: '7a8a0c654b89f157524be1b68adf9dbecc4f1db0',
     picture: '',
     name: 'Karl',
-    role: 'Organizer Web Developer',
+    role: 'Organizer Developer Teacher',
   },
   {
     id: 103,
