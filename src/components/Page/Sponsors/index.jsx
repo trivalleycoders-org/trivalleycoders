@@ -14,7 +14,7 @@ const Sponsors = () => {
         id: 100,
         picture: iZelda,
         name: 'Zelda Kohn',
-        tagLine: 'For all you realestate needs in the Tri-valley!',
+        tagLine: 'For all you real estate needs in the Tri-valley!',
       },
       {
         id: 200,
