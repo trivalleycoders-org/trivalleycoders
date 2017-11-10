@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
 import styles from './style.css'
+import Inner from '../Inner'
 
 class TopBarPhone extends Component {
   constructor(props) {
@@ -45,7 +46,7 @@ class TopBarPhone extends Component {
       // so .wrapper should be a column with 2 rows
       // row 1: brand and hamburger (flex-flow: row)
       // row 2: the menu buttons (flex-flow: column)
-      <div id='phone-1' className={styles.wrapper}>
+      <Inner id='wrapper-inner'>
         <div id='phone-2' className={styles.topBar}>
           <div id='phone-3' className={styles.brandingPhone}>
             <span className={styles.wordTrivalleyPhone}>TriValley</span>
@@ -61,7 +62,7 @@ class TopBarPhone extends Component {
         <div id='phone-6' className={mobileMenuStyle}>
           {renderMenuItems}
         </div>
-      </div>
+      </Inner>
 
     )
   }

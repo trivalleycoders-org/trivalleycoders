@@ -42,11 +42,11 @@ a.menuItem {
 }
 
 .brandingPhone {
-  align-items: center;
+  align-items: baseline;
   display: flex;
   flex-flow: row nowrap;
   flex-grow: 10;
-  font-size: calc( 18px + (22 - 18) * ( (100vw - 325px) / ( 580 - 325) ));
+  font-size: calc( 22px + (30 - 22) * ( (100vw - 325px) / ( 580 - 325) ));
   text-align: center;
   width: 100%;
 }
