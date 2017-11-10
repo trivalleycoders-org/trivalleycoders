@@ -3,12 +3,15 @@ import React from 'react'
 import styles from './style.css'
 import SectionTitle from './SectionTitle'
 import SectionSubTitle from './SectionSubTitle'
-// import classNames from 'classNames'
+import classNames from 'classnames'
 
 const Section = (props) => {
-
+  const wrapperStyles = classNames({
+    [styles.wrapper]: true,
+    [styles.greenBackground]: props.greenBackground,
+  })
   return (
-    <div className={styles.wrapper} id={props.id}>
+    <div className={wrapperStyles} id={props.id}>
       <div className={styles.titles}>
         <div className={styles.title}>
           <SectionTitle fontColor={props.color}>
