@@ -18,10 +18,12 @@ const Header = () => {
       <Section title='A Community'>
         <P textAlign='justify'>TriValley Coders is a community of developers helping developers. We hold free bi-weekly meetings where beginner and experienced developers mix and learn together.</P>
         <div className={styles.buttonContainer}>
-          <button className={btnStyle}>
-            <img className={styles.joinMeetupLogo} src={iMeetup} width={45} alt='meetup logo'/>
-            <span className={styles.joinUsText}>Join Us via Meetup!</span>
-          </button>
+          <a href='https://www.meetup.com/trivalleycoders/'>
+            <button className={btnStyle}>
+              <img className={styles.joinMeetupLogo} src={iMeetup} width={45} alt='meetup logo'/>
+              <span className={styles.joinUsText}>Join Us via Meetup!</span>
+            </button>
+          </a>
         </div>
       </Section>
       <Section title='A School'>
