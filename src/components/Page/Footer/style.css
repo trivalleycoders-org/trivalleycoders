@@ -1,36 +1,31 @@
 /* Footer */
-
-/*.footer {
-  padding-top: 15px;
-	padding-bottom: 15px;
-}*/
-
-.footerContainer {
-	display: flex;
-	flex-flow: column nowrap;
-	align-items: center;
+.copy {
+  text-align: center;
 }
-
 .fa {
-	padding: 5px 10px;
-	color: white;
+  color: white;
+  padding: 5px 10px;
 }
-
 .faBtns {
-	display: flex;
-	flex-direction: row;
+  display: flex;
+  flex-direction: row;
   justify-content: space-around;
-	padding-bottom: 15px;
+  padding-bottom: 15px;
 }
 .facebook {
   color: #445796;
-  }
-.meetup {
-  color: #ED3F64;
 }
 .faIcon {
   margin: 0 10px;
 }
-.copy {
-  text-align: center;
+.footerContainer {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.meetup {
+  color: #ED3F64;
+}
+.slack {
+  color: white;
 }

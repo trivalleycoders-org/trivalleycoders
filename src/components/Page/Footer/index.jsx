@@ -30,6 +30,14 @@ const Footer = () => {
     [styles.faIcon]: true,
     [styles.facebook]: true,
   })
+  const slackStyle = classNames({
+    'fa': true,
+    'fa-slack': true,
+    'fa-2x': true,
+    'fa-icon': true,
+    [styles.faIcon]: true,
+    [styles.slack]: true,
+  })
   return (
     <SectionWrapper>
       <Section>
@@ -40,6 +48,9 @@ const Footer = () => {
             </A>
             <A href="https://www.meetup.com/trivalleycoders//">
               <i className={meetupStyle} aria-hidden="true"></i>
+            </A>
+            <A href="http://tvc-slack-signup.s3-website-us-west-2.amazonaws.com">
+              <i className={slackStyle} aria-hidden="true"></i>
             </A>
             <A href="https://www.facebook.com/groups/free.code.camp.sanramon/">
               <i className={facebookStyle} aria-hidden="true"></i>

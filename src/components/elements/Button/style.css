@@ -355,8 +355,8 @@ fieldset[disabled] .btnAmber.focus {
 }
 .btnRed {
   color: #ffffff;
-  background-color: #ee5f5b;
-  border-color: #ee5f5b;
+  background-color: #e9322d;
+  border-color: #e9322d;
 }
 .btnRed:focus,
 .btnRed.focus {
@@ -366,15 +366,15 @@ fieldset[disabled] .btnAmber.focus {
 }
 .btnRed:hover {
   color: #ffffff;
-  background-color: #e9322d;
-  border-color: #e82924;
+  background-color: #ee5f5b;
+  border-color: #ee5f5b;
 }
 .btnRed:active,
 .btnRed.active,
 .open > .dropdown-toggle.btnRed {
   color: #ffffff;
-  background-color: #e9322d;
-  border-color: #e82924;
+  background-color: #ee5f5b;
+  border-color: #b71713;
 }
 .btnRed:active:hover,
 .btnRed.active:hover,

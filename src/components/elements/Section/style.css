@@ -9,7 +9,10 @@
   padding: 35px 0 35px 0;
 }
 .greenBackground {
-  background-image: linear-gradient(to bottom, #42a552 0%, #42a552 100%);
+  /*background-image: linear-gradient(to bottom, #42a552 0%, #42a552 100%);*/
+
+  background-image: linear-gradient(to bottom, #3b9d48 0%, #3b9d48 100%)
+
 }
 .titles {
   margin-bottom: 20px;
