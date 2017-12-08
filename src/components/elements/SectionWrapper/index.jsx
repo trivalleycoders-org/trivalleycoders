@@ -6,6 +6,7 @@ const SectionWrapper = (props) => {
   const wrapperStyles = classNames({
     [styles.wrapper]: true,
     [styles.greenBackground]: props.greenBackground,
+    [styles.grayBackground]: props.gray,
   })
   return (
     <div className={wrapperStyles} id={props.id}>

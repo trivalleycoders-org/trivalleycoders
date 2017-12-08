@@ -7,6 +7,20 @@
 
 .greenBackground {
   /*background-image: linear-gradient(to bottom, #42a552 0%, #42a552 100%);*/
-  background-image: linear-gradient(to bottom, #3b9d48 0%, #3b9d48 100%);
+
+  /*background-color: #009966;*/
+  /*background-color: #006600;*/
+  /*background-image: linear-gradient(to bottom, #3b9d48 0%, #3b9d48 100%);*/
+  /*sbackground-color: #207722;*/
+  background-image: linear-gradient(to bottom, #207722 0%, #3b9d48 100%); /* nice little light on bottom */
+  background-image: linear-gradient(to bottom, #207722 0%, #389a45 100%); /* nice little light on bottom */
+
+  color: white;
+}
+
+.grayBackground {
+
+  /*background-image: linear-gradient(to bottom, rgb(25, 25, 25) 0%, rgb(50, 50, 50) 100%);*/
+  background-color: rgba(38, 38, 44, 0.5);
   color: white;
 }

@@ -27,7 +27,7 @@ const Header = () => {
       </SectionWrapper>
       <SectionWrapper>
         <Section title='A School'>
-          <P justify>We run periodic classes for those serious about learning to make software. Our couses cover HTML, CSS, JavaScript, React, Express, Node and MongoDB.</P>
+          <P justify>We run periodic classes for those serious about learning to make software. Our courses cover HTML, CSS, JavaScript, React, Express, Node and MongoDB.</P>
           <div className={styles.techLogosWrapper}>
             <TechLogos />
           </div>

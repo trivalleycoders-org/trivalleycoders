@@ -39,7 +39,7 @@ const Footer = () => {
     [styles.slack]: true,
   })
   return (
-    <SectionWrapper>
+    <SectionWrapper gray>
       <Section>
         <div className={styles.footerContainer}>
           <div className={styles.faBtns}>
@@ -56,7 +56,7 @@ const Footer = () => {
               <i className={facebookStyle} aria-hidden="true"></i>
             </A>
           </div>
-          <P>&copy; 2017 Tri-Valley Coders &trade;. All rights reserved.</P>
+          <P>&copy; 2017 TriValley Coders &trade; All rights reserved.</P>
           <P><i>Don't code alone!</i> &trade;</P>
         </div>
       </Section>

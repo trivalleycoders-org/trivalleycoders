@@ -8,8 +8,9 @@ import classNames from 'classnames'
 const Section = (props) => {
   const wrapperStyles = classNames({
     [styles.wrapper]: true,
-    [styles.greenBackground]: props.greenBackground,
+    // [styles.greenBackground]: props.greenBackground,
   })
+  console.log(wrapperStyles)
   return (
     <div className={wrapperStyles} id={props.id}>
       <div className={styles.titles}>
