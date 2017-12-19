@@ -21,6 +21,11 @@
 .grayBackground {
 
   /*background-image: linear-gradient(to bottom, rgb(25, 25, 25) 0%, rgb(50, 50, 50) 100%);*/
-  background-color: rgba(38, 38, 44, 0.5);
+  /*background-color: rgba(38, 38, 44, 0.5);*/
+  background-color: rgb(100, 100, 100);
   color: white;
+}
+.whiteBackground {
+  background-color: white;
+  color: black;
 }

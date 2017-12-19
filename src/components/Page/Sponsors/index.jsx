@@ -36,7 +36,7 @@ const Sponsors = () => {
       />
     ))
     return (
-      <SectionWrapper id='sponsors'>
+      <SectionWrapper id='sponsors' grayBackground>
         <Section title='Our Sponsors'>
           <div className={styles.sponsors}>
             {sponsors}

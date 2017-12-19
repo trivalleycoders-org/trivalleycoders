@@ -18,3 +18,45 @@
   /*margin: 20px 0;*/
   margin-top: 20px;
 }
+.top {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+.topLeft {
+  flex-basis: 50%;
+  padding-right: 10px;
+}
+.topRight {
+  flex-basis: 50%;
+  padding-left: 10px;
+}
+.community {
+  max-width: 400px;
+}
+/* 480px */
+@media (max-width : 580px) {
+  .top {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    /*justify-content: space-between;*/
+  }
+  .topLeft {
+    flex-basis: 50%;
+    padding: 3px;
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+  .topRight {
+    flex-basis: 50%;
+    padding-left: 0;
+  }
+}
+/*@media (min-width : 481px) and (max-width : 875px) {
+
+}
+@media (max-width : 768px) {
+  .wordTrivalleyPhone {
+  }
+}*/

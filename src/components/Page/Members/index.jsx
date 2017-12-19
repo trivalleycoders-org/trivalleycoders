@@ -19,7 +19,7 @@ const Members = () => {
     ))
 
     return (
-      <SectionWrapper id='mentors' greenBackground>
+      <SectionWrapper id='mentors' whiteBackground>
         <Section title='Mentors'>
           <div className={styles.members}>
             {renderMembers}
