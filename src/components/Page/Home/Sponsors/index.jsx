@@ -4,8 +4,8 @@ import iZelda from './images/zelda.sponsor.jpeg'
 import iBRIIA from './images/briia-logo.01.png'
 import Sponsor from './Sponsor';
 import styles from './style.css';
-import SectionWrapper from '../../elements/SectionWrapper'
-import Section from '../../elements/Section'
+import SectionWrapper from '../../../elements/SectionWrapper'
+import Section from '../../../elements/Section'
 
 const Sponsors = () => {
 

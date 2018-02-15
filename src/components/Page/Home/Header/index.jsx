@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from './style.css';
 import iMeetup from './images/meetup-swarm.svg'
-import SectionWrapper from '../../elements/SectionWrapper'
-import Section from '../../elements/Section'
+import SectionWrapper from '../../../elements/SectionWrapper'
+import Section from '../../../elements/Section'
 import TechLogos from './TechLogos'
-import P from '../../elements/P'
+import P from '../../../elements/P'
 import classNames from 'classnames'
-import Button from '../../elements/Button'
-import Image from '../../elements/Image'
+import Button from '../../../elements/Button'
+import Image from '../../../elements/Image'
 import iCommunity from './images/community.4.jpg'
 // import Responsive from 'react-responsive'
 // import { breakPoints } from '../TopBar/topbar.config'

@@ -3,7 +3,7 @@ import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import styles from './style.css';
 import classNames from 'classnames'
-import A from '../../../elements/A'
+import A from '../../../../elements/A'
 
 const formatDate = ({timeArr}) => {
   let hour = parseInt(timeArr.slice(0, 2), 10);

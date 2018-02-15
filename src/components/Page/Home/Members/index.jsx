@@ -3,8 +3,8 @@ import React from 'react';
 import { members } from './member-data'
 import Member from './Member';
 import styles from './style.css';
-import SectionWrapper from '../../elements/SectionWrapper'
-import Section from '../../elements/Section'
+import SectionWrapper from '../../../elements/SectionWrapper'
+import Section from '../../../elements/Section'
 
 const Members = () => {
     const renderMembers = members.map((m) => (

@@ -3,13 +3,13 @@ import React from 'react';
 import { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
-import * as actionCreators from '../../../store/actions';
-import * as selectors from '../../../store/selectors';
+import * as actionCreators from '../../../../store/actions';
+import * as selectors from '../../../../store/selectors';
 import Event from './Event';
-import SectionWrapper from '../../elements/SectionWrapper'
-import Section from '../../elements/Section'
-import P from '../../elements/P'
-import A from '../../elements/A'
+import SectionWrapper from '../../../elements/SectionWrapper'
+import Section from '../../../elements/Section'
+import P from '../../../elements/P'
+import A from '../../../elements/A'
 
 let i = 1;
 

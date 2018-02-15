@@ -13,9 +13,12 @@ const TopBarDesktop = (props) => {
     <Inner id='wrapper-inner'>
       <div id='top-bar' className={styles.topBar}>
         <div id='branding-desktop' className={styles.brandingDesktop}>
-          <span className={styles.wordTrivalleyDesktop}>TriValley</span>
-          &nbsp;
-          <span className={styles.wordCodersDesktop}>coders</span></div>
+          <a href='http://trivalleycoders.com'>
+            <span className={styles.wordTrivalleyDesktop}>TriValley</span>
+            &nbsp;
+            <span className={styles.wordCodersDesktop}>coders</span>
+          </a>
+        </div>
         <div id='desktop-menu-items' className={styles.desktopMenuItems}>
           {renderMenuItems}
         </div>

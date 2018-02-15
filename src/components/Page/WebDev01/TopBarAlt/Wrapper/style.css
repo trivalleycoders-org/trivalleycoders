@@ -1,0 +1,8 @@
+/* SectionWrapper */
+.wrapper {
+  margin: 0 0 25px 0;
+}
+
+.greenBackground {
+  background-image: linear-gradient(to bottom, #42a552 0%, #42a552 100%);
+}

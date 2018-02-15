@@ -1,10 +1,11 @@
 /* Page */
 
-.pageWrapper {
+/* .pageWrapper {
   font-family: 'Roboto', sans-serif !important;
-}
+} */
 body {
   color: white;
+  font-family: 'Roboto', sans-serif !important;
 }
 section, header, footer {
   overflow: hidden;
