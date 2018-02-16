@@ -11,16 +11,20 @@ export const brand = {
 
 export const menuItems = [
   {
+    label: 'Home',
+    href: 'http://trivalleycoders.com',
+  },
+  {
     label: 'Events',
-    href: '#events',
+    href: 'http://trivalleycoders.com#events',
   },
   {
     label: 'Mentors',
-    href: '#mentors',
+    href: 'http://trivalleycoders.com#mentors',
   },
   {
     label: 'Sponsors',
-    href: '#sponsors',
+    href: 'http://trivalleycoders.com#sponsors',
   }
 ]
 

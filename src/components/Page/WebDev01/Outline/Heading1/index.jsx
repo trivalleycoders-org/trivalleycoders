@@ -3,7 +3,7 @@ import React from 'react'
 const H1 = ({ children }) => {
   // console.log('children', props)
   const h1Style = {
-    fontSize: '22px',
+    fontSize: '26px',
     fontWeight: 'bold',
   }
   return (
