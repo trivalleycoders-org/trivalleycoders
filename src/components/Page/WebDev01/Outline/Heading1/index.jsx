@@ -5,6 +5,10 @@ const H1 = ({ children }) => {
   const h1Style = {
     fontSize: '26px',
     fontWeight: 'bold',
+    textAlign: 'center',
+    marginBottom: '15px',
+    marginTop: '5px',
+    marginTop: '10px',
   }
   return (
     <div style={h1Style}>{children}</div>

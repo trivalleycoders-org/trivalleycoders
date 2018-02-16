@@ -11,15 +11,15 @@ const CSS = () => {
         <Li>Key value pairs again</Li>
         <Li>CSS Syntax</Li>
         <H2>Intro to Selectors</H2>
-          <Li l2>Element Selectors</Li>
-          <Li l2>ID Selectors</Li>
-          <Li l2>Class Selectors</Li>
+        <Li>Element Selectors</Li>
+        <Li>ID Selectors</Li>
+        <Li>Class Selectors</Li>
         <H2>CSS Exercises</H2>
-        <Li>Exercise 3 - Creating Styles</Li>
-        <Li>Exercise 4 - Modifying Built-in Styles</Li>
+        <Li><b>Exercise:</b> Creating Styles</Li>
+        <Li><b>Exercise:</b> Modifying Built-in Styles</Li>
         <H2>Advanced CSS Concepts</H2>
         <Li>Understanding Cascading &amp; Inheritance</Li>
-        <Li>Exercise 5 - Exploring Cascading &amp; Inheritance</Li>
+        <Li><b>Exercise:</b> Exploring Cascading &amp; Inheritance</Li>
       </Section>
     </Section>
   )

@@ -10,7 +10,8 @@ const Section = ({ l1, l2, l3, children }) => {
     return '20px 0'
   }
   const sectionStyle = {
-      margin: margin()
+      margin: margin(),
+      marginBottom: '30px',
   }
 
 

@@ -7,14 +7,14 @@ const HTML = () => {
     <Section>
       <H1>HTML</H1>
       <Section l2>
-        <H2>Anatomy of a HTML Element</H2>
+        <H2>Anatomy &amp; Use HTML Elements</H2>
           <Li>Elements are made of tags</Li>
+          <Li>What are Name / value pairs?</Li>
+          <Li>Attributes</Li>
           <Li>Elements are containers</Li>
           <Li>The importance of indenting</Li>
-          <Li>Name / value pairs</Li>
-          <Li>Attributes</Li>
           <Li>Essential HTML Elements</Li>
-          <Li>Exercise 2 - Creating a HTML Page</Li>
+          <Li><b>Exercise:</b> Creating a HTML Page</Li>
       </Section>
     </Section>
   )

@@ -10,6 +10,7 @@ const DocumentStructure = () => {
       <Li l1>What is an element</Li>
       <Li l1>What are styles and why use them</Li>
       <Li l1>The hierarchy of information: An exploration of document structure</Li>
+      <Li l1><b>Exercise:</b> Exploring documnet structure with Google Docs</Li>
     </Section>
   )
 }

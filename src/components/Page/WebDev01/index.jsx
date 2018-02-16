@@ -1,8 +1,6 @@
 import React from 'react'
 import TopBar from './TopBarAlt'
 // simport styles from './style.css'
-import { H1, H2, H3, Li } from './Outline'
-import Section from './Section'
 import SectionWrapper from '../../elements/SectionWrapper'
 import InnerSection from '../../elements/Section'
 import HTML from './HTML'
@@ -16,39 +14,25 @@ import Projects from './Projects'
 import DOM from './DOM'
 
 const WebDev01 = () => {
+  const pageTitleStyle = {
+    textAlign: 'center',
+    margin: '100px 0 15px 0',
+  }
   return (
     <SectionWrapper className='container'>
-    <TopBar />
-    <InnerSection>
-    <h1>Beginning Web Development</h1>
-    <About />
-    <DocumentStructure />
-    <HTMLCSSJSOverview />
-    <ComputerSkills />
-    <HTML />
-    <CSS />
-    <DOM />
-    <JavaScript />
-    <Projects />
-
-
-
-
-
-
-
-
-
-    <div>
-      <H2>Future</H2>
-      <ul>
-        <Li>
-          <Li>Inspecting pages</Li>
-          <Li>Using the web browsers console</Li>
-        </Li>
-      </ul>
-    </div>
-    </InnerSection>
+      <TopBar />
+      <h1 style={pageTitleStyle}>Beginning Web Development</h1>
+      <InnerSection>
+        <About />
+        <DocumentStructure />
+        <HTMLCSSJSOverview />
+        <ComputerSkills />
+        <HTML />
+        <CSS />
+        <DOM />
+        <JavaScript />
+        <Projects />
+      </InnerSection>
     </SectionWrapper>
   )
 }
