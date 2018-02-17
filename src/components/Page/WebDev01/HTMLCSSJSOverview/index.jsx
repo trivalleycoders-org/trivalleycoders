@@ -11,7 +11,7 @@ const HTMLCSSJSOverview = () => {
       <Li>So What's Structure</Li>
       <Li>HTML: Structure is created with HTML</Li>
       <Li>CSS: Styles are created with CSS</Li>
-      <Li>JavaScript: Interactity is provide by JavaScript</Li>
+      <Li>JavaScript: Interactivity is provided by JavaScript</Li>
       <Li><b>Exercise 1:</b> Write Some HTML & CSS</Li>
     </Section>
   )

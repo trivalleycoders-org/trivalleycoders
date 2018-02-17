@@ -12,16 +12,19 @@ import CSS from './CSS'
 import JavaScript from './JavaScript'
 import Projects from './Projects'
 import DOM from './DOM'
+import Footnotes from './Footnotes'
+import PageTitle from './PageTitle'
 
 const WebDev01 = () => {
-  const pageTitleStyle = {
-    textAlign: 'center',
-    margin: '100px 0 15px 0',
-  }
+  
   return (
-    <SectionWrapper className='container'>
+    <div>
+    <SectionWrapper>
       <TopBar />
-      <h1 style={pageTitleStyle}>Beginning Web Development</h1>
+    </SectionWrapper>
+    <SectionWrapper className='container' whiteBackground>
+
+      <PageTitle>Beginning Web Development</PageTitle>
       <InnerSection>
         <About />
         <DocumentStructure />
@@ -32,8 +35,10 @@ const WebDev01 = () => {
         <DOM />
         <JavaScript />
         <Projects />
+        <Footnotes />
       </InnerSection>
     </SectionWrapper>
+    </div>
   )
 }
 export default WebDev01

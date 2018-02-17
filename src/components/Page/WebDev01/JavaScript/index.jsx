@@ -23,7 +23,7 @@ const JavaScript = () => {
         <Li><b>Exercise:</b> Working With Variables</Li>
 
         <H2>Operators</H2>
-        <Li>Arithmic Operators (+, -, etc.)</Li>
+        <Li>Arithmetic Operators (+, -, etc.)</Li>
         <Li>Equality (===)</Li>
         <Li>Relational Operators (&gt;, &lt;, etc.)</Li>
         <Li>Arrays</Li>
@@ -36,7 +36,7 @@ const JavaScript = () => {
         <Li>Calling (i.e., using) Functions</Li>
         <Li><b>Exercise: Writing functions</b></Li>
 
-      <H2>Controling Flow</H2>
+      <H2>Controlling Flow</H2>
       <Li>if, else & if else</Li>
       <Li><b>Exercise:</b> Using if</Li>
       <H2>Loops</H2>
@@ -45,11 +45,11 @@ const JavaScript = () => {
       <Li>While Loops</Li>
       <Li><b>Exercise:</b> Writing While Loops</Li>
 
-      <H1>Events</H1>
+      <H2>Events</H2>
       <Li>What's an event?</Li>
       <Li><b>Exercise:</b> Creating events</Li>
 
-      <H1>JavaScript is Asynchronous - What's Asynchronous?</H1>
+      <H2>JavaScript is Asynchronous - What's Asynchronous?</H2>
       <Li>Demo, Discussion &amp; Examples</Li>
     </Section>
   )

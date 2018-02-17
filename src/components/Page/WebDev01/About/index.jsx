@@ -1,18 +1,23 @@
 import React from 'react'
-import { H1, H2, H3, Li } from './../Outline'
+import { H1, H2 } from './../Outline'
 import Section from './../Section'
 
 export const About = () => {
   return (
     <Section>
       <H1>About</H1>
-      <p>Learn programming concepts in the context of making real web applications - something like that.</p>
-      <p>goals: 1) learn html, css, js, make web sites, 2) become a more sophisticated computer user, 3) problem solving</p>
-      <p>I have been teaching web development to middle and high schoolers, inclusing my middle school son, for over a year and am amazed at what they can learn. The focus of this class, which may seem ambitious, is <b>real software development skills</b>.</p>
-      <H2>Real Software Development Skills</H2>
-      <p>There are many ways to learn to code but most focus on the details of the language or the logic of programming without constructing actual projects. While this is valuable is some ways I have found that children and adults who take this path can't create deployable software, can't write functions </p>
-      <H2>Exposure to Concepts</H2>
-      <H2>Logic &amp; Problem Solving</H2>
+      <H2>Real Skills</H2>
+      <p>There is a lot more to making software than learning the syntax of a given language. Most courses today keep the student in a controlled sandboxed environment. This approach teaches many things, but it focuses on the parts without teaching how to construct the whole into a complete and deployable software application. In short, students learn to write code but not to make software.</p>
+
+      <p>TriValley Coders has been teaching 7 - 12th graders and adults addressing this short-coming for the past two years. We have found that students of all ages can readily learn to put a simple web application project together and then use that environment to learn in, and then deploy it to the Internet.</p>
+
+      <p>Our course starts out teaching the general computing skills needed to write code outside of the controlled sandbox. We progress from there to learn the syntax and and concepts of using HTML, CSS &amp; JavaScript. We finish by deploying a website to the Internet.</p>
+
+      <H2>Exposure to Advanced Concepts</H2>
+      <p>Not all of our younger students want to be software developers. However, technology is part of every business, and being able to understand and discuss technology is part of almost all occupations. This is a key driver behind the structure of our course. We introduce more complex concepts early on to provide exposure to a bigger picture that is beneficial to all of our young students regardless of their future path.</p>
+
+      <H2>Hands-on &amp; Project Based</H2>
+      <p>Our Beginning Web Development course is very hands on. Students start writing code from the very first lesson. They get to practice each concept presented. The course finishes with a series of 5 projects of increasing complexity. The projects are designed to reinforce the concepts learned. They are a combination of coding challenges and step by step instructions that provide both the opportunity to write code and to see in action the concepts learned in prior weeks.</p>
     </Section>
   )
 }

@@ -6,7 +6,6 @@ const CSS = () => {
   return (
     <Section>
       <H1>CSS</H1>
-      <Section l2>
         <H2>Anatomy of a Style</H2>
         <Li>Key value pairs again</Li>
         <Li>CSS Syntax</Li>
@@ -20,7 +19,6 @@ const CSS = () => {
         <H2>Advanced CSS Concepts</H2>
         <Li>Understanding Cascading &amp; Inheritance</Li>
         <Li><b>Exercise:</b> Exploring Cascading &amp; Inheritance</Li>
-      </Section>
     </Section>
   )
 }

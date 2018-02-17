@@ -5,9 +5,10 @@ import Section from './../Section'
 const DOM = () => {
   return (
     <Section>
-      <H1>Exporing the DOM</H1>
+      <H1>Exploring the DOM</H1>
 
       <H2>The Document Object Model</H2>
+      <Li>What's an object?</Li>
       <Li>What is the DOM</Li>
       <Li>How is the DOM Created</Li>
       <Li>Inspecting the DOM</Li>

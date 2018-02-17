@@ -16,7 +16,9 @@ const Section = ({ l1, l2, l3, children }) => {
 
 
   return (
-    <section style={sectionStyle}>{children}</section>
+    <div>
+      <section style={sectionStyle}>{children}</section>
+    </div>
   )
 }
 export default Section
