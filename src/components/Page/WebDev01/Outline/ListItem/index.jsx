@@ -1,31 +1,32 @@
 import React from 'react'
 
+const listItemStyle = {
+  listStylePosition: 'inside',
+}
+const l1Style = {
+  ...listItemStyle,
+  listStyleType: 'square',
+  marginLeft: '10px',
+}
+const l2Style = {
+  ...listItemStyle,
+  listStyleType: 'disc',
+  marginLeft: '20px',
+}
+const l3Style = {
+  ...listItemStyle,
+  listStyleType: 'circle',
+  marginLeft: '30px',
+}
+const l4Style = {
+  ...listItemStyle,
+  listStyleType: 'disclosure-closed',
+  marginLeft: '40px',
+}
+
 const ListItem = ({ l1, l2, l3, l4, children }) => {
   // console.log('li props', props)
   // const solidSquare =
-  const listItemStyle = {
-    listStylePosition: 'inside',
-  }
-  const l1Style = {
-    ...listItemStyle,
-    listStyleType: 'square',
-    marginLeft: '10px',
-  }
-  const l2Style = {
-    ...listItemStyle,
-    listStyleType: 'disc',
-    marginLeft: '20px',
-  }
-  const l3Style = {
-    ...listItemStyle,
-    listStyleType: 'circle',
-    marginLeft: '30px',
-  }
-  const l4Style = {
-    ...listItemStyle,
-    listStyleType: 'disclosure-closed',
-    marginLeft: '40px',
-  }
 
   if (l4) {
     return (

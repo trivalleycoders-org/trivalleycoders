@@ -57,7 +57,7 @@ class Events extends Component {
       default:
         return (
           <SectionWrapper>
-            <Section title='Free Events' fontColor='green'>
+            <Section id='events' title='Free Events' fontColor='green'>
               <h2>Loading data...</h2>
             </Section>
           </SectionWrapper>
