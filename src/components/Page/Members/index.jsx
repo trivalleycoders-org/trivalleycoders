@@ -15,6 +15,7 @@ const Members = () => {
         name={m.name}
         role={m.role}
         index={m.index}
+        url={m.url}
       />
     ))
 

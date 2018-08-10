@@ -10,7 +10,10 @@ const Sponsor = (props) => {
   }
   return (
     <div className={styles.panelSponsor}>
-      <img style={imgStyles} src={props.picture} alt='sponsor' />
+      <a href={props.url}>
+        <img style={imgStyles} src={props.picture} alt='sponsor' />
+      </a>
+
       <h4 id='sponsor-name' className={styles.sponsorName}>{props.name}</h4>
       <h5 id='sponsor-tagline' className={styles.tagLine}>{props.tagLine}</h5>
     </div>

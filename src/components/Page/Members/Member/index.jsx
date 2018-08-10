@@ -12,7 +12,11 @@ const Member = (props) => {
         hash={props._id}
              />
     } else {
-      return <img className={styles.memberImg} src={props.picture} alt='member' />
+      return (
+        <a href={props.url}>
+          <img className={styles.memberImg} src={props.picture} alt='member' />
+        </a>
+      )
     }
   }
   return (
